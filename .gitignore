@@ -1,0 +1,16 @@
+# ignore multimedia files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+
+
+# ignore model cache and checkpoints
+__pycache__/
+*.ckpt
+*.pt
+
+# ignore .vscode settings
+.vscode/
