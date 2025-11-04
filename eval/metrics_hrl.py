@@ -1,10 +1,3 @@
-PROMPT_HRL_S = """
-Previous Info: {}
-
-Predict the reaction:
-"""
-
-
 PROMPT_HRL_F = """
 Previous Info: {}
 
