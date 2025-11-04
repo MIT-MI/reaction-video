@@ -7,8 +7,7 @@ Now, predict the viewer’s next reaction for {current_time_window}, considering
 
 Write the reaction as a single, complete sentence.
 
-Predicted reaction:
-"""
+Predicted reaction:"""
 
 
 
@@ -31,15 +30,6 @@ from models import generate_response
 def reaction_similarity(a: str, b: str) -> float:
     
     return 0
-
-# ----------------------------- batch inference stub -----------------------------
-def inference_fn(prompts: List[str]) -> List[str]:
-    # TODO: replace with vLLM:
-    # from vllm import LLM, SamplingParams
-    # llm = LLM("meta-llama/Llama-3-8B-Instruct")
-    # outs = llm.generate(prompts, SamplingParams(max_tokens=256))
-    # return [o.outputs[0].text.strip() for o in outs]
-    return prompts  # echo for wiring
 
 # ------------------------------- data utilities --------------------------------
 def load_video_segments(csv_dir: Path) -> Dict[str, List[Dict[str, any]]]:
@@ -173,7 +163,14 @@ def evaluate_hrl_f(
 
                 # Prepare prompt
                 current_time_window = f"{start_time:.2f}-{end_time:.2f}s"
-                prompt = PROMPT_HRL_F.format(previous_reactions, current_time_window)
+                prompt = PROMPT_HRL_F.format(
+                    start_time_v=video_start_time, 
+                    end_time_v=end_time, 
+                    start_time_r=video_start_time, 
+                    end_time_r=start_time, 
+                    previous_reactions=previous_reactions,
+                    current_time_window=current_time_window
+                )
                 
                 # Generate prediction
                 predicted_reaction = generate_response(
