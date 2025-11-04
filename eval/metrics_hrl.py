@@ -22,22 +22,8 @@ from models import generate_response
 
 # ---------------------- similarity metric (single function) ----------------------
 def reaction_similarity(a: str, b: str) -> float:
-    tokens_a = [token for token in a.lower().split() if token]
-    tokens_b = [token for token in b.lower().split() if token]
-    if not tokens_a or not tokens_b:
-        return 0.0
-
-    counter_a = Counter(tokens_a)
-    counter_b = Counter(tokens_b)
-    dot = sum(counter_a[t] * counter_b[t] for t in counter_a.keys() & counter_b.keys())
-    if dot == 0:
-        return 0.0
-
-    norm_a = math.sqrt(sum(v * v for v in counter_a.values()))
-    norm_b = math.sqrt(sum(v * v for v in counter_b.values()))
-    if norm_a == 0 or norm_b == 0:
-        return 0.0
-    return dot / (norm_a * norm_b)
+    
+    return 0
 
 # ----------------------------- batch inference stub -----------------------------
 def inference_fn(prompts: List[str]) -> List[str]:
@@ -88,36 +74,27 @@ def evaluate_hrl_f(model: str, segments: Dict[str, List[Dict[str, float]]]) -> L
         for i, seg in enumerate(segs):
             start_time = seg["start_time_s"]
             end_time = seg["end_time_s"]
-            # prepare video clip path by clipping video_path video with video_start_time and end_time
+            
+            # prepare video clip path by clipping video_path video from video_start_time to end_time
             # and save to tmp file
-
-            clip_start = max(start_time - video_start_time, 0.0)
-            clip_duration = max(end_time - start_time, 0.0)
-            video_clip = raw_video_path
-            video_clip_path = video_path
-            if clip_duration > 0:
-                with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as tmp:
-                    tmp_path = Path(tmp.name).resolve()
-                cmd = [
-                    "ffmpeg",
-                    "-y",
-                    "-ss",
-                    f"{clip_start:.3f}",
-                    "-i",
-                    str(raw_video_path),
-                    "-t",
-                    f"{clip_duration:.3f}",
-                    "-c",
-                    "copy",
-                    str(tmp_path),
-                ]
-                try:
-                    subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                except (subprocess.CalledProcessError, FileNotFoundError):
-                    tmp_path.unlink(missing_ok=True)
-                else:
-                    video_clip = tmp_path
-                    video_clip_path = f"file://{tmp_path}"
+            with tempfile.NamedTemporaryFile(suffix=".mp4", delete=False) as tmp:
+                tmp_video_path = tmp.name
+            
+            # Calculate duration from video_start_time to end_time
+            duration = end_time - video_start_time
+            
+            # Use ffmpeg to clip the video
+            ffmpeg_cmd = [
+                "ffmpeg", "-y",
+                "-ss", str(video_start_time),
+                "-i", str(raw_video_path),
+                "-t", str(duration),
+                "-c", "copy",
+                tmp_video_path
+            ]
+            subprocess.run(ffmpeg_cmd, check=True, capture_output=True)
+            
+            video_clip_path = f"file://{tmp_video_path}"   
 
             # prepare prompt
             current_time_window = f"{start_time:.2f}-{end_time:.2f}s"
