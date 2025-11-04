@@ -1,7 +1,13 @@
-PROMPT_HRL_F = """
-Previous Info: {}
+PROMPT_HRL_F = """You are watching a video segment from {start_time_v} to {end_time_v}.
 
-Predict the reaction
+Previously, a viewer watched the video from {start_time_r} to {end_time_r} and reacted as follows:
+{previous_reactions}
+
+Now, predict the viewer’s next reaction for {current_time_window}, considering both the video and the previous reactions.
+
+Write the reaction as a single, complete sentence.
+
+Predicted reaction:
 """
 
 
