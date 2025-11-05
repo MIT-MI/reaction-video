@@ -102,6 +102,7 @@ def evaluate_hrl_f(
     model: str, 
     segments: Dict[str, List[Dict[str, float]]], 
     output_path: Path,
+    stimuli_dir: Path,
     save_interval: int = 10
 ) -> Dict[str, List[Dict]]:
     """
@@ -130,7 +131,7 @@ def evaluate_hrl_f(
     print(f"Processing {len(videos_to_process)} videos")
     
     for vid, segs in tqdm(videos_to_process, desc="Evaluating HRL-F"):
-        raw_video_path = stimuli_data_dir / (vid + ".mp4")
+        raw_video_path = stimuli_dir / (vid + ".mp4")
         
         # Check if video file exists
         if not raw_video_path.exists():
@@ -241,39 +242,32 @@ def evaluate_hrl_f(
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv_dir", default=str(csv_data_dir), help="Directory containing CSV segment descriptions")
-    ap.add_argument("--model", default="qwen2-vl-7b-instruct", help="Model name for evaluation")
-    ap.add_argument("--out_f_full", default="results_hrl_f.json", help="Output JSON for HRL-F results")
+    ap.add_argument("--stimuli_dir", default=str(stimuli_data_dir), help="Directory containing stimuli videos")
+    ap.add_argument("--model", default="Qwen/Qwen2.5-VL-7B-Instruct", help="Model name for evaluation")
+    ap.add_argument("--out_f_full", default="results/results_hrl_f.json", help="Output JSON for HRL-F results")
     ap.add_argument("--save_interval", type=int, default=10, help="Save results every N videos")
     args = ap.parse_args()
 
     # Load video segments
     segs = load_video_segments(Path(args.csv_dir))
     print(f"Loaded {len(segs)} videos from {args.csv_dir}")
-    print("Sample video segments:", list(segs.items())[:1])
     
     # Evaluate HRL-F with incremental saving and resumption support
     print(f"\nEvaluating HRL-F with model: {args.model}")
     print(f"Results will be saved to: {args.out_f_full}")
     print(f"Saving every {args.save_interval} videos")
     
+
+    if not Path(args.out_f_full).parent.exists():
+        Path(args.out_f_full).parent.mkdir(parents=True, exist_ok=True)
+
     results_f = evaluate_hrl_f(
         model=args.model,
         segments=segs,
         output_path=Path(args.out_f_full),
+        stimuli_dir=Path(args.stimuli_dir),
         save_interval=args.save_interval
     )
-    
-    # Calculate and print statistics
-    if results_f:
-        total_segments = sum(len(segments) for segments in results_f.values())
-        all_similarities = [r["similarity"] for vid_results in results_f.values() for r in vid_results]
-        avg_similarity = sum(all_similarities) / len(all_similarities) if all_similarities else 0
-        print(f"\nEvaluation complete!")
-        print(f"Total videos evaluated: {len(results_f)}")
-        print(f"Total segments evaluated: {total_segments}")
-        print(f"Average similarity score: {avg_similarity:.4f}")
-    else:
-        print("\nNo results generated.")
 
 if __name__ == "__main__":
     csv_data_dir = Path("/orcd/scratch/seedfund/001/multimodal/qua/reaction_data/description")
