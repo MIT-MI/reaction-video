@@ -1,13 +1,33 @@
-PROMPT_HRL_F = """A viewer is watching a video segment from {start_time_v} to {end_time_v}.
-
+PROMPT_HRL_V = """A viewer is watching a video segment from {start_time_v} to {end_time_v}.
 Previously, a viewer watched the video from {start_time_r} to {end_time_r} and reacted as follows:
 {previous_reactions}
 
-Now, based on how the viewer reacted previously, predict the viewer’s next reaction for {current_time_window}, considering both the video and the previous reactions.
-
+Now, you are provided with the full video from {start_time_v} to {end_time_v}. Based on how the viewer reacted previously and the video content, predict the viewer’s next reaction for {current_time_window}, considering both the video and the previous reactions.
 Write the reaction as exactly one concise English sentence describing the visible facial expression or emotion.
 
 Predicted reaction:"""
+
+
+PROMPT_HRL_L = """A viewer is watching a video segment from {start_time_l} to {end_time_l}.
+Previously, a viewer watched the video from {start_time_r} to {end_time_r} and made some reactions.
+Now, you are provided with segment-by-segment video captions and the viewer's reactions, predict the viewer’s next reaction for the last video segment.
+
+History:
+{previous_captions_and_reactions}
+Now predict the viewer’s next reaction for the last video segment.
+Viewer Reaction {current_time_window}:
+"""
+
+PROMPT_HRL_L = """A viewer is watching a video segment from {start_time_h} to {end_time_h}.
+Previously, a viewer watched the video from {start_time_r} to {end_time_r} and made some reactions.
+Now, you are provided with segment-by-segment video captions and the viewer's reactions. And you are also provided the current video segment which follows the last video segment in the history.
+Predict the viewer’s next reaction for given video.
+
+History:
+{previous_captions_and_reactions}
+Now predict the viewer’s next reaction for the given video segment.
+Viewer Reaction {current_time_window}:
+"""
 
 
 
@@ -141,7 +161,8 @@ def evaluate_hrl(
             continue
         
         video_start_time = segs[0]["start_time_s"]
-        previous_reactions = ""
+        previous_reactions = []
+        previous_video_captions = []
         video_results = []
         
         for i, seg in enumerate(segs):
@@ -150,62 +171,121 @@ def evaluate_hrl(
             tmp_video_path = None
             
             try:
-                # Create temporary file for video clip
-                with tempfile.NamedTemporaryFile(suffix=".mp4", delete=False) as tmp:
-                    tmp_video_path_full = tmp.name
-                
-                # Calculate duration from video_start_time to end_time
-                duration = end_time - video_start_time
-                
-                # Use ffmpeg to clip the video
-                ffmpeg_cmd = [
-                    "ffmpeg", "-y", "-loglevel", "error",
-                    "-ss", str(video_start_time),
-                    "-i", str(raw_video_path),
-                    "-t", str(duration),
-                    "-c", "copy",
-                    tmp_video_path_full
-                ]
-                subprocess.run(ffmpeg_cmd, check=True, capture_output=True)
-                
-                video_clip_path = f"file://{tmp_video_path_full}"
+                similarity_v = None
+                similarity_l = None
+                similarity_h = None
 
-                # Prepare prompt
-                current_time_window = f"{start_time:.2f}-{end_time:.2f}s"
-                prompt = PROMPT_HRL_F.format(
-                    start_time_v=video_start_time, 
-                    end_time_v=end_time, 
-                    start_time_r=video_start_time, 
-                    end_time_r=start_time, 
-                    previous_reactions=previous_reactions,
-                    current_time_window=current_time_window
-                )
+                if "v" in eval_mode:
+                    # Create temporary file for video clip
+                    with tempfile.NamedTemporaryFile(suffix=".mp4", delete=False) as tmp:
+                        tmp_video_path_full = tmp.name
+                        
+                    # Calculate duration from video_start_time to end_time
+                    duration = end_time - video_start_time
+                    
+                    # Use ffmpeg to clip the video
+                    ffmpeg_cmd = [
+                        "ffmpeg", "-y", "-loglevel", "error",
+                        "-ss", str(video_start_time),
+                        "-i", str(raw_video_path),
+                        "-t", str(duration),
+                        "-c", "copy",
+                        tmp_video_path_full
+                    ]
+                    subprocess.run(ffmpeg_cmd, check=True, capture_output=True)
+                    
+                    video_clip_path = f"file://{tmp_video_path_full}"
+
+                    # Prepare prompt
+                    current_time_window = f"{start_time:.2f}-{end_time:.2f}s"
+                    prompt = PROMPT_HRL_V.format(
+                        start_time_v=video_start_time, 
+                        end_time_v=end_time, 
+                        start_time_r=video_start_time, 
+                        end_time_r=start_time, 
+
+                        current_time_window=current_time_window
+                    )
+                    
+                    # Generate prediction
+                    predicted_reaction = generate_response(
+                        text=prompt,
+                        model=model,
+                        video_path=video_clip_path
+                    )
+
+                    # Calculate similarity
+                    similarity_v = reaction_similarity(predicted_reaction, seg["description"])
                 
-                # import pdb; pdb.set_trace()
+                if "l" in eval_mode:
+                    current_time_window = f"{start_time:.2f}-{end_time:.2f}s"
+                    previous_reactions_and_captions = str("\n".join([f"Video Caption {caption}\nViewer Reaction {reaction}" for caption, reaction in zip(previous_video_captions, previous_reactions)]))
+                    previous_reactions_and_captions += f"\nVideo Caption {f"{start_time:.2f}-{end_time:.2f}s":seg['caption']}"
+                    prompt = PROMPT_HRL_L.format(
+                        start_time_l=video_start_time, 
+                        end_time_l=start_time, 
+                        previous_captions_and_reactions=previous_reactions_and_captions,
+                        current_time_window=current_time_window
+                    )
+
+                    predicted_reaction = generate_response(
+                        text=prompt,
+                        model=model,
+                    )
+                    similarity_l = reaction_similarity(predicted_reaction, seg["description"])
                 
-                # Generate prediction
-                predicted_reaction = generate_response(
-                    text=prompt,
-                    model=model,
-                    video_path=video_clip_path
-                )
-                
-                # Calculate similarity
-                similarity = reaction_similarity(predicted_reaction, seg["description"])
-                
+                if "h" in eval_mode:
+                    current_time_window = f"{start_time:.2f}-{end_time:.2f}s"
+                    with tempfile.NamedTemporaryFile(suffix=".mp4", delete=False) as tmp:
+                        tmp_video_path_cur = tmp.name
+                        
+                    # Calculate duration from video_start_time to end_time
+                    duration = end_time - start_time
+                    previous_reactions_and_captions = str("\n".join([f"Video Caption {caption}\nViewer Reaction {reaction}" for caption, reaction in zip(previous_video_captions, previous_reactions)]))
+
+                    # Use ffmpeg to clip the video
+                    ffmpeg_cmd = [
+                        "ffmpeg", "-y", "-loglevel", "error",
+                        "-ss", str(start_time),
+                        "-i", str(raw_video_path),
+                        "-t", str(duration),
+                        "-c", "copy",
+                        tmp_video_path_cur
+                    ]
+                    subprocess.run(ffmpeg_cmd, check=True, capture_output=True)
+                    
+                    video_clip_path = f"file://{tmp_video_path_cur}"
+                    prompt = PROMPT_HRL_H.format(
+                        start_time_h=start_time, 
+                        end_time_h=end_time, 
+                        start_time_r=video_start_time, 
+                        end_time_r=start_time,
+                        previous_captions_and_reactions=previous_reactions_and_captions,
+                        current_time_window=current_time_window,
+                    )
+                    predicted_reaction = generate_response(
+                        text=prompt,
+                        model=model,
+                        video_path=video_clip_path
+                    )
+                    similarity_h = reaction_similarity(predicted_reaction, seg["description"])
+
                 # Save result
                 result = {
                     "segment_index": i,
                     "time_window": current_time_window,
+                    "similarity_v": similarity_v,
+                    "similarity_l": similarity_l,
+                    "similarity_h": similarity_h,
                     "predicted_reaction": predicted_reaction,
                     "ground_truth_reaction": seg["description"],
-                    "similarity": similarity
                 }
                 video_results.append(result)
                 
                 # Update previous reactions for next iteration
                 cur_reaction = f"Reaction for segment {i+1} ({current_time_window}): {seg['description']}"
-                previous_reactions += "\n" + cur_reaction if previous_reactions else cur_reaction
+                previous_reactions.append(f"({start_time:.2f}-{end_time:.2f}s):" + cur_reaction)
+                previous_video_captions.append(f"({start_time:.2f}-{end_time:.2f}s):" + seg["caption"]) # TODO: get caption from video  
                 
             except Exception as e:
                 print(f"Error processing {vid} segment {i}: {e}")
@@ -213,11 +293,17 @@ def evaluate_hrl(
             
             finally:
                 # Clean up temporary video file immediately
-                if tmp_video_path and os.path.exists(tmp_video_path):
+                if "v" in eval_mode and tmp_video_path_full and os.path.exists(tmp_video_path_full):
                     try:
-                        os.unlink(tmp_video_path)
+                        os.unlink(tmp_video_path_full)
                     except OSError as e:
-                        print(f"Warning: Could not delete temporary file {tmp_video_path}: {e}")
+                        print(f"Warning: Could not delete temporary file {tmp_video_path_full}: {e}")
+                
+                if "h" in eval_mode and tmp_video_path_cur and os.path.exists(tmp_video_path_cur):
+                    try:
+                        os.unlink(tmp_video_path_cur)
+                    except OSError as e:
+                        print(f"Warning: Could not delete temporary file {tmp_video_path_cur}: {e}")
         
         # Store video results
         if video_results:
