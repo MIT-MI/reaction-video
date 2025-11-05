@@ -14,3 +14,7 @@ __pycache__/
 
 # ignore .vscode settings
 .vscode/
+
+# ignore results
+results/
+*/results/

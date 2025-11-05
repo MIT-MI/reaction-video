@@ -23,10 +23,11 @@ import math
 import subprocess
 import tempfile
 import os
+import requests
 from collections import Counter
 from models import generate_response
 
-API_URL = "http://127.0.0.1:8000/similarity"
+API_URL = "http://127.0.0.1:8080/similarity"
 
 # ---------------------- similarity metric (single function) ----------------------
 def reaction_similarity(a: str, b: str) -> float:
