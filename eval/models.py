@@ -11,17 +11,12 @@ def generate_response(text: str, model: str, video_path: str = None) -> str:
             {
                 "role": "user",
                 "content": [
-                        # {"type": "video_url", "video_url": {"url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen2.5-Omni/draw.mp4"}},
-                        # {"type": "audio_url", "audio_url": {"url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen2.5-Omni/cough.wav"}},
-                        # {"type": "video_url", "video_url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen2.5-Omni/draw.mp4"},
                         {"type": "video_url", "video_url": {"url": video_path}},
                         {"type": "text", "text": text}
                 ]
             }
         ],
-        temperature=0.2,
-        # repetition_penalty = 1.0
-        # max_tokens=512,
+        temperature=0.01
     )
     return resp.choices[0].message.content
     

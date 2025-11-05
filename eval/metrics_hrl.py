@@ -18,7 +18,7 @@ from typing import List, Tuple, Dict, Set
 import pandas as pd
 from tqdm import tqdm
 import argparse
-import csv
+import json
 import math
 import subprocess
 import tempfile
@@ -26,10 +26,26 @@ import os
 from collections import Counter
 from models import generate_response
 
+API_URL = "http://127.0.0.1:8000/similarity"
+
 # ---------------------- similarity metric (single function) ----------------------
 def reaction_similarity(a: str, b: str) -> float:
-    
-    return 0
+    """
+    Compute semantic similarity between two texts using the running FastAPI service.
+    Returns a float in [-1, 1].
+    """
+    try:
+        response = requests.post(
+            API_URL,
+            json={"s1": a, "s2": b},
+            timeout=10
+        )
+        response.raise_for_status()
+        result = response.json()
+        return float(result.get("similarity", 0.0))
+    except Exception as e:
+        print(f"[Error] Failed to get similarity: {e}")
+        return 0.0
 
 # ------------------------------- data utilities --------------------------------
 def load_video_segments(csv_dir: Path) -> Dict[str, List[Dict[str, any]]]:
@@ -59,37 +75,27 @@ def load_video_segments(csv_dir: Path) -> Dict[str, List[Dict[str, any]]]:
         segs[vid].sort(key=lambda x: x["start_time_s"])
     return segs
 
-def load_evaluated_videos(output_path: Path) -> Set[str]:
-    """Load the set of already evaluated video IDs from existing results file."""
-    evaluated = set()
+def load_evaluated_videos(output_path: Path) -> Dict[str, List[Dict]]:
+    """Load already evaluated video results from existing JSON file."""
+    evaluated = {}
     if output_path.exists():
         try:
-            df = pd.read_csv(output_path)
-            if "video_id" in df.columns:
-                evaluated = set(df["video_id"].unique())
+            with output_path.open("r", encoding="utf-8") as f:
+                evaluated = json.load(f)
                 print(f"Found {len(evaluated)} already evaluated videos in {output_path}")
         except Exception as e:
             print(f"Warning: Could not load existing results from {output_path}: {e}")
     return evaluated
 
-def save_detailed_results(output_path: Path, results: List[Dict], append: bool = False):
-    """Save detailed evaluation results to CSV."""
+def save_detailed_results(output_path: Path, results: Dict[str, List[Dict]]):
+    """Save detailed evaluation results to JSON as a dictionary with video IDs as keys."""
     if not results:
         return
     
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
-    # Determine fieldnames from first result
-    fieldnames = list(results[0].keys())
-    
-    mode = "a" if append and output_path.exists() else "w"
-    write_header = not (append and output_path.exists())
-    
-    with output_path.open(mode, newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        if write_header:
-            writer.writeheader()
-        writer.writerows(results)
+    with output_path.open("w", encoding="utf-8") as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
 
 # ------------------------------- HRL-F (full) -----------------------------------
 def evaluate_hrl_f(
@@ -97,31 +103,30 @@ def evaluate_hrl_f(
     segments: Dict[str, List[Dict[str, float]]], 
     output_path: Path,
     save_interval: int = 10
-) -> List[Dict]:
+) -> Dict[str, List[Dict]]:
     """
     Evaluate HRL-F metric with incremental saving and resumption support.
     
     Args:
         model: Model name for inference
         segments: Dictionary mapping video IDs to their segments
-        output_path: Path to save results CSV
+        output_path: Path to save results JSON
         save_interval: Save results every N videos (default: 10)
     
     Returns:
-        List of all evaluation results
+        Dictionary mapping video IDs to their evaluation results
     """
     # Load already evaluated videos to support resumption
-    evaluated_videos = load_evaluated_videos(output_path)
+    all_results = load_evaluated_videos(output_path)
     
-    all_results = []
-    pending_results = []
+    pending_results = {}
     video_count = 0
     
     # Filter out already evaluated videos
-    videos_to_process = [(vid, segs) for vid, segs in segments.items() if vid not in evaluated_videos]
+    videos_to_process = [(vid, segs) for vid, segs in segments.items() if vid not in all_results]
     
-    if evaluated_videos:
-        print(f"Skipping {len(evaluated_videos)} already evaluated videos")
+    if all_results:
+        print(f"Skipping {len(all_results)} already evaluated videos")
     print(f"Processing {len(videos_to_process)} videos")
     
     for vid, segs in tqdm(videos_to_process, desc="Evaluating HRL-F"):
@@ -134,6 +139,7 @@ def evaluate_hrl_f(
         
         video_start_time = segs[0]["start_time_s"]
         previous_reactions = ""
+        video_results = []
         
         for i, seg in enumerate(segs):
             start_time = seg["start_time_s"]
@@ -184,15 +190,13 @@ def evaluate_hrl_f(
                 
                 # Save result
                 result = {
-                    "video_id": vid,
                     "segment_index": i,
                     "time_window": current_time_window,
                     "predicted_reaction": predicted_reaction,
                     "ground_truth_reaction": seg["description"],
                     "similarity": similarity
                 }
-                pending_results.append(result)
-                all_results.append(result)
+                video_results.append(result)
                 
                 # Update previous reactions for next iteration
                 cur_reaction = f"Reaction for segment {i+1} ({current_time_window}): {seg['description']}"
@@ -210,36 +214,35 @@ def evaluate_hrl_f(
                     except OSError as e:
                         print(f"Warning: Could not delete temporary file {tmp_video_path}: {e}")
         
+        # Store video results
+        if video_results:
+            all_results[vid] = video_results
+            pending_results[vid] = video_results
+        
         # Increment video counter
         video_count += 1
         
         # Save results incrementally every save_interval videos
         if video_count % save_interval == 0 and pending_results:
-            save_detailed_results(output_path, pending_results, append=True)
-            print(f"Saved results for {video_count} videos ({len(pending_results)} segments)")
-            pending_results = []
+            save_detailed_results(output_path, all_results)
+            total_segments = sum(len(v) for v in pending_results.values())
+            print(f"Saved results for {video_count} videos ({total_segments} segments)")
+            pending_results = {}
     
     # Save any remaining results
     if pending_results:
-        save_detailed_results(output_path, pending_results, append=True)
-        print(f"Saved final batch of {len(pending_results)} segments")
+        save_detailed_results(output_path, all_results)
+        total_segments = sum(len(v) for v in pending_results.values())
+        print(f"Saved final batch: {len(pending_results)} videos ({total_segments} segments)")
     
     return all_results
-
-
-
-# ------------------------------------ I/O --------------------------------------
-def save_scores(path: Path, rows: List[Tuple[str, float]], header=("video_id", "score")):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", newline="") as f:
-        w = csv.writer(f); w.writerow(header); w.writerows(rows)
 
 # ----------------------------------- main --------------------------------------
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv_dir", default=str(csv_data_dir), help="Directory containing CSV segment descriptions")
     ap.add_argument("--model", default="qwen2-vl-7b-instruct", help="Model name for evaluation")
-    ap.add_argument("--out_f_full", default="results_hrl_f.csv", help="Output CSV for HRL-F results")
+    ap.add_argument("--out_f_full", default="results_hrl_f.json", help="Output JSON for HRL-F results")
     ap.add_argument("--save_interval", type=int, default=10, help="Save results every N videos")
     args = ap.parse_args()
 
@@ -262,16 +265,15 @@ def main():
     
     # Calculate and print statistics
     if results_f:
-        avg_similarity = sum(r["similarity"] for r in results_f) / len(results_f)
+        total_segments = sum(len(segments) for segments in results_f.values())
+        all_similarities = [r["similarity"] for vid_results in results_f.values() for r in vid_results]
+        avg_similarity = sum(all_similarities) / len(all_similarities) if all_similarities else 0
         print(f"\nEvaluation complete!")
-        print(f"Total segments evaluated: {len(results_f)}")
+        print(f"Total videos evaluated: {len(results_f)}")
+        print(f"Total segments evaluated: {total_segments}")
         print(f"Average similarity score: {avg_similarity:.4f}")
     else:
         print("\nNo results generated.")
-    
-    # TODO: Implement HRL-S (streaming) evaluation
-    # scores_s = evaluate_hrl_s(segs, args.batch_size, last_only=args.stream_last_only)
-    # save_scores(Path(args.out_f_stream), scores_s, header=("video_id", "score_s"))
 
 if __name__ == "__main__":
     csv_data_dir = Path("/orcd/scratch/seedfund/001/multimodal/qua/reaction_data/description")
