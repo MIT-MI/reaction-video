@@ -1,11 +1,11 @@
-PROMPT_HRL_F = """You are watching a video segment from {start_time_v} to {end_time_v}.
+PROMPT_HRL_F = """A viewer is watching a video segment from {start_time_v} to {end_time_v}.
 
 Previously, a viewer watched the video from {start_time_r} to {end_time_r} and reacted as follows:
 {previous_reactions}
 
-Now, predict the viewer’s next reaction for {current_time_window}, considering both the video and the previous reactions.
+Now, based on how the viewer reacted previously, predict the viewer’s next reaction for {current_time_window}, considering both the video and the previous reactions.
 
-Write the reaction as a single, complete sentence.
+Write the reaction as exactly one concise English sentence describing the visible facial expression or emotion.
 
 Predicted reaction:"""
 
@@ -99,8 +99,9 @@ def save_detailed_results(output_path: Path, results: Dict[str, List[Dict]]):
         json.dump(results, f, indent=2, ensure_ascii=False)
 
 # ------------------------------- HRL-F (full) -----------------------------------
-def evaluate_hrl_f(
+def evaluate_hrl(
     model: str, 
+    eval_mode: str,
     segments: Dict[str, List[Dict[str, float]]], 
     output_path: Path,
     stimuli_dir: Path,
@@ -151,7 +152,7 @@ def evaluate_hrl_f(
             try:
                 # Create temporary file for video clip
                 with tempfile.NamedTemporaryFile(suffix=".mp4", delete=False) as tmp:
-                    tmp_video_path = tmp.name
+                    tmp_video_path_full = tmp.name
                 
                 # Calculate duration from video_start_time to end_time
                 duration = end_time - video_start_time
@@ -163,11 +164,11 @@ def evaluate_hrl_f(
                     "-i", str(raw_video_path),
                     "-t", str(duration),
                     "-c", "copy",
-                    tmp_video_path
+                    tmp_video_path_full
                 ]
                 subprocess.run(ffmpeg_cmd, check=True, capture_output=True)
                 
-                video_clip_path = f"file://{tmp_video_path}"
+                video_clip_path = f"file://{tmp_video_path_full}"
 
                 # Prepare prompt
                 current_time_window = f"{start_time:.2f}-{end_time:.2f}s"
@@ -179,6 +180,8 @@ def evaluate_hrl_f(
                     previous_reactions=previous_reactions,
                     current_time_window=current_time_window
                 )
+                
+                # import pdb; pdb.set_trace()
                 
                 # Generate prediction
                 predicted_reaction = generate_response(
@@ -239,14 +242,22 @@ def evaluate_hrl_f(
     
     return all_results
 
-# ----------------------------------- main --------------------------------------
-def main():
+
+
+if __name__ == "__main__":
+    csv_data_dir = Path("/orcd/scratch/seedfund/001/multimodal/qua/reaction_data/description")
+    stimuli_data_dir = Path("/orcd/scratch/seedfund/001/multimodal/qua/reaction_data/stimuli")
+    result_dir = Path("orcd/home/002/qua/code/reaction/reaction-video/results")
+
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv_dir", default=str(csv_data_dir), help="Directory containing CSV segment descriptions")
     ap.add_argument("--stimuli_dir", default=str(stimuli_data_dir), help="Directory containing stimuli videos")
     ap.add_argument("--model", default="Qwen/Qwen2.5-VL-7B-Instruct", help="Model name for evaluation")
-    ap.add_argument("--out_f_full", default="results/results_hrl_f.json", help="Output JSON for HRL-F results")
+    ap.add_argument("--out_f_full", default=str(result_dir / "results_hrl_f.json"), help="Output JSON for HRL-F results")
     ap.add_argument("--save_interval", type=int, default=10, help="Save results every N videos")
+    ap.add_argument("--eval_mode", default="lvh", help="Evaluation mode: l for language, v for vision, h for hybrid")
+    
+    # ap.add_argument("--")
     args = ap.parse_args()
 
     # Load video segments
@@ -262,17 +273,11 @@ def main():
     if not Path(args.out_f_full).parent.exists():
         Path(args.out_f_full).parent.mkdir(parents=True, exist_ok=True)
 
-    results_f = evaluate_hrl_f(
+    results_f = evaluate_hrl(
         model=args.model,
+        eval_mode=args.eval_mode,
         segments=segs,
         output_path=Path(args.out_f_full),
         stimuli_dir=Path(args.stimuli_dir),
         save_interval=args.save_interval
     )
-
-if __name__ == "__main__":
-    csv_data_dir = Path("/orcd/scratch/seedfund/001/multimodal/qua/reaction_data/description")
-    stimuli_data_dir = Path("/orcd/scratch/seedfund/001/multimodal/qua/reaction_data/stimuli")
-    
-    main()
-
