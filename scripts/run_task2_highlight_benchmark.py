@@ -24,6 +24,9 @@ from eval.backbones import (  # noqa: E402
     GeminiBackbone,
     InternVideoBackbone,
     OpenAIBackbone,
+    OpenRouterBackbone,
+    Qwen2_5OmniBackbone,
+    ReplicateBackbone,
     VLLMBackbone,
     VideoQueryBackbone,
 )
@@ -112,7 +115,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--intense-threshold", type=float, default=DEFAULT_INTENSE_THRESHOLD, help="Trigger score cutoff (<= threshold is mild).")
     parser.add_argument("--prompt", default=None, help="Inline prompt text. Overrides --prompt-file when provided.")
     parser.add_argument("--prompt-file", default=None, help="Optional file containing the scoring prompt.")
-    parser.add_argument("--backbone", choices=("vllm", "gemini", "openai", "internvideo", "minicpm"), required=False, help="MLLM backbone to use.")
+    parser.add_argument("--backbone", choices=("vllm", "gemini", "openai", "openrouter", "internvideo", "minicpm", "videochat-r1", "replicate", "qwen2.5-omni"), required=False, help="MLLM backbone to use.")
     parser.add_argument("--model-name", default=None, help="Model identifier shared by all backbones.")
     parser.add_argument("--api-key", default=None, help="API key for OpenAI/Gemini (optional for local vLLM).")
     parser.add_argument("--base-url", default=None, help="Base URL for OpenAI-compatible endpoints (vLLM or Azure).")
@@ -354,6 +357,8 @@ def build_backbone(args: argparse.Namespace) -> Optional[VideoQueryBackbone]:
         return VLLMBackbone(config)
     if args.backbone == "openai":
         return OpenAIBackbone(config)
+    if args.backbone == "openrouter":
+        return OpenRouterBackbone(config)
     if args.backbone == "gemini":
         return GeminiBackbone(config)
     if args.backbone == "internvideo":
@@ -364,6 +369,14 @@ def build_backbone(args: argparse.Namespace) -> Optional[VideoQueryBackbone]:
     if args.backbone == "videochat" or args.backbone == "videochat-flash":
         from eval.backbones import VideoChatFlashBackbone
         return VideoChatFlashBackbone(config)
+    if args.backbone == "videochat-r1":
+        from eval.backbones import VideoChatR1Backbone
+        return VideoChatR1Backbone(config)
+    if args.backbone == "replicate":
+        from eval.backbones import ReplicateBackbone
+        return ReplicateBackbone(config)
+    if args.backbone == "qwen2.5-omni":
+        return Qwen2_5OmniBackbone(config)
     raise ValueError(f"Unsupported backbone: {args.backbone}")
 
 
