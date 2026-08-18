@@ -34,13 +34,15 @@ PROMPT = (
 
 
 def build_parts(task: dict, r2_base: str, cap: int) -> list[dict]:
+    # stagec/*.mp4 on R2 are already cut to the moment window (start_s/end_s in the task row
+    # are full-video coordinates kept for provenance) — use the whole pre-cut clip.
     parts = [{"type": "text", "text": PROMPT}, {"type": "text", "text": "CONTENT (stimulus):"}]
     stim = fr.fetch_clip(r2_base, task["stimuli_r2_key"])
-    for f in fr.extract_frames(stim, max_frames=cap, start_s=task["start_s"], end_s=task["end_s"]):
+    for f in fr.extract_frames(stim, max_frames=cap):
         parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})
     parts.append({"type": "text", "text": "VIEWER'S REACTION:"})
     face = fr.fetch_clip(r2_base, task["face_r2_key"])
-    for f in fr.extract_frames(face, max_frames=cap, start_s=task["start_s"], end_s=task["end_s"]):
+    for f in fr.extract_frames(face, max_frames=cap):
         parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})
     parts.append({"type": "text", "text": "Your one-sentence explanation:"})
     return parts
