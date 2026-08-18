@@ -69,8 +69,11 @@ def main() -> None:
     r2_base, tasks = payload["r2_base"], payload["tasks"]
     out = HERE / "results/match" / f"{slug(args.model)}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
-    done = {json.loads(l)["candidate_id"] for l in out.read_text().splitlines() if l.strip()} \
-        if out.exists() else set()
+    # resume: an unparsed row (pred_index null) counts as NOT done and is retried;
+    # scorers dedupe by id with last-row-wins, so the append-only log stays consistent
+    done = {r["candidate_id"] for r in
+            (json.loads(l) for l in out.read_text().splitlines() if l.strip())
+            if r["pred_index"] is not None} if out.exists() else set()
 
     backbone = get_backbone(args.model)
     ledger = Ledger(args.model)

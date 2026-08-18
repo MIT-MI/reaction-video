@@ -76,8 +76,10 @@ def main() -> None:
     items = json.loads(args.tasks.read_text())
     out = HERE / "results/ranking" / f"{slug(args.model)}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
-    done = {json.loads(l)["video_id"] for l in out.read_text().splitlines() if l.strip()} \
-        if out.exists() else set()
+    # resume: rows whose scores failed to parse count as NOT done and are retried
+    done = {r["video_id"] for r in
+            (json.loads(l) for l in out.read_text().splitlines() if l.strip())
+            if r.get("scores")} if out.exists() else set()
 
     backbone = get_backbone(args.model)
     ledger = Ledger(args.model)

@@ -84,9 +84,18 @@ class GeminiVertexBackbone:
                 contents.append(t.Part.from_bytes(data=base64.b64decode(b64), mime_type="image/jpeg"))
             else:
                 contents.append(p["text"])
-        r = self._client.models.generate_content(
-            model=self.model, contents=contents,
-            config=t.GenerateContentConfig(max_output_tokens=max_tokens, temperature=0))
+        # max_output_tokens includes thinking tokens on Gemini 3.x; thinking_level="low"
+        # suppresses them (verified: thoughts=None) so the budget goes to the visible answer.
+        try:
+            cfg = t.GenerateContentConfig(
+                max_output_tokens=max_tokens, temperature=0,
+                thinking_config=t.ThinkingConfig(thinking_level="low"))
+            r = self._client.models.generate_content(model=self.model, contents=contents, config=cfg)
+        except Exception as e:
+            if "thinking" not in str(e).lower():
+                raise
+            cfg = t.GenerateContentConfig(max_output_tokens=max_tokens + 4096, temperature=0)
+            r = self._client.models.generate_content(model=self.model, contents=contents, config=cfg)
         u = r.usage_metadata
         return r.text or "", u.prompt_token_count or 0, u.candidates_token_count or 0
 

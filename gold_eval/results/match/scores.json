@@ -1,17 +1,17 @@
 {
-  "gpt-5": {
-    "n_scored": 150,
-    "accuracy": 0.4867,
+  "gemini-3.7-flash": {
+    "n_scored": 111,
+    "accuracy": 0.4595,
     "chance": 0.25,
-    "unparsed": 0,
+    "unparsed": 7,
     "err_temporal_dist_s": {
-      "mean": 22.37,
-      "median": 20.12
+      "mean": 22.58,
+      "median": 18.13
     },
     "acc_by_cultural_specificity": {
-      "0": 0.5,
-      "1": 0.375,
-      "2": 0.4917
+      "0": 0.3529,
+      "1": 0.5,
+      "2": 0.4767
     }
   }
 }

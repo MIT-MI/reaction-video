@@ -1,8 +1,8 @@
 {
-  "gpt-5": {
-    "n_videos_scored": 250,
-    "unparsed": 0,
-    "mean_spearman": 0.0262,
-    "pooled_pearson": 0.2929
+  "gemini-3.7-flash": {
+    "n_videos_scored": 3,
+    "unparsed": 247,
+    "mean_spearman": 1.0,
+    "pooled_pearson": 0.7752
   }
 }
