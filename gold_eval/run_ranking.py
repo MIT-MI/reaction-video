@@ -29,8 +29,9 @@ PROMPT = (
     "per second: frame N corresponds to second N. Below are {k} moments from this video, each a "
     "time range. Rate the INTENSITY of the viewer's reaction in each moment on a 0-100 scale "
     "(0 = calm baseline watching, 100 = peak reaction such as screaming, jumping, hands on "
-    "face). Use the full scale to differentiate the moments. Reply ONLY with a JSON object "
-    'mapping moment ids to integer scores, e.g. {{"m0": 40, "m1": 85}}.\n\nMoments:\n{moments}'
+    "face). Use the full scale to differentiate the moments. Output ONLY a JSON object "
+    'mapping moment ids to integer scores, e.g. {{"m0": 40, "m1": 85}}. Do NOT write any '
+    "analysis or explanation — the JSON object must be your entire answer.\n\nMoments:\n{moments}"
 )
 
 
@@ -92,7 +93,7 @@ def main() -> None:
         vid = item["video_id"]
         try:
             parts = call_with_retry(build_parts, item, args.frame_cap)
-            text, tin, tout = call_with_retry(backbone.complete, parts, max_tokens=120)
+            text, tin, tout = call_with_retry(backbone.complete, parts, max_tokens=320)
             ledger.log(vid, tin, tout)
             scores = parse_scores(text, len(item["moments"]))
             row = {"video_id": vid, "scores": scores, "raw": text.strip()[:400],
