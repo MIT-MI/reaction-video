@@ -22,3 +22,5 @@ __pycache__/
 gold_eval/data/
 gold_eval/results/**/raw/
 .DS_Store
+!gold_eval/results/
+!gold_eval/results/**

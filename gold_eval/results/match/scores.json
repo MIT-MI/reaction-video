@@ -1,0 +1,17 @@
+{
+  "gpt-5": {
+    "n_scored": 150,
+    "accuracy": 0.4867,
+    "chance": 0.25,
+    "unparsed": 0,
+    "err_temporal_dist_s": {
+      "mean": 22.37,
+      "median": 20.12
+    },
+    "acc_by_cultural_specificity": {
+      "0": 0.5,
+      "1": 0.375,
+      "2": 0.4917
+    }
+  }
+}

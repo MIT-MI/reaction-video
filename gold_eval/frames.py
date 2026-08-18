@@ -38,11 +38,20 @@ def extract_frames(clip: Path, fps: float = 1.0, max_side: int = 512,
     if not out_dir.is_dir() or not any(out_dir.glob("*.jpg")):
         tmp_dir = out_dir.with_name(out_dir.name + ".tmp")
         tmp_dir.mkdir(parents=True, exist_ok=True)
-        vf = f"fps={fps},scale='if(gt(iw,ih),{max_side},-2)':'if(gt(iw,ih),-2,{max_side})'"
-        subprocess.run(
-            ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(clip),
-             "-vf", vf, "-q:v", "4", str(tmp_dir / "%05d.jpg")],
-            check=True)
+        scale = f"scale='if(gt(iw,ih),{max_side},-2)':'if(gt(iw,ih),-2,{max_side})'"
+        try:
+            subprocess.run(
+                ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(clip),
+                 "-vf", f"fps={fps},{scale}", "-q:v", "4", str(tmp_dir / "%05d.jpg")],
+                check=True)
+        except subprocess.CalledProcessError:
+            pass
+        if not any(tmp_dir.glob("*.jpg")):
+            # degenerate clip (shorter than 1/fps): fall back to the first frame
+            subprocess.run(
+                ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(clip),
+                 "-vf", scale, "-frames:v", "1", "-q:v", "4", str(tmp_dir / "00001.jpg")],
+                check=True)
         tmp_dir.rename(out_dir)
     frames = sorted(out_dir.glob("*.jpg"))
     if max_frames is not None and len(frames) > max_frames:
