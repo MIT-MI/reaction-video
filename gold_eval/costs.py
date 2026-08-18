@@ -26,8 +26,8 @@ PRICES: dict[str, tuple[float, float]] = {
 
 # Hard abort thresholds per provider (cumulative across all runs).
 PROVIDER_CAPS: dict[str, float] = {
-    "gemini": 100.0,   # ~$110 Vertex credit left; keep headroom
-    "openai": 30.0,    # raise after the GPT-5 decision
+    "gemini": 35.0,    # ~$40 Vertex credit left (2026-08-18); owner swaps account when spent
+    "openai": 30.0,    # GPT-5 approved (owner, 2026-08-18)
     "tinker": float("inf"),
 }
 

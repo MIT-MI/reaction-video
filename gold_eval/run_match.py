@@ -18,6 +18,7 @@ from pathlib import Path
 from . import frames as fr
 from .backbones import get_backbone
 from .costs import BudgetExceeded, Ledger, slug
+from .retry import call_with_retry
 
 HERE = Path(__file__).parent
 LETTERS = "ABCD"
@@ -81,8 +82,8 @@ def main() -> None:
     for i, task in enumerate(todo):
         cid = task["candidate_id"]
         try:
-            parts = build_parts(task, r2_base, args.reaction_cap, args.option_cap)
-            text, tin, tout = backbone.complete(parts, max_tokens=48)
+            parts = call_with_retry(build_parts, task, r2_base, args.reaction_cap, args.option_cap)
+            text, tin, tout = call_with_retry(backbone.complete, parts, max_tokens=48)
             usd = ledger.log(cid, tin, tout)
             row = {"candidate_id": cid, "pred_index": parse_letter(text), "raw": text.strip(),
                    "in_tok": tin, "out_tok": tout}

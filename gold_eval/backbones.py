@@ -48,9 +48,15 @@ class OpenAIBackbone:
                                 "image_url": {"url": p["image_url"]["url"], "detail": "low"}})
             else:
                 content.append(p)
-        r = self._client.chat.completions.create(
-            model=self.model, messages=[{"role": "user", "content": content}],
-            max_tokens=max_tokens, temperature=0)
+        kwargs: dict = {"model": self.model, "messages": [{"role": "user", "content": content}]}
+        if self.model.startswith(("gpt-5", "o")):
+            # Reasoning models: max_completion_tokens includes reasoning tokens (billed as
+            # output), fixed temperature. Minimal effort — benchmark answers, not essays.
+            kwargs.update(max_completion_tokens=max(max_tokens + 512, 1024),
+                          reasoning_effort="minimal")
+        else:
+            kwargs.update(max_tokens=max_tokens, temperature=0)
+        r = self._client.chat.completions.create(**kwargs)
         u = r.usage
         return r.choices[0].message.content or "", u.prompt_tokens, u.completion_tokens
 

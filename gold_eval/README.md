@@ -67,3 +67,44 @@ still logged. Check spend anytime:
 
 `prescreen_rank`/`prescreen_score` fields in the ranking set are for the Gemini self-selection
 analysis ONLY and must never enter a prompt.
+
+## Disconnect / resume (laptop reality)
+
+Everything is designed to be killed at any moment and re-run with the same command:
+
+- **Predictions resume.** Each runner skips ids already present in
+  `results/<task>/<model>.jsonl` (rows are appended per item, so a kill loses at most the
+  in-flight item).
+- **Per-item retry.** Transient errors (network drop, 5xx, rate limit) retry 4× with
+  backoff (`retry.py`); an item that still fails is skipped and picked up by the next
+  re-run. Budget/spend-gate errors abort immediately and are never retried.
+- **Ledger carries over.** Cost totals are recomputed from `results/costs/*.jsonl` at every
+  startup, so caps survive restarts.
+- **Clip/frame cache** (`data/`) is content-addressed by key; partial downloads are written
+  to `.tmp` and renamed, so a killed download never corrupts the cache.
+
+One command re-drives everything (skips finished work):
+
+```bash
+bash gold_eval/run_all.sh            # all arms
+bash gold_eval/run_all.sh tinker     # only grant-billed arms
+caffeinate -is bash gold_eval/run_all.sh   # macOS: keep awake for long runs
+```
+
+**Checkpoint to git** after meaningful progress (results + costs are committed, cache is not):
+
+```bash
+git add gold_eval/results gold_eval/tasks && git commit -m "eval: checkpoint results" && git push
+```
+
+## Migrating to the server (planned ~1 week)
+
+1. Commit + push results from the laptop (above).
+2. On the server: `git clone -b gold-eval <repo>`, create the venv per Setup, install ffmpeg.
+3. Copy env vars into the server shell rc: `TINKER_API_KEY`, `OPENAI_API_KEY`,
+   `GOOGLE_CLOUD_PROJECT/LOCATION/GOOGLE_GENAI_USE_VERTEXAI` (plus
+   `gcloud auth application-default login` on the server, or copy
+   `~/.config/gcloud/application_default_credentials.json`).
+4. `bash gold_eval/run_all.sh` — it resumes exactly where the laptop stopped.
+   (Optionally rsync `gold_eval/data/` to skip re-downloading clips; otherwise it refetches
+   from R2, which is fine.)

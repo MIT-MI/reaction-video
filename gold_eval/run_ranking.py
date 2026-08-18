@@ -20,6 +20,7 @@ from pathlib import Path
 from . import frames as fr
 from .backbones import get_backbone
 from .costs import BudgetExceeded, Ledger, slug
+from .retry import call_with_retry
 
 HERE = Path(__file__).parent
 
@@ -88,8 +89,8 @@ def main() -> None:
     for i, item in enumerate(todo):
         vid = item["video_id"]
         try:
-            parts = build_parts(item, args.frame_cap)
-            text, tin, tout = backbone.complete(parts, max_tokens=120)
+            parts = call_with_retry(build_parts, item, args.frame_cap)
+            text, tin, tout = call_with_retry(backbone.complete, parts, max_tokens=120)
             ledger.log(vid, tin, tout)
             scores = parse_scores(text, len(item["moments"]))
             row = {"video_id": vid, "scores": scores, "raw": text.strip()[:400],
