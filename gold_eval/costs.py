@@ -18,10 +18,19 @@ RESULTS = Path(__file__).parent / "results"
 COSTS_DIR = RESULTS / "costs"
 
 # USD per 1M tokens (input, output). Verify against live pricing pages before big runs.
+# Tinker rates are (prefill, sample) from tinker-docs models page (2026-08) — grant-billed,
+# tracked so grant burn is visible; the tinker cap stays infinite.
 PRICES: dict[str, tuple[float, float]] = {
     "gpt-4o": (2.50, 10.00),           # legacy grandfathered rate
     "gpt-5": (1.25, 10.00),
     "gemini-3.7-flash": (0.75, 3.75),  # intro rate until 2026-12-31, then 1.50/7.50
+    "tinker:Qwen/Qwen3.5-9B": (0.66, 1.995),
+    "tinker:Qwen/Qwen3.6-27B": (1.86, 5.595),
+    "tinker:Qwen/Qwen3.6-35B-A3B": (0.54, 1.335),
+    "tinker:Qwen/Qwen3.5-397B-A17B": (3.00, 7.50),
+    "tinker:moonshotai/Kimi-K2.6": (2.205, 5.49),
+    "tinker:thinkingmachines/Inkling": (1.87, 4.68),      # 50%-off promo rate
+    "tinker:thinkingmachines/Inkling-Small": (0.60, 1.44),  # serverless beta 1.20*, std 2.88
 }
 
 # Hard abort thresholds per provider (cumulative across all runs).
@@ -88,7 +97,11 @@ def main() -> None:
     by_model: dict[str, dict] = {}
     for e in _iter_entries():
         d = by_model.setdefault(e["model"], {"usd": 0.0, "in_tok": 0, "out_tok": 0, "calls": 0})
-        d["usd"] += e["usd"]; d["in_tok"] += e["in_tok"]; d["out_tok"] += e["out_tok"]; d["calls"] += 1
+        usd = e["usd"]
+        if not usd and e["model"] in PRICES:  # rows logged before the price was known
+            pi, po = PRICES[e["model"]]
+            usd = (e["in_tok"] * pi + e["out_tok"] * po) / 1e6
+        d["usd"] += usd; d["in_tok"] += e["in_tok"]; d["out_tok"] += e["out_tok"]; d["calls"] += 1
     if not by_model:
         print("no spend recorded yet")
         return
