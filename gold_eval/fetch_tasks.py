@@ -51,6 +51,16 @@ def main() -> None:
         {"r2_base": R2_PUBLIC, "tasks": rows}, indent=1))
     print(f"[fetch] match_set.json: {len(rows)} tasks")
 
+    rt = sb_all("gold_rationale_tasks?select=candidate_id,video_id,start_s,end_s,face_r2_key,"
+                "stimuli_r2_key,llm_draft,consensus_score&order=candidate_id")
+    (TASKS / "rationale_set.json").write_text(json.dumps({"r2_base": R2_PUBLIC, "tasks": rt}, indent=1))
+    refs = [r for r in sb_all("gold_rationales?select=candidate_id,annotator_id,rationale,status"
+                              "&order=candidate_id") if r["status"] == "ok"]
+    (TASKS / "rationale_refs.json").write_text(json.dumps(refs, indent=1))
+    print(f"[fetch] rationale_set.json: {len(rt)} tasks; rationale_refs.json: {len(refs)} human refs")
+    # llm_draft (Qwen3.5-9B seed) is a model PREDICTION to evaluate — it must never enter
+    # a generation prompt; run_rationale.py only reads keys/times.
+
     if args.ranking_src.exists():
         shutil.copy(args.ranking_src, TASKS / "ranking_set.json")
         n = len(json.loads((TASKS / "ranking_set.json").read_text()))

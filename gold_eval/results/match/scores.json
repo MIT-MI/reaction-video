@@ -1,17 +1,107 @@
 {
   "gemini-3.7-flash": {
-    "n_scored": 111,
-    "accuracy": 0.4595,
+    "n_scored": 141,
+    "accuracy": 0.4539,
     "chance": 0.25,
-    "unparsed": 7,
+    "unparsed": 3,
     "err_temporal_dist_s": {
-      "mean": 22.58,
-      "median": 18.13
+      "mean": 23.02,
+      "median": 20.95
     },
     "acc_by_cultural_specificity": {
-      "0": 0.3529,
+      "0": 0.4,
       "1": 0.5,
-      "2": 0.4767
+      "2": 0.4602
+    }
+  },
+  "gpt-5": {
+    "n_scored": 150,
+    "accuracy": 0.4867,
+    "chance": 0.25,
+    "unparsed": 0,
+    "err_temporal_dist_s": {
+      "mean": 22.37,
+      "median": 20.12
+    },
+    "acc_by_cultural_specificity": {
+      "0": 0.5,
+      "1": 0.375,
+      "2": 0.4917
+    }
+  },
+  "tinker_Qwen_Qwen3.5-397B-A17B": {
+    "n_scored": 150,
+    "accuracy": 0.4467,
+    "chance": 0.25,
+    "unparsed": 0,
+    "err_temporal_dist_s": {
+      "mean": 21.95,
+      "median": 20.27
+    },
+    "acc_by_cultural_specificity": {
+      "0": 0.5,
+      "1": 0.375,
+      "2": 0.4417
+    }
+  },
+  "tinker_Qwen_Qwen3.5-9B": {
+    "n_scored": 150,
+    "accuracy": 0.26,
+    "chance": 0.25,
+    "unparsed": 13,
+    "err_temporal_dist_s": {
+      "mean": 20.34,
+      "median": 18.18
+    },
+    "acc_by_cultural_specificity": {
+      "0": 0.1818,
+      "1": 0.375,
+      "2": 0.2667
+    }
+  },
+  "tinker_Qwen_Qwen3.6-27B": {
+    "n_scored": 150,
+    "accuracy": 0.3867,
+    "chance": 0.25,
+    "unparsed": 0,
+    "err_temporal_dist_s": {
+      "mean": 22.17,
+      "median": 18.93
+    },
+    "acc_by_cultural_specificity": {
+      "0": 0.2727,
+      "1": 0.375,
+      "2": 0.4083
+    }
+  },
+  "tinker_Qwen_Qwen3.6-35B-A3B": {
+    "n_scored": 150,
+    "accuracy": 0.3667,
+    "chance": 0.25,
+    "unparsed": 2,
+    "err_temporal_dist_s": {
+      "mean": 22.0,
+      "median": 19.2
+    },
+    "acc_by_cultural_specificity": {
+      "0": 0.3636,
+      "1": 0.25,
+      "2": 0.375
+    }
+  },
+  "tinker_moonshotai_Kimi-K2.6": {
+    "n_scored": 150,
+    "accuracy": 0.46,
+    "chance": 0.25,
+    "unparsed": 0,
+    "err_temporal_dist_s": {
+      "mean": 22.19,
+      "median": 18.93
+    },
+    "acc_by_cultural_specificity": {
+      "0": 0.4545,
+      "1": 0.375,
+      "2": 0.4667
     }
   }
 }

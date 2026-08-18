@@ -1,0 +1,2684 @@
+[
+ {
+  "candidate_id": "00341_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The viewer reacted because pinball contains physics and I think the person was mocking it.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "00341_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The pin ball machine lit up.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "00341_c00",
+  "annotator_id": "69f98463f2070bddf692b800",
+  "rationale": "The reviewer reacted when a person wearing a bright red dress appeared and began walking down the wooden stairs inside the room.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "00341_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer laughed because the stimulus showed people doing funny things.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "04932_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "I think the reviewer XQC reacted like that because of the way the person jumped down the 20 meters.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "04932_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The characters feet splash into the water",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "04932_c00",
+  "annotator_id": "69f98463f2070bddf692b800",
+  "rationale": "the reviewer reacted when he saw how deep the diver  went",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "04932_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer stayed neutral while watching a person jump from 20 m into a swimming pool.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10121_c00",
+  "annotator_id": "667034c14f027b0188355427",
+  "rationale": "The skateboarder did a 1260.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10121_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The reviewer reacting like this because they did a trick that hasn't been done before.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10121_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The character enters a very large half pipe.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10121_c00",
+  "annotator_id": "69f98463f2070bddf692b800",
+  "rationale": "the reviewer is stunned by  the skaters skills",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10121_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer is shocked and happy because the stimulus showed a person doing a crazy skateboard performance.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10161_c00",
+  "annotator_id": "667034c14f027b0188355427",
+  "rationale": "The ball was thrown back from the darkness.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10161_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The reviewer reacted due to the ball being given back but the background of the video turnt orange which could be deemed as scary.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10161_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A ball flys out of a dark shadowed area.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10161_c00",
+  "annotator_id": "69f98463f2070bddf692b800",
+  "rationale": "it's not clear what was thrown from the dark but it terrified the reviewer",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10161_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked when the ball unexpectedly came out of the dark space.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10300_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The reviewer reacted due to the dog making the noises that the chair would probably make.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10300_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A small dog is seen hiding behind an arm chair.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10300_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because the stimulus showed animal videos doing funny things.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10369_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The giraffe head butts the girl.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10369_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The reviewer reacted because the giraffe hit the lady while she was trying to feed it.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10369_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked when the giraffe hit the woman unexpectedly.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10371_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The garbage bag breaks causing trash to fly everywhere.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10371_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The reviewer reacted because the cue is the man swinging the trash bag then it eventually falls out which shows a sign of waste.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "10371_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer laughed because he is watching a person doing a crazy thing with the garbage bag, and the garbage bag suddenly tore in between.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "14347_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer is giving a neutral reaction because I think he is watching a movie or some video and giving no reaction.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "45404_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The cat swats a waterbottle.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "45404_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The reviewer reacted to the cat finding the bottle as a weird object in which the cue is the cat hitting the bottle.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "45404_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer is happy and laughing because he is watching a funny video of a cat.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "45900_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The reviewer reacted to the slide breaking down and the cue is the person going down the slide.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "45900_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter when he saw a funny video of a kid slide falling apart.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "45912_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "An item is launched high into the sky.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "45912_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The trigger is the something being shot out of a gun and it going so high up in the air.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "45912_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked because he saw a video of an object a person threw up, and it goes too far.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46120_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A person bounces on their side mid way down a slide.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46120_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the man sliding down the slide and hitting their head on the slide.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46120_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer is happy because he is watching a funny video where a person is sliding and hits the ground in a funny way.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46120_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The Reaction is funny. He is watching a video, not sure what is funny in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46120_c02",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the dog having a sixpack.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46120_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction is funny. He is laughing because he is watching a dog video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46120_c03",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The corner of the newspaper is on fire while its reader appears to be unaware.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46120_c03",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the mans newspaper is burning and he is totally unaware of it.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46120_c03",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer is laughing because he is watching some video. I am not sure what the video is about.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46135_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A small hamster struggles to crawl through a toilet paper roll.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46135_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the hamster being stuck inbetween the roll and it struggling to get it.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46135_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer is laughing because he is watching a video in which a hamster is stuck in a paper towel kind of roll and is trying to get out.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46336_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Fire spreads from the cake to surrounding items.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46336_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the candles making a fire after the couple blows on it.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46336_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock while watching a video where suddenly the things on the table catch fire.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46435_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Someone prepares to stand on a flat surface to ride down the stairs.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46435_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person using a board to ride down the stairs and fall off in which triggers the reaction to the fall.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46435_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he is watching a video where a man was trying to do stupid stuff and fall off the stairs.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46445_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "tooth paste squeezes out of the wrong side of the tube.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46445_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person trying to squeeze paste out from the toothpaste but it triggers it coming out from the other side.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46445_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he is watching a funny video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46686_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A mans head gets stuck between closing doors on a train.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46686_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person putting their head inbetween the train doors and it shutting on them which triggers the reaction to him having his head squeezed inbetween the doors.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46686_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked because he was watching a video where a person's head comes in between the closing door of a metro.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46727_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person hitting their head on the lights.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46727_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he's watching a funny video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46759_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A rocket hisses after being ignited.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46759_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the fireworks going off but this triggers it to go to the wrong direction.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46759_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer had a neutral reaction because he is watching a firecracker going up.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46951_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is that the cat is listening to music through headphones in which it triggers the reaction of this unusual thing.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46951_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he is watching a video in which a cat is listening to music using earphones.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46973_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the cat laying down on its back in an unusal postion when the person touches its legs in which it triggers the cat to get up slightly.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "46973_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he is watching a funny video of a cat.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47007_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer had a funny reaction because he is watching some crazy video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47011_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Car veers off the road into a ditch.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47011_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person driving the vehicle and falling into a ditch which triggers a reaction to him falling into the ditch.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47011_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was laughing because he was watching a video in which a car was driving badly and hit the side of the road.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47014_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A car pulls up on the curb while going through a drive-thru.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47014_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the driver reversing back in which it triggers the reaction to them hitting a pole and breaking it off.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47014_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer seems irritated because he is watching a video where a pickup driver has its tire on the curb.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47310_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A ball is thrown at the camera causing a jump scare.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47310_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person throwing the basketball towards the screen in which triggers this reaction to the fearfullness.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47310_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he is watching a funny video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47649_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The video transitions from an attractive female winking to a male laying on a bed throwing a ball.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47649_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral. He is watching a video that I'm not sure about.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47667_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man balances a stack of boxes.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47667_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person carrying all those objects over their head in which is giving the reaction to them being fansinated.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47667_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was appreciating the people in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47708_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The cat swats a water bottle of the counted causing it to land in an upright position.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47708_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the cat throwing off something over the counter top mischievously in which triggers the reaction to the item falling.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47708_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he is watching a cat video in which the cat is throwing a bottle from the shelf.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47892_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A small tin boat accelerates at a very fast speed.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47892_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the speed of how fast the boat can go which triggers the reaction to how fast can the boat actually go.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47892_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was surprised because he is watching a video in which he saw a normal boat speeding so fast.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47899_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A drone is lighting a tree on fire.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47899_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the drone causing fire to the top of the tree in which triggers the reaction to the drone being able to do that.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47899_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock while watching a video where a drone laser is leading to fire on a tree.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47922_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "An unknown substances is poured into a plastic water bottle, spilling everywhere.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "47922_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was disgusted while watching a video in which a person is using some red stuff and putting it in the water bottle.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48014_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A girl in a wheel chair pop wheelies down a step.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48014_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the woman going down the steps and making it on a wheelchair in which triggers the reaction of the drop she made from the top step.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48014_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked by how a person on a wheelchair handled it while coming down some small stairs.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48130_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock while watching a video in which a car was going 250 on a highway and started rolling.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48218_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "An animated tree blows wind causing beach goers to tumble into the water.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48218_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the animated object fake blowing the wind in which blows away the people which triggers the reaction to them being blown away.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48218_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he is watching a funny video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48367_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person flipping the toast and it landing in the postion it did in which triggers the reaction to the toast being in that postion.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48367_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was shocked because he was watching a cooking video where a person did a crazy flip.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48381_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48640_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral. He was watching a video in which a monkey puts his hand in the mouth of a girl.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48897_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A bed is crushed and pulled through a window.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48897_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the bed being taken away by a crane and it going through the window in which triggers the reaction to the sudden bed being decreased in size.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48897_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a funny video in which someone pulled the bed from a window and the bed shatters.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48903_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A lamp post sparks at the base and falls over.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48903_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person holding onto the pole in which the electrics at the bottom start to fuse and this triggers the reaction the fuses making noises.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "48903_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked when a light pole suddenly falls down",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "49145_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral while watching this video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "49237_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A dog springs over a fence with little effort.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "49237_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the hounddog jumping the fence with such ease in which triggers the reaction to the dog jumping the fence in a smart way.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "49237_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he is watching a funny video of a dog jumping the fence.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "49960_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A yelling man explodes in a video game simulation.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50031_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man rips the back of another mans shirt off.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50031_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person ripping off the white shirt off the other person which triggers the reaction to the shirt being ripped.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50031_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because in a video he saw a person trying to pull another person from back by grabbing his T-shirt, and it tears apart.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50037_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A person wearing a VR set starts running towards a wall.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50037_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral while watching a video where a boy is playing Meta Quest.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50332_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Coffee spills from a cup due to the person laughing.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50332_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person overflowing their drink in which the reaciton is that they spill their drink while trying to hold onto it.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50332_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was funny because he's watching a funny video where the other person is laughing and the drink in his hand is spilling all over.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50425_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was short because he saw something fall down in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50427_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A dog lands upright from a flip.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50427_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked when he saw a dog running and got stuck in the net, and then flipped back on his feet.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50456_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A gamer throws a tantrum and hits his keyboard.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50456_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person losing a game of fortnite in which triggers the reaction to them losing.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50631_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Woman hits a bug with her breast.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50631_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person using a body part to hit the roach on the table in which triggers the reaction to them using a body part to hit the roach with it.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50631_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked because a women in the video started thumping her breast on the table.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50693_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A girl sings the word meow in a melodic tone.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50693_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was laughing because he was watching a video in which a woman is singing weirdly.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50696_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he is watching a funny video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50812_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A large quantity of liccorise is placed in a sleeping persons mouth.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50812_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the balloons being put in his mouth in which triggers the reaction to the person being passed out that they cannot feel it.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50812_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked when he saw people putting stuff in another man's mouth when he is sleeping. They did that multiple times, and the man was still sleeping, so the reaction was shocked.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50814_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A dummy becomes animated and grapples a fighter to the floor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50814_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The Reviewer was shocked when he saw a Robo-Figure Man defeating an actual man during the game.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50818_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A person laughs behind a camera while the person in view struggles in a large puddle of water.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50818_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral while he was watching the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50823_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A comes becomes visible in the back of a small car.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50823_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the animal being cramped inside a small car in which triggers the reaction to the animal being in there.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50823_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked when he saw a cow in the back seat of the car.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50825_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A lid to a champagne bottle hits someone in the side of the head causing chaos and mess in the room.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50825_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the cork from the bottle hitting the guys head in which triggers the reaction to the sudden fall off the table.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50825_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked because he's watching a crazy party video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50840_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A door slams shut on someone entering the door on a roller board.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50840_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person riding on the board in which hits the doors which triggers the reaction to the door being closed in the persons face.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50840_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked while watching a man doing crazy stuff in a hotel corridor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50899_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A kid wines \"explain\".",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "50899_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a person's reaction in a video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51022_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A penguin waddles into view.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51022_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the penguin running towards the person and then bowing down in which triggers the reaction to the penguin bowing.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51022_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked watching multiple penguins in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51299_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching Mario's video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51302_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A levitating man jolts upwards into the sky in front of a firing squad.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51302_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person getting shot at and them flying in the air in which triggers the reaction to the them flying in the air.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51302_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was amazed watching action stunts in a movie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51307_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was happy because he was watching some Marvel video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51315_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man shoots at a large monster following the boat.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51315_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because he was watching a person aiming a regular gun at a huge monster in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51322_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was happy and was laughing while watching a movie trailer.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51343_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A cloaked person his beating a man on the floor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51343_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching an NFL video which says \"NFL wild card\".",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51401_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a movie scene in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51413_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a movie scene.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51419_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man levitates off the floor",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51419_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted neutrally while watching a movie clip.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51421_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Spiderman dodges a car being thrown in his direction.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51421_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is Spiderman jumping backwards to avoid the fast moving car thats in the air in which triggers the reaction to the backflip that Spiderman does.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51421_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some spiderman movie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51421_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A car is being thrown at spiderman.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51421_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is Spiderman getting hit with an object in which triggers the reaction to them actually not feeling a thing.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51421_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked while watching some Spider-Man movie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51421_c02",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Spider man catches a falling vehicle right before it crashes to the floor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51421_c02",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the Spiderman using his webs to capture the falling car in which triggers the reaction to him capturing the car.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51421_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some scenes of a Spiderman movie in which Spiderman is trying to save a car which is falling down the highway.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51438_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some anime video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51464_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Reacher attempts to hit a man much larger than him.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51464_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person hitting the bulky man in which triggers then being hit back and falling on the floor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51464_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a video in which a big guy is punching the other guy.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51478_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A dark deformed person reveals himself.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51478_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "Reviewer reacted with shock while watching some clips of the movie Doctor Strange in the Multiverse.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51483_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because in the video, a guy is carrying a chair and dancing among others at a pool party.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51520_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because in the video a person is using his eye beams to destroy the other person.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51533_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A first person shooter hits its intended target.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51533_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer looks happy while watching clips of a video game.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51550_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Wolverine rises up covered in a liquid.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51550_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some movie clips and seeing crazy stunts.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51581_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Grogu hits a button which causes a laser to shoot and destroy a planet.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51581_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person hitting the button which destorys the planet in which triggers the reaction to the planet being destoryed and the population being 14 million.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51581_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching this video in which an elven cartoon destroys the planet.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51590_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A cartoon boy is snuggled while he inches closer to the nipple.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51590_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching an animated video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51592_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching these clips.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51612_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Joker comes into view.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51612_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some video game clips that include a joker figure.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51638_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person trying to capture the hammer in which gives a reaction to the hammer being slowly drifted towards him.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51638_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a Thor video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51669_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man runs out of his car.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51669_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person getting caught cheating with things on his phone in which triggers the reaciton of the person being caught by his girlfriend.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51669_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter by watching the video in which a guy's girlfriend went through his phone and then kicked him out of the car.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51674_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A cartoon is in a position of praise while standing in front of a gym.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51674_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching an animated video about how guys feel in the gym",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51761_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some clips from a movie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51799_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Pedro Pascal appears on camera.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51799_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer laughed while watching a movie trailer about the Fantastic Four.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51843_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Deadpool points at a women.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51843_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching the video in which Spiderman is sitting on this Santa Claus sled.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51850_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a Popeyes ad.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51878_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A possessed looking child is seen runnings towards the camera.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51878_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the scary person coming out of nowhere and running towards the woman in which this triggers a reaction to the horror they encountred.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51878_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a movie trailer in which a zombie figure attacked the girl.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51931_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A dinosaur is preparing to pounce.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51931_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the dinosaur coming closer to the screen in which triggers this reaction of the fearfullness.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "51931_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "Viewer was amazed while watching a Jurassic trailer.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52022_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a funny video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52077_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was happy while watching multiple gaming videos.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52079_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was happy while watching video games video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52121_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A knife is shown in camera view.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52121_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person not running away from the murder in which is a stigma in scary movies in which triggers the reaction to the person not running away but hiding in the most obvious spots.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52121_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter when he was watching the video with the title \"How White People Be in the Scary Movie.\"",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52121_c02",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A person tumbles down a staircase.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52121_c02",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person not running away in which triggers the reaction to the meme in which the person doesn't try to even get away.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52121_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter when he saw the video in which a guy went rolling down through the stairs and a knife is following him.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52121_c04",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person not trying to get away in which triggers them to not even try run away.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52121_c04",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because in the video a black guy is getting scared and alive, and a knife is following him.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52127_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Dragon ball text appears on screen.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52127_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some Dragon Ball video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52289_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some movie trailer.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52565_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A dinosaur falls to the ground in a haze.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52565_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer sounds excited while watching some animated animal videos.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52568_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral, and he was explaining what is happening in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52580_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction is neutral while he is explaining the video and the actions that were happening.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52595_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral, and in the video, don't know what it's about.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52601_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character stomps on another characters head.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52601_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person crushing the persons skull with their feet in which triggers a reaction to the persons skull being crushed.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52601_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching an animated video in which a person breaks the skull of another person by simply using his leg.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52605_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character throws another character to the ground.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52605_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person throwing the other person onto the ground in which triggers the reaction of the person being thrown.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52605_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked while watching the animated video in which a character carries a girl and then throws her down.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52612_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character splits another character in half.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52612_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is of the person dragging somebody onto the sword down the middle in which triggers a reaction to them being dragged inbetween.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52612_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked while watching the animated video in which the character is killing another girl brutally.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52612_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character decapitates another character.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52612_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person chopping the persons head off in which triggers the reaction of head being chopped off.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52612_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock while watching the animated video in which the guy breaks the skull of another person using a rod.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52641_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral while watching an animated video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52652_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching this animated video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52669_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some video of Neo Dragon.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52969_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character leaps across a large gap.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52969_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person running to get across only for the object to fall in which triggers the reaction the person being caught by the edge.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "52969_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was amazed seeing this video game clip.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53003_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A gun can be viewed as being pumped on camera.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53003_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was happy watching the video named \"The Ancient Gods Part 1\".",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53069_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person trying to avoid the fireballs in which triggers the reaction to them avoiding the balls of fire.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53069_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some video game clips.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53269_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A female character is strung up by the neck.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53269_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person getting hanged by the rope in which triggers the reaction to the shock of the hanging.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53269_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked because in the clip, two people were trying to hang a girl.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53270_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character holds up an axe.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53270_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person hitting the hammer on the person laying down in which triggers the reaction of the persons arms being hammered.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53270_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked because in the video, the other two persons keep hammering the girl's hand.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53270_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was neutral and was explaining what is happening in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53272_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character falls to the ground.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53272_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter when he saw the girl hanging on the rope suddenly fall to the ground, funnily.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53304_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character misses the intended target with their arrow.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53304_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person trying to hit someone with a crossbow in which triggers the reaction to them missing their shot.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53304_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some video game clips and while watching a girl miss her shot.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53352_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A frozen body in a narrow passage way comes into view.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53352_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter because in the animated video he saw some frozen dead bodies.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53362_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character kills a zombie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53362_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock while watching an animated gaming video clip where the girl stabbed the guy multiple times using a knife.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53408_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The character says the horse sounds a little \"hoarse\"",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53408_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching the video and the conversation they were having in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53427_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "An explosion throws two characters from their horse.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53427_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer acted shocked. He is watching a gaming video and reacting according to the events.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53429_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person shooting the glass and them falling in which triggers the reaction of the person falling out of the glass.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53429_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching this video as a girl falls down from the roof.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53454_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The character reveals shes pregnant.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53454_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while listening to the conversation in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53492_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is them reacitng to the large army in which triggers the reaction to the amount of army folks there is.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53492_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral while watching some video gaming clips.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53492_c03",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "An arrow flys into the head of one of the characters.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53492_c03",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock while watching video game clips.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53520_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person swaying their swords towards the enemy in which triggers the reaction to the fight.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53520_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer acted neutral while watching an animated clip.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53524_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer is amazed to see all the actions happening in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53573_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Three male characters come into view.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53573_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching an animated video",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53624_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character ducks for cover in a dilapidated building.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53624_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching the video in which people are hiding behind the wall to attack.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53654_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The stool is kicked out from under a woman to be hung.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53654_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person getting hung by a rope in which trigegrs the reaction of the person being hung.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53654_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer acted shocked while watching the video in which some men wearing cowboy hats were hanging a woman.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53671_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character puts on his hat while saying oh very good.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53671_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person being shot at in which triggers the reaction the person taking the hat of the person they shot.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53671_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a person killing all the other men and then taking their cowboy hat.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53690_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A zombie crashes through the glass window.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53690_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the zombie coming through the glass in which triggers the reaction of them being shot.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53690_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked because in the video, two people started acting like zombies and started attacking other people.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53714_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character shoots someone in the head.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53714_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked because in the video, a few men threatened a woman, and the woman shot them.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53741_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A zombie creature jumps out from a dark corner at the characters.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53741_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock while watching a gaming video in which a person is exploring multiple doors and what's behind them, and suddenly, in a door, a creature attacked them.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53790_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person being attacked from behind by a monster in which triggers the event to the person being attacked.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53790_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer's reaction was neutral as he was watching some action video game clips.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53882_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Spiderman hangs upside down saying Math",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53882_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching clips from a Spider-Man movie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53909_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Peter parker appears before a circular portal.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53909_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person coming threw the mysterious orange circle in which the reaction is them saying its a random guy.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53909_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The viewer reacted with laughter while watching clips of a movie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53923_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was amazed by watching the actions in the clip of the spiderman.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53936_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Peter parker is stabbed.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53936_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person putting a knife into the person in which triggers the reaction of them being killed.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "53936_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock and disappointment by watching the clip, which includes the spiderman.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54043_c03",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter by seeing the clip in which it shows three Spider-Man.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54093_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "An animated bat makes sad eyes.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54093_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching some cute clips in an animated video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54441_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A nazi says we shant be bothering your family any longer.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54441_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the group of guys shooting guns towards the floor in which triggers the reaction of the guns being shot.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54441_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked watching the actions in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54441_c02",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Gun shots are fired into the floor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54441_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked when multiple army men started firing on the ground continuously.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54581_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Loki watches thor being tortured.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54581_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked while a giant robo was killing someone.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54630_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character falls to the ground in many pieces.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54630_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person throwing the missle towards the other person in which they spilt into multiple pieces in which triggers the reaction of the person being spilt into pieces.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54630_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked while watching the clips where multiple disturbing actions were happening.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54696_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A character us run over by a large wheel like item.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54696_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked seeing a woman performing really good actions in a movie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54786_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was emotional and happy while watching an emotional scene of a movie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54810_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Thanos grabs kimora by the wrist.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54810_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was emotional when he saw a joint figure taking a girl with him.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54905_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Black panthers is thrown backwards to the floor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54905_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person being kicked in which triggers the reaction to them falling over after being kicked.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54905_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a video clip.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54945_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Black panther is carried to the edge of a cliff.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54945_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the people fighting in which triggers the reaction of one person being defeated.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54945_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was emotional seeing a person beating a man and throwing him off the cliff.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54945_c02",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Black panther is punched in the chest while falling to his knees.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54945_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was emotional watching two men fighting each other in the clip.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54945_c03",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person being thrown off the waterfall in which triggers the reaction to the person being thrown off.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "54945_c03",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was emotional watching a man throwing another man off the waterfall.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55041_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person fighting the others with a sword in which triggers the reaction to them fighting.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55041_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was happy watching a woman killing all the men in the clip with a spear.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55215_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man laughs while revealing he killed the \"tasty B****\"",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55215_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked hearing the audio in the clip.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55420_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was happy seeing the action in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55855_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A person begins to peel of their skin which is falling into a sink.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55855_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person ripping parts of their face off in which triggers the reaction to the person taking apart their face.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55855_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer seems disgusting watching the video where the figure is removing his skin and blood.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55958_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A glass window breaks with the view of a monster behind it.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55958_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked and scared watching a scary scene from a movie where a tree figure took the child.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55959_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A woman reaches up for a child.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "55959_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked while watching the clip in which everything is destroying and a parent is trying to save his child.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "56097_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A boy losses his footing while standing on an open window ledge.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "56097_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person nearly falling off the edge while touching the statue in which triggers the reaction of him capturing her.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "56097_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was laughing while watching the clip.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "56247_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A ghost walks towards a passanger with his hands ready to strangle them.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "56247_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person being strangled and taking out of the doors of the train in which triggers the reaction to them being strangled.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "56247_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked when he saw a figure passing a live man.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "56436_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Boo appears on a fogged cabinet glass door.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "56436_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the letters written to the mirror this triggers the reaction in which the person is horrified by what appeared.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "56436_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked when he saw words appearing on the glass.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "57546_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A large statue is seen walking between city bulidings.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "57546_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person is walking through the city in which is destorying everything next to them this triggers a reaction to them breaking everything in the way.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "57546_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was amazed watching a video clip from a movie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "57548_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer seems neutral while watching this video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "57550_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man is bring stretched by his arms.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "57550_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person being stretched out in which triggers the reaction to them being stretched out.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "57550_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer is shocked while watching a huge figure destroying a man.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "57905_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The viewer is neutral while watching this video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "58150_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Jack sparrow refers to the pig handler as a pig.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "58150_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "A reviewer reacted with laughter while watching the conversation in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "58492_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A hockey player begins to strip off his clothing in the penalty box.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "58492_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a game video, and people are cheering in the video, and a guy took off his shirt.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "58625_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter and shock while watching clips from a series Wednesday.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59055_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Jack black takes a students sandwich from their desk.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59055_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter when she saw a person eating a hot dog funnily in a class.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59090_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A young boy tells Jack Black that he is tacky.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59090_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The viewer reacted with laughter while watching the video because in the video the man is acting crazy.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59741_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A race car spins off track.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59741_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the racing cars driving by eachother in which triggers the reaction to the car being spinned out.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59741_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while he saw a formula racing race.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59741_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A race car is seen off track smoking.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59741_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with disappointment when she saw a car in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59802_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A race car takes a sharp corner going very fast.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59802_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the racing car being at such speed it crashes in which triggers the reaciton to the car crashing.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59802_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer acts shocked while watching a car video in which a car gets destroyed in the accident.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59989_c02",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Fireworks fly into the air while the work crew cheers.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59989_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer acted happy while watching the video in which a player wins the race and there are a lot of fireworks.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59989_c03",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "The race team embraces each other with hugs and celebration.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "59989_c03",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted emotionally when she saw who won the race.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "60083_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Cement pours from a truck onto a suited man laying on his on the floor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "60083_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person laying in front of the cemet bowl in which triggers the reaction to the cemet bowl being poured on them.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "60083_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock while watching a clip from a movie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "60441_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man strangles another man on the floor before vomiting a dark substance onto them.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "60441_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person vomitting out the black liquid outside of their mouth onto the other person in which triggers the reaction of the person laying down having black liquid coming out.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "60441_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with disgust while watching a clip in which a man is throwing up black tar on another person's face.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "60471_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A possessed woman screams at a young boy through a partially broken door before breaking in.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "60471_c01",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person coming through the door in which terrifys the kid which triggers the reaction of the kid being scared.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "60471_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock when she watched a ghost in the video which is trying to scare a boy.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "61010_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A young boy trips and hits his mouth on the floor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "61010_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person falling over and hitting their nose in which triggers the event of the fall to the ground.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "61010_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock when the other guy bullied the other guy.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66185_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Young boys respond \"oh\" when the father of one explains that a Nympho is the state bird of Ohio.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66185_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted neutrally while watching this video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66223_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A girl driving a car pulls something out an interior compartment and it accidentally falls to the ground.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66223_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock when she saw a penguin wearing a T-shirt.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66309_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man that has fallen through the floor boards says their stitches have open up again.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66309_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a man stuck inside the ground.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66347_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Adamn Sandler is serenading Drew Berrymore when a set of dolphins jump in the water beside them.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66347_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter in which a guy is singing to a girl, and behind them, two dolphins are jumping.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66434_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man prances down a set of stairs while holding his white skirt.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66434_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "the cue is person holding the skirt down the stairs with such elegance in which triggers the reaction to the person holding onto the skirt.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66434_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while seeing the video in which a man is wearing a skirt.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66441_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching the animation in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66530_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A child is pulled from her bed and out the window by a dark looking monster.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66530_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person being dragged out of the bed in which triggers the reaction.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66530_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer was shocked watching creatures in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66584_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Thor throws lightning bolts from his fingers, hitting many targets.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66584_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock while watching the video of Thor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66669_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Austin power is sitting in his vehicle and refers to it as a pimp mobile.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "66669_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with laughter while watching a video of a woman in the car.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "67120_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A blindfolded Catherine Zeta Jones, shatters a glass object with her sword.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "67120_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the two people fighting with swords in which they break the glass in which triggers the reaciton to glass being shattered.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "67120_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted, shocked by seeing two women fighting and a zombie appearing, and a woman killed the zombie.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "67273_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Wednesday Adams holds up a knife to a man laying on the floor.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "67273_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock and happiness when seeing a clip from a series Wednesday.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "67377_c01",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man throws a flam ball from his hand towards a large winged statue.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "67377_c01",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock when a man burned a statue using his hands.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68145_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man falls into tank of lobsters that begin to pinch him.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68145_c00",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person in the lobster bowl in which they are being eaten in which triggers the reaction of the them being eaten.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68145_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted with shock when a man suddenly appears in an aquarium.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68158_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Happy introduces himself as an alcoholic during a HAL meeting.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68158_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The reviewer reacted happily while watching the conversation in the video.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68182_c00",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man creams while a being touched by a bear.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68182_c00",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The viewer reacted with laughter while watching a bear pinching a man's nipples.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68208_c03",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "Bad bunny catches a baseball thrown at a high speed in his mouth.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68208_c03",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The viewer reacted with surprise while watching a man catching a ball with different angles and in different ways.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68219_c02",
+  "annotator_id": "6918ad14fcfdc8ec8f99d226",
+  "rationale": "A man is being thrashed around in water by a group of Gators.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68219_c02",
+  "annotator_id": "6a1826fc86551e8cc461a43b",
+  "rationale": "The cue is the person being attacked by the crocidles in which gives a reaction of him being eaten by the crocidles.",
+  "status": "ok"
+ },
+ {
+  "candidate_id": "68219_c02",
+  "annotator_id": "69c9de370243c51e405a3273",
+  "rationale": "The viewer reacted with laughter and a shocking face while watching a man fighting crocodiles in the water.",
+  "status": "ok"
+ }
+]

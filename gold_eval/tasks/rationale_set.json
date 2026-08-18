@@ -1,0 +1,2005 @@
+{
+ "r2_base": "https://pub-b7ceb3feba53440f9924d5ae45fe6f12.r2.dev/",
+ "tasks": [
+  {
+   "candidate_id": "00341_c00",
+   "video_id": "00341",
+   "start_s": 0,
+   "end_s": 3.2,
+   "face_r2_key": "stagec/00341_c00_face.mp4",
+   "stimuli_r2_key": "stagec/00341_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the pinball machine's ball defied realistic physics by appearing to float and move unnaturally, which is highlighted by the on-screen text \"Physics?!\".",
+   "consensus_score": 2.571
+  },
+  {
+   "candidate_id": "04932_c00",
+   "video_id": "04932",
+   "start_s": 7,
+   "end_s": 10,
+   "face_r2_key": "stagec/04932_c00_face.mp4",
+   "stimuli_r2_key": "stagec/04932_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a person diving from a 15-meter height into water, with the camera positioned at the diver\u2019s feet looking up at the massive drop.",
+   "consensus_score": 1.714
+  },
+  {
+   "candidate_id": "10121_c00",
+   "video_id": "10121",
+   "start_s": 11.2,
+   "end_s": 14.5,
+   "face_r2_key": "stagec/10121_c00_face.mp4",
+   "stimuli_r2_key": "stagec/10121_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the skateboarder, after launching off a ramp, executes an incredibly high and complex aerial maneuver before landing back on the board.",
+   "consensus_score": 1.571
+  },
+  {
+   "candidate_id": "10161_c00",
+   "video_id": "10161",
+   "start_s": 3.21,
+   "end_s": 6.21,
+   "face_r2_key": "stagec/10161_c00_face.mp4",
+   "stimuli_r2_key": "stagec/10161_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video abruptly cuts from a dark, empty roadside to a sudden, blurry shot of two figures standing on the road, followed by a chaotic red-tinted scene.",
+   "consensus_score": 2.429
+  },
+  {
+   "candidate_id": "10300_c00",
+   "video_id": "10300",
+   "start_s": 13.51,
+   "end_s": 16.51,
+   "face_r2_key": "stagec/10300_c00_face.mp4",
+   "stimuli_r2_key": "stagec/10300_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a small white dog peeking out from under a table, revealing it was hiding while a cat slept on the couch above.",
+   "consensus_score": 1.714
+  },
+  {
+   "candidate_id": "10369_c00",
+   "video_id": "10369",
+   "start_s": 4.02,
+   "end_s": 6.52,
+   "face_r2_key": "stagec/10369_c00_face.mp4",
+   "stimuli_r2_key": "stagec/10369_c00_stim.mp4",
+   "llm_draft": "The person reacted because the giraffe, after being fed by hand, suddenly grabbed them with its mouth and pulled them down over the fence.",
+   "consensus_score": 1.857
+  },
+  {
+   "candidate_id": "10371_c00",
+   "video_id": "10371",
+   "start_s": 3.69,
+   "end_s": 6.19,
+   "face_r2_key": "stagec/10371_c00_face.mp4",
+   "stimuli_r2_key": "stagec/10371_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a man carrying a large white sack that suddenly bursts open, revealing a live pig inside.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "14347_c00",
+   "video_id": "14347",
+   "start_s": 7,
+   "end_s": 10,
+   "face_r2_key": "stagec/14347_c00_face.mp4",
+   "stimuli_r2_key": "stagec/14347_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows Sonic, after being ejected from a car, flying through the air and crashing into a tree.",
+   "consensus_score": 1.714
+  },
+  {
+   "candidate_id": "45404_c00",
+   "video_id": "45404",
+   "start_s": 0,
+   "end_s": 3,
+   "face_r2_key": "stagec/45404_c00_face.mp4",
+   "stimuli_r2_key": "stagec/45404_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the serval repeatedly and aggressively swipes its paw at the blue and black object on the couch, displaying intense predatory focus and physical exertion.",
+   "consensus_score": 2.333
+  },
+  {
+   "candidate_id": "45900_c00",
+   "video_id": "45900",
+   "start_s": 2,
+   "end_s": 5.3,
+   "face_r2_key": "stagec/45900_c00_face.mp4",
+   "stimuli_r2_key": "stagec/45900_c00_stim.mp4",
+   "llm_draft": "The person reacted because the green spiral slide catastrophically failed and collapsed onto the ground after a child slid down it.",
+   "consensus_score": 2.333
+  },
+  {
+   "candidate_id": "45912_c00",
+   "video_id": "45912",
+   "start_s": 1.89,
+   "end_s": 5.89,
+   "face_r2_key": "stagec/45912_c00_face.mp4",
+   "stimuli_r2_key": "stagec/45912_c00_stim.mp4",
+   "llm_draft": "A dark, box-shaped object falls from the sky and crashes onto the snowy road, creating a puff of dust and debris upon impact.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "46120_c00",
+   "video_id": "46120",
+   "start_s": 0,
+   "end_s": 3,
+   "face_r2_key": "stagec/46120_c00_face.mp4",
+   "stimuli_r2_key": "stagec/46120_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a child sliding down a large indoor slide and then abruptly stopping at the bottom, which causes their body to contort and appear to be thrown forward with significant force.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "46120_c01",
+   "video_id": "46120",
+   "start_s": 2.32,
+   "end_s": 5.32,
+   "face_r2_key": "stagec/46120_c01_face.mp4",
+   "stimuli_r2_key": "stagec/46120_c01_stim.mp4",
+   "llm_draft": "The man reacted because the newspaper he is reading suddenly caught fire from the bottom right corner, with flames visibly licking up the page while he remained seated and eating his bread.",
+   "consensus_score": 2.333
+  },
+  {
+   "candidate_id": "46120_c02",
+   "video_id": "46120",
+   "start_s": 2.2,
+   "end_s": 5,
+   "face_r2_key": "stagec/46120_c02_face.mp4",
+   "stimuli_r2_key": "stagec/46120_c02_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a severely emaciated dog with visible ribs and a large bruise on its side, followed by a close-up of its sad, tearful eyes.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "46120_c03",
+   "video_id": "46120",
+   "start_s": 1.67,
+   "end_s": 4.67,
+   "face_r2_key": "stagec/46120_c03_face.mp4",
+   "stimuli_r2_key": "stagec/46120_c03_stim.mp4",
+   "llm_draft": "The man reacted because a fire was burning on the newspaper he was reading.",
+   "consensus_score": 2.333
+  },
+  {
+   "candidate_id": "46135_c00",
+   "video_id": "46135",
+   "start_s": 0,
+   "end_s": 3,
+   "face_r2_key": "stagec/46135_c00_face.mp4",
+   "stimuli_r2_key": "stagec/46135_c00_stim.mp4",
+   "llm_draft": "A hamster gets its head stuck in a roll of toilet paper and struggles to free itself while moving across a desk.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "46336_c00",
+   "video_id": "46336",
+   "start_s": 2.9,
+   "end_s": 5.9,
+   "face_r2_key": "stagec/46336_c00_face.mp4",
+   "stimuli_r2_key": "stagec/46336_c00_stim.mp4",
+   "llm_draft": "The woman reacted with shock because the candles on her birthday cake ignited a large fire that quickly engulfed the floral decorations and table setting.",
+   "consensus_score": 2.667
+  },
+  {
+   "candidate_id": "46435_c00",
+   "video_id": "46435",
+   "start_s": 2.5,
+   "end_s": 5.5,
+   "face_r2_key": "stagec/46435_c00_face.mp4",
+   "stimuli_r2_key": "stagec/46435_c00_stim.mp4",
+   "llm_draft": "The person reacted because the individual at the top of the stairs loses their balance and falls backward down the steps after stepping onto a white box placed on the landing.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "46445_c00",
+   "video_id": "46445",
+   "start_s": 2.09,
+   "end_s": 5.09,
+   "face_r2_key": "stagec/46445_c00_face.mp4",
+   "stimuli_r2_key": "stagec/46445_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a hand squeezing an almost empty tube of toothpaste, causing a large glob to suddenly pop out from the closed cap end, defying the expectation that no more paste would come out.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "46686_c00",
+   "video_id": "46686",
+   "start_s": 0,
+   "end_s": 3,
+   "face_r2_key": "stagec/46686_c00_face.mp4",
+   "stimuli_r2_key": "stagec/46686_c00_stim.mp4",
+   "llm_draft": "The person reacted because the woman in the video suddenly kicked the green laundry basket, causing it to fly through the air and knock over items on the floor while she laughed hysterically.",
+   "consensus_score": 2.167
+  },
+  {
+   "candidate_id": "46727_c01",
+   "video_id": "46727",
+   "start_s": 0,
+   "end_s": 2,
+   "face_r2_key": "stagec/46727_c01_face.mp4",
+   "stimuli_r2_key": "stagec/46727_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the person in the video jumped so high that their head made contact with the ceiling fan, causing it to spin rapidly and illuminate their face with light.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "46759_c00",
+   "video_id": "46759",
+   "start_s": 1.5,
+   "end_s": 4.5,
+   "face_r2_key": "stagec/46759_c00_face.mp4",
+   "stimuli_r2_key": "stagec/46759_c00_stim.mp4",
+   "llm_draft": "A rocket launches from a rooftop, leaving a bright trail of sparks and smoke as it ascends into the night sky.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "46951_c00",
+   "video_id": "46951",
+   "start_s": 0,
+   "end_s": 3,
+   "face_r2_key": "stagec/46951_c00_face.mp4",
+   "stimuli_r2_key": "stagec/46951_c00_stim.mp4",
+   "llm_draft": "The person reacted because the white cat in the video is shown wearing a white earbud, implying it is listening to music along with the person.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "46973_c00",
+   "video_id": "46973",
+   "start_s": 0,
+   "end_s": 3.8,
+   "face_r2_key": "stagec/46973_c00_face.mp4",
+   "stimuli_r2_key": "stagec/46973_c00_stim.mp4",
+   "llm_draft": "The cat\u2019s head is completely hidden by its own body while lying on its back, creating a comical and confusing visual that likely triggered the viewer\u2019s reaction.",
+   "consensus_score": 3
+  },
+  {
+   "candidate_id": "47007_c00",
+   "video_id": "47007",
+   "start_s": 5.49,
+   "end_s": 8.49,
+   "face_r2_key": "stagec/47007_c00_face.mp4",
+   "stimuli_r2_key": "stagec/47007_c00_stim.mp4",
+   "llm_draft": "The person reacted with shock and excitement because they were holding a WWE Legends action figure of \"Junkyard Dog\" and then immediately threw it into the air in celebration.",
+   "consensus_score": 1.833
+  },
+  {
+   "candidate_id": "47011_c00",
+   "video_id": "47011",
+   "start_s": 1.5,
+   "end_s": 5,
+   "face_r2_key": "stagec/47011_c00_face.mp4",
+   "stimuli_r2_key": "stagec/47011_c00_stim.mp4",
+   "llm_draft": "A red pickup truck drives up a hill and then loses control, flipping over backward down the road.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "47014_c00",
+   "video_id": "47014",
+   "start_s": 4,
+   "end_s": 7.5,
+   "face_r2_key": "stagec/47014_c00_face.mp4",
+   "stimuli_r2_key": "stagec/47014_c00_stim.mp4",
+   "llm_draft": "The white pickup truck repeatedly rams its front left tire into the yellow protective bollard, causing it to chip and break off.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "47310_c00",
+   "video_id": "47310",
+   "start_s": 2.68,
+   "end_s": 6.18,
+   "face_r2_key": "stagec/47310_c00_face.mp4",
+   "stimuli_r2_key": "stagec/47310_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a man in an office who, after watching a basketball clip, gets so excited that he throws his headset off his head in celebration.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "47649_c00",
+   "video_id": "47649",
+   "start_s": 1.5,
+   "end_s": 4.5,
+   "face_r2_key": "stagec/47649_c00_face.mp4",
+   "stimuli_r2_key": "stagec/47649_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a football being thrown upward to hit a large, protruding bump on a popcorn-textured ceiling.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "47667_c00",
+   "video_id": "47667",
+   "start_s": 2.03,
+   "end_s": 5.03,
+   "face_r2_key": "stagec/47667_c00_face.mp4",
+   "stimuli_r2_key": "stagec/47667_c00_stim.mp4",
+   "llm_draft": "The person reacted because the extremely tall, unstable stack of white-wrapped mattresses they were attempting to place suddenly collapsed forward, crushing the individual who was crouched directly beneath it.",
+   "consensus_score": 1.5
+  },
+  {
+   "candidate_id": "47708_c00",
+   "video_id": "47708",
+   "start_s": 0,
+   "end_s": 3,
+   "face_r2_key": "stagec/47708_c00_face.mp4",
+   "stimuli_r2_key": "stagec/47708_c00_stim.mp4",
+   "llm_draft": "The white cat on the kitchen counter knocked a water bottle off the edge, causing it to fall to the floor.",
+   "consensus_score": 1.833
+  },
+  {
+   "candidate_id": "47892_c00",
+   "video_id": "47892",
+   "start_s": 3.93,
+   "end_s": 6.93,
+   "face_r2_key": "stagec/47892_c00_face.mp4",
+   "stimuli_r2_key": "stagec/47892_c00_stim.mp4",
+   "llm_draft": "A man in a small wooden boat reaches out and grabs the woman on the surfboard, pulling her toward his vessel as she loses balance.",
+   "consensus_score": 2.167
+  },
+  {
+   "candidate_id": "47899_c01",
+   "video_id": "47899",
+   "start_s": 0.5,
+   "end_s": 3.5,
+   "face_r2_key": "stagec/47899_c01_face.mp4",
+   "stimuli_r2_key": "stagec/47899_c01_stim.mp4",
+   "llm_draft": "The person reacted because a drone is shown flying while emitting a long, bright orange trail of fire or exhaust.",
+   "consensus_score": 1.833
+  },
+  {
+   "candidate_id": "47922_c00",
+   "video_id": "47922",
+   "start_s": 1.96,
+   "end_s": 4.96,
+   "face_r2_key": "stagec/47922_c00_face.mp4",
+   "stimuli_r2_key": "stagec/47922_c00_stim.mp4",
+   "llm_draft": "The person reacted because the thick, dark red substance being squeezed from the bag into the plastic bottle is visibly splattering and overflowing onto the sink and surrounding area, indicating a messy and uncontrolled transfer.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "48014_c00",
+   "video_id": "48014",
+   "start_s": 3.79,
+   "end_s": 6.79,
+   "face_r2_key": "stagec/48014_c00_face.mp4",
+   "stimuli_r2_key": "stagec/48014_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the woman in the wheelchair, after exiting her home, immediately begins to spin rapidly in circles on the paved driveway.",
+   "consensus_score": 2.333
+  },
+  {
+   "candidate_id": "48130_c00",
+   "video_id": "48130",
+   "start_s": 5.12,
+   "end_s": 8.12,
+   "face_r2_key": "stagec/48130_c00_face.mp4",
+   "stimuli_r2_key": "stagec/48130_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the red motorcycle, traveling at high speed on a highway, violently flips over its side and crashes onto its wheels.",
+   "consensus_score": 1.5
+  },
+  {
+   "candidate_id": "48218_c00",
+   "video_id": "48218",
+   "start_s": 3,
+   "end_s": 7,
+   "face_r2_key": "stagec/48218_c00_face.mp4",
+   "stimuli_r2_key": "stagec/48218_c00_stim.mp4",
+   "llm_draft": "A giant pixelated tree from Super Mario Bros. falls onto a crowded beach, instantly burying the sand and people in a massive cloud of dust.",
+   "consensus_score": 2.167
+  },
+  {
+   "candidate_id": "48367_c00",
+   "video_id": "48367",
+   "start_s": 3.23,
+   "end_s": 6.23,
+   "face_r2_key": "stagec/48367_c00_face.mp4",
+   "stimuli_r2_key": "stagec/48367_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video abruptly cuts from a golf scene to a close-up of a piece of bread being flipped in a pan, revealing it has been cooked into a perfect, detailed likeness of a human face.",
+   "consensus_score": 1.667
+  },
+  {
+   "candidate_id": "48381_c00",
+   "video_id": "48381",
+   "start_s": 2.19,
+   "end_s": 5.39,
+   "face_r2_key": "stagec/48381_c00_face.mp4",
+   "stimuli_r2_key": "stagec/48381_c00_stim.mp4",
+   "llm_draft": "The person reacted because a man blindfolded with a patterned cloth is shown kneeling on a floral rug, repeatedly using a knife to slice open white cotton balls scattered across the floor.",
+   "consensus_score": 1.667
+  },
+  {
+   "candidate_id": "48640_c00",
+   "video_id": "48640",
+   "start_s": 5.21,
+   "end_s": 8.21,
+   "face_r2_key": "stagec/48640_c00_face.mp4",
+   "stimuli_r2_key": "stagec/48640_c00_stim.mp4",
+   "llm_draft": "The person reacted because a monkey in the video reached out and shoved its hand directly into the girl's open mouth as she yawned.",
+   "consensus_score": 2.333
+  },
+  {
+   "candidate_id": "48897_c00",
+   "video_id": "48897",
+   "start_s": 3.29,
+   "end_s": 6.29,
+   "face_r2_key": "stagec/48897_c00_face.mp4",
+   "stimuli_r2_key": "stagec/48897_c00_stim.mp4",
+   "llm_draft": "The bed levitates and flies across the room, defying gravity.",
+   "consensus_score": 1.667
+  },
+  {
+   "candidate_id": "48903_c00",
+   "video_id": "48903",
+   "start_s": 2.63,
+   "end_s": 6.63,
+   "face_r2_key": "stagec/48903_c00_face.mp4",
+   "stimuli_r2_key": "stagec/48903_c00_stim.mp4",
+   "llm_draft": "The person reacted because they witnessed a man successfully pulling down two large, hanging LSU banners from a lamppost.",
+   "consensus_score": 1.833
+  },
+  {
+   "candidate_id": "49145_c00",
+   "video_id": "49145",
+   "start_s": 4.83,
+   "end_s": 8.03,
+   "face_r2_key": "stagec/49145_c00_face.mp4",
+   "stimuli_r2_key": "stagec/49145_c00_stim.mp4",
+   "llm_draft": "The person reacted because a child in a yellow outfit is performing breakdancing moves, including a handstand, in the middle of a store aisle.",
+   "consensus_score": 2.333
+  },
+  {
+   "candidate_id": "49237_c00",
+   "video_id": "49237",
+   "start_s": 1.96,
+   "end_s": 4.96,
+   "face_r2_key": "stagec/49237_c00_face.mp4",
+   "stimuli_r2_key": "stagec/49237_c00_stim.mp4",
+   "llm_draft": "The person reacted because the yellow rubber chicken toy is shown being dipped into and then lifted out of a can of tomato soup, causing its head to become completely covered in the red liquid.",
+   "consensus_score": 1.667
+  },
+  {
+   "candidate_id": "49960_c00",
+   "video_id": "49960",
+   "start_s": 3.29,
+   "end_s": 6.29,
+   "face_r2_key": "stagec/49960_c00_face.mp4",
+   "stimuli_r2_key": "stagec/49960_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because Alex Jones, in the Minecraft gameplay, is seen running directly toward and then turning to face a stationary Creeper \u2014 a hostile mob known for its explosive behavior \u2014 creating an immediate sense of impending danger or comedic tension.",
+   "consensus_score": 1.667
+  },
+  {
+   "candidate_id": "50031_c00",
+   "video_id": "50031",
+   "start_s": 8.83,
+   "end_s": 10.83,
+   "face_r2_key": "stagec/50031_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50031_c00_stim.mp4",
+   "llm_draft": "The person reacted because they saw the other individual lying on the bed in a relaxed, unimpressed posture while watching television, which likely triggered frustration or annoyance at their lack of engagement or effort.",
+   "consensus_score": 1.833
+  },
+  {
+   "candidate_id": "50037_c00",
+   "video_id": "50037",
+   "start_s": 3.2,
+   "end_s": 6.7,
+   "face_r2_key": "stagec/50037_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50037_c00_stim.mp4",
+   "llm_draft": "The person reacted because the man in the video suddenly lunges forward with extreme speed and force, causing the woman he was holding to be violently thrown off balance and fall to the ground.",
+   "consensus_score": 1.833
+  },
+  {
+   "candidate_id": "50332_c00",
+   "video_id": "50332",
+   "start_s": 2.38,
+   "end_s": 6.38,
+   "face_r2_key": "stagec/50332_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50332_c00_stim.mp4",
+   "llm_draft": "The person reacted because the man in the video, while holding a cup, suddenly bends over and urinates on the floor.",
+   "consensus_score": 1.6
+  },
+  {
+   "candidate_id": "50425_c00",
+   "video_id": "50425",
+   "start_s": 1.82,
+   "end_s": 5.82,
+   "face_r2_key": "stagec/50425_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50425_c00_stim.mp4",
+   "llm_draft": "The person reacted because a dark, round object on the mantelpiece suddenly fell and rolled off, causing a loud crash that startled them.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "50427_c00",
+   "video_id": "50427",
+   "start_s": 3.29,
+   "end_s": 6.29,
+   "face_r2_key": "stagec/50427_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50427_c00_stim.mp4",
+   "llm_draft": "The dog, attempting to jump over the tennis net, gets its front paws caught on the top band, causing it to be violently yanked upward and backward into a dramatic, flailing mid-air flip before crashing onto the court.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "50456_c00",
+   "video_id": "50456",
+   "start_s": 3.82,
+   "end_s": 7.42,
+   "face_r2_key": "stagec/50456_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50456_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video they were watching showed a young man violently smashing a computer monitor with his fist.",
+   "consensus_score": 2.6
+  },
+  {
+   "candidate_id": "50631_c00",
+   "video_id": "50631",
+   "start_s": 2.12,
+   "end_s": 5.12,
+   "face_r2_key": "stagec/50631_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50631_c00_stim.mp4",
+   "llm_draft": "The person reacted because they suddenly pulled their left arm into a tight, protective hug against their chest, causing their shirt to bunch up dramatically around their midsection.",
+   "consensus_score": 2.8
+  },
+  {
+   "candidate_id": "50693_c00",
+   "video_id": "50693",
+   "start_s": 2.66,
+   "end_s": 5.66,
+   "face_r2_key": "stagec/50693_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50693_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the man with the \"Google Search Engine\" nameplate, after listening to the woman, turned his head and looked away with a dismissive expression.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "50696_c01",
+   "video_id": "50696",
+   "start_s": 5.48,
+   "end_s": 8.48,
+   "face_r2_key": "stagec/50696_c01_face.mp4",
+   "stimuli_r2_key": "stagec/50696_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because a man in a black suit and sunglasses, who was previously unseen, suddenly appeared behind the desk and began talking on a phone.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "50812_c00",
+   "video_id": "50812",
+   "start_s": 8,
+   "end_s": 10.5,
+   "face_r2_key": "stagec/50812_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50812_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because a hand reaches in and forcibly stuffs a red object, which appears to be a strap or cord, into the man's open mouth while he is slumped against the car window.",
+   "consensus_score": 1.6
+  },
+  {
+   "candidate_id": "50814_c00",
+   "video_id": "50814",
+   "start_s": 3.23,
+   "end_s": 6.23,
+   "face_r2_key": "stagec/50814_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50814_c00_stim.mp4",
+   "llm_draft": "The person reacted because the man in black successfully executed a throw, using the mannequin's own momentum to flip it over his shoulder and onto its back.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "50818_c00",
+   "video_id": "50818",
+   "start_s": 1.96,
+   "end_s": 4.96,
+   "face_r2_key": "stagec/50818_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50818_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the person in the blue jacket, who was standing on the ice, suddenly collapsed and fell completely through the frozen surface into the water below.",
+   "consensus_score": 1.4
+  },
+  {
+   "candidate_id": "50823_c00",
+   "video_id": "50823",
+   "start_s": 1.86,
+   "end_s": 4.86,
+   "face_r2_key": "stagec/50823_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50823_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because a large white dog is sitting in the driver's seat of a green car, appearing to drive it down a road.",
+   "consensus_score": 1.6
+  },
+  {
+   "candidate_id": "50825_c00",
+   "video_id": "50825",
+   "start_s": 3.5,
+   "end_s": 7,
+   "face_r2_key": "stagec/50825_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50825_c00_stim.mp4",
+   "llm_draft": "The man in the white shirt standing on the right is forcefully pulling the pants down of the man sitting at the table, which caused the strong reaction from the other people in the room.",
+   "consensus_score": 1.6
+  },
+  {
+   "candidate_id": "50840_c00",
+   "video_id": "50840",
+   "start_s": 4.5,
+   "end_s": 7.5,
+   "face_r2_key": "stagec/50840_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50840_c00_stim.mp4",
+   "llm_draft": "The person reacted because they witnessed a man in the hallway suddenly lose his balance and fall hard onto the floor.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "50899_c00",
+   "video_id": "50899",
+   "start_s": 2.12,
+   "end_s": 5.62,
+   "face_r2_key": "stagec/50899_c00_face.mp4",
+   "stimuli_r2_key": "stagec/50899_c00_stim.mp4",
+   "llm_draft": "The person reacted because the central pivot system in the video is shown actively spraying water onto a surface, creating visible mist and splashes as it rotates.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "51022_c00",
+   "video_id": "51022",
+   "start_s": 1.62,
+   "end_s": 4.62,
+   "face_r2_key": "stagec/51022_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51022_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because a penguin in the video turns around and waddles directly toward the camera, filling the frame with its back.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "51299_c00",
+   "video_id": "51299",
+   "start_s": 1.86,
+   "end_s": 5.36,
+   "face_r2_key": "stagec/51299_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51299_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character, Mario in his Cat form, performs a sudden and aggressive swipe with his paw directly towards the camera.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "51302_c01",
+   "video_id": "51302",
+   "start_s": 8.23,
+   "end_s": 11.73,
+   "face_r2_key": "stagec/51302_c01_face.mp4",
+   "stimuli_r2_key": "stagec/51302_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a man in a hospital gown, covered in bloodstains, levitating in mid-air while looking up in terror.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "51307_c00",
+   "video_id": "51307",
+   "start_s": 5.76,
+   "end_s": 9.26,
+   "face_r2_key": "stagec/51307_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51307_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character in the video is being forcibly removed from his yellow visor, which is a key piece of his costume.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "51315_c00",
+   "video_id": "51315",
+   "start_s": 5.86,
+   "end_s": 8.86,
+   "face_r2_key": "stagec/51315_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51315_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the giant, textured monster's massive maw opens wide to reveal rows of sharp teeth and a dark interior, creating a sudden and visceral threat.",
+   "consensus_score": 2.8
+  },
+  {
+   "candidate_id": "51322_c00",
+   "video_id": "51322",
+   "start_s": 5.33,
+   "end_s": 7.83,
+   "face_r2_key": "stagec/51322_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51322_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the man, after hugging the two women, abruptly turns away with a stern and angry expression, breaking the moment of comfort.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "51343_c00",
+   "video_id": "51343",
+   "start_s": 1.58,
+   "end_s": 5.58,
+   "face_r2_key": "stagec/51343_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51343_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the person in the white sheet, who was previously standing, suddenly collapses and falls face-first onto the wet floor.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "51401_c00",
+   "video_id": "51401",
+   "start_s": 2.38,
+   "end_s": 5.88,
+   "face_r2_key": "stagec/51401_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51401_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows Rocket Raccoon, after surviving a fiery explosion, being tenderly embraced by his teammates with a look of profound sadness on his face.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "51413_c01",
+   "video_id": "51413",
+   "start_s": 3.47,
+   "end_s": 7.47,
+   "face_r2_key": "stagec/51413_c01_face.mp4",
+   "stimuli_r2_key": "stagec/51413_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the character, after being shown a glowing, circular object that resembles a portal or a strange artifact, suddenly and violently lunges forward with his arm extended as if to grab or attack something unseen.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "51419_c00",
+   "video_id": "51419",
+   "start_s": 2.29,
+   "end_s": 6.29,
+   "face_r2_key": "stagec/51419_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51419_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because Doctor Strange uses the Time Stone to rewind time, which causes the entire scene to violently reverse and explode in a massive burst of energy.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "51421_c00",
+   "video_id": "51421",
+   "start_s": 1.88,
+   "end_s": 5.38,
+   "face_r2_key": "stagec/51421_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51421_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a car being violently flipped and crushed by Thanos's Infinity Gauntlet while Spider-Man watches in shock.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "51421_c01",
+   "video_id": "51421",
+   "start_s": 1.88,
+   "end_s": 5.38,
+   "face_r2_key": "stagec/51421_c01_face.mp4",
+   "stimuli_r2_key": "stagec/51421_c01_stim.mp4",
+   "llm_draft": "The person reacted because Spider-Man uses his webbing to catch a falling car and prevent it from crashing into the vehicle occupied by the woman, thereby saving her life.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "51421_c02",
+   "video_id": "51421",
+   "start_s": 4.12,
+   "end_s": 7.12,
+   "face_r2_key": "stagec/51421_c02_face.mp4",
+   "stimuli_r2_key": "stagec/51421_c02_stim.mp4",
+   "llm_draft": "The person reacted because the video shows Iron Spider-Man diving through a highway, narrowly avoiding a large truck and causing a massive pile-up of cars and debris that nearly hits a civilian in the backseat of a car.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "51438_c00",
+   "video_id": "51438",
+   "start_s": 2.12,
+   "end_s": 5.62,
+   "face_r2_key": "stagec/51438_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51438_c00_stim.mp4",
+   "llm_draft": "The character Dark Might delivers a confident, villainous monologue while charging a massive fireball attack, culminating in a powerful punch that engulfs his opponent in flames.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "51464_c00",
+   "video_id": "51464",
+   "start_s": 2.11,
+   "end_s": 5.61,
+   "face_r2_key": "stagec/51464_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51464_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the man in the black shirt suddenly lunged forward and physically attacked the other man, initiating a violent fight.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "51478_c00",
+   "video_id": "51478",
+   "start_s": 2.29,
+   "end_s": 5.29,
+   "face_r2_key": "stagec/51478_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51478_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character, Silas, is shown with a grotesque, decaying face and a long, worm-like creature emerging from his mouth.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "51483_c00",
+   "video_id": "51483",
+   "start_s": 3.52,
+   "end_s": 7.02,
+   "face_r2_key": "stagec/51483_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51483_c00_stim.mp4",
+   "llm_draft": "The person reacted because a man in a white shirt and dark shorts is seen physically shoving and grappling with another man in swim trunks near the edge of the swimming pool, causing a chaotic scene where other people rush to intervene.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "51520_c01",
+   "video_id": "51520",
+   "start_s": 1.5,
+   "end_s": 5,
+   "face_r2_key": "stagec/51520_c01_face.mp4",
+   "stimuli_r2_key": "stagec/51520_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the character Cyclops fires a powerful optic blast from his eyes, which is shown striking and hitting the back of the other character's head.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "51533_c00",
+   "video_id": "51533",
+   "start_s": 1.7,
+   "end_s": 4.7,
+   "face_r2_key": "stagec/51533_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51533_c00_stim.mp4",
+   "llm_draft": "The player reacted because the video shows an enemy character, who was previously on the ground, being launched high into the air after being shot.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "51550_c00",
+   "video_id": "51550",
+   "start_s": 1.82,
+   "end_s": 4.82,
+   "face_r2_key": "stagec/51550_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51550_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character Deadpool, after being shot by Wolverine, is shown standing up from the ground instead of remaining dead.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "51581_c00",
+   "video_id": "51581",
+   "start_s": 11.62,
+   "end_s": 15.12,
+   "face_r2_key": "stagec/51581_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51581_c00_stim.mp4",
+   "llm_draft": "The viewer reacted with shock and horror because the video shows the planet they are on being destroyed in a massive explosion, followed by a computer screen confirming the event with the message \"PLANET DESTROYED\" and \"POPULATION: 14,000,000\".",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "51590_c00",
+   "video_id": "51590",
+   "start_s": 2.88,
+   "end_s": 5.88,
+   "face_r2_key": "stagec/51590_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51590_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character's expression shifts from peaceful sleep to one of sudden, wide-eyed terror as the large, smiling grey figure behind them begins to peel off their own skin like a mask.",
+   "consensus_score": 2.6
+  },
+  {
+   "candidate_id": "51592_c00",
+   "video_id": "51592",
+   "start_s": 3,
+   "end_s": 7,
+   "face_r2_key": "stagec/51592_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51592_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a grotesque, multi-limbed boss monster from the game *Dark Souls* performing a violent and complex attack on the player character.",
+   "consensus_score": 2.8
+  },
+  {
+   "candidate_id": "51612_c00",
+   "video_id": "51612",
+   "start_s": 7.12,
+   "end_s": 10.12,
+   "face_r2_key": "stagec/51612_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51612_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a large, monstrous figure with a spiky head and multiple arms standing amidst explosions and fireworks.",
+   "consensus_score": 2.6
+  },
+  {
+   "candidate_id": "51638_c01",
+   "video_id": "51638",
+   "start_s": 4.12,
+   "end_s": 6.62,
+   "face_r2_key": "stagec/51638_c01_face.mp4",
+   "stimuli_r2_key": "stagec/51638_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because Thor, after being hit with his own hammer Mjolnir, realizes he is powerless and begins to laugh hysterically at his own misfortune.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "51669_c00",
+   "video_id": "51669",
+   "start_s": 3.09,
+   "end_s": 6.59,
+   "face_r2_key": "stagec/51669_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51669_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a close-up of a woman\u2019s face with a visibly angry or upset expression, directly illustrating the emotional consequence of the text overlay stating she went through their phone while they were away.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "51674_c01",
+   "video_id": "51674",
+   "start_s": 2.12,
+   "end_s": 5.12,
+   "face_r2_key": "stagec/51674_c01_face.mp4",
+   "stimuli_r2_key": "stagec/51674_c01_stim.mp4",
+   "llm_draft": "The person reacted because the video shows the anime character Frieza dramatically emerging from a GoodLife Fitness gym, juxtaposing his imposing presence with the mundane setting to create a humorous meme about men's gym experiences.",
+   "consensus_score": 2.6
+  },
+  {
+   "candidate_id": "51761_c00",
+   "video_id": "51761",
+   "start_s": 3.88,
+   "end_s": 7.38,
+   "face_r2_key": "stagec/51761_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51761_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows the droid BB-8 being launched from a vehicle, flying through the air, and then landing safely on a distant rock formation.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "51799_c00",
+   "video_id": "51799",
+   "start_s": 4,
+   "end_s": 7.5,
+   "face_r2_key": "stagec/51799_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51799_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video displayed a quote from Ryan Britt of Men's Journal calling the film \"one of the best superhero movies of all time.\"",
+   "consensus_score": 2.833
+  },
+  {
+   "candidate_id": "51843_c01",
+   "video_id": "51843",
+   "start_s": 1.57,
+   "end_s": 4.57,
+   "face_r2_key": "stagec/51843_c01_face.mp4",
+   "stimuli_r2_key": "stagec/51843_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the character on the right, dressed as Deadpool, is shown holding a bouquet of flowers while making a suggestive gesture with his hand over his mouth.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "51850_c00",
+   "video_id": "51850",
+   "start_s": 6.35,
+   "end_s": 9.35,
+   "face_r2_key": "stagec/51850_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51850_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video showed a hand in a plastic glove pressing down on a large fried chicken sandwich, which caused the sandwich to collapse and fall apart.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "51878_c00",
+   "video_id": "51878",
+   "start_s": 1.82,
+   "end_s": 5.42,
+   "face_r2_key": "stagec/51878_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51878_c00_stim.mp4",
+   "llm_draft": "The person reacted because a ghostly figure, initially seen as a faint silhouette in a doorway, suddenly lunged forward and grabbed the woman by the throat.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "51931_c00",
+   "video_id": "51931",
+   "start_s": 2.88,
+   "end_s": 5.88,
+   "face_r2_key": "stagec/51931_c00_face.mp4",
+   "stimuli_r2_key": "stagec/51931_c00_stim.mp4",
+   "llm_draft": "The person reacted because the bipedal dinosaur in the video turned its head and looked directly at the camera.",
+   "consensus_score": 2.8
+  },
+  {
+   "candidate_id": "52022_c01",
+   "video_id": "52022",
+   "start_s": 4.38,
+   "end_s": 8.38,
+   "face_r2_key": "stagec/52022_c01_face.mp4",
+   "stimuli_r2_key": "stagec/52022_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the video showed a man screaming in terror while being attacked by a giant, monstrous creature.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "52077_c00",
+   "video_id": "52077",
+   "start_s": 9.62,
+   "end_s": 12.62,
+   "face_r2_key": "stagec/52077_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52077_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows the character Kyo Kusanagi performing a powerful, ground-shattering special move on the beach.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "52079_c00",
+   "video_id": "52079",
+   "start_s": 3.43,
+   "end_s": 6.93,
+   "face_r2_key": "stagec/52079_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52079_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the real-life wrestler, after being shown a video of a character delivering a powerful green energy punch, climbed onto the ring apron and raised his fists in a triumphant pose that directly mimicked the on-screen action.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "52121_c01",
+   "video_id": "52121",
+   "start_s": 4.33,
+   "end_s": 7.83,
+   "face_r2_key": "stagec/52121_c01_face.mp4",
+   "stimuli_r2_key": "stagec/52121_c01_stim.mp4",
+   "llm_draft": "The person reacted because a man in the video is seen frantically crawling across the floor, then diving onto a couch in an exaggerated, panicked motion.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "52121_c02",
+   "video_id": "52121",
+   "start_s": 3.33,
+   "end_s": 6.63,
+   "face_r2_key": "stagec/52121_c02_face.mp4",
+   "stimuli_r2_key": "stagec/52121_c02_stim.mp4",
+   "llm_draft": "The person reacts because they are shown crawling backward down a staircase in extreme fear, clutching the wall for support while fleeing from a dark, ominous doorway at the top of the stairs.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "52121_c04",
+   "video_id": "52121",
+   "start_s": 2.12,
+   "end_s": 5.62,
+   "face_r2_key": "stagec/52121_c04_face.mp4",
+   "stimuli_r2_key": "stagec/52121_c04_stim.mp4",
+   "llm_draft": "The person reacted because the man in the video, after initially appearing calm while washing dishes, suddenly jumps up with a terrified expression and frantically grabs an air freshener spray bottle as if it were a weapon to defend himself from an unseen threat.",
+   "consensus_score": 2.6
+  },
+  {
+   "candidate_id": "52127_c00",
+   "video_id": "52127",
+   "start_s": 9.46,
+   "end_s": 12.96,
+   "face_r2_key": "stagec/52127_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52127_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a character from *Dragon Ball Super* unleashing a powerful energy blast, followed by the official title card for the anime series appearing on screen.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "52289_c00",
+   "video_id": "52289",
+   "start_s": 1.92,
+   "end_s": 5.32,
+   "face_r2_key": "stagec/52289_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52289_c00_stim.mp4",
+   "llm_draft": "The person reacted because Will Smith's character, Detective James Cole, is shown in the video violently shooting and killing the man who was chasing him.",
+   "consensus_score": 1.6
+  },
+  {
+   "candidate_id": "52565_c00",
+   "video_id": "52565",
+   "start_s": 2.06,
+   "end_s": 5.06,
+   "face_r2_key": "stagec/52565_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52565_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a large, predatory dinosaur with glowing eyes emerging from the mist to reveal itself as the \"Venomous Commander,\" a boss monster in the game.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "52568_c00",
+   "video_id": "52568",
+   "start_s": 5.12,
+   "end_s": 8.12,
+   "face_r2_key": "stagec/52568_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52568_c00_stim.mp4",
+   "llm_draft": "The person reacted because a large, reptilian creature with glowing eyes appears and reveals its intent to eat the small blue mushroom by saying, \"Looking for a snack / To swallow whole.\"",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "52580_c02",
+   "video_id": "52580",
+   "start_s": 5.38,
+   "end_s": 8.38,
+   "face_r2_key": "stagec/52580_c02_face.mp4",
+   "stimuli_r2_key": "stagec/52580_c02_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a large dinosaur-like creature being violently launched into the air as twin horns split the sand beneath it.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "52595_c00",
+   "video_id": "52595",
+   "start_s": 3.33,
+   "end_s": 7.33,
+   "face_r2_key": "stagec/52595_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52595_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video depicts a character being held underwater by another character, leading to their apparent drowning.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "52601_c00",
+   "video_id": "52601",
+   "start_s": 2.88,
+   "end_s": 6.88,
+   "face_r2_key": "stagec/52601_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52601_c00_stim.mp4",
+   "llm_draft": "The viewer reacted with horror because the masked killer repeatedly stomped on the victim's head, causing it to be crushed and splattered with blood.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "52605_c01",
+   "video_id": "52605",
+   "start_s": 2.62,
+   "end_s": 5.62,
+   "face_r2_key": "stagec/52605_c01_face.mp4",
+   "stimuli_r2_key": "stagec/52605_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the character in the video raises a large cleaver above their head and then brings it down to strike a person lying on the ground, causing a visible spray of blood.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "52612_c00",
+   "video_id": "52612",
+   "start_s": 2.61,
+   "end_s": 6.11,
+   "face_r2_key": "stagec/52612_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52612_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows the character Jason Voorhees, identifiable by his hockey mask, methodically dragging a body across the ground with a shovel.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "52612_c01",
+   "video_id": "52612",
+   "start_s": 3.12,
+   "end_s": 6.12,
+   "face_r2_key": "stagec/52612_c01_face.mp4",
+   "stimuli_r2_key": "stagec/52612_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the masked killer, after raising his machete in a threatening manner, proceeds to stab the person lying on the ground.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "52641_c00",
+   "video_id": "52641",
+   "start_s": 1.88,
+   "end_s": 4.88,
+   "face_r2_key": "stagec/52641_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52641_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because a massive, crystalline structure is shown violently shattering and exploding into a shower of glowing purple energy and debris.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "52652_c00",
+   "video_id": "52652",
+   "start_s": 2.62,
+   "end_s": 6.12,
+   "face_r2_key": "stagec/52652_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52652_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the ghost character, which was initially peeking from behind the door, suddenly lunged forward and directly toward the camera's viewpoint.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "52669_c00",
+   "video_id": "52669",
+   "start_s": 4.62,
+   "end_s": 8.62,
+   "face_r2_key": "stagec/52669_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52669_c00_stim.mp4",
+   "llm_draft": "The person reacted because the large, menacing character known as Super Shadow Sonic suddenly disappears from the scene, leaving only the smaller character standing alone in the dark.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "52969_c00",
+   "video_id": "52969",
+   "start_s": 3.12,
+   "end_s": 6.62,
+   "face_r2_key": "stagec/52969_c00_face.mp4",
+   "stimuli_r2_key": "stagec/52969_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character, Nathan Drake, is shown falling a great distance from a high, crumbling structure after his grapple line snaps.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53003_c00",
+   "video_id": "53003",
+   "start_s": 5.12,
+   "end_s": 8.12,
+   "face_r2_key": "stagec/53003_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53003_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows the iconic Doom Slayer character, clad in his distinctive green and blue armor, emerging from a dark corridor with a massive, glowing weapon, which is then revealed to be the title card for \"The Ancient Gods Part One\" from the game Doom Eternal.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53069_c00",
+   "video_id": "53069",
+   "start_s": 7.12,
+   "end_s": 10.12,
+   "face_r2_key": "stagec/53069_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53069_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a first-person perspective of navigating a dark, overgrown, and decaying underwater tunnel, which creates a tense and unsettling atmosphere.",
+   "consensus_score": 1.6
+  },
+  {
+   "candidate_id": "53269_c00",
+   "video_id": "53269",
+   "start_s": 2.38,
+   "end_s": 4.88,
+   "face_r2_key": "stagec/53269_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53269_c00_stim.mp4",
+   "llm_draft": "The character Abby is shown being dragged backwards by an unseen force, causing her to scream \"No--\" in terror.",
+   "consensus_score": 1.6
+  },
+  {
+   "candidate_id": "53270_c00",
+   "video_id": "53270",
+   "start_s": 3.12,
+   "end_s": 7.12,
+   "face_r2_key": "stagec/53270_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53270_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the man on the ground is shown being dragged by his arm across the wet, muddy ground by another person.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "53270_c02",
+   "video_id": "53270",
+   "start_s": 5.38,
+   "end_s": 9.38,
+   "face_r2_key": "stagec/53270_c02_face.mp4",
+   "stimuli_r2_key": "stagec/53270_c02_stim.mp4",
+   "llm_draft": "The viewer reacted because the character in the video, after being grabbed by another person, suddenly pulls a knife and turns to face unseen threats.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "53272_c00",
+   "video_id": "53272",
+   "start_s": 3.42,
+   "end_s": 6.62,
+   "face_r2_key": "stagec/53272_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53272_c00_stim.mp4",
+   "llm_draft": "The person reacted because the character in the video is shown being violently struck and then collapsing to the ground.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "53304_c00",
+   "video_id": "53304",
+   "start_s": 4.38,
+   "end_s": 7.88,
+   "face_r2_key": "stagec/53304_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53304_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character in the video game is shown being violently shot and thrown backward across a rooftop.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "53352_c00",
+   "video_id": "53352",
+   "start_s": 23.38,
+   "end_s": 26.88,
+   "face_r2_key": "stagec/53352_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53352_c00_stim.mp4",
+   "llm_draft": "The person reacted because the character in the video game turns to look at a grotesque, frozen face that has been carved into the side of a rock.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53362_c00",
+   "video_id": "53362",
+   "start_s": 8.5,
+   "end_s": 11.5,
+   "face_r2_key": "stagec/53362_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53362_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character Ellie is shown to be critically injured and lying on the floor, with a large pool of blood visible around her.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "53408_c00",
+   "video_id": "53408",
+   "start_s": 5.38,
+   "end_s": 7.88,
+   "face_r2_key": "stagec/53408_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53408_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character Ellie, while riding a horse with Dina, says the line \"Oh boy\" as they ride through a field of purple flowers.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "53427_c00",
+   "video_id": "53427",
+   "start_s": 39.88,
+   "end_s": 43.38,
+   "face_r2_key": "stagec/53427_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53427_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character, Ellie, is shown crawling on the ground while a man off-screen urgently shouts, \"Get the other! Don't lose her! Go!\", indicating she is being pursued or hunted.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "53429_c00",
+   "video_id": "53429",
+   "start_s": 3.38,
+   "end_s": 6.38,
+   "face_r2_key": "stagec/53429_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53429_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character Dina is violently thrown across the room and impales herself on a piece of furniture, killing her instantly.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "53454_c00",
+   "video_id": "53454",
+   "start_s": 14.62,
+   "end_s": 18.62,
+   "face_r2_key": "stagec/53454_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53454_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character Dina, while visibly crying and in distress, says the line \"Ellie...\" as she looks up at the other character, Ellie.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53492_c00",
+   "video_id": "53492",
+   "start_s": 12.1,
+   "end_s": 15.1,
+   "face_r2_key": "stagec/53492_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53492_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a massive army of armored soldiers and giant, horned beasts charging forward in a powerful, coordinated assault.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53492_c03",
+   "video_id": "53492",
+   "start_s": 19.63,
+   "end_s": 22.63,
+   "face_r2_key": "stagec/53492_c03_face.mp4",
+   "stimuli_r2_key": "stagec/53492_c03_stim.mp4",
+   "llm_draft": "The viewer reacted because the character in the video, after being surrounded by magical symbols, is suddenly and violently thrown backward into the air.",
+   "consensus_score": 1.6
+  },
+  {
+   "candidate_id": "53520_c01",
+   "video_id": "53520",
+   "start_s": 12,
+   "end_s": 15,
+   "face_r2_key": "stagec/53520_c01_face.mp4",
+   "stimuli_r2_key": "stagec/53520_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a massive, dark, and menacing creature with glowing red eyes emerging from the mist and advancing on an army.",
+   "consensus_score": 1.6
+  },
+  {
+   "candidate_id": "53524_c00",
+   "video_id": "53524",
+   "start_s": 4.73,
+   "end_s": 7.73,
+   "face_r2_key": "stagec/53524_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53524_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video depicts a character being brutally impaled on a large, horned weapon by an enemy in a fiery battle scene.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53573_c00",
+   "video_id": "53573",
+   "start_s": 5.6,
+   "end_s": 9.2,
+   "face_r2_key": "stagec/53573_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53573_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the game character, Arthur Morgan, is shown dancing with a group of women on a pier, which is an unexpected and humorous interaction.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53624_c00",
+   "video_id": "53624",
+   "start_s": 2.5,
+   "end_s": 5.5,
+   "face_r2_key": "stagec/53624_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53624_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character in the video physically grabs another man by the hair and pulls his head back while holding a rifle to his neck.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53654_c01",
+   "video_id": "53654",
+   "start_s": 7.17,
+   "end_s": 10.67,
+   "face_r2_key": "stagec/53654_c01_face.mp4",
+   "stimuli_r2_key": "stagec/53654_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the video depicts a character being hanged by a noose, which is shown in close-up as the person's neck is constricted and they are lifted off the ground.",
+   "consensus_score": 1.6
+  },
+  {
+   "candidate_id": "53671_c00",
+   "video_id": "53671",
+   "start_s": 19.87,
+   "end_s": 22.87,
+   "face_r2_key": "stagec/53671_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53671_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character in the video, after ordering someone to take off their boots, proceeds to shoot that person while they are kneeling on the ground.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53690_c00",
+   "video_id": "53690",
+   "start_s": 7.77,
+   "end_s": 10.77,
+   "face_r2_key": "stagec/53690_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53690_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows the character Joel holding a gun and pointing it at the character Jimmy, who is cowering on the floor in fear.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53714_c00",
+   "video_id": "53714",
+   "start_s": 6.8,
+   "end_s": 9.8,
+   "face_r2_key": "stagec/53714_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53714_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character Joel physically tackles and subdues the thug who was threatening them.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53741_c00",
+   "video_id": "53741",
+   "start_s": 33,
+   "end_s": 36.8,
+   "face_r2_key": "stagec/53741_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53741_c00_stim.mp4",
+   "llm_draft": "The viewer reacted with horror to the moment the character, Joel, brutally stomps on and crushes the head of a dismembered enemy corpse.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "53790_c00",
+   "video_id": "53790",
+   "start_s": 29,
+   "end_s": 32,
+   "face_r2_key": "stagec/53790_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53790_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because a zombie suddenly appears on the character's back, attacking him.",
+   "consensus_score": 1.8
+  },
+  {
+   "candidate_id": "53882_c01",
+   "video_id": "53882",
+   "start_s": 4.4,
+   "end_s": 7.9,
+   "face_r2_key": "stagec/53882_c01_face.mp4",
+   "stimuli_r2_key": "stagec/53882_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the character, after being told \"Don't do this,\" defiantly says, \"I have to try,\" and then deliberately jumps into the fiery portal, directly disobeying the warning.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "53909_c00",
+   "video_id": "53909",
+   "start_s": 1.87,
+   "end_s": 5.37,
+   "face_r2_key": "stagec/53909_c00_face.mp4",
+   "stimuli_r2_key": "stagec/53909_c00_stim.mp4",
+   "llm_draft": "A man steps out of a swirling, fiery portal that has appeared in the middle of a living room.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "53923_c02",
+   "video_id": "53923",
+   "start_s": 3.67,
+   "end_s": 7.67,
+   "face_r2_key": "stagec/53923_c02_face.mp4",
+   "stimuli_r2_key": "stagec/53923_c02_stim.mp4",
+   "llm_draft": "The person reacted because the video shows two Spider-Man characters swinging at high speed through the air, performing acrobatic maneuvers against a dark city skyline.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "53936_c01",
+   "video_id": "53936",
+   "start_s": 8,
+   "end_s": 11,
+   "face_r2_key": "stagec/53936_c01_face.mp4",
+   "stimuli_r2_key": "stagec/53936_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows Peter Parker, after being defeated by his enemy, discovering that Gwen Stacy is lying dead in the rubble of the destroyed building.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "54043_c03",
+   "video_id": "54043",
+   "start_s": 3,
+   "end_s": 6,
+   "face_r2_key": "stagec/54043_c03_face.mp4",
+   "stimuli_r2_key": "stagec/54043_c03_stim.mp4",
+   "llm_draft": "The viewer reacted because the three Spider-Man characters, after a tense confrontation, simultaneously leap off a high structure into the night, initiating a dynamic chase sequence.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "54093_c00",
+   "video_id": "54093",
+   "start_s": 5.1,
+   "end_s": 8.6,
+   "face_r2_key": "stagec/54093_c00_face.mp4",
+   "stimuli_r2_key": "stagec/54093_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the small cat character, Timon, expresses a deep longing to see new things and meet someone his own age, which is then immediately followed by his own desperate, pleading attempt to stop himself from thinking about it.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "54441_c01",
+   "video_id": "54441",
+   "start_s": 16.03,
+   "end_s": 20.03,
+   "face_r2_key": "stagec/54441_c01_face.mp4",
+   "stimuli_r2_key": "stagec/54441_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the scene depicts a group of German soldiers, led by an officer, entering a room and then abruptly leaving without any interaction, which is a common cinematic trope for a tense or ominous departure.",
+   "consensus_score": 2.8
+  },
+  {
+   "candidate_id": "54441_c02",
+   "video_id": "54441",
+   "start_s": 6.55,
+   "end_s": 10.05,
+   "face_r2_key": "stagec/54441_c02_face.mp4",
+   "stimuli_r2_key": "stagec/54441_c02_stim.mp4",
+   "llm_draft": "The viewer reacted because the man sitting at the table is shot and killed by the soldier standing over him.",
+   "consensus_score": 2.8
+  },
+  {
+   "candidate_id": "54581_c01",
+   "video_id": "54581",
+   "start_s": 8.77,
+   "end_s": 12.27,
+   "face_r2_key": "stagec/54581_c01_face.mp4",
+   "stimuli_r2_key": "stagec/54581_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because Thanos uses the Power Stone to forcibly remove Thor's eye.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "54630_c01",
+   "video_id": "54630",
+   "start_s": 8.65,
+   "end_s": 12.15,
+   "face_r2_key": "stagec/54630_c01_face.mp4",
+   "stimuli_r2_key": "stagec/54630_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because Thanos, in a moment of extreme rage and violence, crushes the head of the character Grimeace with his bare hand while she is screaming for help.",
+   "consensus_score": 2.8
+  },
+  {
+   "candidate_id": "54696_c00",
+   "video_id": "54696",
+   "start_s": 4.56,
+   "end_s": 8.06,
+   "face_r2_key": "stagec/54696_c00_face.mp4",
+   "stimuli_r2_key": "stagec/54696_c00_stim.mp4",
+   "llm_draft": "The viewer reacted with disgust because Black Widow is shown impaling herself with a pair of batons to distract Hawkeye from her fight with the Black Panther.",
+   "consensus_score": 2.2
+  },
+  {
+   "candidate_id": "54786_c00",
+   "video_id": "54786",
+   "start_s": 21.5,
+   "end_s": 25.5,
+   "face_r2_key": "stagec/54786_c00_face.mp4",
+   "stimuli_r2_key": "stagec/54786_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because Tony Stark, after Doctor Strange's intense declaration of duty, delivers the line \"You're an Avenger now\" while simultaneously performing a physical gesture of patting Strange on the arm to welcome him.",
+   "consensus_score": 2
+  },
+  {
+   "candidate_id": "54810_c00",
+   "video_id": "54810",
+   "start_s": 9.9,
+   "end_s": 13.4,
+   "face_r2_key": "stagec/54810_c00_face.mp4",
+   "stimuli_r2_key": "stagec/54810_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because Thanos says \"I'm sorry, little one\" to Gamora just before he kills her.",
+   "consensus_score": 2.6
+  },
+  {
+   "candidate_id": "54905_c01",
+   "video_id": "54905",
+   "start_s": 8.73,
+   "end_s": 11.73,
+   "face_r2_key": "stagec/54905_c01_face.mp4",
+   "stimuli_r2_key": "stagec/54905_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because T'Challa is comically and forcefully thrown across the room by Killmonger after a failed attempt to punch him.",
+   "consensus_score": 2.6
+  },
+  {
+   "candidate_id": "54945_c00",
+   "video_id": "54945",
+   "start_s": 16.83,
+   "end_s": 20.13,
+   "face_r2_key": "stagec/54945_c00_face.mp4",
+   "stimuli_r2_key": "stagec/54945_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character T'Challa is shown being physically dragged and pulled over the edge of a massive waterfall by another character.",
+   "consensus_score": 2.8
+  },
+  {
+   "candidate_id": "54945_c02",
+   "video_id": "54945",
+   "start_s": 18.8,
+   "end_s": 22.1,
+   "face_r2_key": "stagec/54945_c02_face.mp4",
+   "stimuli_r2_key": "stagec/54945_c02_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a character being violently thrown into the water and then standing up to deliver a defiant line of dialogue.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "54945_c03",
+   "video_id": "54945",
+   "start_s": 2.76,
+   "end_s": 6.26,
+   "face_r2_key": "stagec/54945_c03_face.mp4",
+   "stimuli_r2_key": "stagec/54945_c03_stim.mp4",
+   "llm_draft": "The viewer reacted because the character in the video is shown falling backward over the edge of a massive waterfall, plunging into the churning water below.",
+   "consensus_score": 2.6
+  },
+  {
+   "candidate_id": "55041_c00",
+   "video_id": "55041",
+   "start_s": 13.83,
+   "end_s": 17.33,
+   "face_r2_key": "stagec/55041_c00_face.mp4",
+   "stimuli_r2_key": "stagec/55041_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the woman in the red dress is shown skillfully defending herself by striking an attacker with a long staff.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "55215_c00",
+   "video_id": "55215",
+   "start_s": 12.42,
+   "end_s": 15.92,
+   "face_r2_key": "stagec/55215_c00_face.mp4",
+   "stimuli_r2_key": "stagec/55215_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character, after a period of grim silence, suddenly breaks into a wide, unsettling grin while describing his violent actions, which creates a disturbing contrast between his words and his expression.",
+   "consensus_score": 3
+  },
+  {
+   "candidate_id": "55420_c01",
+   "video_id": "55420",
+   "start_s": 4.27,
+   "end_s": 7.27,
+   "face_r2_key": "stagec/55420_c01_face.mp4",
+   "stimuli_r2_key": "stagec/55420_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the character Katara uses her waterbending abilities to create a powerful, swirling vortex of water that violently tears apart the surrounding rocky terrain.",
+   "consensus_score": 2.8
+  },
+  {
+   "candidate_id": "55855_c00",
+   "video_id": "55855",
+   "start_s": 8,
+   "end_s": 11.5,
+   "face_r2_key": "stagec/55855_c00_face.mp4",
+   "stimuli_r2_key": "stagec/55855_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a person with blood on their clothes being held down by another person while they are forced to drink from a bottle.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "55958_c01",
+   "video_id": "55958",
+   "start_s": 1.5,
+   "end_s": 4.5,
+   "face_r2_key": "stagec/55958_c01_face.mp4",
+   "stimuli_r2_key": "stagec/55958_c01_stim.mp4",
+   "llm_draft": "The viewer reacted with fear because a monstrous clown figure suddenly appeared and grabbed the child, Robbie, in his bed.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "55959_c00",
+   "video_id": "55959",
+   "start_s": 4.07,
+   "end_s": 7.07,
+   "face_r2_key": "stagec/55959_c00_face.mp4",
+   "stimuli_r2_key": "stagec/55959_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because a large, dark object, identified by the subtitles as a tornado, violently sucked a man into the air, causing a woman to scream in terror and then completely destroyed a room by blowing debris across the floor.",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "56097_c00",
+   "video_id": "56097",
+   "start_s": 2.63,
+   "end_s": 5.83,
+   "face_r2_key": "stagec/56097_c00_face.mp4",
+   "stimuli_r2_key": "stagec/56097_c00_stim.mp4",
+   "llm_draft": "The person reacted because a character in the video, after being saved from a fall, is suddenly and aggressively tackled by another character, causing them to scream in shock and pain.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "56247_c00",
+   "video_id": "56247",
+   "start_s": 5.37,
+   "end_s": 8.37,
+   "face_r2_key": "stagec/56247_c00_face.mp4",
+   "stimuli_r2_key": "stagec/56247_c00_stim.mp4",
+   "llm_draft": "The person reacted because the man in the maroon shirt is suddenly and violently choked by another man on the subway train.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "56436_c00",
+   "video_id": "56436",
+   "start_s": 5.2,
+   "end_s": 8.2,
+   "face_r2_key": "stagec/56436_c00_face.mp4",
+   "stimuli_r2_key": "stagec/56436_c00_stim.mp4",
+   "llm_draft": "The person reacted because the word \"BOO\" is written on the bathroom mirror, which is a classic and threatening sign of a supernatural presence in horror films.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "57546_c00",
+   "video_id": "57546",
+   "start_s": 3.9,
+   "end_s": 7.9,
+   "face_r2_key": "stagec/57546_c00_face.mp4",
+   "stimuli_r2_key": "stagec/57546_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a colossal, biomechanical robot rising from the street and towering over the city buildings.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "57548_c02",
+   "video_id": "57548",
+   "start_s": 3.02,
+   "end_s": 5.52,
+   "face_r2_key": "stagec/57548_c02_face.mp4",
+   "stimuli_r2_key": "stagec/57548_c02_stim.mp4",
+   "llm_draft": "The person reacted because the character's eyes glow with a bright blue light.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "57550_c01",
+   "video_id": "57550",
+   "start_s": 2.62,
+   "end_s": 6.32,
+   "face_r2_key": "stagec/57550_c01_face.mp4",
+   "stimuli_r2_key": "stagec/57550_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows the character Mr. Fantastic being stretched and contorted by the alien creature, visibly straining in pain as his body is pulled apart.",
+   "consensus_score": 2.75
+  },
+  {
+   "candidate_id": "57905_c00",
+   "video_id": "57905",
+   "start_s": 9.02,
+   "end_s": 12.02,
+   "face_r2_key": "stagec/57905_c00_face.mp4",
+   "stimuli_r2_key": "stagec/57905_c00_stim.mp4",
+   "llm_draft": "The person reacted because the character in the video declares his intention to come to Wakanda and kill the other character if he discovers a single Wakandan ship in the ocean.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "58150_c00",
+   "video_id": "58150",
+   "start_s": 3.9,
+   "end_s": 7.4,
+   "face_r2_key": "stagec/58150_c00_face.mp4",
+   "stimuli_r2_key": "stagec/58150_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character played by Geoffrey Rush explicitly states, \"Do you have any idea how difficult it was to catch that filthy pig?\" while standing next to a dead pig, directly referencing the act of killing an animal.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "58492_c01",
+   "video_id": "58492",
+   "start_s": 8.5,
+   "end_s": 11.5,
+   "face_r2_key": "stagec/58492_c01_face.mp4",
+   "stimuli_r2_key": "stagec/58492_c01_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a character named Dean Portman, who is shirtless and screaming with extreme intensity while yelling \"They ain't that tough!\" to motivate his team during a hockey game.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "58625_c00",
+   "video_id": "58625",
+   "start_s": 6.7,
+   "end_s": 10.2,
+   "face_r2_key": "stagec/58625_c00_face.mp4",
+   "stimuli_r2_key": "stagec/58625_c00_stim.mp4",
+   "llm_draft": "The person reacted because the character they are watching, who was previously smiling and seemingly in control, is suddenly and violently thrown backward by a massive explosion that obliterates the control room.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "59055_c00",
+   "video_id": "59055",
+   "start_s": 6.01,
+   "end_s": 9.01,
+   "face_r2_key": "stagec/59055_c00_face.mp4",
+   "stimuli_r2_key": "stagec/59055_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the man, who is acting as a teacher, pulls a large, wrapped sandwich out of his desk drawer and begins to eat it while standing in front of the class.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "59090_c00",
+   "video_id": "59090",
+   "start_s": 0.2,
+   "end_s": 3.7,
+   "face_r2_key": "stagec/59090_c00_face.mp4",
+   "stimuli_r2_key": "stagec/59090_c00_stim.mp4",
+   "llm_draft": "The person reacted because the teacher, while holding a guitar and pointing at the student, delivers a threat about meeting after class while simultaneously singing about not getting an allowance.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "59741_c00",
+   "video_id": "59741",
+   "start_s": 2,
+   "end_s": 5,
+   "face_r2_key": "stagec/59741_c00_face.mp4",
+   "stimuli_r2_key": "stagec/59741_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the two race cars make high-speed contact, causing both to crash violently and spin out of control into the gravel trap.",
+   "consensus_score": 2.8
+  },
+  {
+   "candidate_id": "59741_c01",
+   "video_id": "59741",
+   "start_s": 0.97,
+   "end_s": 3.97,
+   "face_r2_key": "stagec/59741_c01_face.mp4",
+   "stimuli_r2_key": "stagec/59741_c01_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a race car, identified as Pearce's, losing control and crashing into the gravel barrier, which is confirmed by the on-screen text \"and Pearce hits the barrier.\"",
+   "consensus_score": 2.4
+  },
+  {
+   "candidate_id": "59802_c01",
+   "video_id": "59802",
+   "start_s": 5.07,
+   "end_s": 9.07,
+   "face_r2_key": "stagec/59802_c01_face.mp4",
+   "stimuli_r2_key": "stagec/59802_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a race car crashing violently, scattering debris across the track, which is immediately followed by a shot of a person lying motionless in a hospital bed with a hospital wristband on their arm.",
+   "consensus_score": 2.75
+  },
+  {
+   "candidate_id": "59989_c02",
+   "video_id": "59989",
+   "start_s": 5.68,
+   "end_s": 8.68,
+   "face_r2_key": "stagec/59989_c02_face.mp4",
+   "stimuli_r2_key": "stagec/59989_c02_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows the race car driver crossing the finish line to win, which is immediately followed by his ecstatic celebration in the pit lane with his team and a massive fireworks display.",
+   "consensus_score": 3
+  },
+  {
+   "candidate_id": "59989_c03",
+   "video_id": "59989",
+   "start_s": 4.58,
+   "end_s": 7.58,
+   "face_r2_key": "stagec/59989_c03_face.mp4",
+   "stimuli_r2_key": "stagec/59989_c03_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a race car driver, after winning a night race, being immediately embraced by his emotional team and celebrating with fireworks and champagne.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "60083_c00",
+   "video_id": "60083",
+   "start_s": 4.43,
+   "end_s": 7.93,
+   "face_r2_key": "stagec/60083_c00_face.mp4",
+   "stimuli_r2_key": "stagec/60083_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the person in the green jersey, who was previously riding a wheelbarrow, is now shown screaming in terror while being dragged through the air by a large piece of construction equipment.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "60441_c01",
+   "video_id": "60441",
+   "start_s": 3.84,
+   "end_s": 6.84,
+   "face_r2_key": "stagec/60441_c01_face.mp4",
+   "stimuli_r2_key": "stagec/60441_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the video depicts a man being violently strangled by another person with a dark, viscous substance that splatters across his face and body.",
+   "consensus_score": 2.75
+  },
+  {
+   "candidate_id": "60471_c01",
+   "video_id": "60471",
+   "start_s": 2.31,
+   "end_s": 5.31,
+   "face_r2_key": "stagec/60471_c01_face.mp4",
+   "stimuli_r2_key": "stagec/60471_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the video abruptly cuts from a quiet scene of a boy in his room to a close-up of a woman screaming with her mouth wide open, accompanied by the on-screen text \"[screeching]\".",
+   "consensus_score": 2.75
+  },
+  {
+   "candidate_id": "61010_c00",
+   "video_id": "61010",
+   "start_s": 1.5,
+   "end_s": 5,
+   "face_r2_key": "stagec/61010_c00_face.mp4",
+   "stimuli_r2_key": "stagec/61010_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character on the left intentionally shoves the character on the right, causing him to fall face-first into the dirt.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "66185_c00",
+   "video_id": "66185",
+   "start_s": 7.09,
+   "end_s": 10.09,
+   "face_r2_key": "stagec/66185_c00_face.mp4",
+   "stimuli_r2_key": "stagec/66185_c00_stim.mp4",
+   "llm_draft": "The person reacted because the character in the video, after being asked what a \"nympha\" is, delivers the absurd and incorrect definition that it is \"the state bird of Ohio.\"",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "66223_c01",
+   "video_id": "66223",
+   "start_s": 3.76,
+   "end_s": 7.26,
+   "face_r2_key": "stagec/66223_c01_face.mp4",
+   "stimuli_r2_key": "stagec/66223_c01_stim.mp4",
+   "llm_draft": "The viewer reacted because the person in the video begins driving a vehicle with a large, decorative floral pot on her lap, which is an unsafe and distracting action.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "66309_c00",
+   "video_id": "66309",
+   "start_s": 1.82,
+   "end_s": 5.32,
+   "face_r2_key": "stagec/66309_c00_face.mp4",
+   "stimuli_r2_key": "stagec/66309_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character, after stating his stitches have opened, asks if the other person has a cat and then explains that he feels something licking him.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "66347_c00",
+   "video_id": "66347",
+   "start_s": 4.77,
+   "end_s": 7.77,
+   "face_r2_key": "stagec/66347_c00_face.mp4",
+   "stimuli_r2_key": "stagec/66347_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the man in the video sings a line that explicitly states, \"Was when / You beat the shit out of Ula,\" which is a violent and aggressive act.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "66434_c00",
+   "video_id": "66434",
+   "start_s": 1.5,
+   "end_s": 4.5,
+   "face_r2_key": "stagec/66434_c00_face.mp4",
+   "stimuli_r2_key": "stagec/66434_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character played by Kevin Hart, dressed in a golden armor torso and a short white skirt, is seen dancing and moving energetically around a lavish, opulent palace setting.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "66441_c00",
+   "video_id": "66441",
+   "start_s": 0,
+   "end_s": 3,
+   "face_r2_key": "stagec/66441_c00_face.mp4",
+   "stimuli_r2_key": "stagec/66441_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the character, after ascending a grand staircase, is suddenly engulfed in a blinding, explosive burst of light and energy that violently propels them through a circular portal.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "66530_c00",
+   "video_id": "66530",
+   "start_s": 1,
+   "end_s": 4,
+   "face_r2_key": "stagec/66530_c00_face.mp4",
+   "stimuli_r2_key": "stagec/66530_c00_stim.mp4",
+   "llm_draft": "The person reacted because a large, dark, monstrous figure suddenly lunges and grabs the woman in the bed from behind.",
+   "consensus_score": 2.75
+  },
+  {
+   "candidate_id": "66584_c00",
+   "video_id": "66584",
+   "start_s": 2.25,
+   "end_s": 5.75,
+   "face_r2_key": "stagec/66584_c00_face.mp4",
+   "stimuli_r2_key": "stagec/66584_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video depicts the character Thor unleashing a massive, crackling bolt of lightning from his hand while shouting \"the power of Thor!\"",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "66669_c01",
+   "video_id": "66669",
+   "start_s": 1.73,
+   "end_s": 5.23,
+   "face_r2_key": "stagec/66669_c01_face.mp4",
+   "stimuli_r2_key": "stagec/66669_c01_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a character enthusiastically driving a highly customized, flamboyant maroon limousine through a cloud of smoke in a workshop, while subtitles identify it as \"Basil's pimpmobile.\"",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "67120_c00",
+   "video_id": "67120",
+   "start_s": 4.46,
+   "end_s": 7.96,
+   "face_r2_key": "stagec/67120_c00_face.mp4",
+   "stimuli_r2_key": "stagec/67120_c00_stim.mp4",
+   "llm_draft": "The person reacted because the video shows a man raising an axe to strike, followed by a shot of the axe's blade embedded in the ground, implying a violent act has just occurred.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "67273_c00",
+   "video_id": "67273",
+   "start_s": 5.28,
+   "end_s": 8.28,
+   "face_r2_key": "stagec/67273_c00_face.mp4",
+   "stimuli_r2_key": "stagec/67273_c00_stim.mp4",
+   "llm_draft": "The viewer reacted with horror because the character, after holding a large knife, says the chilling line \"Let's play dolls\" while looking at an injured person.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "67377_c01",
+   "video_id": "67377",
+   "start_s": 3.85,
+   "end_s": 6.85,
+   "face_r2_key": "stagec/67377_c01_face.mp4",
+   "stimuli_r2_key": "stagec/67377_c01_stim.mp4",
+   "llm_draft": "The person reacted because the man on stage, while singing \"you can't start a fire without a spark!\", dramatically throws a glowing ember that ignites a massive bonfire shaped like an eagle in front of a large crowd.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "68145_c00",
+   "video_id": "68145",
+   "start_s": 6.63,
+   "end_s": 10.63,
+   "face_r2_key": "stagec/68145_c00_face.mp4",
+   "stimuli_r2_key": "stagec/68145_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a man being submerged in a large fish tank inside a Stop & Shop store, as depicted in the second frame.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "68158_c00",
+   "video_id": "68158",
+   "start_s": 4.97,
+   "end_s": 8.17,
+   "face_r2_key": "stagec/68158_c00_face.mp4",
+   "stimuli_r2_key": "stagec/68158_c00_stim.mp4",
+   "llm_draft": "The person reacted because the man at the podium, after the attendee introduces himself as an alcoholic, immediately corrects him by stating, \"Oh, we don't say alcoholic.\"",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "68182_c00",
+   "video_id": "68182",
+   "start_s": 4.37,
+   "end_s": 7.17,
+   "face_r2_key": "stagec/68182_c00_face.mp4",
+   "stimuli_r2_key": "stagec/68182_c00_stim.mp4",
+   "llm_draft": "The viewer reacted because the video shows a giant, talking bear aggressively attacking a man in a bathtub.",
+   "consensus_score": 2.5
+  },
+  {
+   "candidate_id": "68208_c03",
+   "video_id": "68208",
+   "start_s": 4.77,
+   "end_s": 8.27,
+   "face_r2_key": "stagec/68208_c03_face.mp4",
+   "stimuli_r2_key": "stagec/68208_c03_stim.mp4",
+   "llm_draft": "The person reacted because the man in the red jacket, after knocking over a person lying on the ground, stands up and delivers a line of dialogue while looking directly at the camera.",
+   "consensus_score": 2.25
+  },
+  {
+   "candidate_id": "68219_c02",
+   "video_id": "68219",
+   "start_s": 12.85,
+   "end_s": 15.85,
+   "face_r2_key": "stagec/68219_c02_face.mp4",
+   "stimuli_r2_key": "stagec/68219_c02_stim.mp4",
+   "llm_draft": "The viewer reacted because the person in the video is shown aggressively attacking and crushing alligators with his bare hands.",
+   "consensus_score": 2.25
+  }
+ ]
+}

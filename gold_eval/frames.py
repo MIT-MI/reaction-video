@@ -33,23 +33,27 @@ def fetch_clip(r2_base: str, key: str) -> Path:
 
 
 def extract_frames(clip: Path, fps: float = 1.0, max_side: int = 512,
-                   max_frames: int | None = None) -> list[Path]:
-    out_dir = FRAMES / f"{clip.parent.name}_{clip.stem}_fps{fps}_s{max_side}"
+                   max_frames: int | None = None,
+                   start_s: float | None = None, end_s: float | None = None) -> list[Path]:
+    win = f"_w{start_s:.1f}-{end_s:.1f}" if start_s is not None else ""
+    out_dir = FRAMES / f"{clip.parent.name}_{clip.stem}_fps{fps}_s{max_side}{win}"
     if not out_dir.is_dir() or not any(out_dir.glob("*.jpg")):
         tmp_dir = out_dir.with_name(out_dir.name + ".tmp")
         tmp_dir.mkdir(parents=True, exist_ok=True)
         scale = f"scale='if(gt(iw,ih),{max_side},-2)':'if(gt(iw,ih),-2,{max_side})'"
+        seek = ([] if start_s is None else ["-ss", f"{start_s}"]) + \
+               ([] if end_s is None else ["-to", f"{end_s}"])
         try:
             subprocess.run(
-                ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(clip),
+                ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *seek, "-i", str(clip),
                  "-vf", f"fps={fps},{scale}", "-q:v", "4", str(tmp_dir / "%05d.jpg")],
                 check=True)
         except subprocess.CalledProcessError:
             pass
         if not any(tmp_dir.glob("*.jpg")):
-            # degenerate clip (shorter than 1/fps): fall back to the first frame
+            # degenerate clip/window (shorter than 1/fps): fall back to the first frame
             subprocess.run(
-                ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(clip),
+                ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *seek, "-i", str(clip),
                  "-vf", scale, "-frames:v", "1", "-q:v", "4", str(tmp_dir / "00001.jpg")],
                 check=True)
         tmp_dir.rename(out_dir)
