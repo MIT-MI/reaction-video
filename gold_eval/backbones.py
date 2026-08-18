@@ -14,6 +14,7 @@ from __future__ import annotations
 import base64
 import os
 from functools import cached_property
+from pathlib import Path
 
 
 class SpendNotConfirmed(RuntimeError):
@@ -82,6 +83,10 @@ class GeminiVertexBackbone:
             if p["type"] == "image_url":
                 b64 = p["image_url"]["url"].split(",", 1)[1]
                 contents.append(t.Part.from_bytes(data=base64.b64decode(b64), mime_type="image/jpeg"))
+            elif p["type"] == "video":
+                # E1 native-video arm: raw mp4 bytes (only Gemini supports this input)
+                contents.append(t.Part.from_bytes(data=Path(p["path"]).read_bytes(),
+                                                  mime_type="video/mp4"))
             else:
                 contents.append(p["text"])
         # max_output_tokens includes thinking tokens on Gemini 3.x; thinking_level="low"

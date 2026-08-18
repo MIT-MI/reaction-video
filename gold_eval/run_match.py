@@ -32,16 +32,30 @@ PROMPT = (
 )
 
 
-def build_parts(task: dict, r2_base: str, reaction_cap: int, option_cap: int) -> list[dict]:
-    parts = [{"type": "text", "text": PROMPT}, {"type": "text", "text": "VIEWER'S REACTION:"}]
+VIDEO_PROMPT = PROMPT.replace("frames (1 per second) of the VIEWER'S REACTION",
+                              "the VIEWER'S REACTION video").replace(
+                              "from the video they were watching, also as frames",
+                              "from the video they were watching, as videos")
+
+
+def build_parts(task: dict, r2_base: str, reaction_cap: int, option_cap: int,
+                video: bool = False) -> list[dict]:
+    parts = [{"type": "text", "text": VIDEO_PROMPT if video else PROMPT},
+             {"type": "text", "text": "VIEWER'S REACTION:"}]
     clip = fr.fetch_clip(r2_base, task["reaction_r2_key"])
-    for f in fr.extract_frames(clip, max_frames=reaction_cap):
-        parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})
+    if video:
+        parts.append({"type": "video", "path": str(clip)})
+    else:
+        for f in fr.extract_frames(clip, max_frames=reaction_cap):
+            parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})
     for i, opt in enumerate(task["options"]):
         parts.append({"type": "text", "text": f"SEGMENT {LETTERS[i]}:"})
         oclip = fr.fetch_clip(r2_base, opt["key"])
-        for f in fr.extract_frames(oclip, max_frames=option_cap):
-            parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})
+        if video:
+            parts.append({"type": "video", "path": str(oclip)})
+        else:
+            for f in fr.extract_frames(oclip, max_frames=option_cap):
+                parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})
     parts.append({"type": "text", "text": "Answer (single letter A/B/C/D):"})
     return parts
 
@@ -63,11 +77,13 @@ def main() -> None:
     p.add_argument("--limit", type=int, default=None)
     p.add_argument("--reaction_cap", type=int, default=12, help="max reaction frames")
     p.add_argument("--option_cap", type=int, default=6, help="max frames per option")
+    p.add_argument("--video", action="store_true",
+                   help="E1: native mp4 input instead of frames (Gemini only)")
     args = p.parse_args()
 
     payload = json.loads(args.tasks.read_text())
     r2_base, tasks = payload["r2_base"], payload["tasks"]
-    out = HERE / "results/match" / f"{slug(args.model)}.jsonl"
+    out = HERE / "results/match" / f"{slug(args.model)}{'__video' if args.video else ''}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
     # resume: an unparsed row (pred_index null) counts as NOT done and is retried;
     # scorers dedupe by id with last-row-wins, so the append-only log stays consistent
@@ -85,7 +101,8 @@ def main() -> None:
     for i, task in enumerate(todo):
         cid = task["candidate_id"]
         try:
-            parts = call_with_retry(build_parts, task, r2_base, args.reaction_cap, args.option_cap)
+            parts = call_with_retry(build_parts, task, r2_base, args.reaction_cap,
+                                    args.option_cap, args.video)
             text, tin, tout = call_with_retry(backbone.complete, parts, max_tokens=48)
             usd = ledger.log(cid, tin, tout)
             row = {"candidate_id": cid, "pred_index": parse_letter(text), "raw": text.strip(),

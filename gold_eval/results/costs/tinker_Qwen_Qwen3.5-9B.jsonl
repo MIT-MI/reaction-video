@@ -428,3 +428,10 @@
 {"ts": "2026-08-18T17:57:24+00:00", "model": "tinker:Qwen/Qwen3.5-9B", "provider": "tinker", "item": "63937_c00", "in_tok": 5446, "out_tok": 48, "usd": 0.00369}
 {"ts": "2026-08-18T17:57:38+00:00", "model": "tinker:Qwen/Qwen3.5-9B", "provider": "tinker", "item": "64827_c01", "in_tok": 4324, "out_tok": 48, "usd": 0.00295}
 {"ts": "2026-08-18T17:57:51+00:00", "model": "tinker:Qwen/Qwen3.5-9B", "provider": "tinker", "item": "67590_c02", "in_tok": 4582, "out_tok": 48, "usd": 0.00312}
+{"ts": "2026-08-18T19:27:13+00:00", "model": "tinker:Qwen/Qwen3.5-9B", "provider": "tinker", "item": "09993_c00:match/09993_c00_opt0.mp4", "in_tok": 2620, "out_tok": 3, "usd": 0.001735}
+{"ts": "2026-08-18T19:27:19+00:00", "model": "tinker:Qwen/Qwen3.5-9B", "provider": "tinker", "item": "09993_c00:match/09993_c00_opt1.mp4", "in_tok": 2264, "out_tok": 3, "usd": 0.0015}
+{"ts": "2026-08-18T19:27:26+00:00", "model": "tinker:Qwen/Qwen3.5-9B", "provider": "tinker", "item": "09993_c00:match/09993_c00_opt2.mp4", "in_tok": 2976, "out_tok": 3, "usd": 0.00197}
+{"ts": "2026-08-18T19:27:32+00:00", "model": "tinker:Qwen/Qwen3.5-9B", "provider": "tinker", "item": "09993_c00:match/09993_c00_opt3.mp4", "in_tok": 2620, "out_tok": 3, "usd": 0.001735}
+{"ts": "2026-08-18T19:27:42+00:00", "model": "tinker:Qwen/Qwen3.5-9B", "provider": "tinker", "item": "46052:m0", "in_tok": 867, "out_tok": 3, "usd": 0.000578}
+{"ts": "2026-08-18T19:27:45+00:00", "model": "tinker:Qwen/Qwen3.5-9B", "provider": "tinker", "item": "46052:m1", "in_tok": 867, "out_tok": 3, "usd": 0.000578}
+{"ts": "2026-08-18T19:28:27+00:00", "model": "tinker:Qwen/Qwen3.5-9B", "provider": "tinker", "item": "00341_c00", "in_tok": 1422, "out_tok": 45, "usd": 0.001028}

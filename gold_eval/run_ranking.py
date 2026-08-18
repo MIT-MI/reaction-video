@@ -35,16 +35,24 @@ PROMPT = (
 )
 
 
-def build_parts(item: dict, frame_cap: int) -> list[dict]:
+def build_parts(item: dict, frame_cap: int, video: bool = False) -> list[dict]:
     moments_txt = "\n".join(
         f'  m{i}: seconds {m["start_s"]:.1f} to {m["end_s"]:.1f}'
         for i, m in enumerate(item["moments"]))
-    parts = [{"type": "text",
-              "text": PROMPT.format(k=len(item["moments"]), moments=moments_txt)}]
+    prompt = PROMPT.format(k=len(item["moments"]), moments=moments_txt)
+    if video:
+        prompt = prompt.replace(
+            "frames of a REACTION VIDEO (a viewer watching content), sampled at 1 frame per "
+            "second: frame N corresponds to second N",
+            "a REACTION VIDEO (a viewer watching content)")
+    parts = [{"type": "text", "text": prompt}]
     r2_base = item["face_url"][: -len(item["face_r2_key"])]
     clip = fr.fetch_clip(r2_base, item["face_r2_key"])
-    for f in fr.extract_frames(clip, max_frames=frame_cap):
-        parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})
+    if video:
+        parts.append({"type": "video", "path": str(clip)})
+    else:
+        for f in fr.extract_frames(clip, max_frames=frame_cap):
+            parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})
     parts.append({"type": "text", "text": "JSON scores:"})
     return parts
 
@@ -72,10 +80,12 @@ def main() -> None:
     p.add_argument("--tasks", type=Path, default=HERE / "tasks/ranking_set.json")
     p.add_argument("--limit", type=int, default=None)
     p.add_argument("--frame_cap", type=int, default=64)
+    p.add_argument("--video", action="store_true",
+                   help="E1: native mp4 input instead of frames (Gemini only)")
     args = p.parse_args()
 
     items = json.loads(args.tasks.read_text())
-    out = HERE / "results/ranking" / f"{slug(args.model)}.jsonl"
+    out = HERE / "results/ranking" / f"{slug(args.model)}{'__video' if args.video else ''}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
     # resume: rows whose scores failed to parse count as NOT done and are retried
     done = {r["video_id"] for r in
@@ -92,7 +102,7 @@ def main() -> None:
     for i, item in enumerate(todo):
         vid = item["video_id"]
         try:
-            parts = call_with_retry(build_parts, item, args.frame_cap)
+            parts = call_with_retry(build_parts, item, args.frame_cap, args.video)
             text, tin, tout = call_with_retry(backbone.complete, parts, max_tokens=320)
             ledger.log(vid, tin, tout)
             scores = parse_scores(text, len(item["moments"]))
