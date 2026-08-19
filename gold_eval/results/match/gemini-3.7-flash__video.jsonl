@@ -122,3 +122,7 @@
 {"candidate_id": "54945_c00", "pred_index": null, "raw": "", "in_tok": 2121, "out_tok": 0}
 {"candidate_id": "54945_c01", "pred_index": null, "raw": "", "in_tok": 1489, "out_tok": 0}
 {"candidate_id": "55041_c00", "pred_index": null, "raw": ",", "in_tok": 2382, "out_tok": 1}
+{"candidate_id": "55297_c03", "pred_index": 0, "raw": "A", "in_tok": 2478, "out_tok": 1}
+{"candidate_id": "55420_c01", "pred_index": 2, "raw": "C", "in_tok": 2206, "out_tok": 1}
+{"candidate_id": "55855_c00", "pred_index": null, "raw": "", "in_tok": 2009, "out_tok": 0}
+{"candidate_id": "55958_c00", "pred_index": 0, "raw": "A", "in_tok": 2475, "out_tok": 1}

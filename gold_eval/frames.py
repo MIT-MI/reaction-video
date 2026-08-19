@@ -68,6 +68,25 @@ def data_uri(p: Path) -> str:
     return "data:image/jpeg;base64," + base64.b64encode(p.read_bytes()).decode("ascii")
 
 
+def video_for_upload(clip: Path, max_bytes: int = 8_000_000, height: int = 360) -> Path:
+    """Native-video arm: inline request bytes are capped (~20MB total), so re-encode any
+    oversized clip to a small H.264 (audio kept — the native arm is the full-modality arm)."""
+    if clip.stat().st_size <= max_bytes:
+        return clip
+    out = DATA / "vsmall" / clip.name
+    if out.exists() and out.stat().st_size > 0:
+        return out
+    out.parent.mkdir(parents=True, exist_ok=True)
+    tmp = out.with_name(out.name + ".tmp.mp4")
+    subprocess.run(
+        ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(clip),
+         "-vf", f"scale=-2:{height}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "28",
+         "-c:a", "aac", "-b:a", "64k", str(tmp)],
+        check=True)
+    tmp.rename(out)
+    return out
+
+
 def make_sbs(left: Path, right: Path, height: int = 360) -> Path:
     """V3: side-by-side video (left=reaction, right=candidate stimulus), silent, shared
     timeline — lets a video-native model check temporal alignment directly."""

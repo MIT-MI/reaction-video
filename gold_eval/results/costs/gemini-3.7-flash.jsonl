@@ -1524,3 +1524,15 @@
 {"ts": "2026-08-19T03:12:49+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "09993_c00:match/09993_c00_opt1.mp4", "in_tok": 562, "out_tok": 0, "usd": 0.000421}
 {"ts": "2026-08-19T03:12:52+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "09993_c00:match/09993_c00_opt2.mp4", "in_tok": 562, "out_tok": 0, "usd": 0.000421}
 {"ts": "2026-08-19T03:12:54+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "09993_c00:match/09993_c00_opt3.mp4", "in_tok": 562, "out_tok": 0, "usd": 0.000421}
+{"ts": "2026-08-19T03:13:38+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "09993_c00:match/09993_c00_opt0.mp4", "in_tok": 562, "out_tok": 1, "usd": 0.000425}
+{"ts": "2026-08-19T03:13:42+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "09993_c00:match/09993_c00_opt1.mp4", "in_tok": 562, "out_tok": 1, "usd": 0.000425}
+{"ts": "2026-08-19T03:13:45+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "09993_c00:match/09993_c00_opt2.mp4", "in_tok": 562, "out_tok": 2, "usd": 0.000429}
+{"ts": "2026-08-19T03:13:48+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "09993_c00:match/09993_c00_opt3.mp4", "in_tok": 562, "out_tok": 2, "usd": 0.000429}
+{"ts": "2026-08-19T03:13:54+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "10300_c01:match/10300_c01_opt0.mp4", "in_tok": 467, "out_tok": 1, "usd": 0.000354}
+{"ts": "2026-08-19T03:13:57+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "10300_c01:match/10300_c01_opt1.mp4", "in_tok": 467, "out_tok": 1, "usd": 0.000354}
+{"ts": "2026-08-19T03:14:01+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "10300_c01:match/10300_c01_opt2.mp4", "in_tok": 467, "out_tok": 1, "usd": 0.000354}
+{"ts": "2026-08-19T03:14:05+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "10300_c01:match/10300_c01_opt3.mp4", "in_tok": 467, "out_tok": 1, "usd": 0.000354}
+{"ts": "2026-08-19T03:14:42+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "55297_c03", "in_tok": 2478, "out_tok": 1, "usd": 0.001862}
+{"ts": "2026-08-19T03:14:47+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "55420_c01", "in_tok": 2206, "out_tok": 1, "usd": 0.001658}
+{"ts": "2026-08-19T03:14:52+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "55855_c00", "in_tok": 2009, "out_tok": 0, "usd": 0.001507}
+{"ts": "2026-08-19T03:14:57+00:00", "model": "gemini-3.7-flash", "provider": "gemini", "item": "55958_c00", "in_tok": 2475, "out_tok": 1, "usd": 0.00186}

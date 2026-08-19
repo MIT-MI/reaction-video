@@ -44,7 +44,7 @@ def build_parts(task: dict, r2_base: str, reaction_cap: int, option_cap: int,
              {"type": "text", "text": "VIEWER'S REACTION:"}]
     clip = fr.fetch_clip(r2_base, task["reaction_r2_key"])
     if video:
-        parts.append({"type": "video", "path": str(clip)})
+        parts.append({"type": "video", "path": str(fr.video_for_upload(clip))})
     else:
         for f in fr.extract_frames(clip, max_frames=reaction_cap):
             parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})
@@ -52,7 +52,7 @@ def build_parts(task: dict, r2_base: str, reaction_cap: int, option_cap: int,
         parts.append({"type": "text", "text": f"SEGMENT {LETTERS[i]}:"})
         oclip = fr.fetch_clip(r2_base, opt["key"])
         if video:
-            parts.append({"type": "video", "path": str(oclip)})
+            parts.append({"type": "video", "path": str(fr.video_for_upload(oclip))})
         else:
             for f in fr.extract_frames(oclip, max_frames=option_cap):
                 parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})

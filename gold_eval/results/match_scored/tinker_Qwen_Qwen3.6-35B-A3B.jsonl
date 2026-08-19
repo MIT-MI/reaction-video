@@ -39,3 +39,8 @@
 {"candidate_id": "53500_c01", "scores": [10, 8, 1, 9], "pred_index": 0, "tie": false}
 {"candidate_id": "53520_c01", "scores": [10, 10, 8, 9], "pred_index": null, "tie": true}
 {"candidate_id": "53533_c00", "scores": [9, 10, 1, 10], "pred_index": null, "tie": true}
+{"candidate_id": "53544_c00", "scores": [9, 10, 9, 10], "pred_index": null, "tie": true}
+{"candidate_id": "53565_c00", "scores": [10, 1, 10, 10], "pred_index": null, "tie": true}
+{"candidate_id": "53624_c00", "scores": [10, 10, 10, 10], "pred_index": null, "tie": true}
+{"candidate_id": "53645_c00", "scores": [1, 10, 1, 1], "pred_index": 1, "tie": false}
+{"candidate_id": "53671_c00", "scores": [10, 10, 10, 10], "pred_index": null, "tie": true}

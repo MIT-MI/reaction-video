@@ -49,7 +49,7 @@ def build_parts(item: dict, frame_cap: int, video: bool = False) -> list[dict]:
     r2_base = item["face_url"][: -len(item["face_r2_key"])]
     clip = fr.fetch_clip(r2_base, item["face_r2_key"])
     if video:
-        parts.append({"type": "video", "path": str(clip)})
+        parts.append({"type": "video", "path": str(fr.video_for_upload(clip))})
     else:
         for f in fr.extract_frames(clip, max_frames=frame_cap):
             parts.append({"type": "image_url", "image_url": {"url": fr.data_uri(f)}})
