@@ -1,0 +1,473 @@
+{
+  "match": {
+    "match/gemini-3.7-flash": {
+      "n_scored": 145,
+      "accuracy": 0.4621,
+      "chance": 0.25,
+      "unparsed": 2,
+      "err_temporal_dist_s": {
+        "mean": 23.02,
+        "median": 20.95
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.4286,
+        "1": 0.5,
+        "2": 0.4655
+      }
+    },
+    "match/gemini-3.7-flash__video": {
+      "n_scored": 149,
+      "accuracy": 0.5168,
+      "chance": 0.25,
+      "unparsed": 0,
+      "err_temporal_dist_s": {
+        "mean": 22.77,
+        "median": 19.2
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.5909,
+        "1": 0.375,
+        "2": 0.5126
+      }
+    },
+    "match/gpt-5": {
+      "n_scored": 150,
+      "accuracy": 0.4867,
+      "chance": 0.25,
+      "unparsed": 0,
+      "err_temporal_dist_s": {
+        "mean": 22.37,
+        "median": 20.12
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.5,
+        "1": 0.375,
+        "2": 0.4917
+      }
+    },
+    "match/tinker_Qwen_Qwen3.5-397B-A17B": {
+      "n_scored": 150,
+      "accuracy": 0.4467,
+      "chance": 0.25,
+      "unparsed": 0,
+      "err_temporal_dist_s": {
+        "mean": 21.95,
+        "median": 20.27
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.5,
+        "1": 0.375,
+        "2": 0.4417
+      }
+    },
+    "match/tinker_Qwen_Qwen3.5-9B": {
+      "n_scored": 150,
+      "accuracy": 0.26,
+      "chance": 0.25,
+      "unparsed": 13,
+      "err_temporal_dist_s": {
+        "mean": 20.34,
+        "median": 18.18
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.1818,
+        "1": 0.375,
+        "2": 0.2667
+      }
+    },
+    "match/tinker_Qwen_Qwen3.6-27B": {
+      "n_scored": 150,
+      "accuracy": 0.3867,
+      "chance": 0.25,
+      "unparsed": 0,
+      "err_temporal_dist_s": {
+        "mean": 22.17,
+        "median": 18.93
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.2727,
+        "1": 0.375,
+        "2": 0.4083
+      }
+    },
+    "match/tinker_Qwen_Qwen3.6-35B-A3B": {
+      "n_scored": 150,
+      "accuracy": 0.3667,
+      "chance": 0.25,
+      "unparsed": 2,
+      "err_temporal_dist_s": {
+        "mean": 22.0,
+        "median": 19.2
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.3636,
+        "1": 0.25,
+        "2": 0.375
+      }
+    },
+    "match/tinker_moonshotai_Kimi-K2.6": {
+      "n_scored": 150,
+      "accuracy": 0.46,
+      "chance": 0.25,
+      "unparsed": 0,
+      "err_temporal_dist_s": {
+        "mean": 22.19,
+        "median": 18.93
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.4545,
+        "1": 0.375,
+        "2": 0.4667
+      }
+    },
+    "match_scored/gemini-3.7-flash": {
+      "n_scored": 150,
+      "accuracy": 0.1467,
+      "chance": 0.25,
+      "unparsed": 94,
+      "err_temporal_dist_s": {
+        "mean": 20.32,
+        "median": 18.94
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.2273,
+        "1": 0.25,
+        "2": 0.125
+      },
+      "tie_rate": 0.6267
+    },
+    "match_scored/gpt-5": {
+      "n_scored": 150,
+      "accuracy": 0.2,
+      "chance": 0.25,
+      "unparsed": 78,
+      "err_temporal_dist_s": {
+        "mean": 24.77,
+        "median": 24.29
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.2727,
+        "1": 0.25,
+        "2": 0.1833
+      },
+      "tie_rate": 0.52
+    },
+    "match_scored/tinker_Qwen_Qwen3.5-397B-A17B": {
+      "n_scored": 150,
+      "accuracy": 0.14,
+      "chance": 0.25,
+      "unparsed": 97,
+      "err_temporal_dist_s": {
+        "mean": 21.89,
+        "median": 20.41
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.1364,
+        "1": 0.125,
+        "2": 0.1417
+      },
+      "tie_rate": 0.6467
+    },
+    "match_scored/tinker_Qwen_Qwen3.5-9B": {
+      "n_scored": 150,
+      "accuracy": 0.1333,
+      "chance": 0.25,
+      "unparsed": 110,
+      "err_temporal_dist_s": {
+        "mean": 22.69,
+        "median": 19.93
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.0909,
+        "1": 0.0,
+        "2": 0.15
+      },
+      "tie_rate": 0.7333
+    },
+    "match_scored/tinker_Qwen_Qwen3.6-27B": {
+      "n_scored": 150,
+      "accuracy": 0.0933,
+      "chance": 0.25,
+      "unparsed": 122,
+      "err_temporal_dist_s": {
+        "mean": 25.7,
+        "median": 22.56
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.0909,
+        "1": 0.125,
+        "2": 0.0917
+      },
+      "tie_rate": 0.8133
+    },
+    "match_scored/tinker_Qwen_Qwen3.6-35B-A3B": {
+      "n_scored": 150,
+      "accuracy": 0.2067,
+      "chance": 0.25,
+      "unparsed": 100,
+      "err_temporal_dist_s": {
+        "mean": 18.76,
+        "median": 16.93
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.1818,
+        "1": 0.5,
+        "2": 0.1917
+      },
+      "tie_rate": 0.6667
+    },
+    "match_scored/tinker_moonshotai_Kimi-K2.6": {
+      "n_scored": 150,
+      "accuracy": 0.1867,
+      "chance": 0.25,
+      "unparsed": 100,
+      "err_temporal_dist_s": {
+        "mean": 17.77,
+        "median": 15.72
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.2727,
+        "1": 0.125,
+        "2": 0.175
+      },
+      "tie_rate": 0.6667
+    },
+    "match_sbs/gemini-3.7-flash": {
+      "n_scored": 150,
+      "accuracy": 0.1467,
+      "chance": 0.25,
+      "unparsed": 92,
+      "err_temporal_dist_s": {
+        "mean": 20.52,
+        "median": 19.66
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.2273,
+        "1": 0.375,
+        "2": 0.1167
+      },
+      "tie_rate": 0.6133
+    }
+  },
+  "ranking": {
+    "ranking/gemini-3.7-flash": {
+      "n_videos_scored": 239,
+      "unparsed": 11,
+      "mean_spearman": 0.1599,
+      "pooled_pearson": 0.297
+    },
+    "ranking/gemini-3.7-flash__video": {
+      "n_videos_scored": 250,
+      "unparsed": 0,
+      "mean_spearman": 0.2604,
+      "pooled_pearson": 0.417
+    },
+    "ranking/gpt-5": {
+      "n_videos_scored": 250,
+      "unparsed": 0,
+      "mean_spearman": 0.0262,
+      "pooled_pearson": 0.2929
+    },
+    "ranking/tinker_Qwen_Qwen3.5-397B-A17B": {
+      "n_videos_scored": 250,
+      "unparsed": 0,
+      "mean_spearman": 0.0646,
+      "pooled_pearson": 0.2172
+    },
+    "ranking/tinker_Qwen_Qwen3.5-9B": {
+      "n_videos_scored": 250,
+      "unparsed": 0,
+      "mean_spearman": 0.0294,
+      "pooled_pearson": 0.2044
+    },
+    "ranking/tinker_Qwen_Qwen3.6-27B": {
+      "n_videos_scored": 250,
+      "unparsed": 0,
+      "mean_spearman": 0.1634,
+      "pooled_pearson": 0.2377
+    },
+    "ranking/tinker_Qwen_Qwen3.6-35B-A3B": {
+      "n_videos_scored": 237,
+      "unparsed": 0,
+      "mean_spearman": 0.0456,
+      "pooled_pearson": 0.1874
+    },
+    "ranking/tinker_moonshotai_Kimi-K2.6": {
+      "n_videos_scored": 250,
+      "unparsed": 0,
+      "mean_spearman": 0.0864,
+      "pooled_pearson": 0.2408
+    },
+    "ranking_indep/gemini-3.7-flash": {
+      "n_videos_scored": 241,
+      "unparsed": 0,
+      "mean_spearman": 0.3282,
+      "pooled_pearson": 0.5175
+    },
+    "ranking_indep/gpt-5": {
+      "n_videos_scored": 217,
+      "unparsed": 0,
+      "mean_spearman": 0.2039,
+      "pooled_pearson": 0.4264
+    },
+    "ranking_indep/tinker_Qwen_Qwen3.5-397B-A17B": {
+      "n_videos_scored": 172,
+      "unparsed": 0,
+      "mean_spearman": 0.3436,
+      "pooled_pearson": 0.3977
+    },
+    "ranking_indep/tinker_Qwen_Qwen3.5-9B": {
+      "n_videos_scored": 191,
+      "unparsed": 0,
+      "mean_spearman": 0.334,
+      "pooled_pearson": 0.389
+    },
+    "ranking_indep/tinker_Qwen_Qwen3.6-27B": {
+      "n_videos_scored": 209,
+      "unparsed": 0,
+      "mean_spearman": 0.3937,
+      "pooled_pearson": 0.4342
+    },
+    "ranking_indep/tinker_Qwen_Qwen3.6-35B-A3B": {
+      "n_videos_scored": 205,
+      "unparsed": 0,
+      "mean_spearman": 0.2566,
+      "pooled_pearson": 0.398
+    },
+    "ranking_indep/tinker_moonshotai_Kimi-K2.6": {
+      "n_videos_scored": 204,
+      "unparsed": 0,
+      "mean_spearman": 0.2856,
+      "pooled_pearson": 0.4298
+    },
+    "human_ceiling": {
+      "n_rater_video_pairs": 420,
+      "mean_loo_spearman": 0.6486
+    }
+  },
+  "rationale": {
+    "gemini-3.7-flash__by__gpt-5": {
+      "cue": 0.738,
+      "link": 1.084,
+      "faithful": 0.534,
+      "composite_0to5": 2.356,
+      "n": 191,
+      "unparsed": 0
+    },
+    "gpt-5__by__gemini-3.7-flash": {
+      "cue": 1.47,
+      "link": 1.335,
+      "faithful": 0.87,
+      "composite_0to5": 3.675,
+      "n": 200,
+      "unparsed": 0
+    },
+    "tinker_Qwen_Qwen3.5-397B-A17B__by__gemini-3.7-flash": {
+      "cue": 1.033,
+      "link": 2.0,
+      "faithful": 0.517,
+      "composite_0to5": 3.55,
+      "n": 60,
+      "unparsed": 0
+    },
+    "tinker_Qwen_Qwen3.5-397B-A17B__by__gpt-5": {
+      "cue": 0.745,
+      "link": 1.475,
+      "faithful": 0.18,
+      "composite_0to5": 2.4,
+      "n": 200,
+      "unparsed": 0
+    },
+    "tinker_Qwen_Qwen3.5-9B__by__gemini-3.7-flash": {
+      "cue": 1.05,
+      "link": 1.967,
+      "faithful": 0.517,
+      "composite_0to5": 3.533,
+      "n": 60,
+      "unparsed": 0
+    },
+    "tinker_Qwen_Qwen3.5-9B__by__gpt-5": {
+      "cue": 0.675,
+      "link": 1.41,
+      "faithful": 0.135,
+      "composite_0to5": 2.22,
+      "n": 200,
+      "unparsed": 0
+    },
+    "tinker_Qwen_Qwen3.6-27B__by__gemini-3.7-flash": {
+      "cue": 1.0,
+      "link": 2.0,
+      "faithful": 0.567,
+      "composite_0to5": 3.567,
+      "n": 60,
+      "unparsed": 0
+    },
+    "tinker_Qwen_Qwen3.6-27B__by__gpt-5": {
+      "cue": 0.72,
+      "link": 1.38,
+      "faithful": 0.18,
+      "composite_0to5": 2.28,
+      "n": 200,
+      "unparsed": 0
+    },
+    "tinker_Qwen_Qwen3.6-35B-A3B__by__gemini-3.7-flash": {
+      "cue": 0.967,
+      "link": 1.983,
+      "faithful": 0.483,
+      "composite_0to5": 3.433,
+      "n": 60,
+      "unparsed": 0
+    },
+    "tinker_Qwen_Qwen3.6-35B-A3B__by__gpt-5": {
+      "cue": 0.75,
+      "link": 1.42,
+      "faithful": 0.185,
+      "composite_0to5": 2.355,
+      "n": 200,
+      "unparsed": 0
+    },
+    "tinker_moonshotai_Kimi-K2.6__by__gemini-3.7-flash": {
+      "cue": 1.133,
+      "link": 1.733,
+      "faithful": 0.567,
+      "composite_0to5": 3.433,
+      "n": 60,
+      "unparsed": 0
+    },
+    "tinker_moonshotai_Kimi-K2.6__by__gpt-5": {
+      "cue": 0.935,
+      "link": 1.495,
+      "faithful": 0.185,
+      "composite_0to5": 2.615,
+      "n": 200,
+      "unparsed": 0
+    },
+    "judge_agreement_overlap": {
+      "tinker_Qwen_Qwen3.5-397B-A17B": {
+        "n": 60,
+        "pearson": 0.767,
+        "mean_abs_diff": 1.4
+      },
+      "tinker_Qwen_Qwen3.5-9B": {
+        "n": 60,
+        "pearson": 0.79,
+        "mean_abs_diff": 1.35
+      },
+      "tinker_Qwen_Qwen3.6-27B": {
+        "n": 60,
+        "pearson": 0.764,
+        "mean_abs_diff": 1.433
+      },
+      "tinker_Qwen_Qwen3.6-35B-A3B": {
+        "n": 60,
+        "pearson": 0.854,
+        "mean_abs_diff": 1.217
+      },
+      "tinker_moonshotai_Kimi-K2.6": {
+        "n": 60,
+        "pearson": 0.792,
+        "mean_abs_diff": 1.067
+      }
+    }
+  }
+}

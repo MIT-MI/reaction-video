@@ -1,0 +1,60 @@
+{"candidate_id": "00341_c00", "scores": {"cue": 1, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 1, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "04932_c00", "scores": {"cue": 1, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 1, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "10121_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "10161_c00", "scores": {"cue": 1, "link": 2, "faithful": 1}, "raw": "```json\n{\n  \"cue\": 1,\n  \"link\": 2,\n  \"faithful\": 1\n}\n```"}
+{"candidate_id": "10300_c00", "scores": {"cue": 2, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "10369_c00", "scores": {"cue": 1, "link": 2, "faithful": 0}, "raw": "```json\n{\n  \"cue\": 1,\n  \"link\": 2,\n  \"faithful\": 0\n}\n```"}
+{"candidate_id": "10371_c00", "scores": {"cue": 1, "link": 2, "faithful": 0}, "raw": "```json\n{\n  \"cue\": 1,\n  \"link\": 2,\n  \"faithful\": 0\n}\n```"}
+{"candidate_id": "14347_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\n  \"cue\": 0,\n  \"link\": 2,\n  \"faithful\": 0\n}\n```"}
+{"candidate_id": "45404_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "45900_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "45912_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\n  \"cue\": 0,\n  \"link\": 2,\n  \"faithful\": 0\n}\n```"}
+{"candidate_id": "46120_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "46120_c01", "scores": {"cue": 0, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "46120_c02", "scores": {"cue": 1, "link": 2, "faithful": 0}, "raw": "```json\n{\n  \"cue\": 1,\n  \"link\": 2,\n  \"faithful\": 0\n}\n```"}
+{"candidate_id": "46120_c03", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\n  \"cue\": 0,\n  \"link\": 2,\n  \"faithful\": 0\n}\n```"}
+{"candidate_id": "46135_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "46336_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "46435_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "46445_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "46686_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "{\"cue\": 0, \"link\": 2, \"faithful\": 0}"}
+{"candidate_id": "46727_c01", "scores": {"cue": 1, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 1, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "46759_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "46951_c00", "scores": {"cue": 1, "link": 2, "faithful": 1}, "raw": "```json\n{\n  \"cue\": 1,\n  \"link\": 2,\n  \"faithful\": 1\n}\n```"}
+{"candidate_id": "46973_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "47007_c00", "scores": {"cue": 1, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 1, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "47011_c00", "scores": {"cue": 1, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 1, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "47014_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "47310_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "47649_c00", "scores": {"cue": 1, "link": 2, "faithful": 0}, "raw": "```json\n{\n  \"cue\": 1,\n  \"link\": 2,\n  \"faithful\": 0\n}\n```"}
+{"candidate_id": "47667_c00", "scores": {"cue": 2, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "47708_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "47892_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "47899_c01", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "47922_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "48014_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "48130_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "48218_c00", "scores": {"cue": 1, "link": 2, "faithful": 0}, "raw": "```json\n{\n  \"cue\": 1,\n  \"link\": 2,\n  \"faithful\": 0\n}\n```"}
+{"candidate_id": "48367_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\n  \"cue\": 0,\n  \"link\": 2,\n  \"faithful\": 0\n}\n```"}
+{"candidate_id": "48381_c00", "scores": {"cue": 0, "link": 0, "faithful": 1}, "raw": "```json\n{\"cue\": 0, \"link\": 0, \"faithful\": 1}\n```"}
+{"candidate_id": "48640_c00", "scores": {"cue": 1, "link": 2, "faithful": 0}, "raw": "{\"cue\": 1, \"link\": 2, \"faithful\": 0}"}
+{"candidate_id": "48897_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "48903_c00", "scores": {"cue": 1, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 1, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "49145_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "49237_c00", "scores": {"cue": 1, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 1, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "49960_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "50031_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "50037_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "50332_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "50425_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "50427_c00", "scores": {"cue": 1, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 1, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "50456_c00", "scores": {"cue": 1, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 1, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "50631_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "50693_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "50696_c01", "scores": {"cue": 1, "link": 2, "faithful": 1}, "raw": "```json\n{\n  \"cue\": 1,\n  \"link\": 2,\n  \"faithful\": 1\n}\n```"}
+{"candidate_id": "50812_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "50814_c00", "scores": {"cue": 1, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 1, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "50818_c00", "scores": {"cue": 2, "link": 2, "faithful": 1}, "raw": "```json\n{\"cue\": 2, \"link\": 2, \"faithful\": 1}\n```"}
+{"candidate_id": "50823_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
+{"candidate_id": "50825_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\n  \"cue\": 0,\n  \"link\": 2,\n  \"faithful\": 0\n}\n```"}
+{"candidate_id": "50840_c00", "scores": {"cue": 0, "link": 2, "faithful": 0}, "raw": "```json\n{\"cue\": 0, \"link\": 2, \"faithful\": 0}\n```"}
