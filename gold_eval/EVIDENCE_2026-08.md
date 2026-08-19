@@ -180,6 +180,16 @@ Gemini $44.7 (caps enforced), OpenAI $3.8, Tinker grant $66.6. ~26k logged calls
   accuracy ≈ ±8pt; on 250-video mean ρ, bootstrap CIs not yet computed.
 - **C10 Gemini rationale gens**: 10/200 empty (thinking-budget bug era; 9 unjudged) → n=191.
   Regenerable at trivial cost if a clean 200 is wanted.
+- **C12 (2026-08-19, SUPERSEDES the T2 numbers in §3.1/§3.3) Match option sets are flawed:**
+  the builder enforced distractor-vs-correct separation but NOT distractor-vs-distractor —
+  98/150 tasks contain two options starting <4s apart (median min pairwise start-gap 2.5s),
+  i.e. adjacent slices of the same scene, visually near-identical (found by the owner during
+  the G9 human pass; audit in git history). Zero temporal IoU between options, and every
+  distractor is ≥4s from the correct option, so answers remain well-defined — but on affected
+  items the effective option count is <4 (chance between .25 and .33), so absolute T2
+  accuracies are possibly inflated and human confirmability is degraded. Builder fixed
+  (pairwise ≥10s, farthest-first); rebuild requires server source data (~3 days), then T2
+  re-runs for all arms and the G9 pass restarts. Treat all §3.1/§3.3 numbers as PROVISIONAL.
 - **C11 Stage-A ceilings vs eval-set ceilings differ by pool** (α=.357/r≈.51/ρ≈.40 on 3,257
   moments vs LOO ρ=.649 on the curated 250-video set). Always name the pool.
 
@@ -324,8 +334,11 @@ task, see gaps G6).
   audio confound). Keep the claim model-scoped.
 - **G8 (missing arm)** Fine-tuned Qwen baseline (ADR-0003) — designed, not run. Rebuttal
   item #2 depends on it. Inkling audio arm also not run (optional).
-- **G9 (instrument mismatch)** T2 ground truth remains auto-alignment without the planned
-  human 1-click confirmation (C6); a 150-item confirmation pass is cheap insurance.
+- **G9 (instrument mismatch) — ESCALATED 2026-08-19**: the human confirmation pass STARTED and
+  immediately surfaced C12 (near-duplicate distractors on 98/150 tasks). Sequence now:
+  rebuild option sets on the server (builder already patched) → reload gold_match_tasks →
+  re-run T2 for all arms (~$6 + grant) → redo the human confirmation. All current T2 numbers
+  are PROVISIONAL until then.
 
 ## 7. Handoff summary (for paper-writing)
 
