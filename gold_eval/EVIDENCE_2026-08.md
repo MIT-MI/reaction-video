@@ -1,0 +1,308 @@
+# ReactionBench gold-eval — Experiments evidence record (2026-08-19)
+
+Researcher-facing evidence base for the Experiments section. NOT paper prose; NOT final
+artifacts. Every number here traces to a file in this repo (provenance ledger §2); numbers
+that cannot be traced are marked NOT-FINAL. Slices are kept separate — no silent merging.
+
+---
+
+## 1. Experiment index
+
+| ID | Question | Items | Models | Status |
+|---|---|---|---|---|
+| T2-MCQ | Can models pick the triggering same-video stimulus segment (single-call, 4-option)? | 150 | 7 arms | complete |
+| T1-JOINT | Can models rank a video's moments by reaction intensity, seen jointly? | 250 videos / 642 moments | 7 arms | complete (35B: 237/250) |
+| T3-RAT | Can models write the human-matching rationale (blind, judged cross-family)? | 200 | 7 arms | complete (gemini gen: 190/200 usable) |
+| E1-VIDEO | Frames (1fps, 512px) vs native mp4 (incl. audio) — same model, same items | T2+T1 | Gemini 3.7 Flash | complete |
+| E2-SCORED | Per-option 1-10 scoring (old-paper protocol) vs single-call MCQ | 150×4 calls | 7 arms | complete |
+| E3-INDEP | Independent per-moment 0-100 scoring (no cross-moment context) vs T1-JOINT | 250 videos | 7 arms | complete w/ coverage gaps (172-241/250) |
+| V3-SBS | Side-by-side (reaction\|option) native video, per-option scoring | 150×4 | Gemini 3.7 Flash | complete |
+| HC-RANK | Human LOO ceiling on the ranking set | 420 rater-video pairs | — | complete |
+| JJ-AGREE | Judge-judge agreement on 30-item overlaps | 60 rows/model ×5 | GPT-5 vs Gemini judges | complete |
+
+Roster decisions: Claude dropped (owner 2026-08-11); Gemini Pro & GPT-4o dropped as stale
+(owner 2026-08-19; ADR-0003). Fine-tune arm: designed (ADR-0003), not yet run.
+
+## 2. Provenance ledger
+
+Repos/commits: eval = `MIT-MI/reaction-video@gold-eval` (results as of `77e27cb`);
+dataset = `reaction_video_benchmark_phase0_pilot@phase0/pilot` (`b1072ec`).
+
+| Evidence | File (eval repo unless noted) |
+|---|---|
+| Master aggregate | `gold_eval/results/summary.json` (regenerate: `python -m gold_eval.summarize --with_ceiling`) |
+| T2 predictions | `gold_eval/results/match/<model>.jsonl` (`__video` = E1 arm) |
+| E2 / V3 predictions | `gold_eval/results/match_scored/`, `gold_eval/results/match_sbs/` |
+| T1 predictions | `gold_eval/results/ranking/` (joint; `__video` = E1), `gold_eval/results/ranking_indep/` (E3) |
+| T3 generations / judgements | `gold_eval/results/rationale/`, `gold_eval/results/rationale_judge/<gen>__by__<judge>.jsonl` |
+| Tie-break slices (E2/V3) | computed 2026-08-19 from the scored jsonls (see §3.3; recompute snippet in git history) |
+| Task sets (frozen) | `gold_eval/tasks/{match_set,ranking_set,rationale_set,rationale_refs}.json` |
+| Ranking-set construction | dataset repo `scripts/pilot/build_ranking_tasks.py`, `reports/phase0/ranking/selection_record.json` |
+| Match-set construction | dataset repo `tools/data_annotation/gold_platform/build_match_tasks.py`, Supabase `gold_match_tasks` |
+| Human rationales (Prolific) | Supabase `gold_rationales`; snapshot in `gold_eval/tasks/rationale_refs.json` (447 'ok' refs) |
+| Stage A agreement stats | dataset repo `docs/gold_stage_a_figures/stats.json` (α_ordinal=0.357), write-up `docs/GOLD_STAGE_A_ANALYSIS.md` |
+| Spend/token ledger | `gold_eval/results/costs/*.jsonl`; `python -m gold_eval.costs` |
+| Prompts (exact strings) | `gold_eval/run_{match,ranking,rationale,match_scored,ranking_independent,match_sbs}.py`, `gold_eval/judge_rationale.py` |
+| Run logs | `gold_eval/data/*.log` (p2/p3/p4/p5 batches) |
+
+Input protocol: frames 1 fps, max side 512, caps: match reaction 12 / option 6, ranking 64,
+rationale 12/stream, E3 window 12. Native-video arm sends mp4 bytes incl. audio (oversized
+clips re-encoded, `frames.video_for_upload`). Temperature 0 (GPT-5: reasoning_effort=minimal;
+Gemini: thinking_level=low + headroom).
+
+## 3. Canonical result tables
+
+### 3.1 T2 match — single-call MCQ (150 items; chance .25)
+
+| Arm | acc | n_scored | unparsed | err time-dist mean/med (s) | acc cult0 (n=22) | cult1 (n=8) | cult2 (n=120) |
+|---|---|---|---|---|---|---|---|
+| Gemini 3.7 Flash native-video | **.5168** | 149 | 0 | 22.8 / 19.2 | .591 | .375 | .513 |
+| GPT-5 (frames) | .4867 | 150 | 0 | 22.4 / 20.1 | .500 | .375 | .492 |
+| Gemini 3.7 Flash (frames) | .4600 | 150 | 1 | 22.7 / 19.7 | .409 | .500 | .467 |
+| Kimi-K2.6 | .4600 | 150 | 0 | 22.2 / 18.9 | .455 | .375 | .467 |
+| Qwen3.5-397B-A17B | .4467 | 150 | 0 | 22.0 / 20.3 | .500 | .375 | .442 |
+| Qwen3.6-27B | .3867 | 150 | 0 | 22.2 / 18.9 | .273 | .375 | .408 |
+| Qwen3.6-35B-A3B | .3667 | 150 | 1 | 21.9 / 19.2 | .364 | .250 | .375 |
+| Qwen3.5-9B | .2600 | 150 | 13 | 20.3 / 18.2 | .182 | .375 | .267 |
+
+Unparsed rows count as incorrect. Ground truth = temporal alignment (`correct_index`),
+auto-built, not human-confirmed (see caveat C6).
+
+### 3.2 T1 ranking — joint vs independent (250 videos, 642 moments; human LOO ceiling ρ=.649, 420 rater-video pairs)
+
+| Arm | JOINT mean ρ | JOINT pooled r | JOINT n | INDEP mean ρ | INDEP pooled r | INDEP n |
+|---|---|---|---|---|---|---|
+| Gemini 3.7 Flash native-video | .2604 | .417 | 250 | — | — | — |
+| Gemini 3.7 Flash (frames) | .1755 | .308 | 249 | .3282 | .5175 | 241 |
+| Qwen3.6-27B | .1634 | .238 | 250 | **.3937** | .434 | 209 |
+| Kimi-K2.6 | .0864 | .241 | 250 | .2856 | .430 | 204 |
+| Qwen3.5-397B-A17B | .0646 | .217 | 250 | .3309 | .387 | 182 |
+| Qwen3.6-35B-A3B | .0456 | .187 | 237 | .2566 | .398 | 205 |
+| Qwen3.5-9B | .0294 | .204 | 250 | .3340 | .389 | 191 |
+| GPT-5 | .0262 | .293 | 250 | .2039 | .426 | 217 |
+
+mean ρ = per-video Spearman vs Stage-A consensus means, averaged over videos with non-tied
+gold; pooled r = Pearson over all moments pooled. INDEP coverage gaps: runner drops a video
+if any moment's answer is unparsable (caveat C3). Stage-A full-pool reference: consensus-mean
+human ceiling r≈.51, within-video ρ≈.40 (dataset repo GOLD_STAGE_A_ANALYSIS.md — different
+pool than the 250-video eval set; do not mix).
+
+### 3.3 E2 per-option scoring & V3 side-by-side (150 items × 4 calls; three scoring conventions — keep all three)
+
+| Arm | strict acc (tie=wrong) | tie rate | expected acc (random tie-break) | decided-only acc (n decided) |
+|---|---|---|---|---|
+| GPT-5 | .200 | .520 | .378 | .417 (72) |
+| Qwen3.6-35B-A3B | .207 | .667 | .392 | .620 (50) |
+| Kimi-K2.6 | .187 | .667 | .387 | .560 (50) |
+| Gemini 3.7 Flash | .147 | .627 | .349 | .393 (56) |
+| Qwen3.5-397B | .140 | .647 | .303 | .396 (53) |
+| Qwen3.5-9B | .133 | .733 | .326 | .500 (40) |
+| Qwen3.6-27B | .093 | .813 | .307 | .500 (28) |
+| **V3 SBS (Gemini)** | .147 | .613 | .322 | .379 (58) |
+
+No item had all four options unparsable. Decided-only subsets are self-selected (easier
+items) — NOT comparable to MCQ accuracy (caveat C4).
+
+### 3.4 T3 rationale — cross-family judge (200 items; refs/item: 1×41, 2×77, 3×78, 4-5×4)
+
+Primary judge GPT-5 (all non-OpenAI gens), Gemini 3.7 Flash judges GPT-5's gens:
+
+| Generator | judge | cue (0-2) | link (0-2) | faithful (0-1) | composite (0-5) | n |
+|---|---|---|---|---|---|---|
+| GPT-5 | gemini | 1.470 | 1.335 | .870 | **3.675** | 200 |
+| Kimi-K2.6 | gpt-5 | .935 | 1.495 | .185 | 2.615 | 200 |
+| Qwen3.5-397B | gpt-5 | .745 | 1.475 | .180 | 2.400 | 200 |
+| Gemini 3.7 Flash | gpt-5 | .738 | 1.084 | .534 | 2.356 | 191 |
+| Qwen3.6-35B-A3B | gpt-5 | .750 | 1.420 | .185 | 2.355 | 200 |
+| Qwen3.6-27B | gpt-5 | .720 | 1.380 | .180 | 2.280 | 200 |
+| Qwen3.5-9B | gpt-5 | .675 | 1.410 | .135 | 2.220 | 200 |
+
+Overlap slices (same 60 gens judged by BOTH judges; 5 Tinker models): Gemini-judge composite
+runs 3.43-3.57 vs GPT-5-judge 2.22-2.62 on identical generations → **Gemini judge is
+systematically ~+1.1-1.4 more lenient**; rank agreement Pearson .76-.85. Therefore the GPT-5
+row (3.675, Gemini-judged) is NOT column-comparable to the others (caveat C1).
+Qwen3.5-9B row doubles as the draft-model control (drafts were never shown to annotators).
+
+### 3.5 Spend / scale (ledger)
+
+Gemini $44.7 (caps enforced), OpenAI $3.8, Tinker grant $66.6. ~26k logged calls.
+
+## 4. Caveat register
+
+- **C1 Judge asymmetry.** T3 primary scores come from two different judges by design (no
+  self-family judging). Cross-judge offset ≈ +1.1-1.4 (Gemini lenient). Any cross-column
+  comparison must be within-judge, or offset-adjusted with the overlap slices. GPT-5-gen
+  offset-adjusted composite ≈ 2.3-2.6 (NOT-FINAL; derived, choose method before use).
+- **C2 Judge-human validation missing.** Judge scores are not yet anchored to human ratings
+  of model rationales (ADR-0001 requires it). 30-50-item human anchor set TODO.
+- **C3 E3 coverage.** INDEP drops whole videos on any unparsable moment: coverage 182-241/250,
+  differs BY MODEL → mean ρ comparisons across models carry selection noise. Per-video paired
+  comparison (joint vs indep on the intersection) is the clean test; not yet computed.
+- **C4 E2/V3 decided-only slices** are self-selected easy subsets; report only alongside tie
+  rate and expected-acc; never as headline accuracy.
+- **C5 Native-video arm includes audio** (full-modality arm). E1 gains conflate video-token
+  representation + audio access. A muted-video ablation would separate them (not run).
+- **C6 T2 ground truth is auto temporal alignment** (match-ready filter + min-duration/
+  distinctness guards). The planned 1-click human confirmation study was not run; 1 known
+  defective option clip (0.2s) documented, first-frame fallback used.
+- **C7 Cultural strata are tiny** (n=22/8/120): stratum-level accuracies are descriptive only;
+  no significance claims.
+- **C8 Creator concentration.** Ranking set: 4 Patreon reviewers = 80% of videos (cap relaxed
+  35→50 to reach 250; selection_record.json). Disclose; per-creator slices not yet computed.
+- **C9 Single run per arm**, temperature 0; no seed variance. Binomial 95% CI on 150-item
+  accuracy ≈ ±8pt; on 250-video mean ρ, bootstrap CIs not yet computed.
+- **C10 Gemini rationale gens**: 10/200 empty (thinking-budget bug era; 9 unjudged) → n=191.
+  Regenerable at trivial cost if a clean 200 is wanted.
+- **C11 Stage-A ceilings vs eval-set ceilings differ by pool** (α=.357/r≈.51/ρ≈.40 on 3,257
+  moments vs LOO ρ=.649 on the curated 250-video set). Always name the pool.
+
+## 5. Table/figure decision log (+ analysis captions)
+
+**A1. Main table — three-task leaderboard (T2 MCQ acc, T1 joint ρ, T3 composite) + human
+reference rows.** Decision: MAIN TABLE. Rationale: the paper's central claim (tasks are
+well-posed, discriminative, unsaturated) needs all three tasks against ceilings in one view.
+T3 column must be within-judge (GPT-5-judged models) with the GPT-5-gen row footnoted (C1).
+
+> analysis_caption: Main results on the ReactionBench gold set: stimulus→reaction matching
+> (150 four-option items, accuracy, chance 0.25), within-video intensity ranking (250 videos,
+> mean per-video Spearman ρ against the mean of ≥3 anchored human scores; human leave-one-out
+> ceiling 0.649), and rationale generation (200 items, 0-5 rubric composite from a cross-family
+> LLM judge scored against 1-5 independent human-written references). Rows are model arms under
+> an identical 1 fps sampled-frame budget; higher is better in all columns. The headline
+> pattern: matching accuracy orders cleanly with model capability (26%→52%) yet the best model
+> stays ~35 points below perfect despite objective ground truth, and joint ranking collapses to
+> near-zero correlation for every arm (≤0.26 vs human 0.649) — models detect reactions but
+> cannot calibrate intensity within a video. Supports the claim that the redesigned same-video
+> tasks are discriminative and far from saturation. Rationale scores are comparable only within
+> the shared judge; the GPT-5 row uses a different (more lenient) judge and is marked. Single
+> run per arm at temperature 0; 150-item accuracies carry ≈±8-point binomial 95% CIs. This
+> table does not show input-modality effects (see the frames-vs-video comparison) and does not
+> imply the ranking failure is perceptual (see the independent-scoring ablation).
+
+**A2. E1 frames vs native video (Gemini, T2+T1).** Decision: MAIN TABLE (small, 2×4) or
+merged rows into A1 with a modality tag. Rationale: only same-model modality comparison;
+supports the protocol-choice discussion and the "video-native models are under-served by
+frame sampling" claim.
+
+> analysis_caption: Input-modality effect measured on a single model (Gemini 3.7 Flash)
+> evaluated twice on identical items: once with the benchmark's standard 1 fps / 512px sampled
+> frames, once with the raw video file (audio track included). Native video improves matching
+> accuracy from 46.0% to 51.7% (150 items) and within-video ranking mean Spearman from 0.18 to
+> 0.26 (250 videos), while costing ~30× fewer input tokens. Supports the narrow claim that the
+> uniform frame protocol understates what a video-native model can extract from the same
+> evidence — the benchmark's difficulty is conservative, not an artifact of starving models.
+> Readers should not attribute the gain purely to visual temporal continuity: the native file
+> also carries audio, so this arm bundles two modality advantages (see caveat register); no
+> other roster model accepts raw video, so no cross-model generalization is claimed.
+
+**A3. E3 joint vs independent scoring (all 7 arms).** Decision: FIGURE (paired dot / slope
+chart, one line per model, joint→indep mean ρ, human ceiling as reference line) + APPENDIX
+TABLE with ns. Rationale: the reversal (every model improves without context) is the paper's
+sharpest mechanism finding; shape beats exact values. Misleading-risk: differing INDEP
+coverage per model (C3) — the figure must state coverage or use the paired-intersection
+recompute before finalizing; without it, mark PRELIMINARY.
+
+> analysis_caption: Within-video relative calibration, not absolute perception, is what
+> breaks current models on intensity ranking. Each line is one model's mean per-video Spearman
+> ρ against human consensus under two elicitations over the same 250-video set: JOINT (the full
+> reaction video plus all of its moments in one prompt, scored together) versus INDEPENDENT
+> (each moment's window scored 0-100 in isolation on the same behaviorally anchored scale).
+> Every arm improves when moments are scored independently — e.g. GPT-5 rises from 0.03 to 0.20
+> and Qwen3.6-27B from 0.16 to 0.39, approaching half the human leave-one-out ceiling of 0.649
+> (dashed reference) — and the model ordering under independent scoring roughly follows
+> capability while joint scores cluster near zero regardless of scale. Supports the narrow
+> claim that long-context relative comparison is the binding failure mode, echoing (and
+> cleanly re-measuring) the context ablation of the prior submission. Independent-scoring
+> coverage varies by model (182-241 of 250 videos) because items with unparsable single-moment
+> answers are dropped; treat cross-model gaps under ~0.05 as noise and rely on the
+> paired-intersection version for the final figure. Do not read this as evidence that context
+> hurts humans — the human ceiling is measured on the joint task.
+
+**A4. E2 per-option scoring + V3 side-by-side (three scoring conventions).** Decision:
+APPENDIX TABLE + one PROSE sentence in main text. Rationale: it justifies the single-call MCQ
+design (the old protocol's scores are tie-saturated on same-video negatives) but three
+conventions are too much nuance for the main text. Misleading-risk: reporting only strict
+accuracy ("below chance") would be rhetorically strong but statistically unfair — expected
+accuracy with random tie-break (0.30-0.39) must appear.
+
+> analysis_caption: Why the benchmark presents all four candidates jointly: replicating the
+> prior submission's per-option protocol (reaction + one candidate per call, 1-10 likelihood,
+> argmax over four calls; 150 items × 4 calls per model) produces ties on 52-81% of items —
+> models assign the same top score to multiple same-video segments — so strict accuracy
+> (ties counted wrong, 0.09-0.21) collapses below the 0.25 chance floor while the fairer
+> random-tie-break expectation sits at 0.30-0.39, and the tie-free subset (0.38-0.62 accuracy,
+> n=28-72) is a self-selected easy cohort not comparable to the main matching accuracy. The
+> side-by-side variant (reaction and candidate hstacked into one video, Gemini only) shows the
+> same tie saturation (61%), indicating that independently presented same-video negatives are
+> indistinguishable on an absolute scale regardless of layout. Supports the narrow claim that
+> same-video hard negatives require joint presentation to be discriminative — the design
+> answer to the prior review's negative-mining critique. Not evidence that these models are
+> below chance at matching, nor that side-by-side composition helps or hurts beyond the tie
+> effect.
+
+**A5. T3 rationale rubric breakdown + judge-agreement overlap.** Decision: MAIN TABLE
+(within-judge columns) + APPENDIX TABLE (overlap slices, both judges). Rationale: T3 is a
+headline task; the judge-asymmetry handling must be visible to preempt the circularity
+critique. Misleading-risk: mixing judges in one column (C1).
+
+> analysis_caption: Rationale quality under a cross-family LLM-as-judge protocol: each
+> model's one-sentence explanation of 200 gold moments is scored against 1-5 independent
+> human-written references on cue identification (0-2), stimulus-reaction linkage (0-2), and
+> faithfulness (0-1). No model family judges its own generations; the five open-weight arms
+> and Gemini are scored by GPT-5 (directly comparable), GPT-5's generations by Gemini (shown
+> separately — a 60-item dual-judged overlap per model shows the Gemini judge is uniformly
+> ~1.1-1.4 points more lenient at rank agreement r≈0.76-0.85, so its absolute scores are not
+> column-comparable). Within the shared judge, composites span only 2.22-2.62 of 5 with cue
+> scores below 1.0 throughout: models produce causally-worded but under-specified rationales
+> that rarely pin the same concrete trigger humans name — supporting the claim that grounded
+> reaction explanation, not fluent affect talk, is the open gap. Judge scores are not yet
+> validated against human ratings of model outputs; treat orderings within ±0.15 composite as
+> unresolved. The Qwen3.5-9B row also serves as the disclosure control that the annotation-era
+> draft model holds no advantage (it ranks last).
+
+**A6. Cultural-specificity slices (T2).** Decision: PROSE-ONLY (one sentence, descriptive).
+Rationale: strata n=22/8/120 (C7) cannot support a table or claims beyond "no visible
+universal-vs-niche gap at current power".
+
+**A7. Human ceilings block (α, r, ρ by pool).** Decision: reported inside A1/A3 captions +
+one METHODS paragraph, not a separate artifact. Rationale: pool confusion risk (C11) is best
+handled in text.
+
+**A8. Cost/efficiency table (tokens & $ per arm).** Decision: APPENDIX TABLE. Rationale:
+reproducibility service to readers; also carries the frames-vs-video 30× token result.
+
+**A9. Failure-mode taxonomy of T3 rationales.** Decision: OMIT for now — no coded data yet
+(old paper's taxonomy exists but applies to the old task; recoding on new outputs is an open
+task, see gaps G6).
+
+## 6. Unresolved evidence gaps
+
+- **G1 (missing number)** Paired joint-vs-indep comparison on per-model intersections (fix for
+  C3) — not computed. Blocking A3 final.
+- **G2 (missing number)** Bootstrap/binomial CIs for all headline numbers — not computed.
+- **G3 (missing study)** Judge-human anchor validation (C2). ~30-50 items × human rubric
+  scores of model rationales. Blocking the T3 claim strength.
+- **G4 (missing number)** Gemini rationale regeneration for the 10 empty items (C10) if a
+  clean n=200 row is wanted.
+- **G5 (non-comparable)** GPT-5 T3 composite vs others (C1) until an offset-adjustment method
+  is fixed, or a third neutral judge (e.g., a Tinker text model) scores everything.
+- **G6 (missing analysis)** Failure-mode coding of new T3/T2 errors; per-creator and
+  per-domain slices (C8); Gemini prescreen self-selection check (prescreen_rank vs its own
+  ranking scores — data present in ranking_set.json, analysis not run).
+- **G7 (claim risk)** "Native video is better" generalizes only to Gemini (C5, single model,
+  audio confound). Keep the claim model-scoped.
+- **G8 (missing arm)** Fine-tuned Qwen baseline (ADR-0003) — designed, not run. Rebuttal
+  item #2 depends on it. Inkling audio arm also not run (optional).
+- **G9 (instrument mismatch)** T2 ground truth remains auto-alignment without the planned
+  human 1-click confirmation (C6); a 150-item confirmation pass is cheap insurance.
+
+## 7. Handoff summary (for paper-writing)
+
+Safe-to-write now: (i) three-task main results with ceilings (A1) and every number in §3;
+(ii) the E1 modality-effect claim scoped to Gemini; (iii) the E2 tie-saturation argument as
+design justification; (iv) the E3 calibration-vs-perception mechanism as the central analysis,
+flagged preliminary pending G1; (v) methods facts (protocol, human data: 3,257 moments ×
+≥3 raters, α=.357; 447 Prolific rationale refs from 3 annotators at 200/200 coverage;
+frozen sets 150/250/200). Not safe yet: cross-judge T3 comparisons (G5), CI-qualified
+superiority claims (G2), any fine-tune or audio-arm statement (G8), human-confirmed T2 gold
+(G9). Numbers must be quoted from §3 / summary.json, not recomputed ad hoc.

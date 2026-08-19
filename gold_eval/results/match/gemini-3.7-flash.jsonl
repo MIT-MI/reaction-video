@@ -149,3 +149,10 @@
 {"candidate_id": "53544_c00", "pred_index": null, "raw": "Look", "in_tok": 28675, "out_tok": 1}
 {"candidate_id": "55958_c00", "pred_index": 0, "raw": "A", "in_tok": 28675, "out_tok": 1}
 {"candidate_id": "56035_c00", "pred_index": 1, "raw": "B", "in_tok": 17675, "out_tok": 1}
+{"candidate_id": "48897_c00", "pred_index": 0, "raw": "A", "in_tok": 12050, "out_tok": 1}
+{"candidate_id": "52119_c01", "pred_index": 0, "raw": "A", "in_tok": 18500, "out_tok": 1}
+{"candidate_id": "53544_c00", "pred_index": 1, "raw": "B", "in_tok": 28675, "out_tok": 1}
+{"candidate_id": "53735_c01", "pred_index": 1, "raw": "B", "in_tok": 28675, "out_tok": 1}
+{"candidate_id": "55805_c00", "pred_index": null, "raw": "", "in_tok": 0, "out_tok": 0}
+{"candidate_id": "55855_c00", "pred_index": 3, "raw": "D", "in_tok": 23164, "out_tok": 1}
+{"candidate_id": "60441_c02", "pred_index": 2, "raw": "C", "in_tok": 24882, "out_tok": 1}

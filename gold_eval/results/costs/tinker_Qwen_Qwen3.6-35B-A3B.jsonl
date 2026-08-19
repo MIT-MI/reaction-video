@@ -1842,3 +1842,5 @@
 {"ts": "2026-08-19T07:42:19+00:00", "model": "tinker:Qwen/Qwen3.6-35B-A3B", "provider": "tinker", "item": "68224:m0", "in_tok": 1125, "out_tok": 3, "usd": 0.000612}
 {"ts": "2026-08-19T07:42:22+00:00", "model": "tinker:Qwen/Qwen3.6-35B-A3B", "provider": "tinker", "item": "68224:m1", "in_tok": 867, "out_tok": 3, "usd": 0.000472}
 {"ts": "2026-08-19T07:42:26+00:00", "model": "tinker:Qwen/Qwen3.6-35B-A3B", "provider": "tinker", "item": "68224:m2", "in_tok": 1125, "out_tok": 3, "usd": 0.000612}
+{"ts": "2026-08-19T16:19:35+00:00", "model": "tinker:Qwen/Qwen3.6-35B-A3B", "provider": "tinker", "item": "45379_c00", "in_tok": 3730, "out_tok": 48, "usd": 0.002078}
+{"ts": "2026-08-19T16:19:45+00:00", "model": "tinker:Qwen/Qwen3.6-35B-A3B", "provider": "tinker", "item": "47636_c00", "in_tok": 2956, "out_tok": 48, "usd": 0.00166}

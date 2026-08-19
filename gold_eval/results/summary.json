@@ -1,18 +1,18 @@
 {
   "match": {
     "match/gemini-3.7-flash": {
-      "n_scored": 145,
-      "accuracy": 0.4621,
+      "n_scored": 150,
+      "accuracy": 0.46,
       "chance": 0.25,
-      "unparsed": 2,
+      "unparsed": 1,
       "err_temporal_dist_s": {
-        "mean": 23.02,
-        "median": 20.95
+        "mean": 22.69,
+        "median": 19.73
       },
       "acc_by_cultural_specificity": {
-        "0": 0.4286,
+        "0": 0.4091,
         "1": 0.5,
-        "2": 0.4655
+        "2": 0.4667
       }
     },
     "match/gemini-3.7-flash__video": {
@@ -94,9 +94,9 @@
       "n_scored": 150,
       "accuracy": 0.3667,
       "chance": 0.25,
-      "unparsed": 2,
+      "unparsed": 1,
       "err_temporal_dist_s": {
-        "mean": 22.0,
+        "mean": 21.89,
         "median": 19.2
       },
       "acc_by_cultural_specificity": {
@@ -251,10 +251,10 @@
   },
   "ranking": {
     "ranking/gemini-3.7-flash": {
-      "n_videos_scored": 239,
-      "unparsed": 11,
-      "mean_spearman": 0.1599,
-      "pooled_pearson": 0.297
+      "n_videos_scored": 249,
+      "unparsed": 1,
+      "mean_spearman": 0.1755,
+      "pooled_pearson": 0.3081
     },
     "ranking/gemini-3.7-flash__video": {
       "n_videos_scored": 250,
@@ -311,10 +311,10 @@
       "pooled_pearson": 0.4264
     },
     "ranking_indep/tinker_Qwen_Qwen3.5-397B-A17B": {
-      "n_videos_scored": 172,
+      "n_videos_scored": 182,
       "unparsed": 0,
-      "mean_spearman": 0.3436,
-      "pooled_pearson": 0.3977
+      "mean_spearman": 0.3309,
+      "pooled_pearson": 0.3867
     },
     "ranking_indep/tinker_Qwen_Qwen3.5-9B": {
       "n_videos_scored": 191,
