@@ -62,6 +62,8 @@ def build_parts(task: dict, r2_base: str, reaction_cap: int, option_cap: int,
 
 def parse_letter(text: str) -> int | None:
     t = text.strip()
+    if not t:
+        return None
     if t[:1] in LETTERS and (len(t) == 1 or not t[1].isalnum()):
         return LETTERS.index(t[0])
     # case-sensitive so the article "a" never matches; take the LAST standalone letter

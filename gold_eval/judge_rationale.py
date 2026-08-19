@@ -101,6 +101,8 @@ def run_judge(gen_file: Path, judge_model: str, refs: dict, limit: int | None) -
 
 
 def aggregate(path: Path) -> dict:
+    if not path.exists():
+        return {"n": 0}
     rows = [r for r in (json.loads(l) for l in path.read_text().splitlines() if l.strip())]
     dedup = {r["candidate_id"]: r for r in rows}
     scored = [r["scores"] for r in dedup.values() if r.get("scores")]
@@ -139,7 +141,11 @@ def main() -> None:
         out = run_judge(gf, primary, refs, args.limit)
         report[gf.stem] = {f"by_{slug(primary)}": aggregate(out)}
         other = "gpt-5" if primary != "gpt-5" else "gemini-3.7-flash"
-        if args.overlap:
+        # cross-family rule also applies to the overlap judge: skip when the second judge
+        # would share a family with the generator (gemini gens get only the gpt-5 judge;
+        # judge-judge agreement is computed on the remaining models)
+        same_family = other.split("-")[0] in gf.stem
+        if args.overlap and not same_family:
             out2 = run_judge(gf, other, refs, args.overlap)
             report[gf.stem][f"by_{slug(other)}_overlap"] = aggregate(out2)
         print(f"{gf.stem}: {json.dumps(report[gf.stem])}")
