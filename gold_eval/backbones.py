@@ -91,9 +91,12 @@ class GeminiVertexBackbone:
                 contents.append(p["text"])
         # max_output_tokens includes thinking tokens on Gemini 3.x; thinking_level="low"
         # suppresses them (verified: thoughts=None) so the budget goes to the visible answer.
+        # Pro models cannot fully disable thinking (~70-300 thought tokens even at "low"),
+        # so give them headroom — thoughts are billed as output but stay small at "low".
+        budget = max_tokens + (2048 if "pro" in self.model else 0)
         try:
             cfg = t.GenerateContentConfig(
-                max_output_tokens=max_tokens, temperature=0,
+                max_output_tokens=budget, temperature=0,
                 thinking_config=t.ThinkingConfig(thinking_level="low"))
             r = self._client.models.generate_content(model=self.model, contents=contents, config=cfg)
         except Exception as e:

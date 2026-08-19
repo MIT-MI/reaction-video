@@ -1,9 +1,9 @@
 {
   "gemini-3.7-flash": {
-    "n_videos_scored": 219,
-    "unparsed": 31,
-    "mean_spearman": 0.1823,
-    "pooled_pearson": 0.3275
+    "n_videos_scored": 239,
+    "unparsed": 11,
+    "mean_spearman": 0.1599,
+    "pooled_pearson": 0.297
   },
   "gpt-5": {
     "n_videos_scored": 250,
@@ -12,10 +12,10 @@
     "pooled_pearson": 0.2929
   },
   "tinker_Qwen_Qwen3.5-397B-A17B": {
-    "n_videos_scored": 0,
-    "unparsed": 19,
-    "mean_spearman": null,
-    "pooled_pearson": null
+    "n_videos_scored": 250,
+    "unparsed": 0,
+    "mean_spearman": 0.0646,
+    "pooled_pearson": 0.2172
   },
   "tinker_Qwen_Qwen3.5-9B": {
     "n_videos_scored": 250,

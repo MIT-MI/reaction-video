@@ -1,17 +1,32 @@
 {
   "gemini-3.7-flash": {
-    "n_scored": 141,
-    "accuracy": 0.4539,
+    "n_scored": 145,
+    "accuracy": 0.4621,
     "chance": 0.25,
-    "unparsed": 3,
+    "unparsed": 2,
     "err_temporal_dist_s": {
       "mean": 23.02,
       "median": 20.95
     },
     "acc_by_cultural_specificity": {
-      "0": 0.4,
+      "0": 0.4286,
       "1": 0.5,
-      "2": 0.4602
+      "2": 0.4655
+    }
+  },
+  "gemini-3.7-flash__video": {
+    "n_scored": 72,
+    "accuracy": 0.4167,
+    "chance": 0.25,
+    "unparsed": 17,
+    "err_temporal_dist_s": {
+      "mean": 22.87,
+      "median": 22.66
+    },
+    "acc_by_cultural_specificity": {
+      "0": 0.3077,
+      "1": 0.2,
+      "2": 0.463
     }
   },
   "gpt-5": {

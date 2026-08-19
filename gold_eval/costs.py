@@ -24,6 +24,7 @@ PRICES: dict[str, tuple[float, float]] = {
     "gpt-4o": (2.50, 10.00),           # legacy grandfathered rate
     "gpt-5": (1.25, 10.00),
     "gemini-3.7-flash": (0.75, 3.75),  # intro rate until 2026-12-31, then 1.50/7.50
+    "gemini-3.1-pro-preview": (2.00, 12.00),
     "tinker:Qwen/Qwen3.5-9B": (0.66, 1.995),
     "tinker:Qwen/Qwen3.6-27B": (1.86, 5.595),
     "tinker:Qwen/Qwen3.6-35B-A3B": (0.54, 1.335),
@@ -35,8 +36,8 @@ PRICES: dict[str, tuple[float, float]] = {
 
 # Hard abort thresholds per provider (cumulative across all runs).
 PROVIDER_CAPS: dict[str, float] = {
-    "gemini": 75.0,    # $36.8 spent on account 1 (exhausted); account 2 swapped in 2026-08-19
-                       # with fresh credit — cap = 36.8 + ~38 usable. Bump again on next swap.
+    "gemini": 330.0,   # $36.8 spent on account 1 (exhausted); account 2 (2026-08-19) has $300
+                       # expiring ~2026-09-08 — owner: "可以随便用". cap = 36.8 + ~293.
     "openai": 30.0,    # GPT-5 approved (owner, 2026-08-18)
     "tinker": float("inf"),
 }

@@ -66,3 +66,21 @@ def extract_frames(clip: Path, fps: float = 1.0, max_side: int = 512,
 
 def data_uri(p: Path) -> str:
     return "data:image/jpeg;base64," + base64.b64encode(p.read_bytes()).decode("ascii")
+
+
+def make_sbs(left: Path, right: Path, height: int = 360) -> Path:
+    """V3: side-by-side video (left=reaction, right=candidate stimulus), silent, shared
+    timeline — lets a video-native model check temporal alignment directly."""
+    out = DATA / "sbs" / f"{left.stem}__{right.stem}.mp4"
+    if out.exists() and out.stat().st_size > 0:
+        return out
+    out.parent.mkdir(parents=True, exist_ok=True)
+    tmp = out.with_name(out.name + ".tmp.mp4")
+    subprocess.run(
+        ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(left), "-i", str(right),
+         "-filter_complex",
+         f"[0:v]scale=-2:{height}[l];[1:v]scale=-2:{height}[r];[l][r]hstack=inputs=2[v]",
+         "-map", "[v]", "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "28", str(tmp)],
+        check=True)
+    tmp.rename(out)
+    return out
