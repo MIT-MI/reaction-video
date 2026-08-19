@@ -1,0 +1,1111 @@
+[
+ {
+  "anchor_id": "8c46c52803c9",
+  "candidate_id": "50031_c00",
+  "gen_model": "gpt-5",
+  "rationale": "When the guy suddenly dives onto his friend lying on the bed and yanks the blanket away.",
+  "refs": [
+   "A man rips the back of another mans shirt off.",
+   "The cue is the person ripping off the white shirt off the other person which triggers the reaction to the shirt being ripped.",
+   "The reviewer reacted with laughter because in a video he saw a person trying to pull another person from back by grabbing his T-shirt, and it tears apart."
+  ],
+  "face_r2_key": "stagec/50031_c00_face.mp4",
+  "stimuli_r2_key": "stagec/50031_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "c29eeec22155",
+  "candidate_id": "53492_c03",
+  "gen_model": "gpt-5",
+  "rationale": "When the sorcerer raises a glowing blue barrier and intricate runes flare up to block the incoming arrows.",
+  "refs": [
+   "An arrow flys into the head of one of the characters.",
+   "The reviewer reacted with shock while watching video game clips."
+  ],
+  "face_r2_key": "stagec/53492_c03_face.mp4",
+  "stimuli_r2_key": "stagec/53492_c03_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "987f6bdff774",
+  "candidate_id": "57905_c00",
+  "gen_model": "gpt-5",
+  "rationale": "When the man threatens, \u201cI will kill the princess\u2026 I will come to Wakanda and I will kill you,\u201d delivered inches from her face.",
+  "refs": [
+   "The viewer is neutral while watching this video."
+  ],
+  "face_r2_key": "stagec/57905_c00_face.mp4",
+  "stimuli_r2_key": "stagec/57905_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "9c4e663f05ae",
+  "candidate_id": "51483_c00",
+  "gen_model": "gpt-5",
+  "rationale": "When the man in pink trunks got grabbed and shoved headfirst into the pool during the chaotic poolside brawl.",
+  "refs": [
+   "The reviewer reacted with laughter because in the video, a guy is carrying a chair and dancing among others at a pool party."
+  ],
+  "face_r2_key": "stagec/51483_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51483_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "42efb290bbb2",
+  "candidate_id": "57548_c02",
+  "gen_model": "gpt-5",
+  "rationale": "The viewer reacts when a colossal, glowing-eyed figure looms over the city and fires a blue energy beam.",
+  "refs": [
+   "The reviewer seems neutral while watching this video."
+  ],
+  "face_r2_key": "stagec/57548_c02_face.mp4",
+  "stimuli_r2_key": "stagec/57548_c02_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "2859e0876a7e",
+  "candidate_id": "52669_c00",
+  "gen_model": "gpt-5",
+  "rationale": "When Sonic transforms into a hulking werewolf form and the small companion yells \u201cOh no!\u201d before fleeing into the green-lit temple, the viewer bursts into laughter at the sudden, over-the-top change.",
+  "refs": [
+   "The reviewer reacted with laughter while watching some video of Neo Dragon."
+  ],
+  "face_r2_key": "stagec/52669_c00_face.mp4",
+  "stimuli_r2_key": "stagec/52669_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "8f5bd7710f40",
+  "candidate_id": "46686_c00",
+  "gen_model": "gpt-5",
+  "rationale": "When the person in the subway gets their arm caught as the train doors close on them.",
+  "refs": [
+   "A mans head gets stuck between closing doors on a train.",
+   "The cue is the person putting their head inbetween the train doors and it shutting on them which triggers the reaction to him having his head squeezed inbetween the doors.",
+   "The reviewer was shocked because he was watching a video where a person's head comes in between the closing door of a metro."
+  ],
+  "face_r2_key": "stagec/46686_c00_face.mp4",
+  "stimuli_r2_key": "stagec/46686_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "04e4c7c27376",
+  "candidate_id": "47310_c00",
+  "gen_model": "gpt-5",
+  "rationale": "When the basketball player suddenly launches himself up and sits on the rim mid-dunk, prompting the cut to a coworker watching with a stunned look.",
+  "refs": [
+   "A ball is thrown at the camera causing a jump scare.",
+   "The cue is the person throwing the basketball towards the screen in which triggers this reaction to the fearfullness.",
+   "The reviewer reacted with laughter because he is watching a funny video."
+  ],
+  "face_r2_key": "stagec/47310_c00_face.mp4",
+  "stimuli_r2_key": "stagec/47310_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "36326953c6d8",
+  "candidate_id": "46759_c00",
+  "gen_model": "gpt-5",
+  "rationale": "When the firework shoots off and arcs toward a nearby building, appearing to head straight for it, the viewer reacts in concern.",
+  "refs": [
+   "A rocket hisses after being ignited.",
+   "The cue is the fireworks going off but this triggers it to go to the wrong direction.",
+   "The reviewer had a neutral reaction because he is watching a firecracker going up."
+  ],
+  "face_r2_key": "stagec/46759_c00_face.mp4",
+  "stimuli_r2_key": "stagec/46759_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "f58a7b702d47",
+  "candidate_id": "47899_c01",
+  "gen_model": "gpt-5",
+  "rationale": "When the drone blasts a long jet of fire onto the tree branches.",
+  "refs": [
+   "A drone is lighting a tree on fire.",
+   "The cue is the drone causing fire to the top of the tree in which triggers the reaction to the drone being able to do that.",
+   "The reviewer reacted with shock while watching a video where a drone laser is leading to fire on a tree."
+  ],
+  "face_r2_key": "stagec/47899_c01_face.mp4",
+  "stimuli_r2_key": "stagec/47899_c01_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "9f401834cd23",
+  "candidate_id": "67273_c00",
+  "gen_model": "gpt-5",
+  "rationale": "When the girl raises the jagged knife over the wheezing man and says, \u201cLet\u2019s play dolls,\u201d prompting his scream.",
+  "refs": [
+   "Wednesday Adams holds up a knife to a man laying on the floor.",
+   "The reviewer reacted with shock and happiness when seeing a clip from a series Wednesday."
+  ],
+  "face_r2_key": "stagec/67273_c00_face.mp4",
+  "stimuli_r2_key": "stagec/67273_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "f92966b49376",
+  "candidate_id": "51322_c00",
+  "gen_model": "gpt-5",
+  "rationale": "He laughs when the red-haired woman suddenly punches the bearded man in the stomach while they\u2019re in a group hug.",
+  "refs": [
+   "The reviewer's reaction was happy and was laughing while watching a movie trailer."
+  ],
+  "face_r2_key": "stagec/51322_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51322_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "d69a1ab4a179",
+  "candidate_id": "46759_c00",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The viewer reacts with",
+  "refs": [
+   "A rocket hisses after being ignited.",
+   "The cue is the fireworks going off but this triggers it to go to the wrong direction.",
+   "The reviewer had a neutral reaction because he is watching a firecracker going up."
+  ],
+  "face_r2_key": "stagec/46759_c00_face.mp4",
+  "stimuli_r2_key": "stagec/46759_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "1163fdcdc95c",
+  "candidate_id": "47899_c01",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The viewer reacted to",
+  "refs": [
+   "A drone is lighting a tree on fire.",
+   "The cue is the drone causing fire to the top of the tree in which triggers the reaction to the drone being able to do that.",
+   "The reviewer reacted with shock while watching a video where a drone laser is leading to fire on a tree."
+  ],
+  "face_r2_key": "stagec/47899_c01_face.mp4",
+  "stimuli_r2_key": "stagec/47899_c01_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "41909d922784",
+  "candidate_id": "57548_c02",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The dramatic reveal of the giant character Gal",
+  "refs": [
+   "The reviewer seems neutral while watching this video."
+  ],
+  "face_r2_key": "stagec/57548_c02_face.mp4",
+  "stimuli_r2_key": "stagec/57548_c02_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "83d496aecceb",
+  "candidate_id": "56097_c00",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The viewer reacted with amusement and a smile to the scene where the man carries the boy away playfully while saying, \"It's better than seeing this gorgeous body splattered all over the place.\"",
+  "refs": [
+   "A boy losses his footing while standing on an open window ledge.",
+   "The cue is the person nearly falling off the edge while touching the statue in which triggers the reaction of him capturing her.",
+   "The reviewer was laughing while watching the clip."
+  ],
+  "face_r2_key": "stagec/56097_c00_face.mp4",
+  "stimuli_r2_key": "stagec/56097_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "e4ea3b1243e1",
+  "candidate_id": "51438_c00",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The viewer is amused and bewildered by the villain's dramatic line proclaiming that \"The world will be painted in Dark Might color!\" followed by Deku leaping into action.",
+  "refs": [
+   "The reviewer reacted with laughter while watching some anime video."
+  ],
+  "face_r2_key": "stagec/51438_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51438_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "d1c98c94ad81",
+  "candidate_id": "51483_c00",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The viewer laughs and",
+  "refs": [
+   "The reviewer reacted with laughter because in the video, a guy is carrying a chair and dancing among others at a pool party."
+  ],
+  "face_r2_key": "stagec/51483_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51483_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "4f4ec4ce3395",
+  "candidate_id": "51315_c00",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The viewer is astonished by the intense scene where Godzilla surfaces from the water and relentlessly chases after the boat while a crew member prepares to fire at it.",
+  "refs": [
+   "A man shoots at a large monster following the boat.",
+   "The reviewer reacted with laughter because he was watching a person aiming a regular gun at a huge monster in the video."
+  ],
+  "face_r2_key": "stagec/51315_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51315_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "f1128919ad67",
+  "candidate_id": "51478_c00",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The viewer is shocked and excited",
+  "refs": [
+   "A dark deformed person reveals himself.",
+   "Reviewer reacted with shock while watching some clips of the movie Doctor Strange in the Multiverse."
+  ],
+  "face_r2_key": "stagec/51478_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51478_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "44e5440fc51b",
+  "candidate_id": "67273_c00",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The viewer reacts with amused shock when Wednesday holds up a knife and chillingly says, \"Let's play dolls.\"",
+  "refs": [
+   "Wednesday Adams holds up a knife to a man laying on the floor.",
+   "The reviewer reacted with shock and happiness when seeing a clip from a series Wednesday."
+  ],
+  "face_r2_key": "stagec/67273_c00_face.mp4",
+  "stimuli_r2_key": "stagec/67273_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "a14010315328",
+  "candidate_id": "51322_c00",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The viewer bursts into laughter at the humorous scene where Yelena mocks Natasha's dramatic fighting pose.",
+  "refs": [
+   "The reviewer's reaction was happy and was laughing while watching a movie trailer."
+  ],
+  "face_r2_key": "stagec/51322_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51322_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "c39a24e2ebae",
+  "candidate_id": "45900_c00",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The viewer reacts with laughter when the entire spiral slide detaches and collapses to the ground as someone slides down it.",
+  "refs": [
+   "The reviewer reacted to the slide breaking down and the cue is the person going down the slide.",
+   "The reviewer reacted with laughter when he saw a funny video of a kid slide falling apart."
+  ],
+  "face_r2_key": "stagec/45900_c00_face.mp4",
+  "stimuli_r2_key": "stagec/45900_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "792a77daf288",
+  "candidate_id": "53003_c00",
+  "gen_model": "gemini-3.7-flash",
+  "rationale": "The reveal of the title card for *DOOM Eternal: The Ancient Gods Part One* after the Doom Slayer pumps his shotgun excited the viewer.",
+  "refs": [
+   "A gun can be viewed as being pumped on camera.",
+   "The reviewer was happy watching the video named \"The Ancient Gods Part 1\"."
+  ],
+  "face_r2_key": "stagec/53003_c00_face.mp4",
+  "stimuli_r2_key": "stagec/53003_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "f74edfadc462",
+  "candidate_id": "67273_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's shocked reaction is caused by the antagonist, Rose, holding up a large knife and saying \"Let's play dolls\" while looking at her dying mother.",
+  "refs": [
+   "Wednesday Adams holds up a knife to a man laying on the floor.",
+   "The reviewer reacted with shock and happiness when seeing a clip from a series Wednesday."
+  ],
+  "face_r2_key": "stagec/67273_c00_face.mp4",
+  "stimuli_r2_key": "stagec/67273_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "2e806093a3c3",
+  "candidate_id": "51322_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's reaction of amusement and laughter is caused by the specific moment in the content where Black Widow (Scarlett Johansson) aggressively punches the bearded man (David Harbour) in the face while he is holding the other woman.",
+  "refs": [
+   "The reviewer's reaction was happy and was laughing while watching a movie trailer."
+  ],
+  "face_r2_key": "stagec/51322_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51322_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "0e1fe097e70a",
+  "candidate_id": "53003_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's reaction of amusement and surprise is caused by the sudden appearance of the iconic Doom Slayer character, clad in his green armor and wielding a large weapon, descending the stairs.",
+  "refs": [
+   "A gun can be viewed as being pumped on camera.",
+   "The reviewer was happy watching the video named \"The Ancient Gods Part 1\"."
+  ],
+  "face_r2_key": "stagec/53003_c00_face.mp4",
+  "stimuli_r2_key": "stagec/53003_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "738d2be5b579",
+  "candidate_id": "52121_c01",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's reaction of intense laughter is caused by the person in the video comically scrambling and falling over the couch in a panic.",
+  "refs": [
+   "A knife is shown in camera view.",
+   "The cue is the person not running away from the murder in which is a stigma in scary movies in which triggers the reaction to the person not running away but hiding in the most obvious spots.",
+   "The reviewer reacted with laughter when he was watching the video with the title \"How White People Be in the Scary Movie.\""
+  ],
+  "face_r2_key": "stagec/52121_c01_face.mp4",
+  "stimuli_r2_key": "stagec/52121_c01_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "7ea669fe6bba",
+  "candidate_id": "55855_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's disgusted reaction is caused by the grotesque scene of a person covered in blood, who then proceeds to eat handfuls of what appears to be raw meat or organs.",
+  "refs": [
+   "A person begins to peel of their skin which is falling into a sink.",
+   "The cue is the person ripping parts of their face off in which triggers the reaction to the person taking apart their face.",
+   "The reviewer seems disgusting watching the video where the figure is removing his skin and blood."
+  ],
+  "face_r2_key": "stagec/55855_c00_face.mp4",
+  "stimuli_r2_key": "stagec/55855_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "36863e1c1f8d",
+  "candidate_id": "58150_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's amused reaction is caused by Jack Sparrow's deadpan delivery of the line, \"Not the big one, the four-legged one,\" while pointing at the pig he just caught.",
+  "refs": [
+   "Jack sparrow refers to the pig handler as a pig.",
+   "A reviewer reacted with laughter while watching the conversation in the video."
+  ],
+  "face_r2_key": "stagec/58150_c00_face.mp4",
+  "stimuli_r2_key": "stagec/58150_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "1151097539ec",
+  "candidate_id": "66434_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's reaction of amusement and laughter is caused by the character in the golden armor lifting his white skirt to reveal his bare buttocks.",
+  "refs": [
+   "A man prances down a set of stairs while holding his white skirt.",
+   "the cue is person holding the skirt down the stairs with such elegance in which triggers the reaction to the person holding onto the skirt.",
+   "The reviewer reacted with laughter while seeing the video in which a man is wearing a skirt."
+  ],
+  "face_r2_key": "stagec/66434_c00_face.mp4",
+  "stimuli_r2_key": "stagec/66434_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "941e516d035f",
+  "candidate_id": "51401_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's reaction of disgust and laughter is caused by Rocket Raccoon's grotesque and unsettling act of licking the face of the dying Peter Quill.",
+  "refs": [
+   "The reviewer reacted with laughter while watching a movie scene in the video."
+  ],
+  "face_r2_key": "stagec/51401_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51401_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "cf4e669f3403",
+  "candidate_id": "46759_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's reaction of shock and disbelief is caused by the sudden, unexpected launch of a large firework that shoots high into the night sky.",
+  "refs": [
+   "A rocket hisses after being ignited.",
+   "The cue is the fireworks going off but this triggers it to go to the wrong direction.",
+   "The reviewer had a neutral reaction because he is watching a firecracker going up."
+  ],
+  "face_r2_key": "stagec/46759_c00_face.mp4",
+  "stimuli_r2_key": "stagec/46759_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "b55d2f586f0d",
+  "candidate_id": "47899_c01",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's reaction is caused by the drone in the video firing a stream of fire directly at a tree.",
+  "refs": [
+   "A drone is lighting a tree on fire.",
+   "The cue is the drone causing fire to the top of the tree in which triggers the reaction to the drone being able to do that.",
+   "The reviewer reacted with shock while watching a video where a drone laser is leading to fire on a tree."
+  ],
+  "face_r2_key": "stagec/47899_c01_face.mp4",
+  "stimuli_r2_key": "stagec/47899_c01_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "c66917120d7b",
+  "candidate_id": "45900_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's amused reaction is caused by the sudden and unexpected collapse of the green slide's upper section, which detaches from the wooden frame and falls over.",
+  "refs": [
+   "The reviewer reacted to the slide breaking down and the cue is the person going down the slide.",
+   "The reviewer reacted with laughter when he saw a funny video of a kid slide falling apart."
+  ],
+  "face_r2_key": "stagec/45900_c00_face.mp4",
+  "stimuli_r2_key": "stagec/45900_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "e6a6e1121d96",
+  "candidate_id": "51464_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-9B",
+  "rationale": "The viewer's reaction of shock and laughter is caused by the sudden, violent moment when the character in the black shirt grabs the other man by the neck and lifts him up.",
+  "refs": [
+   "Reacher attempts to hit a man much larger than him.",
+   "The cue is the person hitting the bulky man in which triggers then being hit back and falling on the floor.",
+   "The reviewer reacted with laughter while watching a video in which a big guy is punching the other guy."
+  ],
+  "face_r2_key": "stagec/51464_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51464_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "e5d8321bdcf2",
+  "candidate_id": "51322_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction of laughter is caused by the scene where the red-haired woman punches the bearded man in the face while he is holding another woman.",
+  "refs": [
+   "The reviewer's reaction was happy and was laughing while watching a movie trailer."
+  ],
+  "face_r2_key": "stagec/51322_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51322_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "b5d9e2eb7c9b",
+  "candidate_id": "51464_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction was caused by the moment the character played by Jai Courtney lunges forward and stares intensely into the camera.",
+  "refs": [
+   "Reacher attempts to hit a man much larger than him.",
+   "The cue is the person hitting the bulky man in which triggers then being hit back and falling on the floor.",
+   "The reviewer reacted with laughter while watching a video in which a big guy is punching the other guy."
+  ],
+  "face_r2_key": "stagec/51464_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51464_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "76b614a9aa24",
+  "candidate_id": "60441_c01",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction was caused by the moment the character's head explodes in a gush of black blood.",
+  "refs": [
+   "A man strangles another man on the floor before vomiting a dark substance onto them.",
+   "The cue is the person vomitting out the black liquid outside of their mouth onto the other person in which triggers the reaction of the person laying down having black liquid coming out.",
+   "The reviewer reacted with disgust while watching a clip in which a man is throwing up black tar on another person's face."
+  ],
+  "face_r2_key": "stagec/60441_c01_face.mp4",
+  "stimuli_r2_key": "stagec/60441_c01_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "110e4879bede",
+  "candidate_id": "57548_c02",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction of smiling and then covering her face in amusement was caused by the close-up shot of Optimus Prime's face as he looks down with a smug, knowing expression.",
+  "refs": [
+   "The reviewer seems neutral while watching this video."
+  ],
+  "face_r2_key": "stagec/57548_c02_face.mp4",
+  "stimuli_r2_key": "stagec/57548_c02_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "61655feb7c36",
+  "candidate_id": "53003_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction was caused by the appearance of the title card \"THE ANCIENT GODS PART ONE\" for the game Doom Eternal.",
+  "refs": [
+   "A gun can be viewed as being pumped on camera.",
+   "The reviewer was happy watching the video named \"The Ancient Gods Part 1\"."
+  ],
+  "face_r2_key": "stagec/53003_c00_face.mp4",
+  "stimuli_r2_key": "stagec/53003_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "47b5ebba66e6",
+  "candidate_id": "52121_c01",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction is caused by the person in the video comically scrambling and falling over themselves while trying to hide from a perceived threat.",
+  "refs": [
+   "A knife is shown in camera view.",
+   "The cue is the person not running away from the murder in which is a stigma in scary movies in which triggers the reaction to the person not running away but hiding in the most obvious spots.",
+   "The reviewer reacted with laughter when he was watching the video with the title \"How White People Be in the Scary Movie.\""
+  ],
+  "face_r2_key": "stagec/52121_c01_face.mp4",
+  "stimuli_r2_key": "stagec/52121_c01_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "7d3ae910b3fd",
+  "candidate_id": "53304_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction of laughter was caused by the player character in the game suddenly and unexpectedly falling off the roof.",
+  "refs": [
+   "A character misses the intended target with their arrow.",
+   "The cue is the person trying to hit someone with a crossbow in which triggers the reaction to them missing their shot.",
+   "The reviewer reacted with laughter while watching some video game clips and while watching a girl miss her shot."
+  ],
+  "face_r2_key": "stagec/53304_c00_face.mp4",
+  "stimuli_r2_key": "stagec/53304_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "d16979176d58",
+  "candidate_id": "10369_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction of shock was caused by the giraffe suddenly leaning over the railing to lick the woman's face.",
+  "refs": [
+   "The giraffe head butts the girl.",
+   "The reviewer reacted because the giraffe hit the lady while she was trying to feed it.",
+   "The reviewer was shocked when the giraffe hit the woman unexpectedly."
+  ],
+  "face_r2_key": "stagec/10369_c00_face.mp4",
+  "stimuli_r2_key": "stagec/10369_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "fc64c8376389",
+  "candidate_id": "46759_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction was caused by the sudden launch of a firework rocket into the night sky.",
+  "refs": [
+   "A rocket hisses after being ignited.",
+   "The cue is the fireworks going off but this triggers it to go to the wrong direction.",
+   "The reviewer had a neutral reaction because he is watching a firecracker going up."
+  ],
+  "face_r2_key": "stagec/46759_c00_face.mp4",
+  "stimuli_r2_key": "stagec/46759_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "7603ce2bb95f",
+  "candidate_id": "47899_c01",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction is caused by the sight of a drone flying near a tree that is on fire.",
+  "refs": [
+   "A drone is lighting a tree on fire.",
+   "The cue is the drone causing fire to the top of the tree in which triggers the reaction to the drone being able to do that.",
+   "The reviewer reacted with shock while watching a video where a drone laser is leading to fire on a tree."
+  ],
+  "face_r2_key": "stagec/47899_c01_face.mp4",
+  "stimuli_r2_key": "stagec/47899_c01_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "33d364060126",
+  "candidate_id": "67273_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer's reaction of shock and covering her mouth was caused by the character Wednesday Addams saying \"Let's play dolls\" while holding a large knife over a screaming, injured man.",
+  "refs": [
+   "Wednesday Adams holds up a knife to a man laying on the floor.",
+   "The reviewer reacted with shock and happiness when seeing a clip from a series Wednesday."
+  ],
+  "face_r2_key": "stagec/67273_c00_face.mp4",
+  "stimuli_r2_key": "stagec/67273_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "5f41c01a7fda",
+  "candidate_id": "45900_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-27B",
+  "rationale": "The viewer laughs at the moment the green slide detaches from the playset and falls over.",
+  "refs": [
+   "The reviewer reacted to the slide breaking down and the cue is the person going down the slide.",
+   "The reviewer reacted with laughter when he saw a funny video of a kid slide falling apart."
+  ],
+  "face_r2_key": "stagec/45900_c00_face.mp4",
+  "stimuli_r2_key": "stagec/45900_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "4ccbceeaeed2",
+  "candidate_id": "47899_c01",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer reacts with a mix of shock and amusement to the sight of a drone being engulfed in flames after colliding with a tree.",
+  "refs": [
+   "A drone is lighting a tree on fire.",
+   "The cue is the drone causing fire to the top of the tree in which triggers the reaction to the drone being able to do that.",
+   "The reviewer reacted with shock while watching a video where a drone laser is leading to fire on a tree."
+  ],
+  "face_r2_key": "stagec/47899_c01_face.mp4",
+  "stimuli_r2_key": "stagec/47899_c01_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "a9d0b77943fe",
+  "candidate_id": "51322_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer laughs when the trailer shows the character Yelena being held hostage by a man who is then punched by Black Widow.",
+  "refs": [
+   "The reviewer's reaction was happy and was laughing while watching a movie trailer."
+  ],
+  "face_r2_key": "stagec/51322_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51322_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "b0f0478f65b6",
+  "candidate_id": "45900_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer laughs because a person unexpectedly pops their head out of the bottom of the green spiral slide.",
+  "refs": [
+   "The reviewer reacted to the slide breaking down and the cue is the person going down the slide.",
+   "The reviewer reacted with laughter when he saw a funny video of a kid slide falling apart."
+  ],
+  "face_r2_key": "stagec/45900_c00_face.mp4",
+  "stimuli_r2_key": "stagec/45900_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "90a452bc1c60",
+  "candidate_id": "52121_c01",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer laughs at the moment the person in the video, who is supposedly scared, turns around and aggressively attacks the person filming.",
+  "refs": [
+   "A knife is shown in camera view.",
+   "The cue is the person not running away from the murder in which is a stigma in scary movies in which triggers the reaction to the person not running away but hiding in the most obvious spots.",
+   "The reviewer reacted with laughter when he was watching the video with the title \"How White People Be in the Scary Movie.\""
+  ],
+  "face_r2_key": "stagec/52121_c01_face.mp4",
+  "stimuli_r2_key": "stagec/52121_c01_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "3cd81559f6eb",
+  "candidate_id": "52022_c01",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer's reaction of disgust and laughter is caused by the sudden appearance of the grotesque, fleshy monster with a gaping maw in the final frames of the \"Contagious\" trailer.",
+  "refs": [
+   "The reviewer reacted with laughter while watching a funny video."
+  ],
+  "face_r2_key": "stagec/52022_c01_face.mp4",
+  "stimuli_r2_key": "stagec/52022_c01_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "abe53943a11d",
+  "candidate_id": "53270_c02",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer reacts with shock and disbelief to the sudden, violent ambush where a man is thrown into a burning car.",
+  "refs": [
+   "The reviewer was neutral and was explaining what is happening in the video."
+  ],
+  "face_r2_key": "stagec/53270_c02_face.mp4",
+  "stimuli_r2_key": "stagec/53270_c02_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "07de5eef61e9",
+  "candidate_id": "53429_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer reacts with shock and then laughter when the character Joel, after shooting a man through a skylight, casually turns to Ellie and says \"Ellie: Dina!\" instead of reacting to the violence he just committed.",
+  "refs": [
+   "The cue is the person shooting the glass and them falling in which triggers the reaction of the person falling out of the glass.",
+   "The reviewer reacted with laughter while watching this video as a girl falls down from the roof."
+  ],
+  "face_r2_key": "stagec/53429_c00_face.mp4",
+  "stimuli_r2_key": "stagec/53429_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "c62a21cc143d",
+  "candidate_id": "67120_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer is shocked by the sudden reveal that the blindfolded woman is actually the villainous Mother, who then calmly impales a man with a sword through the head.",
+  "refs": [
+   "A blindfolded Catherine Zeta Jones, shatters a glass object with her sword.",
+   "The cue is the two people fighting with swords in which they break the glass in which triggers the reaciton to glass being shattered.",
+   "The reviewer reacted, shocked by seeing two women fighting and a zombie appearing, and a woman killed the zombie."
+  ],
+  "face_r2_key": "stagec/67120_c00_face.mp4",
+  "stimuli_r2_key": "stagec/67120_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "6e90389d6a16",
+  "candidate_id": "46759_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer's reaction of shock and disgust is caused by the sudden, violent launch of a firework rocket from a balcony, which creates a dangerous and unexpected spectacle.",
+  "refs": [
+   "A rocket hisses after being ignited.",
+   "The cue is the fireworks going off but this triggers it to go to the wrong direction.",
+   "The reviewer had a neutral reaction because he is watching a firecracker going up."
+  ],
+  "face_r2_key": "stagec/46759_c00_face.mp4",
+  "stimuli_r2_key": "stagec/46759_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "0ac9e8539b84",
+  "candidate_id": "67273_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer is shocked by the moment the character Wednesday Addams raises a serrated knife and menacingly says, \"Let's play dolls.\"",
+  "refs": [
+   "Wednesday Adams holds up a knife to a man laying on the floor.",
+   "The reviewer reacted with shock and happiness when seeing a clip from a series Wednesday."
+  ],
+  "face_r2_key": "stagec/67273_c00_face.mp4",
+  "stimuli_r2_key": "stagec/67273_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "82b3a387b805",
+  "candidate_id": "53003_c00",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer reacts with laughter and excitement to the dramatic title card reveal for \"DOOM ETERNAL: The Ancient Gods Part One.\"",
+  "refs": [
+   "A gun can be viewed as being pumped on camera.",
+   "The reviewer was happy watching the video named \"The Ancient Gods Part 1\"."
+  ],
+  "face_r2_key": "stagec/53003_c00_face.mp4",
+  "stimuli_r2_key": "stagec/53003_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "9e142a9f8082",
+  "candidate_id": "60441_c01",
+  "gen_model": "tinker:Qwen/Qwen3.6-35B-A3B",
+  "rationale": "The viewer reacts with disgust and shock to the graphic scene where a character is violently killed by a black, tentacle-like substance erupting from his mouth and eyes.",
+  "refs": [
+   "A man strangles another man on the floor before vomiting a dark substance onto them.",
+   "The cue is the person vomitting out the black liquid outside of their mouth onto the other person in which triggers the reaction of the person laying down having black liquid coming out.",
+   "The reviewer reacted with disgust while watching a clip in which a man is throwing up black tar on another person's face."
+  ],
+  "face_r2_key": "stagec/60441_c01_face.mp4",
+  "stimuli_r2_key": "stagec/60441_c01_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "1d943d7fdc6b",
+  "candidate_id": "51322_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer's reaction of laughter is caused by the moment in the trailer when Black Widow, after being rescued, immediately and aggressively punches her rescuer, Red Guardian, in the face.",
+  "refs": [
+   "The reviewer's reaction was happy and was laughing while watching a movie trailer."
+  ],
+  "face_r2_key": "stagec/51322_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51322_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "e7c4b17864e6",
+  "candidate_id": "53003_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer's reaction of surprise and amusement was caused by the sudden appearance of the title card \"THE ANCIENT GODS PART ONE\" for Doom Eternal, which followed a dramatic close-up of the Doom Slayer.",
+  "refs": [
+   "A gun can be viewed as being pumped on camera.",
+   "The reviewer was happy watching the video named \"The Ancient Gods Part 1\"."
+  ],
+  "face_r2_key": "stagec/53003_c00_face.mp4",
+  "stimuli_r2_key": "stagec/53003_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "cd50725fbbd7",
+  "candidate_id": "52121_c01",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer is laughing at the person in the video frantically and comically scrambling over a couch to get away from something.",
+  "refs": [
+   "A knife is shown in camera view.",
+   "The cue is the person not running away from the murder in which is a stigma in scary movies in which triggers the reaction to the person not running away but hiding in the most obvious spots.",
+   "The reviewer reacted with laughter when he was watching the video with the title \"How White People Be in the Scary Movie.\""
+  ],
+  "face_r2_key": "stagec/52121_c01_face.mp4",
+  "stimuli_r2_key": "stagec/52121_c01_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "7d0a95d52f8a",
+  "candidate_id": "60441_c01",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer's horrified reaction is caused by the graphic scene where a man is violently impaled through the mouth with a long, dark object, resulting in a massive spray of black blood.",
+  "refs": [
+   "A man strangles another man on the floor before vomiting a dark substance onto them.",
+   "The cue is the person vomitting out the black liquid outside of their mouth onto the other person in which triggers the reaction of the person laying down having black liquid coming out.",
+   "The reviewer reacted with disgust while watching a clip in which a man is throwing up black tar on another person's face."
+  ],
+  "face_r2_key": "stagec/60441_c01_face.mp4",
+  "stimuli_r2_key": "stagec/60441_c01_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "32907a94010b",
+  "candidate_id": "61010_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer's reaction of disgust and cringing is caused by the moment one boy forces another's face into the dirt and then mockingly high-fives his friend while calling the victim \"Frogface.\"",
+  "refs": [
+   "A young boy trips and hits his mouth on the floor.",
+   "The cue is the person falling over and hitting their nose in which triggers the event of the fall to the ground.",
+   "The reviewer reacted with shock when the other guy bullied the other guy."
+  ],
+  "face_r2_key": "stagec/61010_c00_face.mp4",
+  "stimuli_r2_key": "stagec/61010_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "6e41758e240d",
+  "candidate_id": "55855_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer's disgusted reaction is caused by the graphic scene of a woman spitting a large amount of blood and what appears to be a tooth into a sink.",
+  "refs": [
+   "A person begins to peel of their skin which is falling into a sink.",
+   "The cue is the person ripping parts of their face off in which triggers the reaction to the person taking apart their face.",
+   "The reviewer seems disgusting watching the video where the figure is removing his skin and blood."
+  ],
+  "face_r2_key": "stagec/55855_c00_face.mp4",
+  "stimuli_r2_key": "stagec/55855_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "3e63aad95462",
+  "candidate_id": "53069_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer's reaction of focused concentration followed by a smile is caused by the sudden, intense bursts of flame from the flamethrower in the dark, overgrown corridor.",
+  "refs": [
+   "The cue is the person trying to avoid the fireballs in which triggers the reaction to them avoiding the balls of fire.",
+   "The reviewer reacted with laughter while watching some video game clips."
+  ],
+  "face_r2_key": "stagec/53069_c00_face.mp4",
+  "stimuli_r2_key": "stagec/53069_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "eb52b8491990",
+  "candidate_id": "53270_c02",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer's shocked reaction is caused by the female character suddenly stabbing the man in the abdomen with a knife.",
+  "refs": [
+   "The reviewer was neutral and was explaining what is happening in the video."
+  ],
+  "face_r2_key": "stagec/53270_c02_face.mp4",
+  "stimuli_r2_key": "stagec/53270_c02_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "2ae9babb56a9",
+  "candidate_id": "46759_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer's reaction of concern and disbelief is caused by the firework launching horizontally across the screen instead of vertically into the sky.",
+  "refs": [
+   "A rocket hisses after being ignited.",
+   "The cue is the fireworks going off but this triggers it to go to the wrong direction.",
+   "The reviewer had a neutral reaction because he is watching a firecracker going up."
+  ],
+  "face_r2_key": "stagec/46759_c00_face.mp4",
+  "stimuli_r2_key": "stagec/46759_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "416a82ba8ef9",
+  "candidate_id": "47899_c01",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer's reaction is caused by the moment the drone-mounted flamethrower ignites the object in the tree, creating a large burst of fire and smoke.",
+  "refs": [
+   "A drone is lighting a tree on fire.",
+   "The cue is the drone causing fire to the top of the tree in which triggers the reaction to the drone being able to do that.",
+   "The reviewer reacted with shock while watching a video where a drone laser is leading to fire on a tree."
+  ],
+  "face_r2_key": "stagec/47899_c01_face.mp4",
+  "stimuli_r2_key": "stagec/47899_c01_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "5ea34b1a10fe",
+  "candidate_id": "67273_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer's shocked reaction, covering her mouth with her hand, was caused by the character Wednesday Addams holding up a serrated knife and ominously saying, \"Let's play dolls,\" to a man who is already injured and wheezing on the floor.",
+  "refs": [
+   "Wednesday Adams holds up a knife to a man laying on the floor.",
+   "The reviewer reacted with shock and happiness when seeing a clip from a series Wednesday."
+  ],
+  "face_r2_key": "stagec/67273_c00_face.mp4",
+  "stimuli_r2_key": "stagec/67273_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "19529c2eebc7",
+  "candidate_id": "45900_c00",
+  "gen_model": "tinker:Qwen/Qwen3.5-397B-A17B",
+  "rationale": "The viewer is laughing at the moment the green spiral slide suddenly detaches and falls off the playground structure.",
+  "refs": [
+   "The reviewer reacted to the slide breaking down and the cue is the person going down the slide.",
+   "The reviewer reacted with laughter when he saw a funny video of a kid slide falling apart."
+  ],
+  "face_r2_key": "stagec/45900_c00_face.mp4",
+  "stimuli_r2_key": "stagec/45900_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "4305583048b8",
+  "candidate_id": "53003_c00",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer's excited reaction was caused by the title card reveal of \"THE ANCIENT GODS PART ONE\" for Doom Eternal, confirming the announcement of new DLC for the game.",
+  "refs": [
+   "A gun can be viewed as being pumped on camera.",
+   "The reviewer was happy watching the video named \"The Ancient Gods Part 1\"."
+  ],
+  "face_r2_key": "stagec/53003_c00_face.mp4",
+  "stimuli_r2_key": "stagec/53003_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "e4cb9a482608",
+  "candidate_id": "52121_c01",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer laughed at the exaggerated parody of horror-movie tropes where a person frantically runs away from a cardboard cutout, trips over a couch, and flails around the living room in a panic.",
+  "refs": [
+   "A knife is shown in camera view.",
+   "The cue is the person not running away from the murder in which is a stigma in scary movies in which triggers the reaction to the person not running away but hiding in the most obvious spots.",
+   "The reviewer reacted with laughter when he was watching the video with the title \"How White People Be in the Scary Movie.\""
+  ],
+  "face_r2_key": "stagec/52121_c01_face.mp4",
+  "stimuli_r2_key": "stagec/52121_c01_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "d4c959d90835",
+  "candidate_id": "57548_c02",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer's pained reaction coincides with the reveal of Galactus's face with glowing blue eyes looming over the city.",
+  "refs": [
+   "The reviewer seems neutral while watching this video."
+  ],
+  "face_r2_key": "stagec/57548_c02_face.mp4",
+  "stimuli_r2_key": "stagec/57548_c02_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "ab433fd7b690",
+  "candidate_id": "56097_c00",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer's amused and slightly scandalized reaction was caused by the character's line \"It's better than seeing this gorgeous body splattered all over the place\" after the dramatic rescue.",
+  "refs": [
+   "A boy losses his footing while standing on an open window ledge.",
+   "The cue is the person nearly falling off the edge while touching the statue in which triggers the reaction of him capturing her.",
+   "The reviewer was laughing while watching the clip."
+  ],
+  "face_r2_key": "stagec/56097_c00_face.mp4",
+  "stimuli_r2_key": "stagec/56097_c00_stim.mp4",
+  "judge_stratum": "low"
+ },
+ {
+  "anchor_id": "9c936dce7112",
+  "candidate_id": "50037_c00",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer reacted to the blindfolded man attempting to run and jump over a barrier but failing spectacularly by crashing into it.",
+  "refs": [
+   "A person wearing a VR set starts running towards a wall.",
+   "The reviewer's reaction was neutral while watching a video where a boy is playing Meta Quest."
+  ],
+  "face_r2_key": "stagec/50037_c00_face.mp4",
+  "stimuli_r2_key": "stagec/50037_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "d54a114d4294",
+  "candidate_id": "50818_c00",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer reacted when the person in the blue jacket standing on the ice suddenly fell through into the water.",
+  "refs": [
+   "A person laughs behind a camera while the person in view struggles in a large puddle of water.",
+   "The reviewer's reaction was neutral while he was watching the video."
+  ],
+  "face_r2_key": "stagec/50818_c00_face.mp4",
+  "stimuli_r2_key": "stagec/50818_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "bf8f6ed5d31a",
+  "candidate_id": "54441_c02",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer's shocked reaction was caused by the sudden explosion that erupted through the floor right after the Nazi officer said \"...adieu,\" engulfing the room in debris and throwing the soldiers backward.",
+  "refs": [
+   "Gun shots are fired into the floor.",
+   "The reviewer was shocked when multiple army men started firing on the ground continuously."
+  ],
+  "face_r2_key": "stagec/54441_c02_face.mp4",
+  "stimuli_r2_key": "stagec/54441_c02_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "650927d985da",
+  "candidate_id": "67120_c00",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer's shocked reaction was caused by the moment when a sword slices through a person's neck, resulting in a graphic decapitation with blood and gore visible.",
+  "refs": [
+   "A blindfolded Catherine Zeta Jones, shatters a glass object with her sword.",
+   "The cue is the two people fighting with swords in which they break the glass in which triggers the reaciton to glass being shattered.",
+   "The reviewer reacted, shocked by seeing two women fighting and a zombie appearing, and a woman killed the zombie."
+  ],
+  "face_r2_key": "stagec/67120_c00_face.mp4",
+  "stimuli_r2_key": "stagec/67120_c00_stim.mp4",
+  "judge_stratum": "mid"
+ },
+ {
+  "anchor_id": "6042a3c96d78",
+  "candidate_id": "46759_c00",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer reacted to a firework being lit on a rooftop and shooting up into the night sky.",
+  "refs": [
+   "A rocket hisses after being ignited.",
+   "The cue is the fireworks going off but this triggers it to go to the wrong direction.",
+   "The reviewer had a neutral reaction because he is watching a firecracker going up."
+  ],
+  "face_r2_key": "stagec/46759_c00_face.mp4",
+  "stimuli_r2_key": "stagec/46759_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "84709b68c2c2",
+  "candidate_id": "47899_c01",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "A drone shooting a stream of fire at a wasp nest in a tree caused the viewer's reaction.",
+  "refs": [
+   "A drone is lighting a tree on fire.",
+   "The cue is the drone causing fire to the top of the tree in which triggers the reaction to the drone being able to do that.",
+   "The reviewer reacted with shock while watching a video where a drone laser is leading to fire on a tree."
+  ],
+  "face_r2_key": "stagec/47899_c01_face.mp4",
+  "stimuli_r2_key": "stagec/47899_c01_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "b36e59e6b388",
+  "candidate_id": "67273_c00",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer's shocked reaction with her hand covering her mouth was caused by Wednesday Addams saying \"Let's play dolls\" while holding a large serrated knife over her injured father.",
+  "refs": [
+   "Wednesday Adams holds up a knife to a man laying on the floor.",
+   "The reviewer reacted with shock and happiness when seeing a clip from a series Wednesday."
+  ],
+  "face_r2_key": "stagec/67273_c00_face.mp4",
+  "stimuli_r2_key": "stagec/67273_c00_stim.mp4",
+  "judge_stratum": "high"
+ },
+ {
+  "anchor_id": "102c4e9c687d",
+  "candidate_id": "51322_c00",
+  "gen_model": "tinker:moonshotai/Kimi-K2.6",
+  "rationale": "The viewer's amused reaction escalates when Red Guardian awkwardly tries to group hug Black Widow and Yelena, who immediately punch him in response.",
+  "refs": [
+   "The reviewer's reaction was happy and was laughing while watching a movie trailer."
+  ],
+  "face_r2_key": "stagec/51322_c00_face.mp4",
+  "stimuli_r2_key": "stagec/51322_c00_stim.mp4",
+  "judge_stratum": "high"
+ }
+]
