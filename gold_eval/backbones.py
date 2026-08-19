@@ -91,9 +91,10 @@ class GeminiVertexBackbone:
                 contents.append(p["text"])
         # max_output_tokens includes thinking tokens on Gemini 3.x; thinking_level="low"
         # suppresses them (verified: thoughts=None) so the budget goes to the visible answer.
-        # Pro models cannot fully disable thinking (~70-300 thought tokens even at "low"),
-        # so give them headroom — thoughts are billed as output but stay small at "low".
-        budget = max_tokens + (2048 if "pro" in self.model else 0)
+        # Thinking cannot be fully disabled: even at "low", Flash spends ~5-100 thought
+        # tokens (more on video inputs) and Pro ~70-300, all inside max_output_tokens.
+        # Give headroom so the visible answer survives; thoughts bill as output but are tiny.
+        budget = max_tokens + (2048 if "pro" in self.model else 512)
         try:
             cfg = t.GenerateContentConfig(
                 max_output_tokens=budget, temperature=0,
