@@ -13,7 +13,11 @@
         "0": 0.4091,
         "1": 0.5,
         "2": 0.4667
-      }
+      },
+      "acc_ci95_wilson": [
+        0.3822,
+        0.5398
+      ]
     },
     "match/gemini-3.7-flash__video": {
       "n_scored": 149,
@@ -28,7 +32,11 @@
         "0": 0.5909,
         "1": 0.375,
         "2": 0.5126
-      }
+      },
+      "acc_ci95_wilson": [
+        0.4371,
+        0.5956
+      ]
     },
     "match/gpt-5": {
       "n_scored": 150,
@@ -43,7 +51,11 @@
         "0": 0.5,
         "1": 0.375,
         "2": 0.4917
-      }
+      },
+      "acc_ci95_wilson": [
+        0.408,
+        0.566
+      ]
     },
     "match/tinker_Qwen_Qwen3.5-397B-A17B": {
       "n_scored": 150,
@@ -58,7 +70,11 @@
         "0": 0.5,
         "1": 0.375,
         "2": 0.4417
-      }
+      },
+      "acc_ci95_wilson": [
+        0.3694,
+        0.5266
+      ]
     },
     "match/tinker_Qwen_Qwen3.5-9B": {
       "n_scored": 150,
@@ -73,7 +89,11 @@
         "0": 0.1818,
         "1": 0.375,
         "2": 0.2667
-      }
+      },
+      "acc_ci95_wilson": [
+        0.1964,
+        0.3356
+      ]
     },
     "match/tinker_Qwen_Qwen3.6-27B": {
       "n_scored": 150,
@@ -88,7 +108,11 @@
         "0": 0.2727,
         "1": 0.375,
         "2": 0.4083
-      }
+      },
+      "acc_ci95_wilson": [
+        0.3125,
+        0.4665
+      ]
     },
     "match/tinker_Qwen_Qwen3.6-35B-A3B": {
       "n_scored": 150,
@@ -103,7 +127,11 @@
         "0": 0.3636,
         "1": 0.25,
         "2": 0.375
-      }
+      },
+      "acc_ci95_wilson": [
+        0.2938,
+        0.4462
+      ]
     },
     "match/tinker_moonshotai_Kimi-K2.6": {
       "n_scored": 150,
@@ -118,7 +146,11 @@
         "0": 0.4545,
         "1": 0.375,
         "2": 0.4667
-      }
+      },
+      "acc_ci95_wilson": [
+        0.3822,
+        0.5398
+      ]
     },
     "match_scored/gemini-3.7-flash": {
       "n_scored": 150,
@@ -134,7 +166,11 @@
         "1": 0.25,
         "2": 0.125
       },
-      "tie_rate": 0.6267
+      "tie_rate": 0.6267,
+      "acc_ci95_wilson": [
+        0.0989,
+        0.2121
+      ]
     },
     "match_scored/gpt-5": {
       "n_scored": 150,
@@ -150,7 +186,11 @@
         "1": 0.25,
         "2": 0.1833
       },
-      "tie_rate": 0.52
+      "tie_rate": 0.52,
+      "acc_ci95_wilson": [
+        0.1438,
+        0.2711
+      ]
     },
     "match_scored/tinker_Qwen_Qwen3.5-397B-A17B": {
       "n_scored": 150,
@@ -166,7 +206,11 @@
         "1": 0.125,
         "2": 0.1417
       },
-      "tie_rate": 0.6467
+      "tie_rate": 0.6467,
+      "acc_ci95_wilson": [
+        0.0934,
+        0.2046
+      ]
     },
     "match_scored/tinker_Qwen_Qwen3.5-9B": {
       "n_scored": 150,
@@ -182,7 +226,11 @@
         "1": 0.0,
         "2": 0.15
       },
-      "tie_rate": 0.7333
+      "tie_rate": 0.7333,
+      "acc_ci95_wilson": [
+        0.088,
+        0.197
+      ]
     },
     "match_scored/tinker_Qwen_Qwen3.6-27B": {
       "n_scored": 150,
@@ -198,7 +246,11 @@
         "1": 0.125,
         "2": 0.0917
       },
-      "tie_rate": 0.8133
+      "tie_rate": 0.8133,
+      "acc_ci95_wilson": [
+        0.0564,
+        0.1506
+      ]
     },
     "match_scored/tinker_Qwen_Qwen3.6-35B-A3B": {
       "n_scored": 150,
@@ -214,7 +266,11 @@
         "1": 0.5,
         "2": 0.1917
       },
-      "tie_rate": 0.6667
+      "tie_rate": 0.6667,
+      "acc_ci95_wilson": [
+        0.1496,
+        0.2784
+      ]
     },
     "match_scored/tinker_moonshotai_Kimi-K2.6": {
       "n_scored": 150,
@@ -230,7 +286,11 @@
         "1": 0.125,
         "2": 0.175
       },
-      "tie_rate": 0.6667
+      "tie_rate": 0.6667,
+      "acc_ci95_wilson": [
+        0.1324,
+        0.2566
+      ]
     },
     "match_sbs/gemini-3.7-flash": {
       "n_scored": 150,
@@ -246,7 +306,11 @@
         "1": 0.375,
         "2": 0.1167
       },
-      "tie_rate": 0.6133
+      "tie_rate": 0.6133,
+      "acc_ci95_wilson": [
+        0.0989,
+        0.2121
+      ]
     }
   },
   "ranking": {
@@ -254,95 +318,151 @@
       "n_videos_scored": 249,
       "unparsed": 1,
       "mean_spearman": 0.1755,
-      "pooled_pearson": 0.3081
+      "pooled_pearson": 0.3081,
+      "mean_spearman_ci95_boot": [
+        0.067,
+        0.282
+      ]
     },
     "ranking/gemini-3.7-flash__video": {
       "n_videos_scored": 250,
       "unparsed": 0,
       "mean_spearman": 0.2604,
-      "pooled_pearson": 0.417
+      "pooled_pearson": 0.417,
+      "mean_spearman_ci95_boot": [
+        0.1524,
+        0.3658
+      ]
     },
     "ranking/gpt-5": {
       "n_videos_scored": 250,
       "unparsed": 0,
       "mean_spearman": 0.0262,
-      "pooled_pearson": 0.2929
+      "pooled_pearson": 0.2929,
+      "mean_spearman_ci95_boot": [
+        -0.0828,
+        0.1353
+      ]
     },
     "ranking/tinker_Qwen_Qwen3.5-397B-A17B": {
       "n_videos_scored": 250,
       "unparsed": 0,
       "mean_spearman": 0.0646,
-      "pooled_pearson": 0.2172
+      "pooled_pearson": 0.2172,
+      "mean_spearman_ci95_boot": [
+        -0.0444,
+        0.173
+      ]
     },
     "ranking/tinker_Qwen_Qwen3.5-9B": {
       "n_videos_scored": 250,
       "unparsed": 0,
       "mean_spearman": 0.0294,
-      "pooled_pearson": 0.2044
+      "pooled_pearson": 0.2044,
+      "mean_spearman_ci95_boot": [
+        -0.0799,
+        0.1366
+      ]
     },
     "ranking/tinker_Qwen_Qwen3.6-27B": {
       "n_videos_scored": 250,
       "unparsed": 0,
       "mean_spearman": 0.1634,
-      "pooled_pearson": 0.2377
+      "pooled_pearson": 0.2377,
+      "mean_spearman_ci95_boot": [
+        0.0574,
+        0.2721
+      ]
     },
     "ranking/tinker_Qwen_Qwen3.6-35B-A3B": {
       "n_videos_scored": 237,
       "unparsed": 0,
       "mean_spearman": 0.0456,
-      "pooled_pearson": 0.1874
+      "pooled_pearson": 0.1874,
+      "mean_spearman_ci95_boot": [
+        -0.0629,
+        0.1569
+      ]
     },
     "ranking/tinker_moonshotai_Kimi-K2.6": {
       "n_videos_scored": 250,
       "unparsed": 0,
       "mean_spearman": 0.0864,
-      "pooled_pearson": 0.2408
+      "pooled_pearson": 0.2408,
+      "mean_spearman_ci95_boot": [
+        -0.0248,
+        0.1974
+      ]
     },
     "ranking_indep/gemini-3.7-flash": {
       "n_videos_scored": 241,
       "unparsed": 0,
       "mean_spearman": 0.3282,
-      "pooled_pearson": 0.5175
+      "pooled_pearson": 0.5175,
+      "mean_spearman_ci95_boot": [
+        0.224,
+        0.4298
+      ]
     },
     "ranking_indep/gpt-5": {
       "n_videos_scored": 217,
       "unparsed": 0,
       "mean_spearman": 0.2039,
-      "pooled_pearson": 0.4264
+      "pooled_pearson": 0.4264,
+      "mean_spearman_ci95_boot": [
+        0.0888,
+        0.318
+      ]
     },
     "ranking_indep/tinker_Qwen_Qwen3.5-397B-A17B": {
       "n_videos_scored": 182,
       "unparsed": 0,
       "mean_spearman": 0.3309,
-      "pooled_pearson": 0.3867
+      "pooled_pearson": 0.3867,
+      "mean_spearman_ci95_boot": [
+        0.2146,
+        0.4444
+      ]
     },
     "ranking_indep/tinker_Qwen_Qwen3.5-9B": {
       "n_videos_scored": 191,
       "unparsed": 0,
       "mean_spearman": 0.334,
-      "pooled_pearson": 0.389
+      "pooled_pearson": 0.389,
+      "mean_spearman_ci95_boot": [
+        0.216,
+        0.4482
+      ]
     },
     "ranking_indep/tinker_Qwen_Qwen3.6-27B": {
       "n_videos_scored": 209,
       "unparsed": 0,
       "mean_spearman": 0.3937,
-      "pooled_pearson": 0.4342
+      "pooled_pearson": 0.4342,
+      "mean_spearman_ci95_boot": [
+        0.2852,
+        0.4995
+      ]
     },
     "ranking_indep/tinker_Qwen_Qwen3.6-35B-A3B": {
       "n_videos_scored": 205,
       "unparsed": 0,
       "mean_spearman": 0.2566,
-      "pooled_pearson": 0.398
+      "pooled_pearson": 0.398,
+      "mean_spearman_ci95_boot": [
+        0.1424,
+        0.3682
+      ]
     },
     "ranking_indep/tinker_moonshotai_Kimi-K2.6": {
       "n_videos_scored": 204,
       "unparsed": 0,
       "mean_spearman": 0.2856,
-      "pooled_pearson": 0.4298
-    },
-    "human_ceiling": {
-      "n_rater_video_pairs": 420,
-      "mean_loo_spearman": 0.6486
+      "pooled_pearson": 0.4298,
+      "mean_spearman_ci95_boot": [
+        0.1716,
+        0.3957
+      ]
     }
   },
   "rationale": {
@@ -352,7 +472,23 @@
       "faithful": 0.534,
       "composite_0to5": 2.356,
       "n": 191,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.1204,
+        2.5969
+      ]
+    },
+    "gemini-3.7-flash__by__tinker_deepseek-ai_DeepSeek-V3.1": {
+      "cue": 0.737,
+      "link": 0.868,
+      "faithful": 0.763,
+      "composite_0to5": 2.368,
+      "n": 38,
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        1.7895,
+        2.9474
+      ]
     },
     "gpt-5__by__gemini-3.7-flash": {
       "cue": 1.47,
@@ -360,7 +496,20 @@
       "faithful": 0.87,
       "composite_0to5": 3.675,
       "n": 200,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        3.505,
+        3.845
+      ]
+    },
+    "gpt-5__by__tinker_deepseek-ai_DeepSeek-V3.1": {
+      "cue": 2.0,
+      "link": 2.0,
+      "faithful": 1.0,
+      "composite_0to5": 5.0,
+      "n": 2,
+      "unparsed": 0,
+      "composite_ci95_boot": null
     },
     "tinker_Qwen_Qwen3.5-397B-A17B__by__gemini-3.7-flash": {
       "cue": 1.033,
@@ -368,7 +517,11 @@
       "faithful": 0.517,
       "composite_0to5": 3.55,
       "n": 60,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        3.25,
+        3.85
+      ]
     },
     "tinker_Qwen_Qwen3.5-397B-A17B__by__gpt-5": {
       "cue": 0.745,
@@ -376,7 +529,11 @@
       "faithful": 0.18,
       "composite_0to5": 2.4,
       "n": 200,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.19,
+        2.62
+      ]
     },
     "tinker_Qwen_Qwen3.5-9B__by__gemini-3.7-flash": {
       "cue": 1.05,
@@ -384,7 +541,11 @@
       "faithful": 0.517,
       "composite_0to5": 3.533,
       "n": 60,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        3.2167,
+        3.85
+      ]
     },
     "tinker_Qwen_Qwen3.5-9B__by__gpt-5": {
       "cue": 0.675,
@@ -392,7 +553,11 @@
       "faithful": 0.135,
       "composite_0to5": 2.22,
       "n": 200,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.005,
+        2.44
+      ]
     },
     "tinker_Qwen_Qwen3.6-27B__by__gemini-3.7-flash": {
       "cue": 1.0,
@@ -400,7 +565,11 @@
       "faithful": 0.567,
       "composite_0to5": 3.567,
       "n": 60,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        3.2667,
+        3.8667
+      ]
     },
     "tinker_Qwen_Qwen3.6-27B__by__gpt-5": {
       "cue": 0.72,
@@ -408,7 +577,11 @@
       "faithful": 0.18,
       "composite_0to5": 2.28,
       "n": 200,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.055,
+        2.51
+      ]
     },
     "tinker_Qwen_Qwen3.6-35B-A3B__by__gemini-3.7-flash": {
       "cue": 0.967,
@@ -416,7 +589,11 @@
       "faithful": 0.483,
       "composite_0to5": 3.433,
       "n": 60,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        3.1167,
+        3.75
+      ]
     },
     "tinker_Qwen_Qwen3.6-35B-A3B__by__gpt-5": {
       "cue": 0.75,
@@ -424,7 +601,11 @@
       "faithful": 0.185,
       "composite_0to5": 2.355,
       "n": 200,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.13,
+        2.585
+      ]
     },
     "tinker_moonshotai_Kimi-K2.6__by__gemini-3.7-flash": {
       "cue": 1.133,
@@ -432,7 +613,11 @@
       "faithful": 0.567,
       "composite_0to5": 3.433,
       "n": 60,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        3.0667,
+        3.7833
+      ]
     },
     "tinker_moonshotai_Kimi-K2.6__by__gpt-5": {
       "cue": 0.935,
@@ -440,9 +625,18 @@
       "faithful": 0.185,
       "composite_0to5": 2.615,
       "n": 200,
-      "unparsed": 0
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.395,
+        2.845
+      ]
     },
     "judge_agreement_overlap": {
+      "gemini-3.7-flash": {
+        "n": 38,
+        "pearson": 0.878,
+        "mean_abs_diff": 0.553
+      },
       "tinker_Qwen_Qwen3.5-397B-A17B": {
         "n": 60,
         "pearson": 0.767,
@@ -468,6 +662,93 @@
         "pearson": 0.792,
         "mean_abs_diff": 1.067
       }
+    }
+  },
+  "match_paired": {
+    "gemini-3.7-flash": {
+      "n_paired": 149,
+      "frames_only_correct": 25,
+      "video_only_correct": 33,
+      "mcnemar_p": 0.3581
+    }
+  },
+  "ranking_paired": {
+    "gemini-3.7-flash": {
+      "n_paired": 240,
+      "joint_mean_rho": 0.1779,
+      "indep_mean_rho": 0.3263,
+      "delta_mean": 0.1484,
+      "delta_ci95_boot": [
+        0.0322,
+        0.2678
+      ],
+      "wilcoxon_p": 0.014041
+    },
+    "gpt-5": {
+      "n_paired": 217,
+      "joint_mean_rho": 0.0354,
+      "indep_mean_rho": 0.2039,
+      "delta_mean": 0.1686,
+      "delta_ci95_boot": [
+        0.0214,
+        0.3117
+      ],
+      "wilcoxon_p": 0.029989
+    },
+    "tinker_Qwen_Qwen3.5-397B-A17B": {
+      "n_paired": 182,
+      "joint_mean_rho": 0.0817,
+      "indep_mean_rho": 0.3309,
+      "delta_mean": 0.2492,
+      "delta_ci95_boot": [
+        0.0994,
+        0.4002
+      ],
+      "wilcoxon_p": 0.002408
+    },
+    "tinker_Qwen_Qwen3.5-9B": {
+      "n_paired": 191,
+      "joint_mean_rho": 0.0174,
+      "indep_mean_rho": 0.334,
+      "delta_mean": 0.3166,
+      "delta_ci95_boot": [
+        0.1488,
+        0.4797
+      ],
+      "wilcoxon_p": 0.000161
+    },
+    "tinker_Qwen_Qwen3.6-27B": {
+      "n_paired": 209,
+      "joint_mean_rho": 0.1677,
+      "indep_mean_rho": 0.3937,
+      "delta_mean": 0.2259,
+      "delta_ci95_boot": [
+        0.0814,
+        0.3726
+      ],
+      "wilcoxon_p": 0.001454
+    },
+    "tinker_Qwen_Qwen3.6-35B-A3B": {
+      "n_paired": 196,
+      "joint_mean_rho": 0.0362,
+      "indep_mean_rho": 0.2429,
+      "delta_mean": 0.2066,
+      "delta_ci95_boot": [
+        0.0414,
+        0.3739
+      ],
+      "wilcoxon_p": 0.012635
+    },
+    "tinker_moonshotai_Kimi-K2.6": {
+      "n_paired": 204,
+      "joint_mean_rho": 0.0976,
+      "indep_mean_rho": 0.2856,
+      "delta_mean": 0.188,
+      "delta_ci95_boot": [
+        0.0459,
+        0.3294
+      ],
+      "wilcoxon_p": 0.007646
     }
   }
 }

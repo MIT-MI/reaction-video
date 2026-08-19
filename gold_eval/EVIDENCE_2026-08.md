@@ -123,7 +123,34 @@ systematically ~+1.1-1.4 more lenient**; rank agreement Pearson .76-.85. Therefo
 row (3.675, Gemini-judged) is NOT column-comparable to the others (caveat C1).
 Qwen3.5-9B row doubles as the draft-model control (drafts were never shown to annotators).
 
-### 3.5 Spend / scale (ledger)
+### 3.5 Paired tests & confidence intervals (G1/G2, added 2026-08-19)
+
+**G1 — joint vs independent, per-model video intersections** (`summary.json → ranking_paired`):
+
+| Model | n paired | joint ρ | indep ρ | Δ mean | Δ 95% CI (boot) | Wilcoxon p |
+|---|---|---|---|---|---|---|
+| Qwen3.5-9B | 191 | .017 | .334 | +.317 | [.149, .480] | .00016 |
+| Qwen3.5-397B | 182 | .082 | .331 | +.249 | [.099, .400] | .0024 |
+| Qwen3.6-27B | 209 | .168 | .394 | +.226 | [.081, .373] | .0015 |
+| Qwen3.6-35B-A3B | 196 | .036 | .243 | +.207 | [.041, .374] | .0126 |
+| Kimi-K2.6 | 204 | .098 | .286 | +.188 | [.046, .329] | .0076 |
+| GPT-5 | 217 | .035 | .204 | +.169 | [.021, .312] | .0300 |
+| Gemini 3.7 Flash | 240 | .178 | .326 | +.148 | [.032, .268] | .0140 |
+
+All 7 deltas positive, all CIs exclude 0 → the E3 mechanism finding is FINAL (C3 mitigated).
+
+**E1 paired tests (same model, same items):** match McNemar on 149 shared items:
+video-only-correct 33 vs frames-only-correct 25, p = .358 (n.s.). Ranking Wilcoxon on 249
+shared videos: frames .176 → video .258, Δ = +.083, CI [-.049, .213], p = .271 (n.s.).
+→ E1 direction is consistently positive on both tasks but NOT significant at current n;
+the solid E1 result is the deterministic ~30× input-token reduction (ledger).
+
+**G2 — 95% CIs** now attached to every entry in `summary.json` (`acc_ci95_wilson`,
+`mean_spearman_ci95_boot`, `composite_ci95_boot`; bootstrap 10k, seed 0). Notables:
+GPT-5 match [.408, .566]; Gemini-video match [.437, .596]; GPT-5 joint ranking CI
+[-.083, .135] — statistically indistinguishable from zero.
+
+### 3.6 Spend / scale (ledger)
 
 Gemini $44.7 (caps enforced), OpenAI $3.8, Tinker grant $66.6. ~26k logged calls.
 
@@ -179,28 +206,31 @@ T3 column must be within-judge (GPT-5-judged models) with the GPT-5-gen row foot
 > table does not show input-modality effects (see the frames-vs-video comparison) and does not
 > imply the ranking failure is perceptual (see the independent-scoring ablation).
 
-**A2. E1 frames vs native video (Gemini, T2+T1).** Decision: MAIN TABLE (small, 2×4) or
-merged rows into A1 with a modality tag. Rationale: only same-model modality comparison;
-supports the protocol-choice discussion and the "video-native models are under-served by
-frame sampling" claim.
+**A2. E1 frames vs native video (Gemini, T2+T1).** Decision: DOWNGRADED 2026-08-19 →
+APPENDIX TABLE + main-text prose. Paired tests are n.s. on both tasks (match McNemar p=.36,
+ranking Wilcoxon p=.27, §3.5); the defensible claims are (i) direction consistent across
+both tasks and (ii) ~30× cheaper input tokens (deterministic). A "video beats frames"
+main-table claim would exceed the evidence.
 
-> analysis_caption: Input-modality effect measured on a single model (Gemini 3.7 Flash)
-> evaluated twice on identical items: once with the benchmark's standard 1 fps / 512px sampled
-> frames, once with the raw video file (audio track included). Native video improves matching
-> accuracy from 46.0% to 51.7% (150 items) and within-video ranking mean Spearman from 0.18 to
-> 0.26 (250 videos), while costing ~30× fewer input tokens. Supports the narrow claim that the
-> uniform frame protocol understates what a video-native model can extract from the same
-> evidence — the benchmark's difficulty is conservative, not an artifact of starving models.
-> Readers should not attribute the gain purely to visual temporal continuity: the native file
-> also carries audio, so this arm bundles two modality advantages (see caveat register); no
-> other roster model accepts raw video, so no cross-model generalization is claimed.
+> analysis_caption: Input-modality comparison on a single model (Gemini 3.7 Flash) evaluated
+> twice on identical items: once with the benchmark's standard 1 fps / 512px sampled frames,
+> once with the raw video file (audio track included). Native video is directionally better on
+> both tasks — matching 46.0%→51.7% (149 paired items) and ranking mean Spearman 0.18→0.26
+> (249 paired videos) — but neither paired difference reaches significance (McNemar p=0.36;
+> Wilcoxon p=0.27), while the input-token cost drops ~30×, which is a deterministic
+> measurement. Supports only the narrow claims that the frame protocol does not overstate
+> model ability (difficulty is conservative in direction) and that native video is far
+> cheaper at equal-or-better quality for this model. Readers should not conclude that native
+> video significantly improves accuracy, that the trend generalizes beyond this one model, or
+> that the effect is purely visual — the native file also carries the audio track.
 
 **A3. E3 joint vs independent scoring (all 7 arms).** Decision: FIGURE (paired dot / slope
 chart, one line per model, joint→indep mean ρ, human ceiling as reference line) + APPENDIX
 TABLE with ns. Rationale: the reversal (every model improves without context) is the paper's
-sharpest mechanism finding; shape beats exact values. Misleading-risk: differing INDEP
-coverage per model (C3) — the figure must state coverage or use the paired-intersection
-recompute before finalizing; without it, mark PRELIMINARY.
+sharpest mechanism finding; shape beats exact values. STATUS UPDATE 2026-08-19: the paired-
+intersection recompute is done (§3.5) — all 7 deltas positive, CIs exclude 0, Wilcoxon
+p≤.03 — so the finding is FINAL; the figure should plot the PAIRED means from §3.5, not the
+raw per-file means.
 
 > analysis_caption: Within-video relative calibration, not absolute perception, is what
 > breaks current models on intensity ranking. Each line is one model's mean per-video Spearman
@@ -277,15 +307,16 @@ task, see gaps G6).
 
 ## 6. Unresolved evidence gaps
 
-- **G1 (missing number)** Paired joint-vs-indep comparison on per-model intersections (fix for
-  C3) — not computed. Blocking A3 final.
-- **G2 (missing number)** Bootstrap/binomial CIs for all headline numbers — not computed.
+- ~~G1~~ RESOLVED 2026-08-19: paired intersections computed (§3.5); A3 final.
+- ~~G2~~ RESOLVED 2026-08-19: Wilson/bootstrap CIs in `summary.json` (§3.5). Consequence:
+  E1 accuracy gains are n.s. → A2 downgraded. Single-run-per-arm caveat (C9) remains.
 - **G3 (missing study)** Judge-human anchor validation (C2). ~30-50 items × human rubric
   scores of model rationales. Blocking the T3 claim strength.
 - **G4 (missing number)** Gemini rationale regeneration for the 10 empty items (C10) if a
   clean n=200 row is wanted.
-- **G5 (non-comparable)** GPT-5 T3 composite vs others (C1) until an offset-adjustment method
-  is fixed, or a third neutral judge (e.g., a Tinker text model) scores everything.
+- **G5 (non-comparable) — IN PROGRESS 2026-08-19**: third neutral judge (DeepSeek-V3.1 on
+  Tinker, no generator-family overlap) is scoring ALL generations; its column will be the
+  single cross-comparable T3 ranking. Files land as `*__by__tinker_deepseek-ai_DeepSeek-V3.1`.
 - **G6 (missing analysis)** Failure-mode coding of new T3/T2 errors; per-creator and
   per-domain slices (C8); Gemini prescreen self-selection check (prescreen_rank vs its own
   ranking scores — data present in ranking_set.json, analysis not run).

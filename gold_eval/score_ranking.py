@@ -73,8 +73,24 @@ def human_ceiling(items: list[dict]) -> dict:
             "mean_loo_spearman": round(float(np.mean(rhos)), 4) if rhos else None}
 
 
+def per_video_rhos(items: list[dict], preds: dict[str, dict]) -> dict[str, float]:
+    """Per-video Spearman rho vs consensus means, for videos with parsed scores + non-tied gold."""
+    out = {}
+    for it in items:
+        p = preds.get(it["video_id"])
+        if not p or not p.get("scores"):
+            continue
+        gold = [m["mean"] for m in it["moments"]]
+        model = [p["scores"][f"m{i}"] for i in range(len(gold))]
+        if len(set(gold)) > 1:
+            rho = spearmanr(model, gold).statistic
+            if not np.isnan(rho):
+                out[it["video_id"]] = float(rho)
+    return out
+
+
 def score_model(items: list[dict], preds: dict[str, dict]) -> dict:
-    rhos, pooled_model, pooled_gold, unparsed = [], [], [], 0
+    pooled_model, pooled_gold, unparsed = [], [], 0
     for it in items:
         p = preds.get(it["video_id"])
         if p is None:
@@ -83,13 +99,9 @@ def score_model(items: list[dict], preds: dict[str, dict]) -> dict:
             unparsed += 1
             continue
         gold = [m["mean"] for m in it["moments"]]
-        model = [p["scores"][f"m{i}"] for i in range(len(gold))]
         pooled_gold += gold
-        pooled_model += model
-        if len(set(gold)) > 1:
-            rho = spearmanr(model, gold).statistic
-            if not np.isnan(rho):
-                rhos.append(rho)
+        pooled_model += [p["scores"][f"m{i}"] for i in range(len(gold))]
+    rhos = list(per_video_rhos(items, preds).values())
     return {"n_videos_scored": len(rhos), "unparsed": unparsed,
             "mean_spearman": round(float(np.mean(rhos)), 4) if rhos else None,
             "pooled_pearson": round(float(pearsonr(pooled_model, pooled_gold).statistic), 4)

@@ -1,111 +1,11 @@
 {
-  "gemini-3.7-flash": {
-    "by_gpt-5": {
-      "cue": 0.738,
-      "link": 1.084,
-      "faithful": 0.534,
-      "composite_0to5": 2.356,
-      "n": 191,
-      "unparsed": 0
-    }
-  },
   "gpt-5": {
-    "by_gemini-3.7-flash": {
-      "cue": 1.47,
-      "link": 1.335,
-      "faithful": 0.87,
-      "composite_0to5": 3.675,
-      "n": 200,
-      "unparsed": 0
-    }
-  },
-  "tinker_Qwen_Qwen3.5-397B-A17B": {
-    "by_gpt-5": {
-      "cue": 0.745,
-      "link": 1.475,
-      "faithful": 0.18,
-      "composite_0to5": 2.4,
-      "n": 200,
-      "unparsed": 0
-    },
-    "by_gemini-3.7-flash_overlap": {
-      "cue": 1.033,
+    "by_tinker_deepseek-ai_DeepSeek-V3.1": {
+      "cue": 2.0,
       "link": 2.0,
-      "faithful": 0.517,
-      "composite_0to5": 3.55,
-      "n": 60,
-      "unparsed": 0
-    }
-  },
-  "tinker_Qwen_Qwen3.5-9B": {
-    "by_gpt-5": {
-      "cue": 0.675,
-      "link": 1.41,
-      "faithful": 0.135,
-      "composite_0to5": 2.22,
-      "n": 200,
-      "unparsed": 0
-    },
-    "by_gemini-3.7-flash_overlap": {
-      "cue": 1.05,
-      "link": 1.967,
-      "faithful": 0.517,
-      "composite_0to5": 3.533,
-      "n": 60,
-      "unparsed": 0
-    }
-  },
-  "tinker_Qwen_Qwen3.6-27B": {
-    "by_gpt-5": {
-      "cue": 0.72,
-      "link": 1.38,
-      "faithful": 0.18,
-      "composite_0to5": 2.28,
-      "n": 200,
-      "unparsed": 0
-    },
-    "by_gemini-3.7-flash_overlap": {
-      "cue": 1.0,
-      "link": 2.0,
-      "faithful": 0.567,
-      "composite_0to5": 3.567,
-      "n": 60,
-      "unparsed": 0
-    }
-  },
-  "tinker_Qwen_Qwen3.6-35B-A3B": {
-    "by_gpt-5": {
-      "cue": 0.75,
-      "link": 1.42,
-      "faithful": 0.185,
-      "composite_0to5": 2.355,
-      "n": 200,
-      "unparsed": 0
-    },
-    "by_gemini-3.7-flash_overlap": {
-      "cue": 0.967,
-      "link": 1.983,
-      "faithful": 0.483,
-      "composite_0to5": 3.433,
-      "n": 60,
-      "unparsed": 0
-    }
-  },
-  "tinker_moonshotai_Kimi-K2.6": {
-    "by_gpt-5": {
-      "cue": 0.935,
-      "link": 1.495,
-      "faithful": 0.185,
-      "composite_0to5": 2.615,
-      "n": 200,
-      "unparsed": 0
-    },
-    "by_gemini-3.7-flash_overlap": {
-      "cue": 1.133,
-      "link": 1.733,
-      "faithful": 0.567,
-      "composite_0to5": 3.433,
-      "n": 60,
+      "faithful": 1.0,
+      "composite_0to5": 5.0,
+      "n": 2,
       "unparsed": 0
     }
   }

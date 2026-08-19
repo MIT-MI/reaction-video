@@ -125,7 +125,11 @@ class TinkerBackbone:
         from tinker_cookbook.tokenizer_utils import get_tokenizer
         name = self.renderer_name or model_info.get_recommended_renderer_name(self.model)
         # Benchmark answers must be direct: disable thinking where the family supports it.
-        tok, ip = get_tokenizer(self.model), get_image_processor(self.model)
+        tok = get_tokenizer(self.model)
+        try:
+            ip = get_image_processor(self.model)
+        except Exception:
+            ip = None  # text-only model (e.g. DeepSeek judge) — no image processor
         try:
             renderer = get_renderer(f"{name}_disable_thinking", tokenizer=tok, image_processor=ip)
         except Exception:
