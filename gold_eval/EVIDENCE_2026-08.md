@@ -324,9 +324,13 @@ task, see gaps G6).
   scores of model rationales. Blocking the T3 claim strength.
 - **G4 (missing number)** Gemini rationale regeneration for the 10 empty items (C10) if a
   clean n=200 row is wanted.
-- **G5 (non-comparable) — IN PROGRESS 2026-08-19**: third neutral judge (DeepSeek-V3.1 on
-  Tinker, no generator-family overlap) is scoring ALL generations; its column will be the
-  single cross-comparable T3 ranking. Files land as `*__by__tinker_deepseek-ai_DeepSeek-V3.1`.
+- ~~G5~~ RESOLVED 2026-08-21: DeepSeek-V3.1 (neutral family) scored all 7 generators
+  (`*__by__tinker_deepseek-ai_DeepSeek-V3.1.jsonl`). Composite 0–5 [95% CI]: Kimi 2.91
+  [2.68,3.14], Qwen3.5-397B 2.91 [2.68,3.14], Qwen3.5-9B 2.83, GPT-5 2.78 [2.54,3.02],
+  Qwen3.6-35B 2.78, Gemini 2.65 (n=191), Qwen3.6-27B 2.61 [2.37,2.85]. All CIs overlap: under
+  one comparable judge, rationale quality does NOT separate models; cue identification is the
+  hard dimension (≤1.25/2 for every model); GPT-5 has the highest cue (1.25) but the lowest
+  link (1.07). This column replaces the mixed-judge comparison in the main table (PAPER_NOTES B4/C4).
 - **G6 (missing analysis)** Failure-mode coding of new T3/T2 errors; per-creator and
   per-domain slices (C8); Gemini prescreen self-selection check (prescreen_rank vs its own
   ranking scores — data present in ranking_set.json, analysis not run).
