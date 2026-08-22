@@ -204,8 +204,17 @@ class HFLocalBackbone:
                 content.append({"type": "image"})
             else:
                 content.append({"type": "text", "text": p["text"]})
-        text = s["proc"].apply_chat_template([{"role": "user", "content": content}],
-                                             tokenize=False, add_generation_prompt=True)
+        # Benchmark answers must be direct — same rule as TinkerBackbone (which asks the
+        # renderer for the *_disable_thinking variant). Qwen3.5's template otherwise opens a
+        # <think> block, and the indep runner's 8-token budget would be spent on reasoning
+        # before any digit is emitted. Applied identically to base and LoRA.
+        try:
+            text = s["proc"].apply_chat_template([{"role": "user", "content": content}],
+                                                 tokenize=False, add_generation_prompt=True,
+                                                 enable_thinking=False)
+        except TypeError:  # template without the kwarg
+            text = s["proc"].apply_chat_template([{"role": "user", "content": content}],
+                                                 tokenize=False, add_generation_prompt=True)
         enc = s["proc"](text=[text], images=images or None, return_tensors="pt").to(s["model"].device)
         with s["torch"].no_grad():
             out = s["model"].generate(**enc, max_new_tokens=max_tokens, do_sample=False)

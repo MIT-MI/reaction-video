@@ -36,23 +36,30 @@ class SFTData(Dataset):
         content = [{"type": "image"} for _ in images] + [{"type": "text", "text": r["prompt"]}]
         msgs_prompt = [{"role": "user", "content": content}]
         msgs_full = msgs_prompt + [{"role": "assistant", "content": [{"type": "text", "text": r["answer"]}]}]
-        prompt_text = self.proc.apply_chat_template(msgs_prompt, tokenize=False, add_generation_prompt=True)
+        # enable_thinking=False renders the same empty <think></think> block the assistant turn
+        # gets, so prompt_text is an exact TOKEN prefix of full_text (without it the boundary
+        # retokenises and the mask is off by two). Matches HFLocalBackbone's eval-time rendering.
+        prompt_text = self.proc.apply_chat_template(msgs_prompt, tokenize=False,
+                                                    add_generation_prompt=True, enable_thinking=False)
         full_text = self.proc.apply_chat_template(msgs_full, tokenize=False, add_generation_prompt=False)
         enc = self.proc(text=[full_text], images=images, return_tensors="pt")
         n_prompt = self.proc(text=[prompt_text], images=images, return_tensors="pt")["input_ids"].shape[1]
         ids = enc["input_ids"][0]
         if ids.shape[0] > self.max_tokens:
             return self[(i + 1) % len(self)]          # skip over-long samples (PLAN §8)
-        labels = ids.clone(); labels[:n_prompt] = -100  # assistant tokens only
-        out = {k: v[0] for k, v in enc.items()}
+        labels = enc["input_ids"].clone(); labels[:, :n_prompt] = -100  # assistant tokens only
+        # Keep the processor's own batching: text tensors are already (1, L); Qwen VL emits
+        # pixel_values as a FLAT (total_patches, dim) tensor and image_grid_thw as (n_img, 3),
+        # neither of which carries a batch axis — indexing [0] on them would drop all but the
+        # first patch / first image's grid.
+        out = dict(enc)
         out["labels"] = labels
         return out
 
 
-def collate(batch):  # per-device batch size 1 — keep tensors as-is
+def collate(batch):  # per-device batch size 1 — the processor already produced batch-of-1 tensors
     assert len(batch) == 1
-    return {k: v.unsqueeze(0) if v.dim() in (1,) and k in ("input_ids", "attention_mask", "labels") else
-            (v.unsqueeze(0) if k in ("input_ids", "attention_mask", "labels") else v) for k, v in batch[0].items()}
+    return batch[0]
 
 
 def main():

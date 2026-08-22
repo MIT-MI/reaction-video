@@ -26,3 +26,10 @@ gold_eval/results/**/raw/
 !gold_eval/results/**
 finetune/data/
 finetune/ckpt/
+
+# the node run points these at scratch via symlink; a symlink is a file, so the
+# trailing-slash rules above do not cover it
+/gold_eval/data
+/finetune/data
+/finetune/ckpt
+/.venv/
