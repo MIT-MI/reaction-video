@@ -25,11 +25,16 @@ gold_eval/results/**/raw/
 !gold_eval/results/
 !gold_eval/results/**
 finetune/data/
-finetune/ckpt/
+
+# checkpoint weights stay out of git, but the run config does not: train_args.json
+# records trainable_params / global_step / best_eval_loss / log_history and is the
+# provenance for REPORT.md's training numbers.
+finetune/ckpt/**
+!finetune/ckpt/*/
+!finetune/ckpt/*/train_args.json
 
 # the node run points these at scratch via symlink; a symlink is a file, so the
 # trailing-slash rules above do not cover it
 /gold_eval/data
 /finetune/data
-/finetune/ckpt
 /.venv/

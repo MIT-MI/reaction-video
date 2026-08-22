@@ -1,0 +1,123 @@
+{
+  "base": "hf:Qwen/Qwen3.5-9B",
+  "lora": "hf:Qwen/Qwen3.5-9B+finetune/ckpt/Qwen_Qwen3.5-9B-lora-r16/best",
+  "consensus_key": "mean",
+  "tasks": {
+    "T1-JOINT": {
+      "n_base_scored": 250,
+      "n_lora_scored": 166,
+      "n_paired": 166,
+      "base_mean_rho": 0.0239,
+      "lora_mean_rho": 0.1291,
+      "base_mean_rho_all": 0.0236,
+      "lora_mean_rho_all": 0.1291,
+      "base_ci95_boot": [
+        -0.1085,
+        0.1589
+      ],
+      "lora_ci95_boot": [
+        -0.0077,
+        0.262
+      ],
+      "delta_mean": 0.1052,
+      "delta_ci95_boot": [
+        -0.0216,
+        0.2309
+      ],
+      "wilcoxon_p": 0.13119,
+      "n_improved": 42,
+      "n_worsened": 29,
+      "n_tied": 95
+    },
+    "T1-INDEP": {
+      "n_base_scored": 199,
+      "n_lora_scored": 164,
+      "n_paired": 136,
+      "base_mean_rho": 0.3418,
+      "lora_mean_rho": 0.5262,
+      "base_mean_rho_all": 0.3184,
+      "lora_mean_rho_all": 0.5217,
+      "base_ci95_boot": [
+        0.2051,
+        0.4753
+      ],
+      "lora_ci95_boot": [
+        0.405,
+        0.6403
+      ],
+      "delta_mean": 0.1844,
+      "delta_ci95_boot": [
+        0.084,
+        0.2927
+      ],
+      "wilcoxon_p": 0.003074,
+      "n_improved": 36,
+      "n_worsened": 17,
+      "n_tied": 83
+    }
+  },
+  "coverage": {
+    "T1-JOINT": {
+      "base": {
+        "rows": 250,
+        "all_tied_predictions": 0,
+        "pred_sd": 27.89,
+        "n_distinct_values": 28,
+        "n_scored": 250
+      },
+      "lora": {
+        "rows": 250,
+        "all_tied_predictions": 84,
+        "pred_sd": 9.81,
+        "n_distinct_values": 12,
+        "n_scored": 166
+      }
+    },
+    "T1-INDEP": {
+      "base": {
+        "rows": 250,
+        "all_tied_predictions": 51,
+        "pred_sd": 22.97,
+        "n_distinct_values": 16,
+        "n_scored": 199
+      },
+      "lora": {
+        "rows": 250,
+        "all_tied_predictions": 86,
+        "pred_sd": 10.8,
+        "n_distinct_values": 10,
+        "n_scored": 164
+      }
+    }
+  },
+  "sensitivity_tied_as_zero": {
+    "T1-JOINT": {
+      "n": 250,
+      "base_mean_rho": 0.0236,
+      "lora_mean_rho": 0.0857,
+      "delta_mean": 0.0621,
+      "delta_ci95_boot": [
+        -0.0422,
+        0.1655
+      ],
+      "wilcoxon_p": 0.3199
+    },
+    "T1-INDEP": {
+      "n": 250,
+      "base_mean_rho": 0.2534,
+      "lora_mean_rho": 0.3423,
+      "delta_mean": 0.0888,
+      "delta_ci95_boot": [
+        -0.002,
+        0.1789
+      ],
+      "wilcoxon_p": 0.117162
+    }
+  },
+  "preregistered_criterion": {
+    "rule": "T1-JOINT delta mean rho >= 0.10 and Wilcoxon p < 0.05",
+    "delta_mean": 0.1052,
+    "wilcoxon_p": 0.13119,
+    "met": false
+  }
+}

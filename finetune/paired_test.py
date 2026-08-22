@@ -80,6 +80,42 @@ def main() -> None:
             "n_tied": int((diffs == 0).sum()),
         }
 
+    # Coverage diagnostics + a POST-HOC tie-aware sensitivity check. The pre-registered scorer
+    # drops a video when a model's per-moment scores are all equal (Spearman undefined), so an
+    # arm that refuses to differentiate is scored on a favourable subset rather than penalised.
+    # Here an all-tied (uninformative) prediction is instead credited rho = 0, i.e. chance, over
+    # every non-tied-gold video. This is NOT the pre-registered statistic; it is reported
+    # alongside it because the two arms tie at very different rates.
+    report["coverage"], report["sensitivity_tied_as_zero"] = {}, {}
+    for label, sub in (("T1-JOINT", "ranking"), ("T1-INDEP", "ranking_indep")):
+        b, f = preds_for(sub, a.base), preds_for(sub, ft)
+        if b is None or f is None:
+            continue
+        report["coverage"][label] = {
+            nm: {"rows": len(p),
+                 "all_tied_predictions": sum(1 for r in p.values()
+                                             if r.get("scores") and len(set(r["scores"].values())) == 1),
+                 "pred_sd": round(float(np.std([v for r in p.values() if r.get("scores")
+                                                for v in r["scores"].values()])), 2),
+                 "n_distinct_values": len({v for r in p.values() if r.get("scores")
+                                           for v in r["scores"].values()}),
+                 "n_scored": len(per_video_rhos(items, p, key=a.key))}
+            for nm, p in (("base", b), ("lora", f))}
+        rb, rl = per_video_rhos(items, b, key=a.key), per_video_rhos(items, f, key=a.key)
+        vids = [it["video_id"] for it in items
+                if len({m[a.key] for m in it["moments"]}) > 1 and it["video_id"] in b and it["video_id"] in f]
+        B = np.array([rb.get(v, 0.0) for v in vids]); L = np.array([rl.get(v, 0.0) for v in vids])
+        d = L - B
+        try:
+            wp = float(wilcoxon(d).pvalue) if np.any(d != 0) else 1.0
+        except ValueError:
+            wp = None
+        report["sensitivity_tied_as_zero"][label] = {
+            "n": len(vids), "base_mean_rho": round(float(B.mean()), 4),
+            "lora_mean_rho": round(float(L.mean()), 4), "delta_mean": round(float(d.mean()), 4),
+            "delta_ci95_boot": boot_mean_ci(list(d)),
+            "wilcoxon_p": (round(wp, 6) if wp is not None else None)}
+
     j = report["tasks"].get("T1-JOINT", {})
     report["preregistered_criterion"] = {
         "rule": "T1-JOINT delta mean rho >= 0.10 and Wilcoxon p < 0.05",
