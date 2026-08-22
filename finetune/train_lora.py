@@ -91,7 +91,9 @@ def main():
     args = TrainingArguments(
         output_dir=str(a.out), per_device_train_batch_size=1, per_device_eval_batch_size=1,
         gradient_accumulation_steps=a.grad_accum, num_train_epochs=a.epochs, learning_rate=a.lr,
-        lr_scheduler_type="cosine", warmup_ratio=0.03, bf16=True, logging_steps=10,
+        # transformers v5 dropped warmup_ratio; warmup_steps < 1 is read as a ratio
+        # (get_warmup_steps), so this is still PLAN §4's "warmup 3%".
+        lr_scheduler_type="cosine", warmup_steps=0.03, bf16=True, logging_steps=10,
         eval_strategy="steps", eval_steps=100, save_strategy="steps", save_steps=100,
         save_total_limit=3, load_best_model_at_end=True, metric_for_best_model="eval_loss",
         greater_is_better=False, report_to="none", seed=a.seed, remove_unused_columns=False,
