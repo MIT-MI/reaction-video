@@ -347,6 +347,14 @@
       ],
       "mean_spearman_debiased": 0.0262
     },
+    "ranking/hf_Qwen_Qwen3.5-9B": {
+      "n_videos_scored": 2,
+      "unparsed": 0,
+      "mean_spearman": -0.933,
+      "pooled_pearson": 0.1322,
+      "mean_spearman_ci95_boot": null,
+      "mean_spearman_debiased": -0.933
+    },
     "ranking/tinker_Qwen_Qwen3.5-397B-A17B": {
       "n_videos_scored": 250,
       "unparsed": 0,
@@ -423,6 +431,14 @@
         0.318
       ],
       "mean_spearman_debiased": 0.2039
+    },
+    "ranking_indep/hf_Qwen_Qwen3.5-9B": {
+      "n_videos_scored": 2,
+      "unparsed": 0,
+      "mean_spearman": 1.0,
+      "pooled_pearson": 0.8961,
+      "mean_spearman_ci95_boot": null,
+      "mean_spearman_debiased": 1.0
     },
     "ranking_indep/tinker_Qwen_Qwen3.5-397B-A17B": {
       "n_videos_scored": 182,
