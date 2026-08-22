@@ -109,6 +109,9 @@ def main() -> None:
             s = score_model(ranking_items, preds)
             rho_maps[f"{sub}/{f.stem}"] = per_video_rhos(ranking_items, preds)
             s["mean_spearman_ci95_boot"] = boot_mean_ci(list(rho_maps[f"{sub}/{f.stem}"].values()))
+            if all("debiased" in m for it in ranking_items for m in it["moments"]):
+                deb = list(per_video_rhos(ranking_items, preds, key="debiased").values())
+                s["mean_spearman_debiased"] = round(float(np.mean(deb)), 4) if deb else None
             summary["ranking"][f"{sub}/{f.stem}"] = s
     if args.with_ceiling:
         summary["ranking"]["human_ceiling"] = human_ceiling(ranking_items)

@@ -73,14 +73,15 @@ def human_ceiling(items: list[dict]) -> dict:
             "mean_loo_spearman": round(float(np.mean(rhos)), 4) if rhos else None}
 
 
-def per_video_rhos(items: list[dict], preds: dict[str, dict]) -> dict[str, float]:
-    """Per-video Spearman rho vs consensus means, for videos with parsed scores + non-tied gold."""
+def per_video_rhos(items: list[dict], preds: dict[str, dict], key: str = "mean") -> dict[str, float]:
+    """Per-video Spearman rho vs consensus (`key`: raw "mean" or rater-"debiased"), for videos
+    with parsed scores + non-tied gold."""
     out = {}
     for it in items:
         p = preds.get(it["video_id"])
         if not p or not p.get("scores"):
             continue
-        gold = [m["mean"] for m in it["moments"]]
+        gold = [m[key] for m in it["moments"]]
         model = [p["scores"][f"m{i}"] for i in range(len(gold))]
         if len(set(gold)) > 1:
             rho = spearmanr(model, gold).statistic

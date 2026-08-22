@@ -322,7 +322,8 @@
       "mean_spearman_ci95_boot": [
         0.067,
         0.282
-      ]
+      ],
+      "mean_spearman_debiased": 0.1755
     },
     "ranking/gemini-3.7-flash__video": {
       "n_videos_scored": 250,
@@ -332,7 +333,8 @@
       "mean_spearman_ci95_boot": [
         0.1524,
         0.3658
-      ]
+      ],
+      "mean_spearman_debiased": 0.2604
     },
     "ranking/gpt-5": {
       "n_videos_scored": 250,
@@ -342,7 +344,8 @@
       "mean_spearman_ci95_boot": [
         -0.0828,
         0.1353
-      ]
+      ],
+      "mean_spearman_debiased": 0.0262
     },
     "ranking/tinker_Qwen_Qwen3.5-397B-A17B": {
       "n_videos_scored": 250,
@@ -352,7 +355,8 @@
       "mean_spearman_ci95_boot": [
         -0.0444,
         0.173
-      ]
+      ],
+      "mean_spearman_debiased": 0.0646
     },
     "ranking/tinker_Qwen_Qwen3.5-9B": {
       "n_videos_scored": 250,
@@ -362,7 +366,8 @@
       "mean_spearman_ci95_boot": [
         -0.0799,
         0.1366
-      ]
+      ],
+      "mean_spearman_debiased": 0.0294
     },
     "ranking/tinker_Qwen_Qwen3.6-27B": {
       "n_videos_scored": 250,
@@ -372,7 +377,8 @@
       "mean_spearman_ci95_boot": [
         0.0574,
         0.2721
-      ]
+      ],
+      "mean_spearman_debiased": 0.1634
     },
     "ranking/tinker_Qwen_Qwen3.6-35B-A3B": {
       "n_videos_scored": 237,
@@ -382,7 +388,8 @@
       "mean_spearman_ci95_boot": [
         -0.0629,
         0.1569
-      ]
+      ],
+      "mean_spearman_debiased": 0.0456
     },
     "ranking/tinker_moonshotai_Kimi-K2.6": {
       "n_videos_scored": 250,
@@ -392,7 +399,8 @@
       "mean_spearman_ci95_boot": [
         -0.0248,
         0.1974
-      ]
+      ],
+      "mean_spearman_debiased": 0.0864
     },
     "ranking_indep/gemini-3.7-flash": {
       "n_videos_scored": 241,
@@ -402,7 +410,8 @@
       "mean_spearman_ci95_boot": [
         0.224,
         0.4298
-      ]
+      ],
+      "mean_spearman_debiased": 0.3282
     },
     "ranking_indep/gpt-5": {
       "n_videos_scored": 217,
@@ -412,7 +421,8 @@
       "mean_spearman_ci95_boot": [
         0.0888,
         0.318
-      ]
+      ],
+      "mean_spearman_debiased": 0.2039
     },
     "ranking_indep/tinker_Qwen_Qwen3.5-397B-A17B": {
       "n_videos_scored": 182,
@@ -422,7 +432,8 @@
       "mean_spearman_ci95_boot": [
         0.2146,
         0.4444
-      ]
+      ],
+      "mean_spearman_debiased": 0.3309
     },
     "ranking_indep/tinker_Qwen_Qwen3.5-9B": {
       "n_videos_scored": 191,
@@ -432,7 +443,8 @@
       "mean_spearman_ci95_boot": [
         0.216,
         0.4482
-      ]
+      ],
+      "mean_spearman_debiased": 0.334
     },
     "ranking_indep/tinker_Qwen_Qwen3.6-27B": {
       "n_videos_scored": 209,
@@ -442,7 +454,8 @@
       "mean_spearman_ci95_boot": [
         0.2852,
         0.4995
-      ]
+      ],
+      "mean_spearman_debiased": 0.3937
     },
     "ranking_indep/tinker_Qwen_Qwen3.6-35B-A3B": {
       "n_videos_scored": 205,
@@ -452,7 +465,8 @@
       "mean_spearman_ci95_boot": [
         0.1424,
         0.3682
-      ]
+      ],
+      "mean_spearman_debiased": 0.2566
     },
     "ranking_indep/tinker_moonshotai_Kimi-K2.6": {
       "n_videos_scored": 204,
@@ -462,7 +476,8 @@
       "mean_spearman_ci95_boot": [
         0.1716,
         0.3957
-      ]
+      ],
+      "mean_spearman_debiased": 0.2856
     }
   },
   "rationale": {
@@ -479,15 +494,15 @@
       ]
     },
     "gemini-3.7-flash__by__tinker_deepseek-ai_DeepSeek-V3.1": {
-      "cue": 0.737,
-      "link": 0.868,
-      "faithful": 0.763,
-      "composite_0to5": 2.368,
-      "n": 38,
+      "cue": 0.906,
+      "link": 1.131,
+      "faithful": 0.618,
+      "composite_0to5": 2.654,
+      "n": 191,
       "unparsed": 0,
       "composite_ci95_boot": [
-        1.7895,
-        2.9474
+        2.4084,
+        2.9005
       ]
     },
     "gpt-5__by__gemini-3.7-flash": {
@@ -503,13 +518,16 @@
       ]
     },
     "gpt-5__by__tinker_deepseek-ai_DeepSeek-V3.1": {
-      "cue": 2.0,
-      "link": 2.0,
-      "faithful": 1.0,
-      "composite_0to5": 5.0,
-      "n": 2,
+      "cue": 1.245,
+      "link": 1.065,
+      "faithful": 0.465,
+      "composite_0to5": 2.775,
+      "n": 200,
       "unparsed": 0,
-      "composite_ci95_boot": null
+      "composite_ci95_boot": [
+        2.535,
+        3.015
+      ]
     },
     "tinker_Qwen_Qwen3.5-397B-A17B__by__gemini-3.7-flash": {
       "cue": 1.033,
@@ -533,6 +551,18 @@
       "composite_ci95_boot": [
         2.19,
         2.62
+      ]
+    },
+    "tinker_Qwen_Qwen3.5-397B-A17B__by__tinker_deepseek-ai_DeepSeek-V3.1": {
+      "cue": 0.95,
+      "link": 1.685,
+      "faithful": 0.27,
+      "composite_0to5": 2.905,
+      "n": 200,
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.68,
+        3.135
       ]
     },
     "tinker_Qwen_Qwen3.5-9B__by__gemini-3.7-flash": {
@@ -559,6 +589,18 @@
         2.44
       ]
     },
+    "tinker_Qwen_Qwen3.5-9B__by__tinker_deepseek-ai_DeepSeek-V3.1": {
+      "cue": 0.9,
+      "link": 1.72,
+      "faithful": 0.205,
+      "composite_0to5": 2.825,
+      "n": 200,
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.615,
+        3.04
+      ]
+    },
     "tinker_Qwen_Qwen3.6-27B__by__gemini-3.7-flash": {
       "cue": 1.0,
       "link": 2.0,
@@ -581,6 +623,18 @@
       "composite_ci95_boot": [
         2.055,
         2.51
+      ]
+    },
+    "tinker_Qwen_Qwen3.6-27B__by__tinker_deepseek-ai_DeepSeek-V3.1": {
+      "cue": 0.815,
+      "link": 1.525,
+      "faithful": 0.27,
+      "composite_0to5": 2.61,
+      "n": 200,
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.37,
+        2.85
       ]
     },
     "tinker_Qwen_Qwen3.6-35B-A3B__by__gemini-3.7-flash": {
@@ -607,6 +661,18 @@
         2.585
       ]
     },
+    "tinker_Qwen_Qwen3.6-35B-A3B__by__tinker_deepseek-ai_DeepSeek-V3.1": {
+      "cue": 0.95,
+      "link": 1.55,
+      "faithful": 0.275,
+      "composite_0to5": 2.775,
+      "n": 200,
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.535,
+        3.025
+      ]
+    },
     "tinker_moonshotai_Kimi-K2.6__by__gemini-3.7-flash": {
       "cue": 1.133,
       "link": 1.733,
@@ -631,11 +697,28 @@
         2.845
       ]
     },
+    "tinker_moonshotai_Kimi-K2.6__by__tinker_deepseek-ai_DeepSeek-V3.1": {
+      "cue": 1.085,
+      "link": 1.53,
+      "faithful": 0.295,
+      "composite_0to5": 2.91,
+      "n": 200,
+      "unparsed": 0,
+      "composite_ci95_boot": [
+        2.675,
+        3.14
+      ]
+    },
     "judge_agreement_overlap": {
       "gemini-3.7-flash": {
-        "n": 38,
-        "pearson": 0.878,
-        "mean_abs_diff": 0.553
+        "n": 191,
+        "pearson": 0.81,
+        "mean_abs_diff": 0.665
+      },
+      "gpt-5": {
+        "n": 200,
+        "pearson": 0.693,
+        "mean_abs_diff": 1.13
       },
       "tinker_Qwen_Qwen3.5-397B-A17B": {
         "n": 60,

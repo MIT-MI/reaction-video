@@ -353,13 +353,17 @@ superiority claims (G2), any fine-tune or audio-arm statement (G8), human-confir
 
 ---
 ### Addendum 2026-08-21 (meeting decisions; fine-tune track)
-- **C13** A platform test account (`annotator_id='test'`, 58 of 14,894 Stage-A scores, bias
-  +0.06) is included in the frozen ranking-set consensus. Excluding it changes spreads and
-  hence set membership, so the frozen set is retained as-is; the fine-tune split and any
-  future rebuild exclude it (`build_ranking_tasks.py` / `build_finetune_split.py` patched).
-- **Ground truth refinement (co-author):** rater-debiased consensus (two-way additive
-  model) will be reported alongside the raw mean for the frozen 250 videos (membership
-  unchanged); |Δ| averages 0.04 on the 0-3 scale.
+- **C13 (revised 2026-08-21)** `annotator_id='test'` (58 of 14,894 Stage-A scores) is the
+  first author's own careful pass, not a throwaway account — retained as an author rater
+  (ADR-0002 permits author raters, blind to model scores) and disclosed as such. No set
+  rebuild; frozen membership unchanged.
+- **Ground-truth normalisation — DONE, null effect:** rater-debiased consensus (two-way
+  additive model, 8 raters, effects −0.30…+0.21) added to the frozen 250-video set
+  (`ranking_set.json → moments[].debiased`, `debias_record.json`). |debiased − mean| averages
+  0.045 (max 0.057) and changes the within-video ORDER in **0/250 videos**, so every Spearman
+  ρ is identical to 4 decimals under both ground truths (`summary.json →
+  mean_spearman_debiased`). Reason: ≥3 raters per moment and the same raters covering a
+  whole video make rater offsets cancel within-video. Report as a one-line robustness check.
 - **A10 (planned) Fine-tune with/without row** — PLAN in `finetune/PLAN.md`: LoRA on
   Qwen3.5-9B, F-INDEP + F-JOINT formats, train 1,364 videos / 1,952 moments (video-disjoint
   from every eval set), eval via the local HF path for both base and LoRA. Pre-registered
