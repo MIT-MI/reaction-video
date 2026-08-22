@@ -24,3 +24,5 @@ gold_eval/results/**/raw/
 .DS_Store
 !gold_eval/results/
 !gold_eval/results/**
+finetune/data/
+finetune/ckpt/

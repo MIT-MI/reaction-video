@@ -22,6 +22,8 @@ class SpendNotConfirmed(RuntimeError):
 
 
 def get_backbone(model: str):
+    if model.startswith("hf:"):
+        return HFLocalBackbone(model[3:])
     if model.startswith("tinker:"):
         return TinkerBackbone(model.split(":", 1)[1])
     if model.startswith("gemini"):
@@ -164,3 +166,49 @@ class TinkerBackbone:
         seq = resp.sequences[0]
         message, _ = s["renderer"].parse_response(seq.tokens)
         return s["get_text"](message), prompt.length, len(seq.tokens)
+
+
+class HFLocalBackbone:
+    """Local transformers inference for the fine-tune comparison (PLAN §5).
+    Model spec: "hf:<base_or_path>" or "hf:<base>+<lora_adapter_dir>". Greedy decoding, same
+    frame parts as every other backbone. Base AND LoRA must both be evaluated through this
+    class so the with/without contrast has no Tinker-vs-local confound."""
+
+    def __init__(self, spec: str):
+        self.base, _, self.adapter = spec.partition("+")
+        self.model_name = spec
+
+    @cached_property
+    def _stack(self):
+        import torch
+        from transformers import AutoModelForImageTextToText, AutoProcessor
+        proc = AutoProcessor.from_pretrained(self.base)
+        model = AutoModelForImageTextToText.from_pretrained(
+            self.base, torch_dtype=torch.bfloat16, device_map="auto")
+        if self.adapter:
+            from peft import PeftModel
+            model = PeftModel.from_pretrained(model, self.adapter)
+        model.eval()
+        return {"proc": proc, "model": model, "torch": torch}
+
+    def complete(self, parts: list[dict], max_tokens: int = 128) -> tuple[str, int, int]:
+        import base64 as b64
+        import io
+        from PIL import Image
+        s = self._stack
+        images, content = [], []
+        for p in parts:
+            if p["type"] == "image_url":
+                raw = b64.b64decode(p["image_url"]["url"].split(",", 1)[1])
+                images.append(Image.open(io.BytesIO(raw)).convert("RGB"))
+                content.append({"type": "image"})
+            else:
+                content.append({"type": "text", "text": p["text"]})
+        text = s["proc"].apply_chat_template([{"role": "user", "content": content}],
+                                             tokenize=False, add_generation_prompt=True)
+        enc = s["proc"](text=[text], images=images or None, return_tensors="pt").to(s["model"].device)
+        with s["torch"].no_grad():
+            out = s["model"].generate(**enc, max_new_tokens=max_tokens, do_sample=False)
+        n_in = enc["input_ids"].shape[1]
+        gen = out[0][n_in:]
+        return s["proc"].decode(gen, skip_special_tokens=True), int(n_in), int(gen.shape[0])

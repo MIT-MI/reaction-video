@@ -40,6 +40,7 @@ PROVIDER_CAPS: dict[str, float] = {
                        # expiring ~2026-09-08 — owner: "可以随便用". cap = 36.8 + ~293.
     "openai": 30.0,    # GPT-5 approved (owner, 2026-08-18)
     "tinker": float("inf"),
+    "local": float("inf"),   # own GPUs
 }
 
 
@@ -48,8 +49,8 @@ class BudgetExceeded(RuntimeError):
 
 
 def provider_of(model: str) -> str:
-    if model.startswith("tinker:"):
-        return "tinker"
+    if model.startswith(("tinker:", "hf:")):
+        return "tinker" if model.startswith("tinker:") else "local"
     if model.startswith("gemini"):
         return "gemini"
     return "openai"

@@ -350,3 +350,18 @@ flagged preliminary pending G1; (v) methods facts (protocol, human data: 3,257 m
 frozen sets 150/250/200). Not safe yet: cross-judge T3 comparisons (G5), CI-qualified
 superiority claims (G2), any fine-tune or audio-arm statement (G8), human-confirmed T2 gold
 (G9). Numbers must be quoted from §3 / summary.json, not recomputed ad hoc.
+
+---
+### Addendum 2026-08-21 (meeting decisions; fine-tune track)
+- **C13** A platform test account (`annotator_id='test'`, 58 of 14,894 Stage-A scores, bias
+  +0.06) is included in the frozen ranking-set consensus. Excluding it changes spreads and
+  hence set membership, so the frozen set is retained as-is; the fine-tune split and any
+  future rebuild exclude it (`build_ranking_tasks.py` / `build_finetune_split.py` patched).
+- **Ground truth refinement (co-author):** rater-debiased consensus (two-way additive
+  model) will be reported alongside the raw mean for the frozen 250 videos (membership
+  unchanged); |Δ| averages 0.04 on the 0-3 scale.
+- **A10 (planned) Fine-tune with/without row** — PLAN in `finetune/PLAN.md`: LoRA on
+  Qwen3.5-9B, F-INDEP + F-JOINT formats, train 1,364 videos / 1,952 moments (video-disjoint
+  from every eval set), eval via the local HF path for both base and LoRA. Pre-registered
+  success: ΔρJOINT ≥ .10, paired Wilcoxon p<.05. Status: data built, code untested on node.
+- **Workshop target:** IAEval (Evaluation of Interactive Agents), DDL 2026-08-29/30.
