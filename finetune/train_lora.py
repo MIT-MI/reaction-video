@@ -76,18 +76,10 @@ def main():
     p.add_argument("--seed", type=int, default=0)
     a = p.parse_args()
 
-    proc = AutoProcessor.from_pretrained(a.base)
-    model = AutoModelForImageTextToText.from_pretrained(a.base, torch_dtype=torch.bfloat16)
-    model.gradient_checkpointing_enable()
-    for n, prm in model.named_parameters():        # freeze everything; LoRA adds trainables
-        prm.requires_grad = False
-    lcfg = LoraConfig(r=a.rank, lora_alpha=2 * a.rank, lora_dropout=0.05, bias="none",
-                      # language-model projections only (regex excludes the vision tower)
-                      target_modules=r".*(language_model|model\.layers).*\.(q_proj|k_proj|v_proj|o_proj|gate_proj|up_proj|down_proj)")
-    model = get_peft_model(model, lcfg)
-    model.print_trainable_parameters()
-
-    train_ds, val_ds = SFTData(a.train, proc, a.max_tokens), SFTData(a.val, proc, a.max_tokens)
+    # Build TrainingArguments FIRST: it initialises the accelerator/CUDA state, so the bf16
+    # capability probe runs while host memory is still free. With 8 ranks each holding a 19 GB
+    # CPU copy of the weights first, that probe died with "CUDA driver initialization failed"
+    # and TrainingArguments reported it as "your setup doesn't support bf16/gpu".
     args = TrainingArguments(
         output_dir=str(a.out), per_device_train_batch_size=1, per_device_eval_batch_size=1,
         gradient_accumulation_steps=a.grad_accum, num_train_epochs=a.epochs, learning_rate=a.lr,
@@ -98,13 +90,38 @@ def main():
         save_total_limit=3, load_best_model_at_end=True, metric_for_best_model="eval_loss",
         greater_is_better=False, report_to="none", seed=a.seed, remove_unused_columns=False,
         dataloader_num_workers=2, ddp_find_unused_parameters=False)
+
+    proc = AutoProcessor.from_pretrained(a.base)
+    # Stream each rank's weights straight onto its own GPU instead of materialising eight
+    # 19 GB copies in host RAM. Single-entry device_map => Trainer keeps is_model_parallel False,
+    # so this is still plain DDP (PLAN §4), not model parallelism.
+    local_rank = int(os.environ.get("LOCAL_RANK", 0))
+    model = AutoModelForImageTextToText.from_pretrained(
+        a.base, dtype=torch.bfloat16, device_map={"": local_rank})
+    model.gradient_checkpointing_enable()
+    for n, prm in model.named_parameters():        # freeze everything; LoRA adds trainables
+        prm.requires_grad = False
+    lcfg = LoraConfig(r=a.rank, lora_alpha=2 * a.rank, lora_dropout=0.05, bias="none",
+                      # language-model projections only (regex excludes the vision tower)
+                      target_modules=r".*(language_model|model\.layers).*\.(q_proj|k_proj|v_proj|o_proj|gate_proj|up_proj|down_proj)")
+    model = get_peft_model(model, lcfg)
+    model.print_trainable_parameters()
+
+    train_ds, val_ds = SFTData(a.train, proc, a.max_tokens), SFTData(a.val, proc, a.max_tokens)
     tr = Trainer(model=model, args=args, train_dataset=train_ds, eval_dataset=val_ds,
                  data_collator=collate, callbacks=[EarlyStoppingCallback(early_stopping_patience=3)])
     tr.train()
-    model.save_pretrained(str(a.out / "best"))
-    proc.save_pretrained(str(a.out / "best"))
-    (a.out / "train_args.json").write_text(json.dumps(vars(a), default=str, indent=2))
-    print(f"[train] saved LoRA adapter -> {a.out/'best'}")
+    if tr.is_world_process_zero():   # 8 ranks writing the same adapter dir is a corruption race
+        model.save_pretrained(str(a.out / "best"))
+        proc.save_pretrained(str(a.out / "best"))
+        hist = [h for h in tr.state.log_history if "eval_loss" in h]
+        best = min(hist, key=lambda h: h["eval_loss"]) if hist else {}
+        (a.out / "train_args.json").write_text(json.dumps(
+            {**vars(a), "trainable_params": sum(p.numel() for p in model.parameters() if p.requires_grad),
+             "global_step": tr.state.global_step, "best_eval_loss": best.get("eval_loss"),
+             "best_eval_step": best.get("step"), "log_history": tr.state.log_history},
+            default=str, indent=2))
+        print(f"[train] saved LoRA adapter -> {a.out/'best'}")
 
 
 if __name__ == "__main__":
