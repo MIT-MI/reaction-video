@@ -72,3 +72,14 @@ Steps:
 Rules: keep the evaluation prompts and frame protocol untouched; if a run must deviate
 (OOM → lower --joint_cap to 24; class-name fixes), say so explicitly in REPORT.md; never
 fabricate or back-fill numbers — every number must come from a file in results/.
+
+---------------------------------------------------------------- RUN 2 (when GPUs free up)
+
+Owner decision 2026-08-22: GPUs unavailable for ≥72 h → the paper is written on run 1
+(null result). If the node frees up before camera-ready, run 2 = run 1 with three changes
+only: (a) training part order now matches the eval runners (prompt → frames → cue; already
+in the builder/trainer — rebuild data first), (b) `--epochs 5` (run 1's val loss was still
+falling at step 264), (c) same seed 0, then seeds 1–2 if time. Everything else identical
+(joint_cap 24, LoRA targets, lr). Report exactly as REPORT.md, as `finetune/REPORT_run2.md`,
+with the tie-aware paired test (`per_video_rhos(..., tied_as_zero=True)`) as primary and the
+pre-registered drop-ties test alongside. Expected ≈ 6–7 h.

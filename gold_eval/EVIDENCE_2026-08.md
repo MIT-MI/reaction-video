@@ -410,3 +410,8 @@ fine-tune effects fall below significance (joint +.062 p=.32; indep +.089 p=.12)
 Deltas shrink (ties on INDEP now count as 0) but every CI still excludes 0 → C2 stands under
 both conventions. **Paper convention: report tie-aware numbers as primary for T1 and the
 pre-registered drop-ties numbers in the appendix**, stating the all-tied counts.
+
+**Decision 2026-08-22 (owner):** GPUs unavailable ≥72 h → no run 2 before the IAEval deadline;
+the paper is written on run 1 (null). Run-2 fixes (train/eval part-order alignment, 5
+epochs) are pre-staged in `finetune/` and `SERVER_SESSION_PROMPT.md`; if the node frees up
+before camera-ready, rerun and replace A10. Paper outline: `paper/OUTLINE.md`.

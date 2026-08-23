@@ -29,9 +29,10 @@ def indep_sample(item: dict, m: dict, cap: int, label_key: str) -> dict:
     r2_base = item["face_url"][: -len(item["face_r2_key"])]
     clip = fr.fetch_clip(r2_base, item["face_r2_key"])
     imgs = [str(p) for p in fr.extract_frames(clip, max_frames=cap, start_s=m["start_s"], end_s=m["end_s"])]
+    # part order mirrors run_ranking_independent: prompt -> frames -> "Score (0-100):"
     return {"id": f"indep::{m['candidate_id']}", "format": "indep", "images": imgs,
-            "prompt": INDEP_PROMPT + "\nScore (0-100):", "answer": str(to100(m[label_key])),
-            "weight": 1.0 / (1.0 + m["std"])}
+            "prompt_before": INDEP_PROMPT, "prompt": "Score (0-100):",
+            "answer": str(to100(m[label_key])), "weight": 1.0 / (1.0 + m["std"])}
 
 
 def joint_sample(item: dict, cap: int, label_key: str) -> dict:
@@ -42,8 +43,10 @@ def joint_sample(item: dict, cap: int, label_key: str) -> dict:
                             for i, m in enumerate(item["moments"]))
     prompt = JOINT_PROMPT.format(k=len(item["moments"]), moments=moments_txt) + "\nJSON scores:"
     ans = json.dumps({f"m{i}": to100(m[label_key]) for i, m in enumerate(item["moments"])})
+    # part order mirrors run_ranking: prompt(+moments) -> frames -> "JSON scores:"
     return {"id": f"joint::{item['video_id']}", "format": "joint", "images": imgs,
-            "prompt": prompt, "answer": ans, "weight": 1.0}
+            "prompt_before": prompt[: -len("\nJSON scores:")], "prompt": "JSON scores:",
+            "answer": ans, "weight": 1.0}
 
 
 def main() -> None:

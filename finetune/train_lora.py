@@ -33,7 +33,14 @@ class SFTData(Dataset):
     def __getitem__(self, i):
         r = self.rows[i]
         images = [Image.open(p).convert("RGB") for p in r["images"]]
-        content = [{"type": "image"} for _ in images] + [{"type": "text", "text": r["prompt"]}]
+        # run-2 ordering (matches the eval runners): text prompt -> frames -> short cue.
+        # Rows from the run-1 builder (no "prompt_before") fall back to frames -> prompt.
+        if r.get("prompt_before"):
+            content = ([{"type": "text", "text": r["prompt_before"]}]
+                       + [{"type": "image"} for _ in images]
+                       + [{"type": "text", "text": r["prompt"]}])
+        else:
+            content = [{"type": "image"} for _ in images] + [{"type": "text", "text": r["prompt"]}]
         msgs_prompt = [{"role": "user", "content": content}]
         msgs_full = msgs_prompt + [{"role": "assistant", "content": [{"type": "text", "text": r["answer"]}]}]
         # enable_thinking=False renders the same empty <think></think> block the assistant turn
