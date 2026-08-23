@@ -73,9 +73,12 @@ def human_ceiling(items: list[dict]) -> dict:
             "mean_loo_spearman": round(float(np.mean(rhos)), 4) if rhos else None}
 
 
-def per_video_rhos(items: list[dict], preds: dict[str, dict], key: str = "mean") -> dict[str, float]:
+def per_video_rhos(items: list[dict], preds: dict[str, dict], key: str = "mean",
+                   tied_as_zero: bool = False) -> dict[str, float]:
     """Per-video Spearman rho vs consensus (`key`: raw "mean" or rater-"debiased"), for videos
-    with parsed scores + non-tied gold."""
+    with non-tied gold. Default (pre-registered) drops videos whose prediction is all-tied
+    (rho undefined); `tied_as_zero=True` credits rho=0 (chance) instead — the tie-aware
+    convention, which removes the denominator-shrinking artefact found in the fine-tune run."""
     out = {}
     for it in items:
         p = preds.get(it["video_id"])
@@ -87,6 +90,8 @@ def per_video_rhos(items: list[dict], preds: dict[str, dict], key: str = "mean")
             rho = spearmanr(model, gold).statistic
             if not np.isnan(rho):
                 out[it["video_id"]] = float(rho)
+            elif tied_as_zero:
+                out[it["video_id"]] = 0.0
     return out
 
 

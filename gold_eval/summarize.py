@@ -109,6 +109,10 @@ def main() -> None:
             s = score_model(ranking_items, preds)
             rho_maps[f"{sub}/{f.stem}"] = per_video_rhos(ranking_items, preds)
             s["mean_spearman_ci95_boot"] = boot_mean_ci(list(rho_maps[f"{sub}/{f.stem}"].values()))
+            tie0 = per_video_rhos(ranking_items, preds, tied_as_zero=True)
+            s["mean_spearman_tie0"] = round(float(np.mean(list(tie0.values()))), 4) if tie0 else None
+            s["n_all_tied_predictions"] = len(tie0) - len(rho_maps[f"{sub}/{f.stem}"])
+            rho_maps[f"tie0::{sub}/{f.stem}"] = tie0
             if all("debiased" in m for it in ranking_items for m in it["moments"]):
                 deb = list(per_video_rhos(ranking_items, preds, key="debiased").values())
                 s["mean_spearman_debiased"] = round(float(np.mean(deb)), 4) if deb else None
@@ -118,7 +122,7 @@ def main() -> None:
 
     # G1: paired joint-vs-independent comparison on each model's video intersection
     summary["ranking_paired"] = {}
-    for joint_key in [k for k in rho_maps if k.startswith("ranking/") and "__video" not in k]:
+    for joint_key in [k for k in rho_maps if k.startswith(("ranking/", "tie0::ranking/")) and "__video" not in k]:
         indep_key = joint_key.replace("ranking/", "ranking_indep/")
         if indep_key not in rho_maps:
             continue
@@ -132,7 +136,8 @@ def main() -> None:
             wp = float(wilcoxon(diffs).pvalue) if np.any(diffs != 0) else 1.0
         except ValueError:
             wp = None
-        summary["ranking_paired"][joint_key.split("/", 1)[1]] = {
+        label = joint_key.split("/", 1)[1] + ("  [tie0]" if joint_key.startswith("tie0::") else "")
+        summary["ranking_paired"][label] = {
             "n_paired": len(shared),
             "joint_mean_rho": round(float(np.mean(dj)), 4),
             "indep_mean_rho": round(float(np.mean(di)), 4),

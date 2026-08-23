@@ -373,3 +373,40 @@ superiority claims (G2), any fine-tune or audio-arm statement (G8), human-confir
   from every eval set), eval via the local HF path for both base and LoRA. Pre-registered
   success: ΔρJOINT ≥ .10, paired Wilcoxon p<.05. Status: data built, code untested on node.
 - **Workshop target:** IAEval (Evaluation of Interactive Agents), DDL 2026-08-29/30.
+
+---
+### Addendum 2026-08-22 — fine-tune run 1 (A10) and the tie-aware scoring convention
+
+**A10 result (finetune/REPORT.md, finetune_paired.json):** Qwen3.5-9B + LoRA r16
+(29.1M trainable, 264 steps / 3 epochs, 3.2 h on 8×A6000), base and LoRA both through the
+local HF path (local base reproduces the Tinker zero-shot row: joint .024 vs .029, indep
+.318 vs .334). Pre-registered paired test: T1-JOINT Δρ = **+0.105**, CI [−0.022, 0.231],
+Wilcoxon p = **0.131**, n = 166 → **criterion NOT met** (effect-size bar cleared,
+significance not). T1-INDEP Δρ = +0.184, p = .003, n = 136. Joint-vs-indep gap *widened*
+(.29 → .39): supervised intensity labels did not repair within-video calibration. Report as
+a null result for the calibration hypothesis at this scale (single seed, C9).
+
+**C14 — scorer artefact (applies to ALL arms, found via A10):** Spearman is undefined when a
+model emits identical scores for every moment, and the pre-registered scorer *drops* such
+videos, silently shrinking that arm's denominator. The LoRA collapsed its output range
+(pred SD 27.9 → 9.8; 84/250 joint videos all-tied vs 0 for base), so its headline means
+are flattered; base models also tie on INDEP (e.g. base Qwen 51/250). A tie-aware
+convention (credit ρ = 0 for an all-tied prediction; `mean_spearman_tie0`,
+`n_all_tied_predictions` in summary.json) is now computed for every arm. Under it the
+fine-tune effects fall below significance (joint +.062 p=.32; indep +.089 p=.12).
+
+**E3 re-checked under tie-aware scoring — robust (summary.json → ranking_paired "[tie0]"):**
+
+| Model (all 250 videos) | joint ρ | indep ρ | Δ | Δ 95% CI | p |
+|---|---|---|---|---|---|
+| Qwen3.5-9B | .029 | .255 | +.226 | [.088, .363] | .0017 |
+| Qwen3.5-397B | .085 | .267 | +.182 | [.046, .315] | .0135 |
+| Qwen3.6-35B-A3B | .043 | .210 | +.167 | [.028, .304] | .0187 |
+| Qwen3.6-27B | .163 | .329 | +.166 | [.033, .294] | .0132 |
+| GPT-5 | .026 | .177 | +.151 | [.015, .286] | .0349 |
+| Kimi-K2.6 | .086 | .233 | +.147 | [.019, .270] | .0299 |
+| Gemini 3.7 Flash | .175 | .315 | +.139 | [.024, .254] | .0203 |
+
+Deltas shrink (ties on INDEP now count as 0) but every CI still excludes 0 → C2 stands under
+both conventions. **Paper convention: report tie-aware numbers as primary for T1 and the
+pre-registered drop-ties numbers in the appendix**, stating the all-tied counts.

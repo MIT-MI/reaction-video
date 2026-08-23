@@ -323,6 +323,8 @@
         0.067,
         0.282
       ],
+      "mean_spearman_tie0": 0.1755,
+      "n_all_tied_predictions": 0,
       "mean_spearman_debiased": 0.1755
     },
     "ranking/gemini-3.7-flash__video": {
@@ -334,6 +336,8 @@
         0.1524,
         0.3658
       ],
+      "mean_spearman_tie0": 0.2604,
+      "n_all_tied_predictions": 0,
       "mean_spearman_debiased": 0.2604
     },
     "ranking/gpt-5": {
@@ -345,6 +349,8 @@
         -0.0828,
         0.1353
       ],
+      "mean_spearman_tie0": 0.0262,
+      "n_all_tied_predictions": 0,
       "mean_spearman_debiased": 0.0262
     },
     "ranking/hf_Qwen_Qwen3.5-9B+finetune_ckpt_Qwen_Qwen3.5-9B-lora-r16_best": {
@@ -356,6 +362,8 @@
         -0.0077,
         0.262
       ],
+      "mean_spearman_tie0": 0.0857,
+      "n_all_tied_predictions": 84,
       "mean_spearman_debiased": 0.1291
     },
     "ranking/hf_Qwen_Qwen3.5-9B": {
@@ -367,6 +375,8 @@
         -0.0862,
         0.1344
       ],
+      "mean_spearman_tie0": 0.0236,
+      "n_all_tied_predictions": 0,
       "mean_spearman_debiased": 0.0236
     },
     "ranking/tinker_Qwen_Qwen3.5-397B-A17B": {
@@ -378,6 +388,8 @@
         -0.0444,
         0.173
       ],
+      "mean_spearman_tie0": 0.0646,
+      "n_all_tied_predictions": 0,
       "mean_spearman_debiased": 0.0646
     },
     "ranking/tinker_Qwen_Qwen3.5-9B": {
@@ -389,6 +401,8 @@
         -0.0799,
         0.1366
       ],
+      "mean_spearman_tie0": 0.0294,
+      "n_all_tied_predictions": 0,
       "mean_spearman_debiased": 0.0294
     },
     "ranking/tinker_Qwen_Qwen3.6-27B": {
@@ -400,6 +414,8 @@
         0.0574,
         0.2721
       ],
+      "mean_spearman_tie0": 0.1634,
+      "n_all_tied_predictions": 0,
       "mean_spearman_debiased": 0.1634
     },
     "ranking/tinker_Qwen_Qwen3.6-35B-A3B": {
@@ -411,6 +427,8 @@
         -0.0629,
         0.1569
       ],
+      "mean_spearman_tie0": 0.0432,
+      "n_all_tied_predictions": 13,
       "mean_spearman_debiased": 0.0456
     },
     "ranking/tinker_moonshotai_Kimi-K2.6": {
@@ -422,6 +440,8 @@
         -0.0248,
         0.1974
       ],
+      "mean_spearman_tie0": 0.0864,
+      "n_all_tied_predictions": 0,
       "mean_spearman_debiased": 0.0864
     },
     "ranking_indep/gemini-3.7-flash": {
@@ -433,6 +453,8 @@
         0.224,
         0.4298
       ],
+      "mean_spearman_tie0": 0.3164,
+      "n_all_tied_predictions": 9,
       "mean_spearman_debiased": 0.3282
     },
     "ranking_indep/gpt-5": {
@@ -444,6 +466,8 @@
         0.0888,
         0.318
       ],
+      "mean_spearman_tie0": 0.177,
+      "n_all_tied_predictions": 33,
       "mean_spearman_debiased": 0.2039
     },
     "ranking_indep/hf_Qwen_Qwen3.5-9B+finetune_ckpt_Qwen_Qwen3.5-9B-lora-r16_best": {
@@ -455,6 +479,8 @@
         0.4123,
         0.6281
       ],
+      "mean_spearman_tie0": 0.3423,
+      "n_all_tied_predictions": 86,
       "mean_spearman_debiased": 0.5217
     },
     "ranking_indep/hf_Qwen_Qwen3.5-9B": {
@@ -466,6 +492,8 @@
         0.1998,
         0.4334
       ],
+      "mean_spearman_tie0": 0.2534,
+      "n_all_tied_predictions": 51,
       "mean_spearman_debiased": 0.3184
     },
     "ranking_indep/tinker_Qwen_Qwen3.5-397B-A17B": {
@@ -477,6 +505,8 @@
         0.2146,
         0.4444
       ],
+      "mean_spearman_tie0": 0.2665,
+      "n_all_tied_predictions": 44,
       "mean_spearman_debiased": 0.3309
     },
     "ranking_indep/tinker_Qwen_Qwen3.5-9B": {
@@ -488,6 +518,8 @@
         0.216,
         0.4482
       ],
+      "mean_spearman_tie0": 0.2551,
+      "n_all_tied_predictions": 59,
       "mean_spearman_debiased": 0.334
     },
     "ranking_indep/tinker_Qwen_Qwen3.6-27B": {
@@ -499,6 +531,8 @@
         0.2852,
         0.4995
       ],
+      "mean_spearman_tie0": 0.3291,
+      "n_all_tied_predictions": 41,
       "mean_spearman_debiased": 0.3937
     },
     "ranking_indep/tinker_Qwen_Qwen3.6-35B-A3B": {
@@ -510,6 +544,8 @@
         0.1424,
         0.3682
       ],
+      "mean_spearman_tie0": 0.2104,
+      "n_all_tied_predictions": 45,
       "mean_spearman_debiased": 0.2566
     },
     "ranking_indep/tinker_moonshotai_Kimi-K2.6": {
@@ -521,6 +557,8 @@
         0.1716,
         0.3957
       ],
+      "mean_spearman_tie0": 0.2331,
+      "n_all_tied_predictions": 46,
       "mean_spearman_debiased": 0.2856
     }
   },
@@ -811,6 +849,17 @@
       ],
       "wilcoxon_p": 0.014041
     },
+    "gemini-3.7-flash  [tie0]": {
+      "n_paired": 249,
+      "joint_mean_rho": 0.1755,
+      "indep_mean_rho": 0.3145,
+      "delta_mean": 0.139,
+      "delta_ci95_boot": [
+        0.0241,
+        0.2541
+      ],
+      "wilcoxon_p": 0.020313
+    },
     "gpt-5": {
       "n_paired": 217,
       "joint_mean_rho": 0.0354,
@@ -821,6 +870,17 @@
         0.3117
       ],
       "wilcoxon_p": 0.029989
+    },
+    "gpt-5  [tie0]": {
+      "n_paired": 250,
+      "joint_mean_rho": 0.0262,
+      "indep_mean_rho": 0.177,
+      "delta_mean": 0.1509,
+      "delta_ci95_boot": [
+        0.0152,
+        0.2864
+      ],
+      "wilcoxon_p": 0.034923
     },
     "hf_Qwen_Qwen3.5-9B+finetune_ckpt_Qwen_Qwen3.5-9B-lora-r16_best": {
       "n_paired": 113,
@@ -833,6 +893,17 @@
       ],
       "wilcoxon_p": 0.000197
     },
+    "hf_Qwen_Qwen3.5-9B+finetune_ckpt_Qwen_Qwen3.5-9B-lora-r16_best  [tie0]": {
+      "n_paired": 250,
+      "joint_mean_rho": 0.0857,
+      "indep_mean_rho": 0.3423,
+      "delta_mean": 0.2565,
+      "delta_ci95_boot": [
+        0.138,
+        0.3701
+      ],
+      "wilcoxon_p": 2.2e-05
+    },
     "hf_Qwen_Qwen3.5-9B": {
       "n_paired": 199,
       "joint_mean_rho": 0.0653,
@@ -843,6 +914,17 @@
         0.4099
       ],
       "wilcoxon_p": 0.002469
+    },
+    "hf_Qwen_Qwen3.5-9B  [tie0]": {
+      "n_paired": 250,
+      "joint_mean_rho": 0.0236,
+      "indep_mean_rho": 0.2534,
+      "delta_mean": 0.2298,
+      "delta_ci95_boot": [
+        0.0915,
+        0.3635
+      ],
+      "wilcoxon_p": 0.001226
     },
     "tinker_Qwen_Qwen3.5-397B-A17B": {
       "n_paired": 182,
@@ -855,6 +937,17 @@
       ],
       "wilcoxon_p": 0.002408
     },
+    "tinker_Qwen_Qwen3.5-397B-A17B  [tie0]": {
+      "n_paired": 226,
+      "joint_mean_rho": 0.0849,
+      "indep_mean_rho": 0.2665,
+      "delta_mean": 0.1816,
+      "delta_ci95_boot": [
+        0.0455,
+        0.3148
+      ],
+      "wilcoxon_p": 0.013502
+    },
     "tinker_Qwen_Qwen3.5-9B": {
       "n_paired": 191,
       "joint_mean_rho": 0.0174,
@@ -865,6 +958,17 @@
         0.4797
       ],
       "wilcoxon_p": 0.000161
+    },
+    "tinker_Qwen_Qwen3.5-9B  [tie0]": {
+      "n_paired": 250,
+      "joint_mean_rho": 0.0294,
+      "indep_mean_rho": 0.2551,
+      "delta_mean": 0.2257,
+      "delta_ci95_boot": [
+        0.0883,
+        0.363
+      ],
+      "wilcoxon_p": 0.001678
     },
     "tinker_Qwen_Qwen3.6-27B": {
       "n_paired": 209,
@@ -877,6 +981,17 @@
       ],
       "wilcoxon_p": 0.001454
     },
+    "tinker_Qwen_Qwen3.6-27B  [tie0]": {
+      "n_paired": 250,
+      "joint_mean_rho": 0.1634,
+      "indep_mean_rho": 0.3291,
+      "delta_mean": 0.1657,
+      "delta_ci95_boot": [
+        0.0332,
+        0.2936
+      ],
+      "wilcoxon_p": 0.013187
+    },
     "tinker_Qwen_Qwen3.6-35B-A3B": {
       "n_paired": 196,
       "joint_mean_rho": 0.0362,
@@ -888,6 +1003,17 @@
       ],
       "wilcoxon_p": 0.012635
     },
+    "tinker_Qwen_Qwen3.6-35B-A3B  [tie0]": {
+      "n_paired": 250,
+      "joint_mean_rho": 0.0432,
+      "indep_mean_rho": 0.2104,
+      "delta_mean": 0.1672,
+      "delta_ci95_boot": [
+        0.0278,
+        0.304
+      ],
+      "wilcoxon_p": 0.018748
+    },
     "tinker_moonshotai_Kimi-K2.6": {
       "n_paired": 204,
       "joint_mean_rho": 0.0976,
@@ -898,6 +1024,17 @@
         0.3294
       ],
       "wilcoxon_p": 0.007646
+    },
+    "tinker_moonshotai_Kimi-K2.6  [tie0]": {
+      "n_paired": 250,
+      "joint_mean_rho": 0.0864,
+      "indep_mean_rho": 0.2331,
+      "delta_mean": 0.1467,
+      "delta_ci95_boot": [
+        0.0188,
+        0.2698
+      ],
+      "wilcoxon_p": 0.029931
     }
   }
 }
