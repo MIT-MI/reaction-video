@@ -14,6 +14,7 @@ import argparse, json
 from pathlib import Path
 
 from gold_eval import frames as fr
+from gold_eval.run_match import LETTERS, PROMPT as MATCH_PROMPT
 from gold_eval.run_ranking import PROMPT as JOINT_PROMPT
 from gold_eval.run_ranking_independent import PROMPT as INDEP_PROMPT
 
@@ -49,6 +50,21 @@ def joint_sample(item: dict, cap: int, label_key: str) -> dict:
             "answer": ans, "weight": 1.0}
 
 
+def match_sample(task: dict, r2_base: str, reaction_cap: int = 12, option_cap: int = 6) -> dict:
+    """F-MATCH: interleaved parts exactly as run_match.build_parts lays them out; answer = letter.
+    Labels are auto temporal alignment (weak supervision, disclosed)."""
+    parts = [{"type": "text", "text": MATCH_PROMPT}, {"type": "text", "text": "VIEWER'S REACTION:"}]
+    clip = fr.fetch_clip(r2_base, task["reaction_r2_key"])
+    parts += [{"type": "image", "path": str(f)} for f in fr.extract_frames(clip, max_frames=reaction_cap)]
+    for i, opt in enumerate(task["options"]):
+        parts.append({"type": "text", "text": f"SEGMENT {LETTERS[i]}:"})
+        oclip = fr.fetch_clip(r2_base, opt["key"])
+        parts += [{"type": "image", "path": str(f)} for f in fr.extract_frames(oclip, max_frames=option_cap)]
+    parts.append({"type": "text", "text": "Answer (single letter A/B/C/D):"})
+    return {"id": f"match::{task['candidate_id']}", "format": "match", "parts": parts,
+            "answer": LETTERS[task["correct_index"]], "weight": 1.0}
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--split", type=Path, required=True, help="dir with train.jsonl / val.jsonl")
@@ -57,8 +73,23 @@ def main() -> None:
     p.add_argument("--joint_cap", type=int, default=32)
     p.add_argument("--joint_oversample", type=int, default=2)
     p.add_argument("--limit", type=int, default=None, help="videos per split (smoke test)")
+    p.add_argument("--match_train", type=Path, default=None,
+                   help="match_train.json from build_match_tasks --train_out (adds F-MATCH rows to train; "
+                        "every 10th item by hashed id goes to val)")
     a = p.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
+    match_rows = {"train": [], "val": []}
+    if a.match_train:
+        import hashlib
+        payload = json.loads(a.match_train.read_text())
+        for t in payload["tasks"][: a.limit] if a.limit else payload["tasks"]:
+            try:
+                row = match_sample(t, payload["r2_base"])
+            except Exception as e:
+                print(f"[sft] FAIL match {t['candidate_id']}: {e}"); continue
+            split = "val" if int(hashlib.sha1(t["candidate_id"].encode()).hexdigest(), 16) % 10 == 0 else "train"
+            match_rows[split].append(row)
+        print(f"[sft] match: train={len(match_rows['train'])} val={len(match_rows['val'])}")
     for name in ("train", "val"):
         items = [json.loads(l) for l in (a.split / f"{name}.jsonl").read_text().splitlines() if l.strip()]
         if a.limit:
@@ -75,7 +106,10 @@ def main() -> None:
                             f.write(json.dumps(s) + "\n"); n_j += 1
                 except Exception as e:  # one bad video must not kill the build
                     n_fail += 1; print(f"[sft] FAIL {it['video_id']}: {e}")
-        print(f"[sft] {name}: indep={n_i} joint={n_j} (oversampled) failed_videos={n_fail} -> {OUT/name}.jsonl")
+            for row in match_rows[name]:
+                f.write(json.dumps(row) + "\n")
+        print(f"[sft] {name}: indep={n_i} joint={n_j} (oversampled) match={len(match_rows[name])} "
+              f"failed_videos={n_fail} -> {OUT/name}.jsonl")
 
 
 if __name__ == "__main__":

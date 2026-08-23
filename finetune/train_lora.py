@@ -32,10 +32,17 @@ class SFTData(Dataset):
 
     def __getitem__(self, i):
         r = self.rows[i]
-        images = [Image.open(p).convert("RGB") for p in r["images"]]
+        if r.get("parts"):  # F-MATCH: interleaved text/image parts in eval order
+            images = [Image.open(q["path"]).convert("RGB") for q in r["parts"] if q["type"] == "image"]
+            content = [({"type": "image"} if q["type"] == "image" else {"type": "text", "text": q["text"]})
+                       for q in r["parts"]]
+        else:
+            images = [Image.open(p).convert("RGB") for p in r["images"]]
         # run-2 ordering (matches the eval runners): text prompt -> frames -> short cue.
         # Rows from the run-1 builder (no "prompt_before") fall back to frames -> prompt.
-        if r.get("prompt_before"):
+        if r.get("parts"):
+            pass
+        elif r.get("prompt_before"):
             content = ([{"type": "text", "text": r["prompt_before"]}]
                        + [{"type": "image"} for _ in images]
                        + [{"type": "text", "text": r["prompt"]}])

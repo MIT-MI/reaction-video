@@ -73,13 +73,41 @@ Rules: keep the evaluation prompts and frame protocol untouched; if a run must d
 (OOM → lower --joint_cap to 24; class-name fixes), say so explicitly in REPORT.md; never
 fabricate or back-fill numbers — every number must come from a file in results/.
 
----------------------------------------------------------------- RUN 2 (when GPUs free up)
+---------------------------------------------------------------- RUN 2 MATRIX (GPU 8/24 AM; match source 8/24 PM)
 
-Owner decision 2026-08-22: GPUs unavailable for ≥72 h → the paper is written on run 1
-(null result). If the node frees up before camera-ready, run 2 = run 1 with three changes
-only: (a) training part order now matches the eval runners (prompt → frames → cue; already
-in the builder/trainer — rebuild data first), (b) `--epochs 5` (run 1's val loss was still
-falling at step 264), (c) same seed 0, then seeds 1–2 if time. Everything else identical
-(joint_cap 24, LoRA targets, lr). Report exactly as REPORT.md, as `finetune/REPORT_run2.md`,
-with the tie-aware paired test (`per_video_rhos(..., tied_as_zero=True)`) as primary and the
-pre-registered drop-ties test alongside. Expected ≈ 6–7 h.
+Owner plan 2026-08-22. Two machines, two briefs. Deadline 8/29–30 → numbers frozen 8/27.
+
+### Office machine (has pool.csv + source videos) — 8/24 afternoon, ~2–3 h, dataset repo
+```
+git pull                                   # branch phase0/pilot
+# A. rebuild the frozen EVAL match set with the audited builder (pairwise >=10 s)
+python tools/data_annotation/gold_platform/build_match_tasks.py --dry_run
+python tools/data_annotation/gold_platform/build_match_tasks.py --force      # re-cuts + re-uploads match/ and upserts gold_match_tasks
+# B. build the match TRAINING pool (non-eval videos) and its clips under match_train/
+python scripts/pilot/build_match_train_pool.py --eval_dir ../reaction-video/gold_eval/tasks
+python tools/data_annotation/gold_platform/build_match_tasks.py \
+    --set_csv reports/phase0/stimulus_ranking/match_train_pool.csv \
+    --train_out reports/phase0/finetune/match_train.json
+git add reports/phase0/finetune/match_train.json reports/phase0/stimulus_ranking/match_train_pool.csv && git commit -m "match: rebuilt eval set + training items" && git push
+```
+Then on the laptop: `python -m gold_eval.fetch_tasks` (new eval match set) → `bash gold_eval/run_all.sh` match-only re-run for all 7 arms (~4 h) → G9 human pass.
+
+### GPU node — run order (each step idempotent; commit REPORT_<run>.md + results after each)
+| # | when | run | data | train | eval | ~time |
+|---|---|---|---|---|---|---|
+| R2 | 8/24 AM | intensity, order-aligned | `build_sft_data` (no --match_train) | INDEP+JOINT mix, 5 ep, seed 0 | T1 joint+indep, base vs LoRA, tie-aware paired | 6–7 h |
+| R3 | 8/25 AM | match-only | `build_sft_data --match_train <match_train.json>` then filter `format==match` | F-MATCH, 3 ep | T2 (REBUILT set) base vs LoRA via hf: path; McNemar | 2–3 h |
+| R4 | 8/25 PM | multi-task | INDEP+JOINT+MATCH mix | 5 ep | T1 + T2, base vs LoRA | 6–7 h |
+| R5 | 8/26 | ablations | INDEP-only / JOINT-only | 5 ep each | T1 | 2×3 h |
+| R6 | if time | seeds 1–2 of R2 | — | — | mean±std | 2×6 h |
+
+Hard rules: (1) the eval sets in `gold_eval/tasks/` are never training data — F-MATCH rows
+come ONLY from `match_train.json` (videos disjoint from every eval set by construction);
+(2) after the office rebuild, run `python -m gold_eval.fetch_tasks` on the node BEFORE R3/R4
+so T2 eval uses the rebuilt set; (3) base rows for the rebuilt T2 must be re-run through the
+hf: path too; (4) tie-aware paired test primary, pre-registered drop-ties alongside; (5) one
+REPORT per run, same template as REPORT.md; (6) never train on anything under gold_eval/tasks.
+
+Not run, by design: side-by-side (SBS) training — frame-only models cannot consume the
+hstacked video and the SBS arm is Gemini-only supplementary; rationale fine-tuning — no human
+references outside the eval set (a distillation variant is possible later, disclosed as weak).
