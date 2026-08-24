@@ -415,3 +415,15 @@ pre-registered drop-ties numbers in the appendix**, stating the all-tied counts.
 the paper is written on run 1 (null). Run-2 fixes (train/eval part-order alignment, 5
 epochs) are pre-staged in `finetune/` and `SERVER_SESSION_PROMPT.md`; if the node frees up
 before camera-ready, rerun and replace A10. Paper outline: `paper/OUTLINE.md`.
+
+**Owner QA verdict on the rebuilt match set (2026-08-24, via the match_review site):** the
+112 rebuilt tasks are hard but DISTINGUISHABLE — resolving an item takes repeated viewing
+(each option compared against the reaction 1–2×), unlike the pre-rebuild set where adjacent
+options were visually identical. Client-side check: min pairwise start-gap 6.0–18.1 s,
+0 items <6 s (pre-rebuild median was 2.5 s). C12's quality failure is considered fixed at
+the qualitative level; the quantitative gate is the G9 human confirmation pass (accuracy +
+per-item confirm rate), which doubles as the T2 human reference. Revised G9 estimate:
+~60–120 s/item at the owner's observed pace → 2–3.5 h over 112 items (platform resumes
+across sittings). Framing note for the paper: models see one pass of sparse frames while
+humans need multiple passes — reported model accuracies are under a strictly harder
+input regime than the human reference.
