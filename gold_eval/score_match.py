@@ -47,11 +47,14 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--model", default=None)
     p.add_argument("--tasks", type=Path, default=HERE / "tasks/match_set.json")
+    p.add_argument("--pred_file", type=Path, default=None, help="score one predictions jsonl against --tasks")
     args = p.parse_args()
 
     tasks = json.loads(args.tasks.read_text())["tasks"]
     res_dir = HERE / "results/match"
-    files = [res_dir / f"{slug(args.model)}.jsonl"] if args.model else sorted(res_dir.glob("*.jsonl"))
+    files = ([args.pred_file] if args.pred_file else
+             [res_dir / f"{slug(args.model)}.jsonl"] if args.model else
+             [f for f in sorted(res_dir.glob("*.jsonl")) if "__match_" not in f.stem])
     report = {}
     for f in files:
         if not f.exists():

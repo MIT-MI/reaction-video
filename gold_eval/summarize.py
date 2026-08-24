@@ -72,6 +72,8 @@ def main() -> None:
         if not d.is_dir():
             continue
         for f in sorted(d.glob("*.jsonl")):
+            if "__match_" in f.stem:   # variant sets (e.g. __match_xv) score against their own
+                continue               # task file via score_match --pred_file, not match_set
             preds = dedup(rows(f), "candidate_id")
             s = match_score(match_tasks, preds)
             if any("tie" in r for r in preds.values()):

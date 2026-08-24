@@ -85,7 +85,8 @@ def main() -> None:
 
     payload = json.loads(args.tasks.read_text())
     r2_base, tasks = payload["r2_base"], payload["tasks"]
-    out = HERE / "results/match" / f"{slug(args.model)}{'__video' if args.video else ''}.jsonl"
+    variant = "" if args.tasks.stem == "match_set" else f"__{args.tasks.stem}"
+    out = HERE / "results/match" / f"{slug(args.model)}{'__video' if args.video else ''}{variant}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
     # resume: an unparsed row (pred_index null) counts as NOT done and is retried;
     # scorers dedupe by id with last-row-wins, so the append-only log stays consistent
