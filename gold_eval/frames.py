@@ -8,6 +8,8 @@ than max_frames, frames are subsampled evenly (deterministic).
 from __future__ import annotations
 
 import base64
+import os
+import shutil
 import subprocess
 import urllib.request
 from pathlib import Path
@@ -22,7 +24,9 @@ def fetch_clip(r2_base: str, key: str) -> Path:
     if dest.exists() and dest.stat().st_size > 0:
         return dest
     dest.parent.mkdir(parents=True, exist_ok=True)
-    tmp = dest.with_suffix(dest.suffix + ".tmp")
+    # PID-unique temp: two eval arms sharing this cache would otherwise write the same ".tmp"
+    # and the first rename would pull the file out from under the second.
+    tmp = dest.with_suffix(dest.suffix + f".{os.getpid()}.tmp")
     # R2's public dev endpoint 403s the default Python-urllib User-Agent.
     req = urllib.request.Request(r2_base.rstrip("/") + "/" + key,
                                  headers={"User-Agent": "Mozilla/5.0 (gold-eval)"})
@@ -38,7 +42,7 @@ def extract_frames(clip: Path, fps: float = 1.0, max_side: int = 512,
     win = f"_w{start_s:.1f}-{end_s:.1f}" if start_s is not None else ""
     out_dir = FRAMES / f"{clip.parent.name}_{clip.stem}_fps{fps}_s{max_side}{win}"
     if not out_dir.is_dir() or not any(out_dir.glob("*.jpg")):
-        tmp_dir = out_dir.with_name(out_dir.name + ".tmp")
+        tmp_dir = out_dir.with_name(out_dir.name + f".{os.getpid()}.tmp")
         tmp_dir.mkdir(parents=True, exist_ok=True)
         scale = f"scale='if(gt(iw,ih),{max_side},-2)':'if(gt(iw,ih),-2,{max_side})'"
         seek = ([] if start_s is None else ["-ss", f"{start_s}"]) + \
@@ -56,7 +60,15 @@ def extract_frames(clip: Path, fps: float = 1.0, max_side: int = 512,
                 ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *seek, "-i", str(clip),
                  "-vf", scale, "-frames:v", "1", "-q:v", "4", str(tmp_dir / "00001.jpg")],
                 check=True)
-        tmp_dir.rename(out_dir)
+        # A concurrent process may have published out_dir first; its frames are identical
+        # (same clip, same deterministic ffmpeg args), so keep the winner and drop our copy.
+        if out_dir.is_dir():
+            shutil.rmtree(tmp_dir, ignore_errors=True)
+        else:
+            try:
+                tmp_dir.rename(out_dir)
+            except OSError:
+                shutil.rmtree(tmp_dir, ignore_errors=True)
     frames = sorted(out_dir.glob("*.jpg"))
     if max_frames is not None and len(frames) > max_frames:
         step = len(frames) / max_frames

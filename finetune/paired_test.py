@@ -37,7 +37,7 @@ from scipy.stats import wilcoxon
 
 from gold_eval.costs import slug
 from gold_eval.score_ranking import per_video_rhos
-from gold_eval.summarize import boot_mean_ci
+from gold_eval.summarize import boot_mean_ci, wilson_ci
 
 HERE = Path(__file__).parent
 RES = HERE.parent / "gold_eval" / "results"
@@ -74,8 +74,64 @@ def stats(b_rho: dict[str, float], f_rho: dict[str, float], vids: list[str],
             "n_tied": int((d == 0).sum()), **(extra or {})}
 
 
+def match_preds(model: str) -> dict[str, dict] | None:
+    """Last row per candidate_id from results/match/<slug>.jsonl (dedup like summarize)."""
+    f = RES / "match" / f"{slug(model)}.jsonl"
+    if not f.exists():
+        return None
+    return {r["candidate_id"]: r for r in
+            (json.loads(l) for l in f.read_text().splitlines() if l.strip())}
+
+
+def match_report(base: str, ft: str, tasks_file: Path) -> dict:
+    """T2 base-vs-LoRA: accuracy + Wilson CI per arm, exact McNemar on the shared items.
+
+    Same statistic as `gold_eval.summarize.match_paired` (which pairs the frames/video arms of
+    one model); here the pair is the two arms of the fine-tune on one task. An unparsed row has
+    pred_index None, which is never equal to correct_index, so it counts as a miss for its arm
+    rather than being dropped -- unparsed counts are reported so that is auditable.
+    """
+    from scipy.stats import binomtest
+
+    tasks = json.loads(tasks_file.read_text())["tasks"]
+    gt = {t["candidate_id"]: t["correct_index"] for t in tasks}
+    b_p, f_p = match_preds(base), match_preds(ft)
+    rep: dict = {"base": base, "lora": ft, "task": "T2-MATCH",
+                 "tasks_file": str(tasks_file), "n_tasks": len(tasks)}
+    if b_p is None or f_p is None:
+        miss = [nm for nm, p_ in (("base", b_p), ("lora", f_p)) if p_ is None]
+        return {**rep, "error": f"missing predictions for: {', '.join(miss)}"}
+
+    for nm, p_ in (("base", b_p), ("lora", f_p)):
+        scored = [c for c in gt if c in p_]
+        k = sum(1 for c in scored if p_[c]["pred_index"] == gt[c])
+        rep[nm] = {"n_scored": len(scored), "n_correct": k,
+                   "accuracy": round(k / len(scored), 4) if scored else None,
+                   "acc_ci95_wilson": wilson_ci(k, len(scored)),
+                   "unparsed": sum(1 for c in scored if p_[c]["pred_index"] is None)}
+
+    shared = sorted(c for c in gt if c in b_p and c in f_p)
+    b = sum(1 for c in shared if b_p[c]["pred_index"] == gt[c] and f_p[c]["pred_index"] != gt[c])
+    c_ = sum(1 for c in shared if b_p[c]["pred_index"] != gt[c] and f_p[c]["pred_index"] == gt[c])
+    rep["mcnemar"] = {
+        "n_paired": len(shared), "base_only_correct": b, "lora_only_correct": c_,
+        "both_correct": sum(1 for c in shared if b_p[c]["pred_index"] == gt[c]
+                            and f_p[c]["pred_index"] == gt[c]),
+        "both_wrong": sum(1 for c in shared if b_p[c]["pred_index"] != gt[c]
+                          and f_p[c]["pred_index"] != gt[c]),
+        "discordant": b + c_,
+        "delta_acc": (round((c_ - b) / len(shared), 4) if shared else None),
+        "p_exact": (round(float(binomtest(min(b, c_), b + c_, 0.5).pvalue), 6)
+                    if b + c_ > 0 else None)}
+    return rep
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--match", action="store_true",
+                   help="T2 match mode: accuracy + Wilson CI per arm and exact McNemar on the "
+                        "shared items, instead of the T1 rho comparison")
+    p.add_argument("--match_tasks", type=Path, default=RES.parent / "tasks/match_set.json")
     p.add_argument("--base", default="hf:Qwen/Qwen3.5-9B")
     p.add_argument("--lora", required=True, help="adapter dir, appended to the base with '+'")
     p.add_argument("--tasks", type=Path, default=RES.parent / "tasks/ranking_set.json")
@@ -84,8 +140,17 @@ def main() -> None:
     p.add_argument("--out", type=Path, default=RES / "finetune_paired.json")
     a = p.parse_args()
 
-    items = json.loads(a.tasks.read_text())
     ft = f"{a.base}+{a.lora}"
+
+    if a.match:
+        rep = match_report(a.base, ft, a.match_tasks)
+        a.out.parent.mkdir(parents=True, exist_ok=True)
+        a.out.write_text(json.dumps(rep, indent=2))
+        print(json.dumps(rep, indent=2))
+        print(f"-> {a.out}")
+        return
+
+    items = json.loads(a.tasks.read_text())
     # videos the ranking metric is defined on at all: gold must not be all-tied
     rankable = [it["video_id"] for it in items if len({m[a.key] for m in it["moments"]}) > 1]
     report: dict = {"base": a.base, "lora": ft, "consensus_key": a.key,
