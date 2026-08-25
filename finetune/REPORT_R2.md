@@ -162,8 +162,10 @@ bootstrap CI (`RNG_SEED=0`, `N_BOOT=10000`).
 | T1-INDEP | 250 | 0.2534 | 0.3730 | **+0.1196** | [0.0168, 0.2202] | **0.0516** | 92 / 72 / 86 | +0.0888 (0.117) |
 
 > **Pre-registered criterion — Δρ_JOINT ≥ 0.10 with p < 0.05, judged under the primary
-> (tie-aware) convention: NOT MET.** The effect-size bar is cleared (+0.112, up from run 1's
-> +0.062) but the significance bar is not (p = 0.171).
+> (tie-aware) convention: NOT MET.** On this seed the effect-size bar is cleared (+0.112, up from
+> run 1's +0.062) but the significance bar is not (p = 0.171).
+> **Superseded by the seed replicates below:** seed 0 is the most favourable of three seeds, and
+> the across-seed mean (+0.081 ± 0.030) does **not** clear the effect-size bar either.
 
 ### Paired test — SECONDARY: pre-registered drop-ties convention
 
@@ -211,14 +213,83 @@ narrow.
 
 ---
 
+## Seed replicates (R6): seeds 1 and 2
+
+Added 2026-08-24 after R5, per the R6 spec (batch-2 `match_train.json` was absent at launch, gate
+re-checked against a fresh `git fetch`). Seeds 1 and 2 are R2 re-run verbatim with `--seed 1` /
+`--seed 2` → `finetune/ckpt/r2-seed1`, `finetune/ckpt/r2-seed2`. Trainable params 29,097,984 in
+both; wall-clock 5.26 h and 5.29 h.
+
+| seed | best val loss @ step | wall-clock |
+|---|---|---|
+| 0 (`r2-order-5ep`) | 0.39611 @ 300 | 5.27 h |
+| 1 (`r2-seed1`) | 0.42641 @ 200 | 5.26 h |
+| 2 (`r2-seed2`) | 0.43449 @ 200 | 5.29 h |
+
+All three overfit; seeds 1 and 2 bottom out a full 100 steps earlier than seed 0 and at a
+noticeably worse value, so even the *location* of the optimum is seed-dependent.
+
+### Per-seed results, PRIMARY tie-aware (n = 250 for every row)
+
+| seed | T1-JOINT ρ | Δ vs base [95% CI] | p | T1-INDEP ρ | Δ vs base [95% CI] | p |
+|---|---|---|---|---|---|---|
+| 0 | 0.1352 | +0.1116 [−0.0139, 0.2326] | 0.171 | 0.3730 | +0.1196 [0.0168, 0.2202] | 0.0516 |
+| 1 | 0.1033 | +0.0797 [−0.0241, 0.1800] | 0.227 | 0.3615 | +0.1080 [0.0119, 0.2031] | 0.0509 |
+| 2 | 0.0753 | +0.0517 [−0.0627, 0.1641] | 0.514 | 0.3373 | +0.0839 [−0.0139, 0.1832] | 0.136 |
+| **mean ± sd** | **0.1046 ± 0.0300** | **+0.0810 ± 0.0300** | — | **0.3573 ± 0.0182** | **+0.1038 ± 0.0182** | — |
+
+**Seed 0 is the most favourable of the three on both tasks.** The across-seed mean Δρ_JOINT is
+**+0.081 ± 0.030, which does not clear the pre-registered ≥0.10 effect-size bar**, and no individual
+seed reaches p < 0.05 on either task (JOINT p = .171/.227/.514; INDEP p = .052/.051/.136). The
+single-seed R2 headline of +0.112 sits at the top of the seed distribution and **must not be quoted
+as the effect size.** C9 is thereby discharged for R2: the result is a null under replication, not
+merely under-powered on one run.
+
+### Collapse and the drop-ties artefact across seeds
+
+| seed | JOINT all-tied | pred SD | n scored (drop-ties) | drop-ties Δρ_JOINT | p |
+|---|---|---|---|---|---|
+| 0 | 136 / 250 | 13.26 | 114 | +0.2005 | **0.0348** |
+| 1 | 126 / 250 | 10.65 | 124 | +0.0944 | 0.155 |
+| 2 | **193 / 250** | 11.94 | **57** | **+0.2350** | 0.125 |
+| mean ± sd | 151.7 ± 36.1 | 11.95 ± 1.31 | — | — | — |
+
+Collapse is severe and highly variable (126–193 of 250 joint videos, sd = 36), and this table is the
+cleanest demonstration in the batch of why the convention had to change: **the most collapsed seed
+produces the largest drop-ties improvement.** Seed 2 ties on 193/250 videos, leaving the scorer just
+57 to average over, and on those 57 it posts the batch's biggest drop-ties delta (+0.235) — while
+the tie-aware convention, which sees all 250, ranks it the *worst* of the three (+0.052). Under
+drop-ties the three seeds would be reported as +0.201 / +0.094 / +0.235; under tie-aware they are
++0.112 / +0.080 / +0.052, ordered by how much the model actually differentiated.
+
+### E3 gap across seeds (tie-aware)
+
+| arm | joint ρ | indep ρ | gap | p |
+|---|---|---|---|---|
+| base | 0.0236 | 0.2534 | 0.2298 | 0.0012 |
+| seed 0 | 0.1352 | 0.3730 | 0.2379 | 1.6e-05 |
+| seed 1 | 0.1033 | 0.3615 | 0.2582 | 6.0e-06 |
+| seed 2 | 0.0753 | 0.3373 | 0.2620 | <1e-06 |
+
+Every seed leaves the independent-vs-joint gap **wider** than the base's 0.2298, and overwhelmingly
+significant in all three. No seed shows any sign of calibration repair.
+
+---
+
 ## Honest interpretation
+
+> **Revised after the R6 seed replicates.** The paragraphs below were written from seed 0 alone.
+> The single-seed conclusion (null, but with the effect-size bar cleared) survives only in its
+> "null" half: across three seeds the mean Δρ_JOINT is +0.081 ± 0.030 and the effect-size bar is
+> **not** cleared either. Read the seed section above as the authoritative result for R2.
 
 Fixing the part-order asymmetry and training longer **moved every number in the right direction and
 still did not meet the pre-registered criterion.** Under the primary tie-aware convention T1-JOINT
 improved by Δρ = +0.112 (run 1: +0.062), clearing the ≥0.10 effect bar, but at p = 0.171 over 250
 paired videos it remains indistinguishable from zero; T1-INDEP improved by +0.120 and lands at
 p = 0.052, just the wrong side of the line. So R2 is **again a null result for the calibration
-hypothesis at this scale**, and it is a single seed (C9).
+hypothesis at this scale** — and the seed replicates make it a firmer null: across seeds 0–2 the
+joint effect is +0.081 ± 0.030, below the effect-size bar, with seed 0 the most favourable draw.
 
 Two findings from R2 matter more than its headline deltas.
 
@@ -278,6 +349,30 @@ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True CUDA_VISIBLE_DEVICES=4,5,6,7 \
 Wall-clock: data ~15 s; training 5.27 h; eval 32 min (JOINT) and 8 min (INDEP) run concurrently
 → 32 min; paired test + summarize < 1 min. **Total ≈ 5.9 h.**
 
+### R6 seed replicates
+
+```bash
+# gate re-checked first: reports/phase0/finetune/match_train.json absent after a fresh git fetch
+for S in 1 2; do
+  PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+  .venv/bin/torchrun --nproc_per_node 8 -m finetune.train_lora --base Qwen/Qwen3.5-9B \
+      --train finetune/data/train.jsonl --val finetune/data/val.jsonl \
+      --out finetune/ckpt/r2-seed$S --epochs 5 --lr 1e-4 --rank 16 --seed $S
+done
+# evals: round 1 = both seeds' T1-JOINT, round 2 = both seeds' T1-INDEP (4 GPUs each)
+CUDA_VISIBLE_DEVICES=0,1,2,3 .venv/bin/python -m gold_eval.run_ranking             --model "hf:Qwen/Qwen3.5-9B+finetune/ckpt/r2-seed1/best"
+CUDA_VISIBLE_DEVICES=4,5,6,7 .venv/bin/python -m gold_eval.run_ranking             --model "hf:Qwen/Qwen3.5-9B+finetune/ckpt/r2-seed2/best"
+CUDA_VISIBLE_DEVICES=0,1,2,3 .venv/bin/python -m gold_eval.run_ranking_independent --model "hf:Qwen/Qwen3.5-9B+finetune/ckpt/r2-seed1/best"
+CUDA_VISIBLE_DEVICES=4,5,6,7 .venv/bin/python -m gold_eval.run_ranking_independent --model "hf:Qwen/Qwen3.5-9B+finetune/ckpt/r2-seed2/best"
+.venv/bin/python -m finetune.paired_test --lora finetune/ckpt/r2-seed1/best \
+    --out gold_eval/results/finetune_paired_r2_seed1.json
+.venv/bin/python -m finetune.paired_test --lora finetune/ckpt/r2-seed2/best \
+    --out gold_eval/results/finetune_paired_r2_seed2.json
+.venv/bin/python -m gold_eval.summarize
+```
+
+R6 wall-clock: 5.26 h + 5.29 h training, 40 min evals → **≈ 11.2 h.**
+
 ---
 
 ## Deviations from the R2 spec
@@ -303,7 +398,12 @@ was altered.** Prompts are still imported from the eval runners by `build_sft_da
 4. **Base T1 rows were reused from run 1, not re-run**, as instructed.
 5. **T2 (match) / T3 (rationale) collateral rows not run** — out of scope for this batch, and T2
    remains blocked pending the option-set rebuild (EVIDENCE C12).
-6. **Single seed (0).** Seeds 1 and 2 are R6, gated on batch-2 data.
+6. **Seeds 1 and 2 were run (R6)** after R5, once the batch-2 gate was re-checked and still open;
+   see the seed-replicates section. C9 is discharged for R2. The R5 ablations remain single-seed.
+8. **The interpretation was revised after R6.** The Results and Honest-interpretation sections were
+   written from seed 0 before seeds 1–2 existed; rather than rewrite them, the seed section was
+   added and the two places whose conclusion changed are marked inline. No seed-0 number was
+   altered.
 7. `finetune/data/{train,val}_run1.jsonl.bak` hold run 1's exact SFT files, since the rebuild
    overwrote `train.jsonl` / `val.jsonl` in place. Untracked (the `finetune/data` symlink is
    gitignored per run-1 Deviation #12).
