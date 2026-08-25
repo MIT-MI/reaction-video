@@ -52,22 +52,30 @@ Gemini: thinking_level=low + headroom).
 
 ## 3. Canonical result tables
 
-### 3.1 T2 match — single-call MCQ (150 items; chance .25)
+### 3.1 T2 match — single-call MCQ, REBUILT set (112 items, adaptive pairwise gap 10/8/6 s; chance .25)
 
-| Arm | acc | n_scored | unparsed | err time-dist mean/med (s) | acc cult0 (n=22) | cult1 (n=8) | cult2 (n=120) |
-|---|---|---|---|---|---|---|---|
-| Gemini 3.7 Flash native-video | **.5168** | 149 | 0 | 22.8 / 19.2 | .591 | .375 | .513 |
-| GPT-5 (frames) | .4867 | 150 | 0 | 22.4 / 20.1 | .500 | .375 | .492 |
-| Gemini 3.7 Flash (frames) | .4600 | 150 | 1 | 22.7 / 19.7 | .409 | .500 | .467 |
-| Kimi-K2.6 | .4600 | 150 | 0 | 22.2 / 18.9 | .455 | .375 | .467 |
-| Qwen3.5-397B-A17B | .4467 | 150 | 0 | 22.0 / 20.3 | .500 | .375 | .442 |
-| Qwen3.6-27B | .3867 | 150 | 0 | 22.2 / 18.9 | .273 | .375 | .408 |
-| Qwen3.6-35B-A3B | .3667 | 150 | 1 | 21.9 / 19.2 | .364 | .250 | .375 |
-| Qwen3.5-9B | .2600 | 150 | 13 | 20.3 / 18.2 | .182 | .375 | .267 |
+Rebuilt 2026-08-24 (C12 fix); pre-rebuild predictions archived in `results/match_pre_rebuild/`
+and their numbers in git history. Ground truth = temporal alignment; G9 human confirmation
+pass pending (owner, ~2-3.5 h) — it supplies the human reference, not a validity gate.
 
-Unparsed rows count as incorrect. Ground truth = temporal alignment (`correct_index`),
-auto-built, not human-confirmed (see caveat C6).
+| Arm | acc | 95% CI | unparsed | err time-dist med (s) |
+|---|---|---|---|---|
+| Gemini 3.7 Flash native-video | **.545** | [.453, .634] | 0 | 27.5 |
+| GPT-5 (frames) | .509 | [.418, .600] | 0 | 26.8 |
+| Gemini 3.7 Flash (frames) | .500 | [.409, .591] | 1 | 24.8 |
+| Qwen3.6-35B-A3B | .482 | [.392, .574] | 0 | 26.8 |
+| Qwen3.6-27B | .446 | [.358, .539] | 0 | 25.7 |
+| Qwen3.5-397B-A17B | .411 | [.324, .503] | 0 | 24.7 |
+| Kimi-K2.6 | .375 | [.291, .467] | 0 | 24.5 |
+| Qwen3.5-9B | .259 (=chance) | [.187, .347] | 20 | 26.4 |
 
+vs the pre-rebuild (contaminated) set: absolute accuracies moved little overall (top arms
++2-5 pt — cleaner distractor sets, no near-dup pairs shrinking effective option count), but
+mid-field ORDER changed (35B .367→.482, Kimi .460→.375): per-model numbers on the old set
+were not trustworthy, the rebuild mattered. E1 on the rebuilt set: video .545 vs frames .500,
+McNemar p=.42 (n.s., direction consistent again). Error temporal distance grew (~19→~26 s
+median) as expected — options are farther apart by construction. Cultural strata remain
+descriptive only (C7).
 ### 3.2 T1 ranking — joint vs independent (250 videos, 642 moments; human LOO ceiling ρ=.649, 420 rater-video pairs)
 
 | Arm | JOINT mean ρ | JOINT pooled r | JOINT n | INDEP mean ρ | INDEP pooled r | INDEP n |
@@ -189,7 +197,7 @@ Gemini $44.7 (caps enforced), OpenAI $3.8, Tinker grant $66.6. ~26k logged calls
   items the effective option count is <4 (chance between .25 and .33), so absolute T2
   accuracies are possibly inflated and human confirmability is degraded. Builder fixed
   (pairwise ≥10s, farthest-first); rebuild requires server source data (~3 days), then T2
-  re-runs for all arms and the G9 pass restarts. Treat all §3.1/§3.3 numbers as PROVISIONAL.
+  re-runs for all arms and the G9 pass restarts. RESOLVED 2026-08-24: §3.1 now reports the rebuilt set; §3.3 (E2/V3) still reflects the pre-rebuild options and is kept as design-justification evidence only.
 - **C11 Stage-A ceilings vs eval-set ceilings differ by pool** (α=.357/r≈.51/ρ≈.40 on 3,257
   moments vs LOO ρ=.649 on the curated 250-video set). Always name the pool.
 
