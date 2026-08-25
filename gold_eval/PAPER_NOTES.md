@@ -39,7 +39,7 @@ obligations. (Owner request 2026-08-21: "找到一个统一的地方把这些重
 | C4 | Under a single neutral judge, rationale quality does not separate models (composites 2.61–2.91, overlapping CIs); cue identification is the hard dimension (<1.25/2 for all). | §3.4 DeepSeek column |
 | C5 | Same-video hard negatives are only discriminable under joint presentation (per-option scoring ties on 52–81% of items) — design justification, not a below-chance claim. | §3.3 |
 | C6 | Match accuracy orders with capability (26%→52%) and is unsaturated — **provisional until option-set rebuild**. | §3.1 + C12 |
-| C7 | **Fine-tune = null result**: LoRA on 1,952 human-labelled moments moves T1-JOINT by Δρ +.105 but p = .13 (pre-registered criterion not met); tie-aware +.06, p = .32. Supervised intensity labels did not repair within-video calibration; the model instead collapsed its output range (SD 27.9→9.8). Write it as a finding about the difficulty, not a failed experiment; single seed. | finetune/REPORT.md; finetune_paired.json |
+| C7 | **Fine-tune = stable null across 3 seeds + 2 protocols**: order-aligned 5-ep LoRA gives JOINT Δρ mean +.081±.030 (tie-aware; no seed p<.05) — below the pre-registered ≥.10 bar; INDEP +.104±.018. JOINT-format training drives both the small gain and the output collapse (R5). Write as a finding: human intensity labels alone do not buy within-video calibration at this scale. | dynamo finetune/REPORT_R2.md §R6 (commit 2b97003); REPORT_R5.md |
 
 ## D. Limitations to write (not hide)
 

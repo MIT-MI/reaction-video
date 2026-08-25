@@ -435,3 +435,15 @@ per-item confirm rate), which doubles as the T2 human reference. Revised G9 esti
 across sittings). Framing note for the paper: models see one pass of sparse frames while
 humans need multiple passes — reported model accuracies are under a strictly harder
 input regime than the human reference.
+
+**A10 finalized across seeds (2026-08-24; dynamo local commits 52b3c93/7bc95e3/2b97003,
+independently re-computed and verified digit-for-digit):** R2 (order-aligned, 5 ep) across
+seeds 0/1/2, tie-aware paired vs the local base, n=250 per seed:
+JOINT Δρ = +.112 (p=.17) / +.080 (p=.23) / +.052 (p=.51) → **mean +.081 ± .030 — fails the
+pre-registered ≥.10 effect bar as well**; INDEP Δρ = +.120/+.108/+.084 → +.104 ± .018
+(per-seed p ≈ .05–.14). R5 ablation: the JOINT training format drives both the joint gain
+and the output collapse; INDEP-only is the clean arm. Verdict: the calibration-repair
+hypothesis is a **stable null across 4 training runs and 3 seeds** — the original single-seed
++0.112 was the most favorable draw. Seed2 drop-ties n=57/250 confirms the collapse artefact
+(C14). Batch-1 results live as local commits on dynamo (commit-no-push discipline) — push
+after owner review.
