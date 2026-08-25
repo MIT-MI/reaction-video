@@ -447,3 +447,31 @@ hypothesis is a **stable null across 4 training runs and 3 seeds** — the origi
 +0.112 was the most favorable draw. Seed2 drop-ties n=57/250 confirms the collapse artefact
 (C14). Batch-1 results live as local commits on dynamo (commit-no-push discipline) — push
 after owner review.
+
+### 3.7 XV — cross-video-highlight distractor variant (added 2026-08-25)
+
+Same correct option, distractors = other videos' trigger windows; 180 items (recovers the 68
+candidates unbuildable under the pairwise-gap rule); 112 items share their correct option
+with the within-video set → paired per-model comparison (`results/match/xv_vs_within.json`,
+predictions `*__match_xv.jsonl`, tasks `tasks/match_xv.json`).
+
+| Model | within (shared 112) | cross (shared 112) | Δ | McNemar p | cross (all 180) |
+|---|---|---|---|---|---|
+| Gemini 3.7 Flash (frames) | .500 | .536 | +.04 | .63 | .461 |
+| GPT-5 | .509 | .429 | −.08 | .18 | .400 |
+| Qwen3.6-35B-A3B | .482 | .366 | −.12 | .06 | .278 |
+| Qwen3.6-27B | .446 | .473 | +.03 | .72 | .372 |
+| Qwen3.5-397B | .411 | .375 | −.04 | .64 | .322 |
+| Kimi-K2.6 | .375 | .411 | +.04 | .64 | .400 |
+| Qwen3.5-9B | .259 | .277 | +.02 | .86 | .250 |
+
+**Finding: for frame-based models, cross-video highlight distractors are NOT easier** —
+deltas are small, mixed-sign, all n.s. Interpretation: the anticipated context/audio-bleed
+shortcut cannot operate on silent sparse frames, and "highlight-worthy" content from other
+videos is genuinely confusable. Consequences: (i) the owner's pool-expansion idea is
+validated for model evaluation at current model strength (180-item cross set ≈ comparable
+difficulty); (ii) within-video negatives remain the design choice for the main task because
+they close the shortcut *in principle* (audio-capable models, humans) and test temporal
+grounding specifically; (iii) the all-180 cross accuracies run below the shared-112 ones —
+the 68 recovered items skew harder. Audio-shortcut probe (Gemini native video incl. audio on
+XV) queued; if it jumps on XV but not within, the shortcut is demonstrated.
