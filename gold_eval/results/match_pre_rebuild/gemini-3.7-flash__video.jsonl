@@ -1,0 +1,221 @@
+{"candidate_id": "10300_c01", "pred_index": 1, "raw": "B", "in_tok": 1991, "out_tok": 1}
+{"candidate_id": "45379_c00", "pred_index": 2, "raw": "C", "in_tok": 1379, "out_tok": 1}
+{"candidate_id": "46135_c00", "pred_index": 0, "raw": "A", "in_tok": 1077, "out_tok": 1}
+{"candidate_id": "46951_c00", "pred_index": 0, "raw": "A", "in_tok": 1036, "out_tok": 1}
+{"candidate_id": "47474_c00", "pred_index": 1, "raw": "B", "in_tok": 889, "out_tok": 1}
+{"candidate_id": "46727_c01", "pred_index": null, "raw": "tarts", "in_tok": 1349, "out_tok": 1}
+{"candidate_id": "48389_c00", "pred_index": 3, "raw": "D", "in_tok": 825, "out_tok": 1}
+{"candidate_id": "51419_c01", "pred_index": 2, "raw": "C", "in_tok": 1417, "out_tok": 1}
+{"candidate_id": "51512_c00", "pred_index": null, "raw": ", there", "in_tok": 1345, "out_tok": 1}
+{"candidate_id": "51556_c00", "pred_index": 1, "raw": "B", "in_tok": 1388, "out_tok": 1}
+{"candidate_id": "51800_c00", "pred_index": 1, "raw": "B", "in_tok": 1526, "out_tok": 1}
+{"candidate_id": "52119_c01", "pred_index": 0, "raw": "A", "in_tok": 1328, "out_tok": 1}
+{"candidate_id": "52523_c00", "pred_index": 0, "raw": "A", "in_tok": 1681, "out_tok": 1}
+{"candidate_id": "52800_c00", "pred_index": 1, "raw": "B", "in_tok": 1387, "out_tok": 1}
+{"candidate_id": "52893_c00", "pred_index": 0, "raw": "A", "in_tok": 1460, "out_tok": 1}
+{"candidate_id": "53352_c00", "pred_index": null, "raw": "...]\"", "in_tok": 2263, "out_tok": 1}
+{"candidate_id": "53362_c00", "pred_index": 0, "raw": "A", "in_tok": 2252, "out_tok": 1}
+{"candidate_id": "53418_c00", "pred_index": 2, "raw": "C", "in_tok": 2054, "out_tok": 1}
+{"candidate_id": "53492_c00", "pred_index": 0, "raw": "A", "in_tok": 1988, "out_tok": 1}
+{"candidate_id": "53492_c03", "pred_index": 0, "raw": "A", "in_tok": 1988, "out_tok": 1}
+{"candidate_id": "53500_c01", "pred_index": 2, "raw": "C", "in_tok": 2085, "out_tok": 1}
+{"candidate_id": "53533_c00", "pred_index": 1, "raw": "B", "in_tok": 2120, "out_tok": 1}
+{"candidate_id": "53544_c00", "pred_index": 1, "raw": "B", "in_tok": 1988, "out_tok": 1}
+{"candidate_id": "53565_c00", "pred_index": 0, "raw": "A", "in_tok": 2054, "out_tok": 1}
+{"candidate_id": "53624_c00", "pred_index": 0, "raw": "A", "in_tok": 2120, "out_tok": 1}
+{"candidate_id": "53645_c00", "pred_index": 3, "raw": "D", "in_tok": 1282, "out_tok": 1}
+{"candidate_id": "53671_c00", "pred_index": 0, "raw": "A", "in_tok": 2252, "out_tok": 1}
+{"candidate_id": "53790_c00", "pred_index": 2, "raw": "C", "in_tok": 2054, "out_tok": 1}
+{"candidate_id": "54043_c03", "pred_index": 3, "raw": "D", "in_tok": 2388, "out_tok": 1}
+{"candidate_id": "54118_c00", "pred_index": null, "raw": "er creature", "in_tok": 2114, "out_tok": 1}
+{"candidate_id": "54118_c01", "pred_index": 3, "raw": "D", "in_tok": 1919, "out_tok": 1}
+{"candidate_id": "54199_c00", "pred_index": 0, "raw": "A", "in_tok": 1835, "out_tok": 1}
+{"candidate_id": "54199_c02", "pred_index": 1, "raw": "B", "in_tok": 1758, "out_tok": 1}
+{"candidate_id": "54441_c01", "pred_index": 0, "raw": "A", "in_tok": 2117, "out_tok": 1}
+{"candidate_id": "54558_c00", "pred_index": 0, "raw": "A shows", "in_tok": 2262, "out_tok": 1}
+{"candidate_id": "54630_c00", "pred_index": 3, "raw": "D", "in_tok": 1760, "out_tok": 1}
+{"candidate_id": "54630_c01", "pred_index": 3, "raw": "D shows", "in_tok": 1837, "out_tok": 1}
+{"candidate_id": "54729_c01", "pred_index": 0, "raw": "A", "in_tok": 2114, "out_tok": 1}
+{"candidate_id": "54786_c00", "pred_index": 3, "raw": "D", "in_tok": 2750, "out_tok": 1}
+{"candidate_id": "54810_c00", "pred_index": 3, "raw": "D", "in_tok": 2396, "out_tok": 1}
+{"candidate_id": "54905_c01", "pred_index": null, "raw": "Okoye", "in_tok": 1851, "out_tok": 1}
+{"candidate_id": "54945_c01", "pred_index": null, "raw": "runs up", "in_tok": 1489, "out_tok": 1}
+{"candidate_id": "54953_c02", "pred_index": 0, "raw": "A", "in_tok": 2098, "out_tok": 1}
+{"candidate_id": "55297_c03", "pred_index": null, "raw": "viewer saying", "in_tok": 2478, "out_tok": 1}
+{"candidate_id": "55420_c01", "pred_index": null, "raw": "\"", "in_tok": 2206, "out_tok": 1}
+{"candidate_id": "55559_c01", "pred_index": 3, "raw": "D", "in_tok": 1930, "out_tok": 1}
+{"candidate_id": "55805_c00", "pred_index": 2, "raw": "C", "in_tok": 2124, "out_tok": 1}
+{"candidate_id": "56035_c00", "pred_index": 2, "raw": "C", "in_tok": 1568, "out_tok": 1}
+{"candidate_id": "56123_c00", "pred_index": 1, "raw": "B", "in_tok": 2578, "out_tok": 1}
+{"candidate_id": "56761_c00", "pred_index": 0, "raw": "A", "in_tok": 2020, "out_tok": 1}
+{"candidate_id": "56983_c00", "pred_index": 3, "raw": "D", "in_tok": 1645, "out_tok": 1}
+{"candidate_id": "57220_c01", "pred_index": 2, "raw": "C", "in_tok": 1834, "out_tok": 1}
+{"candidate_id": "57389_c00", "pred_index": null, "raw": ": \"", "in_tok": 1824, "out_tok": 1}
+{"candidate_id": "57905_c00", "pred_index": 3, "raw": "D", "in_tok": 1747, "out_tok": 1}
+{"candidate_id": "58468_c01", "pred_index": 3, "raw": "D", "in_tok": 1821, "out_tok": 1}
+{"candidate_id": "58492_c01", "pred_index": null, "raw": "t he", "in_tok": 2488, "out_tok": 1}
+{"candidate_id": "58581_c02", "pred_index": 1, "raw": "B", "in_tok": 2367, "out_tok": 1}
+{"candidate_id": "58613_c01", "pred_index": null, "raw": ".", "in_tok": 1573, "out_tok": 1}
+{"candidate_id": "58996_c03", "pred_index": null, "raw": "* (", "in_tok": 1747, "out_tok": 1}
+{"candidate_id": "59055_c01", "pred_index": null, "raw": "In Segment", "in_tok": 2565, "out_tok": 1}
+{"candidate_id": "59055_c02", "pred_index": 0, "raw": "A", "in_tok": 2565, "out_tok": 1}
+{"candidate_id": "59430_c02", "pred_index": null, "raw": "s line", "in_tok": 1564, "out_tok": 1}
+{"candidate_id": "59741_c00", "pred_index": 3, "raw": "D", "in_tok": 2832, "out_tok": 1}
+{"candidate_id": "59989_c02", "pred_index": 1, "raw": "B", "in_tok": 2205, "out_tok": 1}
+{"candidate_id": "60088_c00", "pred_index": 3, "raw": "D", "in_tok": 1555, "out_tok": 1}
+{"candidate_id": "60441_c00", "pred_index": 1, "raw": "B", "in_tok": 2100, "out_tok": 1}
+{"candidate_id": "60451_c00", "pred_index": 0, "raw": "A", "in_tok": 2342, "out_tok": 1}
+{"candidate_id": "60471_c03", "pred_index": 0, "raw": "A", "in_tok": 1520, "out_tok": 1}
+{"candidate_id": "60471_c04", "pred_index": 0, "raw": "A", "in_tok": 1520, "out_tok": 1}
+{"candidate_id": "60476_c00", "pred_index": null, "raw": "0.", "in_tok": 1774, "out_tok": 1}
+{"candidate_id": "60608_c00", "pred_index": null, "raw": "'", "in_tok": 2345, "out_tok": 1}
+{"candidate_id": "64034_c00", "pred_index": null, "raw": ", I", "in_tok": 1913, "out_tok": 1}
+{"candidate_id": "64125_c01", "pred_index": 1, "raw": "B", "in_tok": 1781, "out_tok": 1}
+{"candidate_id": "64918_c00", "pred_index": 0, "raw": "A", "in_tok": 2651, "out_tok": 1}
+{"candidate_id": "65023_c00", "pred_index": 0, "raw": "A", "in_tok": 1671, "out_tok": 1}
+{"candidate_id": "65026_c00", "pred_index": 1, "raw": "B", "in_tok": 2196, "out_tok": 1}
+{"candidate_id": "66530_c00", "pred_index": 0, "raw": "A", "in_tok": 1473, "out_tok": 1}
+{"candidate_id": "66728_c02", "pred_index": null, "raw": ":", "in_tok": 2005, "out_tok": 1}
+{"candidate_id": "67141_c00", "pred_index": null, "raw": "uh", "in_tok": 1830, "out_tok": 1}
+{"candidate_id": "67141_c03", "pred_index": 3, "raw": "D", "in_tok": 1844, "out_tok": 1}
+{"candidate_id": "67487_c02", "pred_index": null, "raw": "and the", "in_tok": 2661, "out_tok": 1}
+{"candidate_id": "67563_c01", "pred_index": 3, "raw": "D", "in_tok": 2852, "out_tok": 1}
+{"candidate_id": "67590_c02", "pred_index": 3, "raw": "D", "in_tok": 2364, "out_tok": 1}
+{"candidate_id": "67801_c00", "pred_index": null, "raw": "corpses/", "in_tok": 2475, "out_tok": 1}
+{"candidate_id": "68118_c00", "pred_index": 0, "raw": "A", "in_tok": 1820, "out_tok": 1}
+{"candidate_id": "68182_c01", "pred_index": 1, "raw": "B", "in_tok": 2565, "out_tok": 1}
+{"candidate_id": "68219_c02", "pred_index": null, "raw": "attacked", "in_tok": 2290, "out_tok": 1}
+{"candidate_id": "09993_c00", "pred_index": 2, "raw": "C", "in_tok": 1708, "out_tok": 1}
+{"candidate_id": "46686_c00", "pred_index": 1, "raw": "B", "in_tok": 1597, "out_tok": 1}
+{"candidate_id": "46727_c01", "pred_index": null, "raw": "", "in_tok": 1349, "out_tok": 0}
+{"candidate_id": "47636_c00", "pred_index": 3, "raw": "D", "in_tok": 1163, "out_tok": 1}
+{"candidate_id": "46727_c01", "pred_index": null, "raw": "smiling wide", "in_tok": 1349, "out_tok": 1}
+{"candidate_id": "48130_c00", "pred_index": null, "raw": "", "in_tok": 1445, "out_tok": 0}
+{"candidate_id": "48711_c00", "pred_index": null, "raw": "", "in_tok": 1092, "out_tok": 0}
+{"candidate_id": "48897_c00", "pred_index": null, "raw": "ing singing", "in_tok": 1073, "out_tok": 1}
+{"candidate_id": "51302_c01", "pred_index": 0, "raw": "A", "in_tok": 1405, "out_tok": 1}
+{"candidate_id": "51512_c00", "pred_index": null, "raw": "", "in_tok": 1345, "out_tok": 0}
+{"candidate_id": "51581_c00", "pred_index": 2, "raw": "C", "in_tok": 1471, "out_tok": 1}
+{"candidate_id": "52043_c00", "pred_index": null, "raw": "", "in_tok": 1298, "out_tok": 0}
+{"candidate_id": "52127_c00", "pred_index": 0, "raw": "A", "in_tok": 1438, "out_tok": 1}
+{"candidate_id": "52521_c00", "pred_index": 2, "raw": "C", "in_tok": 1388, "out_tok": 1}
+{"candidate_id": "52624_c02", "pred_index": null, "raw": "", "in_tok": 1514, "out_tok": 0}
+{"candidate_id": "52805_c01", "pred_index": 2, "raw": "C", "in_tok": 2027, "out_tok": 1}
+{"candidate_id": "52906_c01", "pred_index": 3, "raw": "D", "in_tok": 2042, "out_tok": 1}
+{"candidate_id": "53042_c00", "pred_index": null, "raw": "0:", "in_tok": 2019, "out_tok": 1}
+{"candidate_id": "53352_c00", "pred_index": null, "raw": "", "in_tok": 2263, "out_tok": 0}
+{"candidate_id": "53371_c00", "pred_index": null, "raw": "", "in_tok": 1933, "out_tok": 0}
+{"candidate_id": "53454_c00", "pred_index": 0, "raw": "A", "in_tok": 1813, "out_tok": 1}
+{"candidate_id": "53470_c00", "pred_index": 0, "raw": "A", "in_tok": 2131, "out_tok": 1}
+{"candidate_id": "53520_c01", "pred_index": null, "raw": "", "in_tok": 2252, "out_tok": 0}
+{"candidate_id": "53690_c00", "pred_index": 2, "raw": "C", "in_tok": 2252, "out_tok": 1}
+{"candidate_id": "53700_c00", "pred_index": null, "raw": "", "in_tok": 1790, "out_tok": 0}
+{"candidate_id": "53714_c00", "pred_index": null, "raw": "", "in_tok": 1856, "out_tok": 0}
+{"candidate_id": "53735_c01", "pred_index": null, "raw": "", "in_tok": 1988, "out_tok": 0}
+{"candidate_id": "53774_c00", "pred_index": 2, "raw": "C", "in_tok": 2197, "out_tok": 1}
+{"candidate_id": "53813_c01", "pred_index": null, "raw": "reaction", "in_tok": 1790, "out_tok": 1}
+{"candidate_id": "53936_c01", "pred_index": null, "raw": "s", "in_tok": 1936, "out_tok": 1}
+{"candidate_id": "53939_c00", "pred_index": 3, "raw": "D", "in_tok": 2555, "out_tok": 1}
+{"candidate_id": "54118_c00", "pred_index": null, "raw": "", "in_tok": 2114, "out_tok": 0}
+{"candidate_id": "54274_c02", "pred_index": 3, "raw": "D", "in_tok": 2398, "out_tok": 1}
+{"candidate_id": "54905_c01", "pred_index": null, "raw": "and Nak", "in_tok": 1851, "out_tok": 1}
+{"candidate_id": "54945_c00", "pred_index": null, "raw": "", "in_tok": 2121, "out_tok": 0}
+{"candidate_id": "54945_c01", "pred_index": null, "raw": "", "in_tok": 1489, "out_tok": 0}
+{"candidate_id": "55041_c00", "pred_index": null, "raw": ",", "in_tok": 2382, "out_tok": 1}
+{"candidate_id": "55297_c03", "pred_index": 0, "raw": "A", "in_tok": 2478, "out_tok": 1}
+{"candidate_id": "55420_c01", "pred_index": 2, "raw": "C", "in_tok": 2206, "out_tok": 1}
+{"candidate_id": "55855_c00", "pred_index": null, "raw": "", "in_tok": 2009, "out_tok": 0}
+{"candidate_id": "55958_c00", "pred_index": 0, "raw": "A", "in_tok": 2475, "out_tok": 1}
+{"candidate_id": "56247_c00", "pred_index": 0, "raw": "A", "in_tok": 2302, "out_tok": 1}
+{"candidate_id": "56355_c02", "pred_index": 0, "raw": "A", "in_tok": 1747, "out_tok": 1}
+{"candidate_id": "56426_c00", "pred_index": 1, "raw": "B", "in_tok": 2193, "out_tok": 1}
+{"candidate_id": "56426_c01", "pred_index": null, "raw": "s voice", "in_tok": 2189, "out_tok": 1}
+{"candidate_id": "56557_c01", "pred_index": 1, "raw": "B", "in_tok": 2214, "out_tok": 1}
+{"candidate_id": "56565_c00", "pred_index": null, "raw": "", "in_tok": 2556, "out_tok": 0}
+{"candidate_id": "56749_c00", "pred_index": 0, "raw": "A", "in_tok": 2473, "out_tok": 1}
+{"candidate_id": "57389_c00", "pred_index": null, "raw": "laugh", "in_tok": 1824, "out_tok": 1}
+{"candidate_id": "57784_c01", "pred_index": null, "raw": "", "in_tok": 1655, "out_tok": 0}
+{"candidate_id": "58492_c01", "pred_index": null, "raw": "Answering", "in_tok": 2488, "out_tok": 1}
+{"candidate_id": "58531_c00", "pred_index": 3, "raw": "D", "in_tok": 1927, "out_tok": 1}
+{"candidate_id": "58581_c00", "pred_index": null, "raw": "", "in_tok": 2367, "out_tok": 0}
+{"candidate_id": "58587_c03", "pred_index": 0, "raw": "A", "in_tok": 1303, "out_tok": 1}
+{"candidate_id": "58613_c01", "pred_index": null, "raw": "to her", "in_tok": 1573, "out_tok": 1}
+{"candidate_id": "58771_c00", "pred_index": 2, "raw": "C", "in_tok": 1941, "out_tok": 1}
+{"candidate_id": "58996_c03", "pred_index": null, "raw": "funny moment", "in_tok": 1747, "out_tok": 1}
+{"candidate_id": "59055_c01", "pred_index": null, "raw": "the", "in_tok": 2565, "out_tok": 1}
+{"candidate_id": "59090_c00", "pred_index": null, "raw": "), and", "in_tok": 1733, "out_tok": 1}
+{"candidate_id": "59430_c02", "pred_index": null, "raw": "", "in_tok": 1564, "out_tok": 0}
+{"candidate_id": "60077_c00", "pred_index": null, "raw": "", "in_tok": 2565, "out_tok": 0}
+{"candidate_id": "60165_c00", "pred_index": null, "raw": "", "in_tok": 2291, "out_tok": 0}
+{"candidate_id": "60441_c01", "pred_index": 3, "raw": "D", "in_tok": 2100, "out_tok": 1}
+{"candidate_id": "60441_c02", "pred_index": null, "raw": "", "in_tok": 2100, "out_tok": 0}
+{"candidate_id": "60443_c02", "pred_index": null, "raw": "", "in_tok": 2009, "out_tok": 0}
+{"candidate_id": "60471_c02", "pred_index": 0, "raw": "A", "in_tok": 1265, "out_tok": 1}
+{"candidate_id": "60473_c00", "pred_index": null, "raw": "", "in_tok": 1590, "out_tok": 0}
+{"candidate_id": "60473_c02", "pred_index": 1, "raw": "B", "in_tok": 1590, "out_tok": 1}
+{"candidate_id": "60476_c00", "pred_index": null, "raw": "", "in_tok": 1774, "out_tok": 0}
+{"candidate_id": "60476_c01", "pred_index": 2, "raw": "C", "in_tok": 1858, "out_tok": 1}
+{"candidate_id": "60608_c00", "pred_index": null, "raw": "", "in_tok": 2345, "out_tok": 0}
+{"candidate_id": "61087_c01", "pred_index": null, "raw": "Wait", "in_tok": 1223, "out_tok": 1}
+{"candidate_id": "63937_c00", "pred_index": 0, "raw": "A", "in_tok": 2327, "out_tok": 1}
+{"candidate_id": "64034_c00", "pred_index": 3, "raw": "D", "in_tok": 1913, "out_tok": 1}
+{"candidate_id": "64827_c01", "pred_index": null, "raw": "... wait", "in_tok": 2303, "out_tok": 1}
+{"candidate_id": "65717_c00", "pred_index": null, "raw": "", "in_tok": 1298, "out_tok": 0}
+{"candidate_id": "66256_c02", "pred_index": 2, "raw": "C", "in_tok": 1485, "out_tok": 1}
+{"candidate_id": "66670_c02", "pred_index": 2, "raw": "C", "in_tok": 1571, "out_tok": 1}
+{"candidate_id": "66728_c02", "pred_index": null, "raw": "", "in_tok": 2005, "out_tok": 0}
+{"candidate_id": "66953_c00", "pred_index": null, "raw": "'s", "in_tok": 2374, "out_tok": 1}
+{"candidate_id": "67141_c00", "pred_index": null, "raw": "", "in_tok": 1830, "out_tok": 0}
+{"candidate_id": "67487_c02", "pred_index": null, "raw": "", "in_tok": 2661, "out_tok": 0}
+{"candidate_id": "67801_c00", "pred_index": null, "raw": "", "in_tok": 2475, "out_tok": 0}
+{"candidate_id": "68194_c00", "pred_index": 0, "raw": "A", "in_tok": 2034, "out_tok": 1}
+{"candidate_id": "68219_c02", "pred_index": null, "raw": "", "in_tok": 2290, "out_tok": 0}
+{"candidate_id": "46727_c01", "pred_index": 1, "raw": "B", "in_tok": 1349, "out_tok": 1}
+{"candidate_id": "48130_c00", "pred_index": 1, "raw": "B", "in_tok": 1445, "out_tok": 1}
+{"candidate_id": "48711_c00", "pred_index": 1, "raw": "B", "in_tok": 1092, "out_tok": 1}
+{"candidate_id": "48897_c00", "pred_index": 1, "raw": "B", "in_tok": 1073, "out_tok": 1}
+{"candidate_id": "51512_c00", "pred_index": 2, "raw": "C", "in_tok": 1345, "out_tok": 1}
+{"candidate_id": "52043_c00", "pred_index": 2, "raw": "C", "in_tok": 1298, "out_tok": 1}
+{"candidate_id": "52624_c02", "pred_index": 0, "raw": "A", "in_tok": 1514, "out_tok": 1}
+{"candidate_id": "53042_c00", "pred_index": 2, "raw": "C", "in_tok": 2019, "out_tok": 0}
+{"candidate_id": "53352_c00", "pred_index": 0, "raw": "A", "in_tok": 2263, "out_tok": 1}
+{"candidate_id": "53371_c00", "pred_index": 1, "raw": "B", "in_tok": 1933, "out_tok": 1}
+{"candidate_id": "53520_c01", "pred_index": 0, "raw": "A", "in_tok": 2252, "out_tok": 1}
+{"candidate_id": "53700_c00", "pred_index": 3, "raw": "D", "in_tok": 1790, "out_tok": 1}
+{"candidate_id": "53714_c00", "pred_index": 3, "raw": "D", "in_tok": 1856, "out_tok": 1}
+{"candidate_id": "53735_c01", "pred_index": 0, "raw": "A", "in_tok": 1988, "out_tok": 1}
+{"candidate_id": "53813_c01", "pred_index": 2, "raw": "C", "in_tok": 1790, "out_tok": 1}
+{"candidate_id": "53936_c01", "pred_index": 1, "raw": "B", "in_tok": 1936, "out_tok": 1}
+{"candidate_id": "54118_c00", "pred_index": 1, "raw": "B", "in_tok": 2114, "out_tok": 1}
+{"candidate_id": "54905_c01", "pred_index": 3, "raw": "D", "in_tok": 1851, "out_tok": 1}
+{"candidate_id": "54945_c00", "pred_index": 0, "raw": "A", "in_tok": 2121, "out_tok": 1}
+{"candidate_id": "54945_c01", "pred_index": 2, "raw": "C", "in_tok": 1489, "out_tok": 0}
+{"candidate_id": "55041_c00", "pred_index": 0, "raw": "A", "in_tok": 2382, "out_tok": 1}
+{"candidate_id": "55855_c00", "pred_index": 1, "raw": "B", "in_tok": 2009, "out_tok": 1}
+{"candidate_id": "56426_c01", "pred_index": 3, "raw": "D", "in_tok": 2189, "out_tok": 1}
+{"candidate_id": "56565_c00", "pred_index": 1, "raw": "B", "in_tok": 2556, "out_tok": 1}
+{"candidate_id": "57389_c00", "pred_index": 1, "raw": "B", "in_tok": 1824, "out_tok": 1}
+{"candidate_id": "57784_c01", "pred_index": 3, "raw": "D", "in_tok": 1655, "out_tok": 1}
+{"candidate_id": "58492_c01", "pred_index": 1, "raw": "\" sound.\nLet's look at Segment B:\nSegment B shows the guy dancing, with", "in_tok": 2488, "out_tok": 21}
+{"candidate_id": "58581_c00", "pred_index": 1, "raw": "B", "in_tok": 2367, "out_tok": 1}
+{"candidate_id": "58613_c01", "pred_index": 3, "raw": "D", "in_tok": 1573, "out_tok": 1}
+{"candidate_id": "58996_c03", "pred_index": 1, "raw": "B", "in_tok": 1747, "out_tok": 1}
+{"candidate_id": "59055_c01", "pred_index": 1, "raw": "B", "in_tok": 2565, "out_tok": 1}
+{"candidate_id": "59090_c00", "pred_index": 2, "raw": "C", "in_tok": 1733, "out_tok": 1}
+{"candidate_id": "59430_c02", "pred_index": 0, "raw": "A", "in_tok": 1564, "out_tok": 1}
+{"candidate_id": "60077_c00", "pred_index": 1, "raw": "B", "in_tok": 2565, "out_tok": 1}
+{"candidate_id": "60165_c00", "pred_index": 2, "raw": "C", "in_tok": 2291, "out_tok": 1}
+{"candidate_id": "60441_c02", "pred_index": 0, "raw": "A", "in_tok": 2100, "out_tok": 1}
+{"candidate_id": "60443_c02", "pred_index": 0, "raw": "A", "in_tok": 2009, "out_tok": 1}
+{"candidate_id": "60473_c00", "pred_index": 3, "raw": "D", "in_tok": 1590, "out_tok": 0}
+{"candidate_id": "60476_c00", "pred_index": 3, "raw": "D", "in_tok": 1774, "out_tok": 1}
+{"candidate_id": "60608_c00", "pred_index": 0, "raw": "A", "in_tok": 2345, "out_tok": 1}
+{"candidate_id": "61087_c01", "pred_index": 1, "raw": "B", "in_tok": 1223, "out_tok": 0}
+{"candidate_id": "64827_c01", "pred_index": 3, "raw": "D", "in_tok": 2303, "out_tok": 1}
+{"candidate_id": "65717_c00", "pred_index": 2, "raw": "C", "in_tok": 1298, "out_tok": 1}
+{"candidate_id": "66728_c02", "pred_index": 1, "raw": "B", "in_tok": 2005, "out_tok": 1}
+{"candidate_id": "66953_c00", "pred_index": 3, "raw": "D", "in_tok": 2374, "out_tok": 1}
+{"candidate_id": "67141_c00", "pred_index": 2, "raw": "C", "in_tok": 1830, "out_tok": 0}
+{"candidate_id": "67487_c02", "pred_index": 2, "raw": "C", "in_tok": 2661, "out_tok": 1}
+{"candidate_id": "67801_c00", "pred_index": 3, "raw": "D", "in_tok": 2475, "out_tok": 1}
+{"candidate_id": "68219_c02", "pred_index": 2, "raw": "C", "in_tok": 2290, "out_tok": 1}

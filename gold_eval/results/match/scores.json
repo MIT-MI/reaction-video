@@ -1,122 +1,122 @@
 {
   "gemini-3.7-flash": {
-    "n_scored": 145,
-    "accuracy": 0.4621,
+    "n_scored": 112,
+    "accuracy": 0.5,
     "chance": 0.25,
-    "unparsed": 2,
+    "unparsed": 1,
     "err_temporal_dist_s": {
-      "mean": 23.02,
-      "median": 20.95
+      "mean": 26.02,
+      "median": 24.8
     },
     "acc_by_cultural_specificity": {
-      "0": 0.4286,
-      "1": 0.5,
-      "2": 0.4655
+      "0": 0.5,
+      "1": 0.7143,
+      "2": 0.4839
     }
   },
   "gemini-3.7-flash__video": {
-    "n_scored": 72,
-    "accuracy": 0.4167,
+    "n_scored": 112,
+    "accuracy": 0.5446,
     "chance": 0.25,
-    "unparsed": 17,
+    "unparsed": 0,
     "err_temporal_dist_s": {
-      "mean": 22.87,
-      "median": 22.66
+      "mean": 27.68,
+      "median": 27.53
     },
     "acc_by_cultural_specificity": {
-      "0": 0.3077,
-      "1": 0.2,
-      "2": 0.463
+      "0": 0.3333,
+      "1": 0.4286,
+      "2": 0.5806
     }
   },
   "gpt-5": {
-    "n_scored": 150,
-    "accuracy": 0.4867,
+    "n_scored": 112,
+    "accuracy": 0.5089,
     "chance": 0.25,
     "unparsed": 0,
     "err_temporal_dist_s": {
-      "mean": 22.37,
-      "median": 20.12
+      "mean": 29.42,
+      "median": 26.83
     },
     "acc_by_cultural_specificity": {
-      "0": 0.5,
-      "1": 0.375,
-      "2": 0.4917
+      "0": 0.6667,
+      "1": 0.5714,
+      "2": 0.4839
     }
   },
   "tinker_Qwen_Qwen3.5-397B-A17B": {
-    "n_scored": 150,
-    "accuracy": 0.4467,
+    "n_scored": 112,
+    "accuracy": 0.4107,
     "chance": 0.25,
     "unparsed": 0,
     "err_temporal_dist_s": {
-      "mean": 21.95,
-      "median": 20.27
+      "mean": 25.35,
+      "median": 24.73
     },
     "acc_by_cultural_specificity": {
-      "0": 0.5,
-      "1": 0.375,
-      "2": 0.4417
+      "0": 0.25,
+      "1": 0.5714,
+      "2": 0.4194
     }
   },
   "tinker_Qwen_Qwen3.5-9B": {
-    "n_scored": 150,
-    "accuracy": 0.26,
+    "n_scored": 112,
+    "accuracy": 0.2589,
     "chance": 0.25,
-    "unparsed": 13,
+    "unparsed": 20,
     "err_temporal_dist_s": {
-      "mean": 20.34,
-      "median": 18.18
+      "mean": 27.17,
+      "median": 26.4
     },
     "acc_by_cultural_specificity": {
-      "0": 0.1818,
-      "1": 0.375,
-      "2": 0.2667
+      "0": 0.1667,
+      "1": 0.4286,
+      "2": 0.2581
     }
   },
   "tinker_Qwen_Qwen3.6-27B": {
-    "n_scored": 150,
-    "accuracy": 0.3867,
+    "n_scored": 112,
+    "accuracy": 0.4464,
     "chance": 0.25,
     "unparsed": 0,
     "err_temporal_dist_s": {
-      "mean": 22.17,
-      "median": 18.93
+      "mean": 26.56,
+      "median": 25.67
     },
     "acc_by_cultural_specificity": {
-      "0": 0.2727,
-      "1": 0.375,
-      "2": 0.4083
+      "0": 0.4167,
+      "1": 0.7143,
+      "2": 0.4301
     }
   },
   "tinker_Qwen_Qwen3.6-35B-A3B": {
-    "n_scored": 150,
-    "accuracy": 0.3667,
-    "chance": 0.25,
-    "unparsed": 2,
-    "err_temporal_dist_s": {
-      "mean": 22.0,
-      "median": 19.2
-    },
-    "acc_by_cultural_specificity": {
-      "0": 0.3636,
-      "1": 0.25,
-      "2": 0.375
-    }
-  },
-  "tinker_moonshotai_Kimi-K2.6": {
-    "n_scored": 150,
-    "accuracy": 0.46,
+    "n_scored": 112,
+    "accuracy": 0.4821,
     "chance": 0.25,
     "unparsed": 0,
     "err_temporal_dist_s": {
-      "mean": 22.19,
-      "median": 18.93
+      "mean": 28.91,
+      "median": 26.81
     },
     "acc_by_cultural_specificity": {
-      "0": 0.4545,
-      "1": 0.375,
-      "2": 0.4667
+      "0": 0.5,
+      "1": 0.7143,
+      "2": 0.4624
+    }
+  },
+  "tinker_moonshotai_Kimi-K2.6": {
+    "n_scored": 112,
+    "accuracy": 0.375,
+    "chance": 0.25,
+    "unparsed": 0,
+    "err_temporal_dist_s": {
+      "mean": 26.27,
+      "median": 24.47
+    },
+    "acc_by_cultural_specificity": {
+      "0": 0.3333,
+      "1": 0.5714,
+      "2": 0.3656
     }
   }
 }
