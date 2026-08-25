@@ -73,7 +73,7 @@ vs the pre-rebuild (contaminated) set: absolute accuracies moved little overall 
 +2-5 pt — cleaner distractor sets, no near-dup pairs shrinking effective option count), but
 mid-field ORDER changed (35B .367→.482, Kimi .460→.375): per-model numbers on the old set
 were not trustworthy, the rebuild mattered. E1 on the rebuilt set: video .545 vs frames .500,
-McNemar p=.42 (n.s., direction consistent again). Error temporal distance grew (~19→~26 s
+McNemar p=.54 (n.s., direction consistent again; 24 video-only vs 19 frames-only correct). Error temporal distance grew (~19→~26 s
 median) as expected — options are farther apart by construction. Cultural strata remain
 descriptive only (C7).
 ### 3.2 T1 ranking — joint vs independent (250 videos, 642 moments; human LOO ceiling ρ=.649, 420 rater-video pairs)
