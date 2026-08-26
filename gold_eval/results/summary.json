@@ -1,315 +1,315 @@
 {
   "match": {
     "match/gemini-3.7-flash": {
-      "n_scored": 150,
-      "accuracy": 0.46,
+      "n_scored": 112,
+      "accuracy": 0.5,
       "chance": 0.25,
       "unparsed": 1,
       "err_temporal_dist_s": {
-        "mean": 22.69,
-        "median": 19.73
+        "mean": 26.02,
+        "median": 24.8
       },
       "acc_by_cultural_specificity": {
-        "0": 0.4091,
-        "1": 0.5,
-        "2": 0.4667
+        "0": 0.5,
+        "1": 0.7143,
+        "2": 0.4839
       },
       "acc_ci95_wilson": [
-        0.3822,
-        0.5398
+        0.4089,
+        0.5911
       ]
     },
     "match/gemini-3.7-flash__video": {
-      "n_scored": 149,
-      "accuracy": 0.5168,
+      "n_scored": 112,
+      "accuracy": 0.5446,
       "chance": 0.25,
       "unparsed": 0,
       "err_temporal_dist_s": {
-        "mean": 22.77,
-        "median": 19.2
+        "mean": 27.68,
+        "median": 27.53
       },
       "acc_by_cultural_specificity": {
-        "0": 0.5909,
-        "1": 0.375,
-        "2": 0.5126
+        "0": 0.3333,
+        "1": 0.4286,
+        "2": 0.5806
       },
       "acc_ci95_wilson": [
-        0.4371,
-        0.5956
+        0.4525,
+        0.6339
       ]
     },
     "match/gpt-5": {
-      "n_scored": 150,
-      "accuracy": 0.4867,
+      "n_scored": 112,
+      "accuracy": 0.5089,
       "chance": 0.25,
       "unparsed": 0,
       "err_temporal_dist_s": {
-        "mean": 22.37,
-        "median": 20.12
+        "mean": 29.42,
+        "median": 26.83
       },
       "acc_by_cultural_specificity": {
-        "0": 0.5,
-        "1": 0.375,
-        "2": 0.4917
+        "0": 0.6667,
+        "1": 0.5714,
+        "2": 0.4839
       },
       "acc_ci95_wilson": [
-        0.408,
-        0.566
+        0.4176,
+        0.5997
       ]
     },
     "match/tinker_Qwen_Qwen3.5-397B-A17B": {
-      "n_scored": 150,
-      "accuracy": 0.4467,
+      "n_scored": 112,
+      "accuracy": 0.4107,
       "chance": 0.25,
       "unparsed": 0,
       "err_temporal_dist_s": {
-        "mean": 21.95,
-        "median": 20.27
+        "mean": 25.35,
+        "median": 24.73
       },
       "acc_by_cultural_specificity": {
-        "0": 0.5,
-        "1": 0.375,
-        "2": 0.4417
+        "0": 0.25,
+        "1": 0.5714,
+        "2": 0.4194
       },
       "acc_ci95_wilson": [
-        0.3694,
-        0.5266
+        0.324,
+        0.5033
       ]
     },
     "match/tinker_Qwen_Qwen3.5-9B": {
-      "n_scored": 150,
-      "accuracy": 0.26,
+      "n_scored": 112,
+      "accuracy": 0.2589,
       "chance": 0.25,
-      "unparsed": 13,
+      "unparsed": 20,
       "err_temporal_dist_s": {
-        "mean": 20.34,
-        "median": 18.18
+        "mean": 27.17,
+        "median": 26.4
       },
       "acc_by_cultural_specificity": {
-        "0": 0.1818,
-        "1": 0.375,
-        "2": 0.2667
+        "0": 0.1667,
+        "1": 0.4286,
+        "2": 0.2581
       },
       "acc_ci95_wilson": [
-        0.1964,
-        0.3356
+        0.1868,
+        0.3471
       ]
     },
     "match/tinker_Qwen_Qwen3.6-27B": {
-      "n_scored": 150,
-      "accuracy": 0.3867,
+      "n_scored": 112,
+      "accuracy": 0.4464,
       "chance": 0.25,
       "unparsed": 0,
       "err_temporal_dist_s": {
-        "mean": 22.17,
-        "median": 18.93
+        "mean": 26.56,
+        "median": 25.67
       },
       "acc_by_cultural_specificity": {
-        "0": 0.2727,
-        "1": 0.375,
-        "2": 0.4083
+        "0": 0.4167,
+        "1": 0.7143,
+        "2": 0.4301
       },
       "acc_ci95_wilson": [
-        0.3125,
-        0.4665
+        0.3577,
+        0.5388
       ]
     },
     "match/tinker_Qwen_Qwen3.6-35B-A3B": {
-      "n_scored": 150,
-      "accuracy": 0.3667,
-      "chance": 0.25,
-      "unparsed": 1,
-      "err_temporal_dist_s": {
-        "mean": 21.89,
-        "median": 19.2
-      },
-      "acc_by_cultural_specificity": {
-        "0": 0.3636,
-        "1": 0.25,
-        "2": 0.375
-      },
-      "acc_ci95_wilson": [
-        0.2938,
-        0.4462
-      ]
-    },
-    "match/tinker_moonshotai_Kimi-K2.6": {
-      "n_scored": 150,
-      "accuracy": 0.46,
+      "n_scored": 112,
+      "accuracy": 0.4821,
       "chance": 0.25,
       "unparsed": 0,
       "err_temporal_dist_s": {
-        "mean": 22.19,
-        "median": 18.93
+        "mean": 28.91,
+        "median": 26.81
       },
       "acc_by_cultural_specificity": {
-        "0": 0.4545,
-        "1": 0.375,
-        "2": 0.4667
+        "0": 0.5,
+        "1": 0.7143,
+        "2": 0.4624
       },
       "acc_ci95_wilson": [
-        0.3822,
-        0.5398
+        0.3917,
+        0.5737
+      ]
+    },
+    "match/tinker_moonshotai_Kimi-K2.6": {
+      "n_scored": 112,
+      "accuracy": 0.375,
+      "chance": 0.25,
+      "unparsed": 0,
+      "err_temporal_dist_s": {
+        "mean": 26.27,
+        "median": 24.47
+      },
+      "acc_by_cultural_specificity": {
+        "0": 0.3333,
+        "1": 0.5714,
+        "2": 0.3656
+      },
+      "acc_ci95_wilson": [
+        0.2909,
+        0.4674
       ]
     },
     "match_scored/gemini-3.7-flash": {
-      "n_scored": 150,
-      "accuracy": 0.1467,
+      "n_scored": 99,
+      "accuracy": 0.1717,
       "chance": 0.25,
-      "unparsed": 94,
+      "unparsed": 58,
       "err_temporal_dist_s": {
-        "mean": 20.32,
-        "median": 18.94
+        "mean": 23.97,
+        "median": 19.59
       },
       "acc_by_cultural_specificity": {
-        "0": 0.2273,
-        "1": 0.25,
-        "2": 0.125
+        "0": 0.3636,
+        "1": 0.2857,
+        "2": 0.1358
       },
       "tie_rate": 0.6267,
       "acc_ci95_wilson": [
-        0.0989,
-        0.2121
+        0.1101,
+        0.2579
       ]
     },
     "match_scored/gpt-5": {
-      "n_scored": 150,
-      "accuracy": 0.2,
+      "n_scored": 99,
+      "accuracy": 0.2121,
       "chance": 0.25,
-      "unparsed": 78,
+      "unparsed": 52,
       "err_temporal_dist_s": {
-        "mean": 24.77,
-        "median": 24.29
+        "mean": 33.72,
+        "median": 28.99
       },
       "acc_by_cultural_specificity": {
         "0": 0.2727,
-        "1": 0.25,
-        "2": 0.1833
+        "1": 0.2857,
+        "2": 0.1975
       },
       "tie_rate": 0.52,
       "acc_ci95_wilson": [
-        0.1438,
-        0.2711
+        0.1431,
+        0.3026
       ]
     },
     "match_scored/tinker_Qwen_Qwen3.5-397B-A17B": {
-      "n_scored": 150,
-      "accuracy": 0.14,
+      "n_scored": 99,
+      "accuracy": 0.1414,
       "chance": 0.25,
-      "unparsed": 97,
+      "unparsed": 65,
       "err_temporal_dist_s": {
-        "mean": 21.89,
-        "median": 20.41
+        "mean": 30.73,
+        "median": 28.66
       },
       "acc_by_cultural_specificity": {
-        "0": 0.1364,
-        "1": 0.125,
-        "2": 0.1417
+        "0": 0.0909,
+        "1": 0.1429,
+        "2": 0.1481
       },
       "tie_rate": 0.6467,
       "acc_ci95_wilson": [
-        0.0934,
-        0.2046
+        0.0861,
+        0.2235
       ]
     },
     "match_scored/tinker_Qwen_Qwen3.5-9B": {
-      "n_scored": 150,
-      "accuracy": 0.1333,
+      "n_scored": 99,
+      "accuracy": 0.1616,
       "chance": 0.25,
-      "unparsed": 110,
+      "unparsed": 74,
       "err_temporal_dist_s": {
-        "mean": 22.69,
-        "median": 19.93
+        "mean": 20.52,
+        "median": 20.27
       },
       "acc_by_cultural_specificity": {
         "0": 0.0909,
         "1": 0.0,
-        "2": 0.15
+        "2": 0.1852
       },
       "tie_rate": 0.7333,
       "acc_ci95_wilson": [
-        0.088,
-        0.197
+        0.102,
+        0.2465
       ]
     },
     "match_scored/tinker_Qwen_Qwen3.6-27B": {
-      "n_scored": 150,
-      "accuracy": 0.0933,
+      "n_scored": 99,
+      "accuracy": 0.101,
       "chance": 0.25,
-      "unparsed": 122,
+      "unparsed": 81,
       "err_temporal_dist_s": {
-        "mean": 25.7,
-        "median": 22.56
+        "mean": 26.24,
+        "median": 27.17
       },
       "acc_by_cultural_specificity": {
         "0": 0.0909,
-        "1": 0.125,
-        "2": 0.0917
+        "1": 0.1429,
+        "2": 0.0988
       },
       "tie_rate": 0.8133,
       "acc_ci95_wilson": [
-        0.0564,
-        0.1506
+        0.0558,
+        0.176
       ]
     },
     "match_scored/tinker_Qwen_Qwen3.6-35B-A3B": {
-      "n_scored": 150,
-      "accuracy": 0.2067,
+      "n_scored": 99,
+      "accuracy": 0.1616,
       "chance": 0.25,
-      "unparsed": 100,
+      "unparsed": 69,
       "err_temporal_dist_s": {
-        "mean": 18.76,
-        "median": 16.93
+        "mean": 25.0,
+        "median": 19.34
       },
       "acc_by_cultural_specificity": {
         "0": 0.1818,
-        "1": 0.5,
-        "2": 0.1917
+        "1": 0.4286,
+        "2": 0.1358
       },
       "tie_rate": 0.6667,
       "acc_ci95_wilson": [
-        0.1496,
-        0.2784
+        0.102,
+        0.2465
       ]
     },
     "match_scored/tinker_moonshotai_Kimi-K2.6": {
-      "n_scored": 150,
-      "accuracy": 0.1867,
+      "n_scored": 99,
+      "accuracy": 0.2323,
       "chance": 0.25,
-      "unparsed": 100,
+      "unparsed": 61,
       "err_temporal_dist_s": {
-        "mean": 17.77,
-        "median": 15.72
+        "mean": 28.22,
+        "median": 28.53
       },
       "acc_by_cultural_specificity": {
-        "0": 0.2727,
-        "1": 0.125,
-        "2": 0.175
+        "0": 0.3636,
+        "1": 0.1429,
+        "2": 0.2222
       },
       "tie_rate": 0.6667,
       "acc_ci95_wilson": [
-        0.1324,
-        0.2566
+        0.1601,
+        0.3246
       ]
     },
     "match_sbs/gemini-3.7-flash": {
-      "n_scored": 150,
-      "accuracy": 0.1467,
+      "n_scored": 99,
+      "accuracy": 0.1616,
       "chance": 0.25,
-      "unparsed": 92,
+      "unparsed": 57,
       "err_temporal_dist_s": {
-        "mean": 20.52,
-        "median": 19.66
+        "mean": 26.14,
+        "median": 25.2
       },
       "acc_by_cultural_specificity": {
-        "0": 0.2273,
-        "1": 0.375,
-        "2": 0.1167
+        "0": 0.2727,
+        "1": 0.4286,
+        "2": 0.1235
       },
       "tie_rate": 0.6133,
       "acc_ci95_wilson": [
-        0.0989,
-        0.2121
+        0.102,
+        0.2465
       ]
     }
   },
@@ -961,10 +961,10 @@
   },
   "match_paired": {
     "gemini-3.7-flash": {
-      "n_paired": 149,
-      "frames_only_correct": 25,
-      "video_only_correct": 33,
-      "mcnemar_p": 0.3581
+      "n_paired": 112,
+      "frames_only_correct": 19,
+      "video_only_correct": 24,
+      "mcnemar_p": 0.5424
     }
   },
   "ranking_paired": {
