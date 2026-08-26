@@ -473,5 +473,22 @@ validated for model evaluation at current model strength (180-item cross set ≈
 difficulty); (ii) within-video negatives remain the design choice for the main task because
 they close the shortcut *in principle* (audio-capable models, humans) and test temporal
 grounding specifically; (iii) the all-180 cross accuracies run below the shared-112 ones —
-the 68 recovered items skew harder. Audio-shortcut probe (Gemini native video incl. audio on
-XV) queued; if it jumps on XV but not within, the shortcut is demonstrated.
+the 68 recovered items skew harder.
+
+**Audio-shortcut probe (2026-08-26): demonstrated.** Gemini 3.7 Flash native video (audio
+included) on the same XV set (`gemini-3.7-flash__video__match_xv.jsonl`, 180/180):
+
+| arm | within (shared 112) | cross (shared 112) | Δ | McNemar b/c | p | cross (all 180) |
+|---|---|---|---|---|---|---|
+| native video (audio) | .545 | **.777** | **+.232** | 4/30 | **6e-6** | .761 |
+| frames (no audio) | .500 | .536 | +.036 | 17/21 | .63 | .461 |
+
+The *same model* on the *same items* gains +.232 from cross-video distractors when and only
+when it can hear the audio: the reaction clip carries bleed-through of the stimulus audio, so
+distractors from *other* videos can be rejected by soundtrack mismatch alone, no
+reaction understanding required. Within-video negatives share the soundtrack and close this.
+This settles the design question empirically: (i) the within-video contract is **necessary**,
+not conservative — an XV-built set would be inflated by ≈23 points for any audio-capable
+model; (ii) the frame-based protocol's modality-matched comparison is unaffected (frames Δ
+n.s.); (iii) the .777 is a *shortcut* score, not a matching score, and must never be reported
+as model capability.

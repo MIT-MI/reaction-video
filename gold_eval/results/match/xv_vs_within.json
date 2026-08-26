@@ -61,5 +61,16 @@
     "w_only": 18,
     "x_only": 22,
     "mcnemar_p": 0.6358
+  },
+  "gemini-3.7-flash__video": {
+    "n_paired": 112,
+    "within_acc": 0.5446,
+    "xv_acc": 0.7768,
+    "delta": 0.2321,
+    "within_only_correct": 4,
+    "xv_only_correct": 30,
+    "mcnemar_p": 5.9e-06,
+    "xv_all180_acc": 0.7611,
+    "note": "audio-shortcut probe: native video incl. audio"
   }
 }
