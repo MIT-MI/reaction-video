@@ -1,0 +1,35 @@
+{
+  "base": {
+    "n_scored": 112,
+    "n_correct": 34,
+    "accuracy": 0.3036,
+    "acc_ci95_wilson": [
+      0.2261,
+      0.3941
+    ],
+    "unparsed": 17
+  },
+  "lora": {
+    "n_scored": 112,
+    "n_correct": 46,
+    "accuracy": 0.4107,
+    "acc_ci95_wilson": [
+      0.324,
+      0.5033
+    ],
+    "unparsed": 0
+  },
+  "task": "T2-MATCH",
+  "tasks_file": "/home/yiboz7/code/reaction-video/gold_eval/tasks/match_set.json",
+  "n_tasks": 112,
+  "mcnemar": {
+    "n_paired": 112,
+    "base_only_correct": 8,
+    "lora_only_correct": 20,
+    "both_correct": 26,
+    "both_wrong": 58,
+    "discordant": 28,
+    "delta_acc": 0.1071,
+    "p_exact": 0.035698
+  }
+}
