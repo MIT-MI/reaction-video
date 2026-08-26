@@ -1,0 +1,35 @@
+{
+  "base": "Qwen/Qwen3.5-9B",
+  "train": "finetune/data/train_match.jsonl",
+  "val": "finetune/data/val_match.jsonl",
+  "out": "finetune/ckpt/r3-match-3ep",
+  "epochs": 3.0,
+  "lr": 0.0001,
+  "rank": 16,
+  "grad_accum": 4,
+  "max_tokens": 10000,
+  "seed": 0,
+  "trainable_params": 29097984,
+  "global_step": 9,
+  "best_eval_loss": 0.43799513578414917,
+  "best_eval_step": 9,
+  "log_history": [
+    {
+      "eval_loss": 0.43799513578414917,
+      "eval_runtime": 6.0135,
+      "eval_samples_per_second": 1.663,
+      "eval_steps_per_second": 0.333,
+      "epoch": 3.0,
+      "step": 9
+    },
+    {
+      "train_runtime": 409.0522,
+      "train_samples_per_second": 0.682,
+      "train_steps_per_second": 0.022,
+      "total_flos": 6.659713582655078e+16,
+      "train_loss": 0.5312513775295682,
+      "epoch": 3.0,
+      "step": 9
+    }
+  ]
+}
