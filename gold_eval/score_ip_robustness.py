@@ -11,9 +11,17 @@ Addresses two anticipated reviews:
        comparable between models and the human leave-one-out reference.
 Plus human-reference re-weighting (A5) and a selection-dependency check (A6).
 
-Scoring convention is IDENTICAL to score_ranking.per_video_rhos (pre-registered):
-per-video Spearman(model scores, consensus means) for videos with non-tied gold;
-unparsed predictions and all-tied predictions are dropped (rho undefined).
+Scoring conventions. Two variants of score_ranking.per_video_rhos exist:
+  strict (tied_as_zero=False): all-tied predictions dropped (rho undefined);
+  tie0   (tied_as_zero=True):  all-tied parsed predictions credited rho=0.
+Unparsed/missing predictions are dropped under BOTH (never imputed: indep
+397B has 24 unparsed videos and the paper's .267 = mean over the 226 parsed,
+not a zero-imputed mean over 250). The paper's Table-2 rhos — joint .176/.026/
+.029/.163/.043/.065/.086 and indep .316/.177/.255/.329/.210/.267/.233 — are ALL
+reproduced to 3 decimals by the tie0 convention (verified; joint gemini raw
+0.17552 -> .176), which is therefore marked PRIMARY ("paper_convention") below;
+the strict variant is kept as "strict_convention". The two differ only where
+all-tied predictions occur (joint 35B; every indep arm).
 Spearman is implemented as Pearson on average ranks (scipy-free).
 
 Inputs (all local, no network):
@@ -58,6 +66,19 @@ MODELS = [
     "tinker_moonshotai_Kimi-K2.6",
 ]
 MODES = {"joint": "results/ranking", "indep": "results/ranking_indep"}
+
+# Paper Table-2 per-video mean Spearman (3 dp) — used only to verify that the
+# tie0 convention reproduces the published numbers exactly.
+PAPER_TABLE2 = {
+    "joint": {"gemini-3.7-flash": 0.176, "gpt-5": 0.026,
+              "tinker_Qwen_Qwen3.5-397B-A17B": 0.065, "tinker_Qwen_Qwen3.5-9B": 0.029,
+              "tinker_Qwen_Qwen3.6-27B": 0.163, "tinker_Qwen_Qwen3.6-35B-A3B": 0.043,
+              "tinker_moonshotai_Kimi-K2.6": 0.086},
+    "indep": {"gemini-3.7-flash": 0.316, "gpt-5": 0.177,
+              "tinker_Qwen_Qwen3.5-397B-A17B": 0.267, "tinker_Qwen_Qwen3.5-9B": 0.255,
+              "tinker_Qwen_Qwen3.6-27B": 0.329, "tinker_Qwen_Qwen3.6-35B-A3B": 0.210,
+              "tinker_moonshotai_Kimi-K2.6": 0.233},
+}
 
 # Channel-level merge: a reviewer may insist the two personas per channel share
 # audience/style, so cluster at channel granularity too (~5 clusters).
@@ -122,8 +143,13 @@ def load_preds(path: Path) -> dict[str, dict]:
     return preds
 
 
-def per_video_rhos(items: list[dict], preds: dict[str, dict]) -> dict[str, float]:
-    """Exact reproduction of score_ranking.per_video_rhos (default convention)."""
+def per_video_rhos(items: list[dict], preds: dict[str, dict],
+                   tied_as_zero: bool = False) -> dict[str, float]:
+    """Exact reproduction of score_ranking.per_video_rhos.
+
+    tied_as_zero=False: strict / pre-registered (all-tied predictions dropped).
+    tied_as_zero=True:  paper Table-2 convention (all-tied parsed predictions
+    credited rho=0). Unparsed/missing predictions dropped under both."""
     out = {}
     for it in items:
         p = preds.get(it["video_id"])
@@ -135,6 +161,8 @@ def per_video_rhos(items: list[dict], preds: dict[str, dict]) -> dict[str, float
             rho = spearman(model, gold)
             if not math.isnan(rho):
                 out[it["video_id"]] = rho
+            elif tied_as_zero:
+                out[it["video_id"]] = 0.0
     return out
 
 
@@ -286,7 +314,10 @@ def a4_model(items: list[dict], preds: dict[str, dict]) -> dict:
             per_video.append(c / n)
     return {"n_pairs": tot_n, "pooled_acc": rnd(tot_c / tot_n) if tot_n else None,
             "n_videos": len(per_video),
-            "video_equal_weight_acc": rnd(np.mean(per_video)) if per_video else None}
+            "video_equal_weight_acc": rnd(np.mean(per_video)) if per_video else None,
+            "note": "convention-independent: covers every parsed video with >=1 "
+                    "non-tied gold pair (all-tied predictions included, each of "
+                    "their pairs credited 0.5); unparsed videos excluded"}
 
 
 def a4_human(loo_recs: list[dict]) -> dict:
@@ -356,30 +387,52 @@ def main() -> None:
             "clusters_channel": sorted({CHANNEL_OF.get(it["creator"], it["creator"])
                                         for it in items}),
             "selection_criteria": {"min_raters": MIN_RATERS, "min_spread": MIN_SPREAD},
-            "convention": "per-video Spearman vs consensus mean; unparsed and "
-                          "all-tied predictions dropped (score_ranking default)",
+            "conventions": {
+                "paper_convention": "PRIMARY. tied_as_zero: per-video Spearman vs "
+                    "consensus mean; all-tied parsed predictions credited rho=0; "
+                    "unparsed/missing dropped (NOT zero-imputed). Reproduces every "
+                    "paper Table-2 rho (joint AND indep) to 3 decimals — see "
+                    "paper_table2_verification.",
+                "strict_convention": "SECONDARY. score_ranking pre-registered "
+                    "default: all-tied predictions dropped (rho undefined).",
+            },
         },
+        "paper_table2_verification": {},
         "models": {},
     }
 
-    # ---- per-model analyses
+    # ---- per-model analyses (both conventions; paper = primary)
     for mode, sub in MODES.items():
         for m in MODELS:
             f = HERE / sub / f"{m}.jsonl"
             if not f.exists():
                 continue
             preds = load_preds(f)
-            rhos = per_video_rhos(items, preds)
-            units = sorted(rhos.items())
-            entry = {
-                "mean_spearman": rnd(np.mean([x for _, x in units])),
-                "n_videos_scored": len(units),
-                "A1_bootstrap": a1_bootstrap(rhos, creator_of),
-                "A2_leave_one_creator_out": a2_loco(units, creator_of),
-                "A3_by_n_moments": a3_strata(units, nm_of),
-                "A4_pairwise": a4_model(items, preds),
-            }
+            entry: dict = {}
+            raw_means = {}
+            for conv, tie0 in (("paper_convention", True), ("strict_convention", False)):
+                rhos = per_video_rhos(items, preds, tied_as_zero=tie0)
+                units = sorted(rhos.items())
+                raw_means[conv] = float(np.mean([x for _, x in units]))
+                entry[conv] = {
+                    "mean_spearman": rnd(raw_means[conv]),
+                    "n_videos_scored": len(units),
+                    "A1_bootstrap": a1_bootstrap(rhos, creator_of),
+                    "A2_leave_one_creator_out": a2_loco(units, creator_of),
+                    "A3_by_n_moments": a3_strata(units, nm_of),
+                }
+            # n_all_tied_as_zero: count videos dropped by strict but kept by paper
+            entry["paper_convention"]["n_all_tied_as_zero"] = (
+                entry["paper_convention"]["n_videos_scored"]
+                - entry["strict_convention"]["n_videos_scored"])
+            entry["A4_pairwise"] = a4_model(items, preds)
             report["models"].setdefault(m, {})[mode] = entry
+            expected = PAPER_TABLE2[mode].get(m)
+            report["paper_table2_verification"][f"{mode}/{m}"] = {
+                "paper": expected,
+                "recomputed": rnd(raw_means["paper_convention"], 5),
+                "match_3dp": expected is not None
+                             and round(raw_means["paper_convention"], 3) == expected}
 
     # ---- human reference
     dump_path = HERE / "data/gold_scores_dump.json"
@@ -436,11 +489,16 @@ def main() -> None:
     tmp.rename(out)
     print(f"-> {out}")
 
-    # compact console summary
+    # compact console summary (paper convention)
+    n_match = sum(1 for v in report["paper_table2_verification"].values() if v["match_3dp"])
+    print(f"paper Table-2 verification: {n_match}/{len(report['paper_table2_verification'])} "
+          f"match to 3 decimals")
     for m, modes in report["models"].items():
         for mode, e in modes.items():
-            a1 = e["A1_bootstrap"]
-            print(f"{m} [{mode}] rho={e['mean_spearman']} "
+            pc = e["paper_convention"]
+            a1 = pc["A1_bootstrap"]
+            print(f"{m} [{mode}] rho={pc['mean_spearman']} (n={pc['n_videos_scored']}, "
+                  f"strict={e['strict_convention']['mean_spearman']}) "
                   f"naiveCI={a1['naive']['ci95']} creatorCI={a1['creator']['ci95']} "
                   f"(x{a1['creator']['width_ratio_vs_naive']}) "
                   f"pairacc={e['A4_pairwise']['pooled_acc']}")

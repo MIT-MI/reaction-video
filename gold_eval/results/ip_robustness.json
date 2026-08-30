@@ -31,1182 +31,2391 @@
       "min_raters": 3,
       "min_spread": 0.25
     },
-    "convention": "per-video Spearman vs consensus mean; unparsed and all-tied predictions dropped (score_ranking default)"
+    "conventions": {
+      "paper_convention": "PRIMARY. tied_as_zero: per-video Spearman vs consensus mean; all-tied parsed predictions credited rho=0; unparsed/missing dropped (NOT zero-imputed). Reproduces every paper Table-2 rho (joint AND indep) to 3 decimals \u2014 see paper_table2_verification.",
+      "strict_convention": "SECONDARY. score_ranking pre-registered default: all-tied predictions dropped (rho undefined)."
+    }
+  },
+  "paper_table2_verification": {
+    "joint/gemini-3.7-flash": {
+      "paper": 0.176,
+      "recomputed": 0.17552,
+      "match_3dp": true
+    },
+    "joint/gpt-5": {
+      "paper": 0.026,
+      "recomputed": 0.02616,
+      "match_3dp": true
+    },
+    "joint/tinker_Qwen_Qwen3.5-397B-A17B": {
+      "paper": 0.065,
+      "recomputed": 0.06461,
+      "match_3dp": true
+    },
+    "joint/tinker_Qwen_Qwen3.5-9B": {
+      "paper": 0.029,
+      "recomputed": 0.02944,
+      "match_3dp": true
+    },
+    "joint/tinker_Qwen_Qwen3.6-27B": {
+      "paper": 0.163,
+      "recomputed": 0.16344,
+      "match_3dp": true
+    },
+    "joint/tinker_Qwen_Qwen3.6-35B-A3B": {
+      "paper": 0.043,
+      "recomputed": 0.04325,
+      "match_3dp": true
+    },
+    "joint/tinker_moonshotai_Kimi-K2.6": {
+      "paper": 0.086,
+      "recomputed": 0.08637,
+      "match_3dp": true
+    },
+    "indep/gemini-3.7-flash": {
+      "paper": 0.316,
+      "recomputed": 0.31637,
+      "match_3dp": true
+    },
+    "indep/gpt-5": {
+      "paper": 0.177,
+      "recomputed": 0.17703,
+      "match_3dp": true
+    },
+    "indep/tinker_Qwen_Qwen3.5-397B-A17B": {
+      "paper": 0.267,
+      "recomputed": 0.2665,
+      "match_3dp": true
+    },
+    "indep/tinker_Qwen_Qwen3.5-9B": {
+      "paper": 0.255,
+      "recomputed": 0.25515,
+      "match_3dp": true
+    },
+    "indep/tinker_Qwen_Qwen3.6-27B": {
+      "paper": 0.329,
+      "recomputed": 0.32911,
+      "match_3dp": true
+    },
+    "indep/tinker_Qwen_Qwen3.6-35B-A3B": {
+      "paper": 0.21,
+      "recomputed": 0.21041,
+      "match_3dp": true
+    },
+    "indep/tinker_moonshotai_Kimi-K2.6": {
+      "paper": 0.233,
+      "recomputed": 0.23308,
+      "match_3dp": true
+    }
   },
   "models": {
     "gemini-3.7-flash": {
       "joint": {
-        "mean_spearman": 0.1755,
-        "n_videos_scored": 249,
-        "A1_bootstrap": {
-          "n_units": 249,
-          "naive": {
-            "mean": 0.1755,
-            "ci95": [
-              0.067,
-              0.282
-            ],
-            "ci_width": 0.215
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              0.1119,
-              0.2327
-            ],
-            "ci_width": 0.1208,
-            "width_ratio_vs_naive": 0.5619
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              0.1225,
-              0.2253
-            ],
-            "ci_width": 0.1028,
-            "width_ratio_vs_naive": 0.4781
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.1755,
-            "holdout_means": {
-              "CineBinge_person1": 0.2065,
-              "CineBinge_person2": 0.1751,
-              "KAI ZAMMIT": 0.1745,
-              "Magic Magy_person1": 0.1717,
-              "Magic Magy_person2": 0.1527,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1759,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1728
+        "paper_convention": {
+          "mean_spearman": 0.1755,
+          "n_videos_scored": 249,
+          "A1_bootstrap": {
+            "n_units": 249,
+            "naive": {
+              "mean": 0.1755,
+              "ci95": [
+                0.067,
+                0.282
+              ],
+              "ci_width": 0.215
             },
-            "min": 0.1527,
-            "max": 0.2065,
-            "range": 0.0538
-          },
-          "channel": {
-            "full_mean": 0.1755,
-            "holdout_means": {
-              "CineBinge": 0.2163,
-              "KAI ZAMMIT": 0.1745,
-              "Magic Magy": 0.1401,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1759,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1728
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.1119,
+                0.2327
+              ],
+              "ci_width": 0.1208,
+              "width_ratio_vs_naive": 0.5619
             },
-            "min": 0.1401,
-            "max": 0.2163,
-            "range": 0.0762
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.1225,
+                0.2253
+              ],
+              "ci_width": 0.1028,
+              "width_ratio_vs_naive": 0.4781
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.1755,
+              "holdout_means": {
+                "CineBinge_person1": 0.2065,
+                "CineBinge_person2": 0.1751,
+                "KAI ZAMMIT": 0.1745,
+                "Magic Magy_person1": 0.1717,
+                "Magic Magy_person2": 0.1527,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1759,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1728
+              },
+              "min": 0.1527,
+              "max": 0.2065,
+              "range": 0.0538
+            },
+            "channel": {
+              "full_mean": 0.1755,
+              "holdout_means": {
+                "CineBinge": 0.2163,
+                "KAI ZAMMIT": 0.1745,
+                "Magic Magy": 0.1401,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1759,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1728
+              },
+              "min": 0.1401,
+              "max": 0.2163,
+              "range": 0.0762
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.1724
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.2139
+            },
+            "4+": {
+              "n": 28,
+              "mean": 0.0874
+            }
+          },
+          "n_all_tied_as_zero": 0
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 145,
-            "mean": 0.1724
+        "strict_convention": {
+          "mean_spearman": 0.1755,
+          "n_videos_scored": 249,
+          "A1_bootstrap": {
+            "n_units": 249,
+            "naive": {
+              "mean": 0.1755,
+              "ci95": [
+                0.067,
+                0.282
+              ],
+              "ci_width": 0.215
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.1119,
+                0.2327
+              ],
+              "ci_width": 0.1208,
+              "width_ratio_vs_naive": 0.5619
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.1225,
+                0.2253
+              ],
+              "ci_width": 0.1028,
+              "width_ratio_vs_naive": 0.4781
+            }
           },
-          "3": {
-            "n": 76,
-            "mean": 0.2139
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.1755,
+              "holdout_means": {
+                "CineBinge_person1": 0.2065,
+                "CineBinge_person2": 0.1751,
+                "KAI ZAMMIT": 0.1745,
+                "Magic Magy_person1": 0.1717,
+                "Magic Magy_person2": 0.1527,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1759,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1728
+              },
+              "min": 0.1527,
+              "max": 0.2065,
+              "range": 0.0538
+            },
+            "channel": {
+              "full_mean": 0.1755,
+              "holdout_means": {
+                "CineBinge": 0.2163,
+                "KAI ZAMMIT": 0.1745,
+                "Magic Magy": 0.1401,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1759,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1728
+              },
+              "min": 0.1401,
+              "max": 0.2163,
+              "range": 0.0762
+            }
           },
-          "4+": {
-            "n": 28,
-            "mean": 0.0874
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.1724
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.2139
+            },
+            "4+": {
+              "n": 28,
+              "mean": 0.0874
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 474,
           "pooled_acc": 0.5854,
           "n_videos": 249,
-          "video_equal_weight_acc": 0.5896
+          "video_equal_weight_acc": 0.5896,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       },
       "indep": {
-        "mean_spearman": 0.3282,
-        "n_videos_scored": 241,
-        "A1_bootstrap": {
-          "n_units": 241,
-          "naive": {
-            "mean": 0.3282,
-            "ci95": [
-              0.224,
-              0.4298
-            ],
-            "ci_width": 0.2058
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              0.2525,
-              0.4135
-            ],
-            "ci_width": 0.161,
-            "width_ratio_vs_naive": 0.7823
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              0.2747,
-              0.4597
-            ],
-            "ci_width": 0.1851,
-            "width_ratio_vs_naive": 0.8994
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.3282,
-            "holdout_means": {
-              "CineBinge_person1": 0.3203,
-              "CineBinge_person2": 0.3692,
-              "KAI ZAMMIT": 0.3072,
-              "Magic Magy_person1": 0.3212,
-              "Magic Magy_person2": 0.3315,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3307,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.321
+        "paper_convention": {
+          "mean_spearman": 0.3164,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.3164,
+              "ci95": [
+                0.2163,
+                0.4158
+              ],
+              "ci_width": 0.1995
             },
-            "min": 0.3072,
-            "max": 0.3692,
-            "range": 0.062
-          },
-          "channel": {
-            "full_mean": 0.3282,
-            "holdout_means": {
-              "CineBinge": 0.3715,
-              "KAI ZAMMIT": 0.3072,
-              "Magic Magy": 0.3234,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3307,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.321
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.2428,
+                0.4018
+              ],
+              "ci_width": 0.159,
+              "width_ratio_vs_naive": 0.797
             },
-            "min": 0.3072,
-            "max": 0.3715,
-            "range": 0.0643
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.2611,
+                0.4597
+              ],
+              "ci_width": 0.1986,
+              "width_ratio_vs_naive": 0.9955
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.3164,
+              "holdout_means": {
+                "CineBinge_person1": 0.3123,
+                "CineBinge_person2": 0.3563,
+                "KAI ZAMMIT": 0.2954,
+                "Magic Magy_person1": 0.3084,
+                "Magic Magy_person2": 0.3199,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3184,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3081
+              },
+              "min": 0.2954,
+              "max": 0.3563,
+              "range": 0.0609
+            },
+            "channel": {
+              "full_mean": 0.3164,
+              "holdout_means": {
+                "CineBinge": 0.3641,
+                "KAI ZAMMIT": 0.2954,
+                "Magic Magy": 0.3105,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3184,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3081
+              },
+              "min": 0.2954,
+              "max": 0.3641,
+              "range": 0.0687
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.3172
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.3542
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.2129
+            }
+          },
+          "n_all_tied_as_zero": 9
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 136,
-            "mean": 0.3382
+        "strict_convention": {
+          "mean_spearman": 0.3282,
+          "n_videos_scored": 241,
+          "A1_bootstrap": {
+            "n_units": 241,
+            "naive": {
+              "mean": 0.3282,
+              "ci95": [
+                0.224,
+                0.4298
+              ],
+              "ci_width": 0.2058
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.2525,
+                0.4135
+              ],
+              "ci_width": 0.161,
+              "width_ratio_vs_naive": 0.7823
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.2747,
+                0.4597
+              ],
+              "ci_width": 0.1851,
+              "width_ratio_vs_naive": 0.8994
+            }
           },
-          "3": {
-            "n": 76,
-            "mean": 0.3542
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.3282,
+              "holdout_means": {
+                "CineBinge_person1": 0.3203,
+                "CineBinge_person2": 0.3692,
+                "KAI ZAMMIT": 0.3072,
+                "Magic Magy_person1": 0.3212,
+                "Magic Magy_person2": 0.3315,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3307,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.321
+              },
+              "min": 0.3072,
+              "max": 0.3692,
+              "range": 0.062
+            },
+            "channel": {
+              "full_mean": 0.3282,
+              "holdout_means": {
+                "CineBinge": 0.3715,
+                "KAI ZAMMIT": 0.3072,
+                "Magic Magy": 0.3234,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3307,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.321
+              },
+              "min": 0.3072,
+              "max": 0.3715,
+              "range": 0.0643
+            }
           },
-          "4+": {
-            "n": 29,
-            "mean": 0.2129
+          "A3_by_n_moments": {
+            "2": {
+              "n": 136,
+              "mean": 0.3382
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.3542
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.2129
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.6447,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.6588
+          "video_equal_weight_acc": 0.6588,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       }
     },
     "gpt-5": {
       "joint": {
-        "mean_spearman": 0.0262,
-        "n_videos_scored": 250,
-        "A1_bootstrap": {
-          "n_units": 250,
-          "naive": {
-            "mean": 0.0262,
-            "ci95": [
-              -0.0828,
-              0.1353
-            ],
-            "ci_width": 0.2181
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              -0.0351,
-              0.092
-            ],
-            "ci_width": 0.127,
-            "width_ratio_vs_naive": 0.5823
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              -0.0526,
-              0.1184
-            ],
-            "ci_width": 0.1709,
-            "width_ratio_vs_naive": 0.7836
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.0262,
-            "holdout_means": {
-              "CineBinge_person1": 0.0265,
-              "CineBinge_person2": 0.0427,
-              "KAI ZAMMIT": 0.0437,
-              "Magic Magy_person1": 0.0097,
-              "Magic Magy_person2": 0.0319,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0126,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.017
+        "paper_convention": {
+          "mean_spearman": 0.0262,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.0262,
+              "ci95": [
+                -0.0828,
+                0.1353
+              ],
+              "ci_width": 0.2181
             },
-            "min": 0.0097,
-            "max": 0.0437,
-            "range": 0.034
-          },
-          "channel": {
-            "full_mean": 0.0262,
-            "holdout_means": {
-              "CineBinge": 0.0487,
-              "KAI ZAMMIT": 0.0437,
-              "Magic Magy": 0.0118,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0126,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.017
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                -0.0351,
+                0.092
+              ],
+              "ci_width": 0.127,
+              "width_ratio_vs_naive": 0.5823
             },
-            "min": 0.0118,
-            "max": 0.0487,
-            "range": 0.0369
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                -0.0526,
+                0.1184
+              ],
+              "ci_width": 0.1709,
+              "width_ratio_vs_naive": 0.7836
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.0262,
+              "holdout_means": {
+                "CineBinge_person1": 0.0265,
+                "CineBinge_person2": 0.0427,
+                "KAI ZAMMIT": 0.0437,
+                "Magic Magy_person1": 0.0097,
+                "Magic Magy_person2": 0.0319,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0126,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.017
+              },
+              "min": 0.0097,
+              "max": 0.0437,
+              "range": 0.034
+            },
+            "channel": {
+              "full_mean": 0.0262,
+              "holdout_means": {
+                "CineBinge": 0.0487,
+                "KAI ZAMMIT": 0.0437,
+                "Magic Magy": 0.0118,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0126,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.017
+              },
+              "min": 0.0118,
+              "max": 0.0487,
+              "range": 0.0369
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": -0.0345
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.0534
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.2579
+            }
+          },
+          "n_all_tied_as_zero": 0
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 145,
-            "mean": -0.0345
+        "strict_convention": {
+          "mean_spearman": 0.0262,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.0262,
+              "ci95": [
+                -0.0828,
+                0.1353
+              ],
+              "ci_width": 0.2181
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                -0.0351,
+                0.092
+              ],
+              "ci_width": 0.127,
+              "width_ratio_vs_naive": 0.5823
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                -0.0526,
+                0.1184
+              ],
+              "ci_width": 0.1709,
+              "width_ratio_vs_naive": 0.7836
+            }
           },
-          "3": {
-            "n": 76,
-            "mean": 0.0534
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.0262,
+              "holdout_means": {
+                "CineBinge_person1": 0.0265,
+                "CineBinge_person2": 0.0427,
+                "KAI ZAMMIT": 0.0437,
+                "Magic Magy_person1": 0.0097,
+                "Magic Magy_person2": 0.0319,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0126,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.017
+              },
+              "min": 0.0097,
+              "max": 0.0437,
+              "range": 0.034
+            },
+            "channel": {
+              "full_mean": 0.0262,
+              "holdout_means": {
+                "CineBinge": 0.0487,
+                "KAI ZAMMIT": 0.0437,
+                "Magic Magy": 0.0118,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0126,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.017
+              },
+              "min": 0.0118,
+              "max": 0.0487,
+              "range": 0.0369
+            }
           },
-          "4+": {
-            "n": 29,
-            "mean": 0.2579
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": -0.0345
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.0534
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.2579
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.5493,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.5175
+          "video_equal_weight_acc": 0.5175,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       },
       "indep": {
-        "mean_spearman": 0.2039,
-        "n_videos_scored": 217,
-        "A1_bootstrap": {
-          "n_units": 217,
-          "naive": {
-            "mean": 0.2039,
-            "ci95": [
-              0.0888,
-              0.318
-            ],
-            "ci_width": 0.2292
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              0.0899,
-              0.3268
-            ],
-            "ci_width": 0.237,
-            "width_ratio_vs_naive": 1.034
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              0.0984,
-              0.3647
-            ],
-            "ci_width": 0.2663,
-            "width_ratio_vs_naive": 1.1619
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.2039,
-            "holdout_means": {
-              "CineBinge_person1": 0.2063,
-              "CineBinge_person2": 0.2612,
-              "KAI ZAMMIT": 0.1734,
-              "Magic Magy_person1": 0.2045,
-              "Magic Magy_person2": 0.1793,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2093,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1975
+        "paper_convention": {
+          "mean_spearman": 0.177,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.177,
+              "ci95": [
+                0.0772,
+                0.2737
+              ],
+              "ci_width": 0.1965
             },
-            "min": 0.1734,
-            "max": 0.2612,
-            "range": 0.0878
-          },
-          "channel": {
-            "full_mean": 0.2039,
-            "holdout_means": {
-              "CineBinge": 0.2826,
-              "KAI ZAMMIT": 0.1734,
-              "Magic Magy": 0.1717,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2093,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1975
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.0762,
+                0.2889
+              ],
+              "ci_width": 0.2127,
+              "width_ratio_vs_naive": 1.0824
             },
-            "min": 0.1717,
-            "max": 0.2826,
-            "range": 0.1109
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.0846,
+                0.3461
+              ],
+              "ci_width": 0.2615,
+              "width_ratio_vs_naive": 1.3308
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.177,
+              "holdout_means": {
+                "CineBinge_person1": 0.1795,
+                "CineBinge_person2": 0.2312,
+                "KAI ZAMMIT": 0.1505,
+                "Magic Magy_person1": 0.1769,
+                "Magic Magy_person2": 0.1569,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1806,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1685
+              },
+              "min": 0.1505,
+              "max": 0.2312,
+              "range": 0.0807
+            },
+            "channel": {
+              "full_mean": 0.177,
+              "holdout_means": {
+                "CineBinge": 0.2525,
+                "KAI ZAMMIT": 0.1505,
+                "Magic Magy": 0.15,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1806,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1685
+              },
+              "min": 0.15,
+              "max": 0.2525,
+              "range": 0.1025
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.131
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.2446
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.2299
+            }
+          },
+          "n_all_tied_as_zero": 33
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 119,
-            "mean": 0.1597
+        "strict_convention": {
+          "mean_spearman": 0.2039,
+          "n_videos_scored": 217,
+          "A1_bootstrap": {
+            "n_units": 217,
+            "naive": {
+              "mean": 0.2039,
+              "ci95": [
+                0.0888,
+                0.318
+              ],
+              "ci_width": 0.2292
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.0899,
+                0.3268
+              ],
+              "ci_width": 0.237,
+              "width_ratio_vs_naive": 1.034
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.0984,
+                0.3647
+              ],
+              "ci_width": 0.2663,
+              "width_ratio_vs_naive": 1.1619
+            }
           },
-          "3": {
-            "n": 69,
-            "mean": 0.2694
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.2039,
+              "holdout_means": {
+                "CineBinge_person1": 0.2063,
+                "CineBinge_person2": 0.2612,
+                "KAI ZAMMIT": 0.1734,
+                "Magic Magy_person1": 0.2045,
+                "Magic Magy_person2": 0.1793,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2093,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1975
+              },
+              "min": 0.1734,
+              "max": 0.2612,
+              "range": 0.0878
+            },
+            "channel": {
+              "full_mean": 0.2039,
+              "holdout_means": {
+                "CineBinge": 0.2826,
+                "KAI ZAMMIT": 0.1734,
+                "Magic Magy": 0.1717,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2093,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1975
+              },
+              "min": 0.1717,
+              "max": 0.2826,
+              "range": 0.1109
+            }
           },
-          "4+": {
-            "n": 29,
-            "mean": 0.2299
+          "A3_by_n_moments": {
+            "2": {
+              "n": 119,
+              "mean": 0.1597
+            },
+            "3": {
+              "n": 69,
+              "mean": 0.2694
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.2299
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.5933,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.5887
+          "video_equal_weight_acc": 0.5887,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       }
     },
     "tinker_Qwen_Qwen3.5-397B-A17B": {
       "joint": {
-        "mean_spearman": 0.0646,
-        "n_videos_scored": 250,
-        "A1_bootstrap": {
-          "n_units": 250,
-          "naive": {
-            "mean": 0.0646,
-            "ci95": [
-              -0.0444,
-              0.173
-            ],
-            "ci_width": 0.2174
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              -0.0641,
-              0.2131
-            ],
-            "ci_width": 0.2772,
-            "width_ratio_vs_naive": 1.2751
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              -0.0592,
-              0.2495
-            ],
-            "ci_width": 0.3087,
-            "width_ratio_vs_naive": 1.42
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.0646,
-            "holdout_means": {
-              "CineBinge_person1": 0.0703,
-              "CineBinge_person2": 0.0837,
-              "KAI ZAMMIT": 0.0952,
-              "Magic Magy_person1": 0.0193,
-              "Magic Magy_person2": 0.106,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0385,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0421
+        "paper_convention": {
+          "mean_spearman": 0.0646,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.0646,
+              "ci95": [
+                -0.0444,
+                0.173
+              ],
+              "ci_width": 0.2174
             },
-            "min": 0.0193,
-            "max": 0.106,
-            "range": 0.0867
-          },
-          "channel": {
-            "full_mean": 0.0646,
-            "holdout_means": {
-              "CineBinge": 0.0977,
-              "KAI ZAMMIT": 0.0952,
-              "Magic Magy": 0.0594,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0385,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0421
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                -0.0641,
+                0.2131
+              ],
+              "ci_width": 0.2772,
+              "width_ratio_vs_naive": 1.2751
             },
-            "min": 0.0385,
-            "max": 0.0977,
-            "range": 0.0592
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                -0.0592,
+                0.2495
+              ],
+              "ci_width": 0.3087,
+              "width_ratio_vs_naive": 1.42
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.0646,
+              "holdout_means": {
+                "CineBinge_person1": 0.0703,
+                "CineBinge_person2": 0.0837,
+                "KAI ZAMMIT": 0.0952,
+                "Magic Magy_person1": 0.0193,
+                "Magic Magy_person2": 0.106,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0385,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0421
+              },
+              "min": 0.0193,
+              "max": 0.106,
+              "range": 0.0867
+            },
+            "channel": {
+              "full_mean": 0.0646,
+              "holdout_means": {
+                "CineBinge": 0.0977,
+                "KAI ZAMMIT": 0.0952,
+                "Magic Magy": 0.0594,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0385,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0421
+              },
+              "min": 0.0385,
+              "max": 0.0977,
+              "range": 0.0592
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": -0.0483
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.2438
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.1595
+            }
+          },
+          "n_all_tied_as_zero": 0
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 145,
-            "mean": -0.0483
+        "strict_convention": {
+          "mean_spearman": 0.0646,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.0646,
+              "ci95": [
+                -0.0444,
+                0.173
+              ],
+              "ci_width": 0.2174
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                -0.0641,
+                0.2131
+              ],
+              "ci_width": 0.2772,
+              "width_ratio_vs_naive": 1.2751
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                -0.0592,
+                0.2495
+              ],
+              "ci_width": 0.3087,
+              "width_ratio_vs_naive": 1.42
+            }
           },
-          "3": {
-            "n": 76,
-            "mean": 0.2438
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.0646,
+              "holdout_means": {
+                "CineBinge_person1": 0.0703,
+                "CineBinge_person2": 0.0837,
+                "KAI ZAMMIT": 0.0952,
+                "Magic Magy_person1": 0.0193,
+                "Magic Magy_person2": 0.106,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0385,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0421
+              },
+              "min": 0.0193,
+              "max": 0.106,
+              "range": 0.0867
+            },
+            "channel": {
+              "full_mean": 0.0646,
+              "holdout_means": {
+                "CineBinge": 0.0977,
+                "KAI ZAMMIT": 0.0952,
+                "Magic Magy": 0.0594,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0385,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0421
+              },
+              "min": 0.0385,
+              "max": 0.0977,
+              "range": 0.0592
+            }
           },
-          "4+": {
-            "n": 29,
-            "mean": 0.1595
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": -0.0483
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.2438
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.1595
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.5639,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.5307
+          "video_equal_weight_acc": 0.5307,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       },
       "indep": {
-        "mean_spearman": 0.3309,
-        "n_videos_scored": 182,
-        "A1_bootstrap": {
-          "n_units": 182,
-          "naive": {
-            "mean": 0.3309,
-            "ci95": [
-              0.2146,
-              0.4444
-            ],
-            "ci_width": 0.2298
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              0.2419,
-              0.4446
-            ],
-            "ci_width": 0.2027,
-            "width_ratio_vs_naive": 0.8821
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              0.2909,
-              0.5157
-            ],
-            "ci_width": 0.2248,
-            "width_ratio_vs_naive": 0.9782
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.3309,
-            "holdout_means": {
-              "CineBinge_person1": 0.3107,
-              "CineBinge_person2": 0.3846,
-              "KAI ZAMMIT": 0.3153,
-              "Magic Magy_person1": 0.3501,
-              "Magic Magy_person2": 0.3174,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3248,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3216
+        "paper_convention": {
+          "mean_spearman": 0.2665,
+          "n_videos_scored": 226,
+          "A1_bootstrap": {
+            "n_units": 226,
+            "naive": {
+              "mean": 0.2665,
+              "ci95": [
+                0.1702,
+                0.3609
+              ],
+              "ci_width": 0.1907
             },
-            "min": 0.3107,
-            "max": 0.3846,
-            "range": 0.0739
-          },
-          "channel": {
-            "full_mean": 0.3309,
-            "holdout_means": {
-              "CineBinge": 0.3767,
-              "KAI ZAMMIT": 0.3153,
-              "Magic Magy": 0.3371,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3248,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3216
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.204,
+                0.3383
+              ],
+              "ci_width": 0.1343,
+              "width_ratio_vs_naive": 0.7042
             },
-            "min": 0.3153,
-            "max": 0.3767,
-            "range": 0.0614
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.237,
+                0.3887
+              ],
+              "ci_width": 0.1517,
+              "width_ratio_vs_naive": 0.7955
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.2665,
+              "holdout_means": {
+                "CineBinge_person1": 0.2525,
+                "CineBinge_person2": 0.3021,
+                "KAI ZAMMIT": 0.2522,
+                "Magic Magy_person1": 0.2744,
+                "Magic Magy_person2": 0.2625,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.265,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2608
+              },
+              "min": 0.2522,
+              "max": 0.3021,
+              "range": 0.0499
+            },
+            "channel": {
+              "full_mean": 0.2665,
+              "holdout_means": {
+                "CineBinge": 0.2966,
+                "KAI ZAMMIT": 0.2522,
+                "Magic Magy": 0.2715,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.265,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2608
+              },
+              "min": 0.2522,
+              "max": 0.2966,
+              "range": 0.0444
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 134,
+              "mean": 0.2164
+            },
+            "3": {
+              "n": 67,
+              "mean": 0.3914
+            },
+            "4+": {
+              "n": 25,
+              "mean": 0.2003
+            }
+          },
+          "n_all_tied_as_zero": 44
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 95,
-            "mean": 0.3053
+        "strict_convention": {
+          "mean_spearman": 0.3309,
+          "n_videos_scored": 182,
+          "A1_bootstrap": {
+            "n_units": 182,
+            "naive": {
+              "mean": 0.3309,
+              "ci95": [
+                0.2146,
+                0.4444
+              ],
+              "ci_width": 0.2298
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.2419,
+                0.4446
+              ],
+              "ci_width": 0.2027,
+              "width_ratio_vs_naive": 0.8821
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.2909,
+                0.5157
+              ],
+              "ci_width": 0.2248,
+              "width_ratio_vs_naive": 0.9782
+            }
           },
-          "3": {
-            "n": 64,
-            "mean": 0.4097
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.3309,
+              "holdout_means": {
+                "CineBinge_person1": 0.3107,
+                "CineBinge_person2": 0.3846,
+                "KAI ZAMMIT": 0.3153,
+                "Magic Magy_person1": 0.3501,
+                "Magic Magy_person2": 0.3174,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3248,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3216
+              },
+              "min": 0.3107,
+              "max": 0.3846,
+              "range": 0.0739
+            },
+            "channel": {
+              "full_mean": 0.3309,
+              "holdout_means": {
+                "CineBinge": 0.3767,
+                "KAI ZAMMIT": 0.3153,
+                "Magic Magy": 0.3371,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3248,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3216
+              },
+              "min": 0.3153,
+              "max": 0.3767,
+              "range": 0.0614
+            }
           },
-          "4+": {
-            "n": 23,
-            "mean": 0.2177
+          "A3_by_n_moments": {
+            "2": {
+              "n": 95,
+              "mean": 0.3053
+            },
+            "3": {
+              "n": 64,
+              "mean": 0.4097
+            },
+            "4+": {
+              "n": 23,
+              "mean": 0.2177
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 422,
           "pooled_acc": 0.6315,
           "n_videos": 226,
-          "video_equal_weight_acc": 0.6327
+          "video_equal_weight_acc": 0.6327,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       }
     },
     "tinker_Qwen_Qwen3.5-9B": {
       "joint": {
-        "mean_spearman": 0.0294,
-        "n_videos_scored": 250,
-        "A1_bootstrap": {
-          "n_units": 250,
-          "naive": {
-            "mean": 0.0294,
-            "ci95": [
-              -0.0799,
-              0.1366
-            ],
-            "ci_width": 0.2165
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              -0.0211,
-              0.0924
-            ],
-            "ci_width": 0.1135,
-            "width_ratio_vs_naive": 0.5242
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              -0.005,
-              0.0931
-            ],
-            "ci_width": 0.0981,
-            "width_ratio_vs_naive": 0.4531
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.0294,
-            "holdout_means": {
-              "CineBinge_person1": 0.0086,
-              "CineBinge_person2": 0.0413,
-              "KAI ZAMMIT": 0.0334,
-              "Magic Magy_person1": 0.0267,
-              "Magic Magy_person2": 0.05,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0186,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0291
+        "paper_convention": {
+          "mean_spearman": 0.0294,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.0294,
+              "ci95": [
+                -0.0799,
+                0.1366
+              ],
+              "ci_width": 0.2165
             },
-            "min": 0.0086,
-            "max": 0.05,
-            "range": 0.0414
-          },
-          "channel": {
-            "full_mean": 0.0294,
-            "holdout_means": {
-              "CineBinge": 0.0175,
-              "KAI ZAMMIT": 0.0334,
-              "Magic Magy": 0.0531,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0186,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0291
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                -0.0211,
+                0.0924
+              ],
+              "ci_width": 0.1135,
+              "width_ratio_vs_naive": 0.5242
             },
-            "min": 0.0175,
-            "max": 0.0531,
-            "range": 0.0356
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                -0.005,
+                0.0931
+              ],
+              "ci_width": 0.0981,
+              "width_ratio_vs_naive": 0.4531
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.0294,
+              "holdout_means": {
+                "CineBinge_person1": 0.0086,
+                "CineBinge_person2": 0.0413,
+                "KAI ZAMMIT": 0.0334,
+                "Magic Magy_person1": 0.0267,
+                "Magic Magy_person2": 0.05,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0186,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0291
+              },
+              "min": 0.0086,
+              "max": 0.05,
+              "range": 0.0414
+            },
+            "channel": {
+              "full_mean": 0.0294,
+              "holdout_means": {
+                "CineBinge": 0.0175,
+                "KAI ZAMMIT": 0.0334,
+                "Magic Magy": 0.0531,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0186,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0291
+              },
+              "min": 0.0175,
+              "max": 0.0531,
+              "range": 0.0356
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": -0.0207
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.0298
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.279
+            }
+          },
+          "n_all_tied_as_zero": 0
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 145,
-            "mean": -0.0207
+        "strict_convention": {
+          "mean_spearman": 0.0294,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.0294,
+              "ci95": [
+                -0.0799,
+                0.1366
+              ],
+              "ci_width": 0.2165
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                -0.0211,
+                0.0924
+              ],
+              "ci_width": 0.1135,
+              "width_ratio_vs_naive": 0.5242
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                -0.005,
+                0.0931
+              ],
+              "ci_width": 0.0981,
+              "width_ratio_vs_naive": 0.4531
+            }
           },
-          "3": {
-            "n": 76,
-            "mean": 0.0298
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.0294,
+              "holdout_means": {
+                "CineBinge_person1": 0.0086,
+                "CineBinge_person2": 0.0413,
+                "KAI ZAMMIT": 0.0334,
+                "Magic Magy_person1": 0.0267,
+                "Magic Magy_person2": 0.05,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0186,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0291
+              },
+              "min": 0.0086,
+              "max": 0.05,
+              "range": 0.0414
+            },
+            "channel": {
+              "full_mean": 0.0294,
+              "holdout_means": {
+                "CineBinge": 0.0175,
+                "KAI ZAMMIT": 0.0334,
+                "Magic Magy": 0.0531,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0186,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0291
+              },
+              "min": 0.0175,
+              "max": 0.0531,
+              "range": 0.0356
+            }
           },
-          "4+": {
-            "n": 29,
-            "mean": 0.279
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": -0.0207
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.0298
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.279
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.5335,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.5137
+          "video_equal_weight_acc": 0.5137,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       },
       "indep": {
-        "mean_spearman": 0.334,
-        "n_videos_scored": 191,
-        "A1_bootstrap": {
-          "n_units": 191,
-          "naive": {
-            "mean": 0.334,
-            "ci95": [
-              0.216,
-              0.4482
-            ],
-            "ci_width": 0.2322
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              0.2547,
-              0.4604
-            ],
-            "ci_width": 0.2057,
-            "width_ratio_vs_naive": 0.8859
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              0.282,
-              0.5978
-            ],
-            "ci_width": 0.3158,
-            "width_ratio_vs_naive": 1.36
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.334,
-            "holdout_means": {
-              "CineBinge_person1": 0.3479,
-              "CineBinge_person2": 0.3525,
-              "KAI ZAMMIT": 0.3291,
-              "Magic Magy_person1": 0.3761,
-              "Magic Magy_person2": 0.3144,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3195,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3064
+        "paper_convention": {
+          "mean_spearman": 0.2551,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.2551,
+              "ci95": [
+                0.164,
+                0.3425
+              ],
+              "ci_width": 0.1785
             },
-            "min": 0.3064,
-            "max": 0.3761,
-            "range": 0.0697
-          },
-          "channel": {
-            "full_mean": 0.334,
-            "holdout_means": {
-              "CineBinge": 0.3758,
-              "KAI ZAMMIT": 0.3291,
-              "Magic Magy": 0.3643,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3195,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3064
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.1958,
+                0.3437
+              ],
+              "ci_width": 0.1479,
+              "width_ratio_vs_naive": 0.8286
             },
-            "min": 0.3064,
-            "max": 0.3758,
-            "range": 0.0694
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.2048,
+                0.427
+              ],
+              "ci_width": 0.2222,
+              "width_ratio_vs_naive": 1.2448
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.2551,
+              "holdout_means": {
+                "CineBinge_person1": 0.2749,
+                "CineBinge_person2": 0.2714,
+                "KAI ZAMMIT": 0.2462,
+                "Magic Magy_person1": 0.2783,
+                "Magic Magy_person2": 0.2374,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2466,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2369
+              },
+              "min": 0.2369,
+              "max": 0.2783,
+              "range": 0.0414
+            },
+            "channel": {
+              "full_mean": 0.2551,
+              "holdout_means": {
+                "CineBinge": 0.3031,
+                "KAI ZAMMIT": 0.2462,
+                "Magic Magy": 0.2623,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2466,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2369
+              },
+              "min": 0.2369,
+              "max": 0.3031,
+              "range": 0.0662
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.2345
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.3078
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.2205
+            }
+          },
+          "n_all_tied_as_zero": 59
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 100,
-            "mean": 0.34
+        "strict_convention": {
+          "mean_spearman": 0.334,
+          "n_videos_scored": 191,
+          "A1_bootstrap": {
+            "n_units": 191,
+            "naive": {
+              "mean": 0.334,
+              "ci95": [
+                0.216,
+                0.4482
+              ],
+              "ci_width": 0.2322
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.2547,
+                0.4604
+              ],
+              "ci_width": 0.2057,
+              "width_ratio_vs_naive": 0.8859
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.282,
+                0.5978
+              ],
+              "ci_width": 0.3158,
+              "width_ratio_vs_naive": 1.36
+            }
           },
-          "3": {
-            "n": 66,
-            "mean": 0.3544
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.334,
+              "holdout_means": {
+                "CineBinge_person1": 0.3479,
+                "CineBinge_person2": 0.3525,
+                "KAI ZAMMIT": 0.3291,
+                "Magic Magy_person1": 0.3761,
+                "Magic Magy_person2": 0.3144,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3195,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3064
+              },
+              "min": 0.3064,
+              "max": 0.3761,
+              "range": 0.0697
+            },
+            "channel": {
+              "full_mean": 0.334,
+              "holdout_means": {
+                "CineBinge": 0.3758,
+                "KAI ZAMMIT": 0.3291,
+                "Magic Magy": 0.3643,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3195,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3064
+              },
+              "min": 0.3064,
+              "max": 0.3758,
+              "range": 0.0694
+            }
           },
-          "4+": {
-            "n": 25,
-            "mean": 0.2558
+          "A3_by_n_moments": {
+            "2": {
+              "n": 100,
+              "mean": 0.34
+            },
+            "3": {
+              "n": 66,
+              "mean": 0.3544
+            },
+            "4+": {
+              "n": 25,
+              "mean": 0.2558
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.6184,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.6262
+          "video_equal_weight_acc": 0.6262,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       }
     },
     "tinker_Qwen_Qwen3.6-27B": {
       "joint": {
-        "mean_spearman": 0.1634,
-        "n_videos_scored": 250,
-        "A1_bootstrap": {
-          "n_units": 250,
-          "naive": {
-            "mean": 0.1634,
-            "ci95": [
-              0.0574,
-              0.2721
-            ],
-            "ci_width": 0.2147
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              0.0933,
-              0.2571
-            ],
-            "ci_width": 0.1637,
-            "width_ratio_vs_naive": 0.7625
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              0.0829,
-              0.2487
-            ],
-            "ci_width": 0.1658,
-            "width_ratio_vs_naive": 0.7722
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.1634,
-            "holdout_means": {
-              "CineBinge_person1": 0.1802,
-              "CineBinge_person2": 0.1795,
-              "KAI ZAMMIT": 0.1738,
-              "Magic Magy_person1": 0.1188,
-              "Magic Magy_person2": 0.1677,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1529,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1707
+        "paper_convention": {
+          "mean_spearman": 0.1634,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.1634,
+              "ci95": [
+                0.0574,
+                0.2721
+              ],
+              "ci_width": 0.2147
             },
-            "min": 0.1188,
-            "max": 0.1802,
-            "range": 0.0614
-          },
-          "channel": {
-            "full_mean": 0.1634,
-            "holdout_means": {
-              "CineBinge": 0.2071,
-              "KAI ZAMMIT": 0.1738,
-              "Magic Magy": 0.1096,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1529,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1707
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.0933,
+                0.2571
+              ],
+              "ci_width": 0.1637,
+              "width_ratio_vs_naive": 0.7625
             },
-            "min": 0.1096,
-            "max": 0.2071,
-            "range": 0.0975
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.0829,
+                0.2487
+              ],
+              "ci_width": 0.1658,
+              "width_ratio_vs_naive": 0.7722
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.1634,
+              "holdout_means": {
+                "CineBinge_person1": 0.1802,
+                "CineBinge_person2": 0.1795,
+                "KAI ZAMMIT": 0.1738,
+                "Magic Magy_person1": 0.1188,
+                "Magic Magy_person2": 0.1677,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1529,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1707
+              },
+              "min": 0.1188,
+              "max": 0.1802,
+              "range": 0.0614
+            },
+            "channel": {
+              "full_mean": 0.1634,
+              "holdout_means": {
+                "CineBinge": 0.2071,
+                "KAI ZAMMIT": 0.1738,
+                "Magic Magy": 0.1096,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1529,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1707
+              },
+              "min": 0.1096,
+              "max": 0.2071,
+              "range": 0.0975
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.0897
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.2503
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.3046
+            }
+          },
+          "n_all_tied_as_zero": 0
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 145,
-            "mean": 0.0897
+        "strict_convention": {
+          "mean_spearman": 0.1634,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.1634,
+              "ci95": [
+                0.0574,
+                0.2721
+              ],
+              "ci_width": 0.2147
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.0933,
+                0.2571
+              ],
+              "ci_width": 0.1637,
+              "width_ratio_vs_naive": 0.7625
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.0829,
+                0.2487
+              ],
+              "ci_width": 0.1658,
+              "width_ratio_vs_naive": 0.7722
+            }
           },
-          "3": {
-            "n": 76,
-            "mean": 0.2503
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.1634,
+              "holdout_means": {
+                "CineBinge_person1": 0.1802,
+                "CineBinge_person2": 0.1795,
+                "KAI ZAMMIT": 0.1738,
+                "Magic Magy_person1": 0.1188,
+                "Magic Magy_person2": 0.1677,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1529,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1707
+              },
+              "min": 0.1188,
+              "max": 0.1802,
+              "range": 0.0614
+            },
+            "channel": {
+              "full_mean": 0.1634,
+              "holdout_means": {
+                "CineBinge": 0.2071,
+                "KAI ZAMMIT": 0.1738,
+                "Magic Magy": 0.1096,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.1529,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.1707
+              },
+              "min": 0.1096,
+              "max": 0.2071,
+              "range": 0.0975
+            }
           },
-          "4+": {
-            "n": 29,
-            "mean": 0.3046
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.0897
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.2503
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.3046
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.6205,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.587
+          "video_equal_weight_acc": 0.587,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       },
       "indep": {
-        "mean_spearman": 0.3937,
-        "n_videos_scored": 209,
-        "A1_bootstrap": {
-          "n_units": 209,
-          "naive": {
-            "mean": 0.3937,
-            "ci95": [
-              0.2852,
-              0.4995
-            ],
-            "ci_width": 0.2142
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              0.3378,
-              0.4923
-            ],
-            "ci_width": 0.1545,
-            "width_ratio_vs_naive": 0.7213
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              0.3392,
-              0.6262
-            ],
-            "ci_width": 0.287,
-            "width_ratio_vs_naive": 1.3399
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.3937,
-            "holdout_means": {
-              "CineBinge_person1": 0.4047,
-              "CineBinge_person2": 0.4191,
-              "KAI ZAMMIT": 0.3731,
-              "Magic Magy_person1": 0.4038,
-              "Magic Magy_person2": 0.3935,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3938,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.374
+        "paper_convention": {
+          "mean_spearman": 0.3291,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.3291,
+              "ci95": [
+                0.2369,
+                0.4171
+              ],
+              "ci_width": 0.1802
             },
-            "min": 0.3731,
-            "max": 0.4191,
-            "range": 0.046
-          },
-          "channel": {
-            "full_mean": 0.3937,
-            "holdout_means": {
-              "CineBinge": 0.4421,
-              "KAI ZAMMIT": 0.3731,
-              "Magic Magy": 0.4073,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3938,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.374
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.2744,
+                0.4009
+              ],
+              "ci_width": 0.1265,
+              "width_ratio_vs_naive": 0.702
             },
-            "min": 0.3731,
-            "max": 0.4421,
-            "range": 0.069
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.2777,
+                0.461
+              ],
+              "ci_width": 0.1833,
+              "width_ratio_vs_naive": 1.0172
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.3291,
+              "holdout_means": {
+                "CineBinge_person1": 0.3338,
+                "CineBinge_person2": 0.3583,
+                "KAI ZAMMIT": 0.3125,
+                "Magic Magy_person1": 0.3271,
+                "Magic Magy_person2": 0.3266,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3301,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3192
+              },
+              "min": 0.3125,
+              "max": 0.3583,
+              "range": 0.0458
+            },
+            "channel": {
+              "full_mean": 0.3291,
+              "holdout_means": {
+                "CineBinge": 0.3743,
+                "KAI ZAMMIT": 0.3125,
+                "Magic Magy": 0.3231,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3301,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.3192
+              },
+              "min": 0.3125,
+              "max": 0.3743,
+              "range": 0.0618
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.2828
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.4283
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.3009
+            }
+          },
+          "n_all_tied_as_zero": 41
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 113,
-            "mean": 0.3628
+        "strict_convention": {
+          "mean_spearman": 0.3937,
+          "n_videos_scored": 209,
+          "A1_bootstrap": {
+            "n_units": 209,
+            "naive": {
+              "mean": 0.3937,
+              "ci95": [
+                0.2852,
+                0.4995
+              ],
+              "ci_width": 0.2142
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.3378,
+                0.4923
+              ],
+              "ci_width": 0.1545,
+              "width_ratio_vs_naive": 0.7213
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.3392,
+                0.6262
+              ],
+              "ci_width": 0.287,
+              "width_ratio_vs_naive": 1.3399
+            }
           },
-          "3": {
-            "n": 70,
-            "mean": 0.465
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.3937,
+              "holdout_means": {
+                "CineBinge_person1": 0.4047,
+                "CineBinge_person2": 0.4191,
+                "KAI ZAMMIT": 0.3731,
+                "Magic Magy_person1": 0.4038,
+                "Magic Magy_person2": 0.3935,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3938,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.374
+              },
+              "min": 0.3731,
+              "max": 0.4191,
+              "range": 0.046
+            },
+            "channel": {
+              "full_mean": 0.3937,
+              "holdout_means": {
+                "CineBinge": 0.4421,
+                "KAI ZAMMIT": 0.3731,
+                "Magic Magy": 0.4073,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.3938,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.374
+              },
+              "min": 0.3731,
+              "max": 0.4421,
+              "range": 0.069
+            }
           },
-          "4+": {
-            "n": 26,
-            "mean": 0.3356
+          "A3_by_n_moments": {
+            "2": {
+              "n": 113,
+              "mean": 0.3628
+            },
+            "3": {
+              "n": 70,
+              "mean": 0.465
+            },
+            "4+": {
+              "n": 26,
+              "mean": 0.3356
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.6646,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.6626
+          "video_equal_weight_acc": 0.6626,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       }
     },
     "tinker_Qwen_Qwen3.6-35B-A3B": {
       "joint": {
-        "mean_spearman": 0.0456,
-        "n_videos_scored": 237,
-        "A1_bootstrap": {
-          "n_units": 237,
-          "naive": {
-            "mean": 0.0456,
-            "ci95": [
-              -0.0629,
-              0.1569
-            ],
-            "ci_width": 0.2198
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              -0.0545,
-              0.1436
-            ],
-            "ci_width": 0.1982,
-            "width_ratio_vs_naive": 0.9017
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              -0.0162,
-              0.0947
-            ],
-            "ci_width": 0.1109,
-            "width_ratio_vs_naive": 0.5045
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.0456,
-            "holdout_means": {
-              "CineBinge_person1": 0.0648,
-              "CineBinge_person2": 0.0269,
-              "KAI ZAMMIT": 0.0623,
-              "Magic Magy_person1": 0.0052,
-              "Magic Magy_person2": 0.0795,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0363,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0434
+        "paper_convention": {
+          "mean_spearman": 0.0432,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.0432,
+              "ci95": [
+                -0.0589,
+                0.1477
+              ],
+              "ci_width": 0.2066
             },
-            "min": 0.0052,
-            "max": 0.0795,
-            "range": 0.0743
-          },
-          "channel": {
-            "full_mean": 0.0456,
-            "holdout_means": {
-              "CineBinge": 0.0469,
-              "KAI ZAMMIT": 0.0623,
-              "Magic Magy": 0.0366,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0363,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0434
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                -0.0519,
+                0.1361
+              ],
+              "ci_width": 0.1879,
+              "width_ratio_vs_naive": 0.9095
             },
-            "min": 0.0363,
-            "max": 0.0623,
-            "range": 0.026
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                -0.0151,
+                0.0905
+              ],
+              "ci_width": 0.1057,
+              "width_ratio_vs_naive": 0.5116
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.0432,
+              "holdout_means": {
+                "CineBinge_person1": 0.0629,
+                "CineBinge_person2": 0.0254,
+                "KAI ZAMMIT": 0.0588,
+                "Magic Magy_person1": 0.0049,
+                "Magic Magy_person2": 0.0748,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0345,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0409
+              },
+              "min": 0.0049,
+              "max": 0.0748,
+              "range": 0.0699
+            },
+            "channel": {
+              "full_mean": 0.0432,
+              "holdout_means": {
+                "CineBinge": 0.0456,
+                "KAI ZAMMIT": 0.0588,
+                "Magic Magy": 0.0342,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0345,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0409
+              },
+              "min": 0.0342,
+              "max": 0.0588,
+              "range": 0.0246
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.0
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.061
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.213
+            }
+          },
+          "n_all_tied_as_zero": 13
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 132,
-            "mean": 0.0
+        "strict_convention": {
+          "mean_spearman": 0.0456,
+          "n_videos_scored": 237,
+          "A1_bootstrap": {
+            "n_units": 237,
+            "naive": {
+              "mean": 0.0456,
+              "ci95": [
+                -0.0629,
+                0.1569
+              ],
+              "ci_width": 0.2198
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                -0.0545,
+                0.1436
+              ],
+              "ci_width": 0.1982,
+              "width_ratio_vs_naive": 0.9017
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                -0.0162,
+                0.0947
+              ],
+              "ci_width": 0.1109,
+              "width_ratio_vs_naive": 0.5045
+            }
           },
-          "3": {
-            "n": 76,
-            "mean": 0.061
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.0456,
+              "holdout_means": {
+                "CineBinge_person1": 0.0648,
+                "CineBinge_person2": 0.0269,
+                "KAI ZAMMIT": 0.0623,
+                "Magic Magy_person1": 0.0052,
+                "Magic Magy_person2": 0.0795,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0363,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0434
+              },
+              "min": 0.0052,
+              "max": 0.0795,
+              "range": 0.0743
+            },
+            "channel": {
+              "full_mean": 0.0456,
+              "holdout_means": {
+                "CineBinge": 0.0469,
+                "KAI ZAMMIT": 0.0623,
+                "Magic Magy": 0.0366,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.0363,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0434
+              },
+              "min": 0.0363,
+              "max": 0.0623,
+              "range": 0.026
+            }
           },
-          "4+": {
-            "n": 29,
-            "mean": 0.213
+          "A3_by_n_moments": {
+            "2": {
+              "n": 132,
+              "mean": 0.0
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.061
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.213
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.5472,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.5204
+          "video_equal_weight_acc": 0.5204,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       },
       "indep": {
-        "mean_spearman": 0.2566,
-        "n_videos_scored": 205,
-        "A1_bootstrap": {
-          "n_units": 205,
-          "naive": {
-            "mean": 0.2566,
-            "ci95": [
-              0.1424,
-              0.3682
-            ],
-            "ci_width": 0.2258
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              0.1734,
-              0.3759
-            ],
-            "ci_width": 0.2025,
-            "width_ratio_vs_naive": 0.8968
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              0.1793,
-              0.4751
-            ],
-            "ci_width": 0.2958,
-            "width_ratio_vs_naive": 1.31
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.2566,
-            "holdout_means": {
-              "CineBinge_person1": 0.2251,
-              "CineBinge_person2": 0.275,
-              "KAI ZAMMIT": 0.2592,
-              "Magic Magy_person1": 0.2928,
-              "Magic Magy_person2": 0.2718,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.248,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2298
+        "paper_convention": {
+          "mean_spearman": 0.2104,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.2104,
+              "ci95": [
+                0.1172,
+                0.3033
+              ],
+              "ci_width": 0.1861
             },
-            "min": 0.2251,
-            "max": 0.2928,
-            "range": 0.0677
-          },
-          "channel": {
-            "full_mean": 0.2566,
-            "holdout_means": {
-              "CineBinge": 0.2398,
-              "KAI ZAMMIT": 0.2592,
-              "Magic Magy": 0.3279,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.248,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2298
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.1425,
+                0.2973
+              ],
+              "ci_width": 0.1548,
+              "width_ratio_vs_naive": 0.8318
             },
-            "min": 0.2298,
-            "max": 0.3279,
-            "range": 0.0981
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.1526,
+                0.3337
+              ],
+              "ci_width": 0.1812,
+              "width_ratio_vs_naive": 0.9737
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.2104,
+              "holdout_means": {
+                "CineBinge_person1": 0.1835,
+                "CineBinge_person2": 0.2282,
+                "KAI ZAMMIT": 0.2149,
+                "Magic Magy_person1": 0.2371,
+                "Magic Magy_person2": 0.2161,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2058,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.19
+              },
+              "min": 0.1835,
+              "max": 0.2371,
+              "range": 0.0536
+            },
+            "channel": {
+              "full_mean": 0.2104,
+              "holdout_means": {
+                "CineBinge": 0.1983,
+                "KAI ZAMMIT": 0.2149,
+                "Magic Magy": 0.2536,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2058,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.19
+              },
+              "min": 0.19,
+              "max": 0.2536,
+              "range": 0.0636
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.1931
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.2995
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.0636
+            }
+          },
+          "n_all_tied_as_zero": 45
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 106,
-            "mean": 0.2642
+        "strict_convention": {
+          "mean_spearman": 0.2566,
+          "n_videos_scored": 205,
+          "A1_bootstrap": {
+            "n_units": 205,
+            "naive": {
+              "mean": 0.2566,
+              "ci95": [
+                0.1424,
+                0.3682
+              ],
+              "ci_width": 0.2258
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.1734,
+                0.3759
+              ],
+              "ci_width": 0.2025,
+              "width_ratio_vs_naive": 0.8968
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.1793,
+                0.4751
+              ],
+              "ci_width": 0.2958,
+              "width_ratio_vs_naive": 1.31
+            }
           },
-          "3": {
-            "n": 71,
-            "mean": 0.3205
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.2566,
+              "holdout_means": {
+                "CineBinge_person1": 0.2251,
+                "CineBinge_person2": 0.275,
+                "KAI ZAMMIT": 0.2592,
+                "Magic Magy_person1": 0.2928,
+                "Magic Magy_person2": 0.2718,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.248,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2298
+              },
+              "min": 0.2251,
+              "max": 0.2928,
+              "range": 0.0677
+            },
+            "channel": {
+              "full_mean": 0.2566,
+              "holdout_means": {
+                "CineBinge": 0.2398,
+                "KAI ZAMMIT": 0.2592,
+                "Magic Magy": 0.3279,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.248,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2298
+              },
+              "min": 0.2298,
+              "max": 0.3279,
+              "range": 0.0981
+            }
           },
-          "4+": {
-            "n": 28,
-            "mean": 0.0659
+          "A3_by_n_moments": {
+            "2": {
+              "n": 106,
+              "mean": 0.2642
+            },
+            "3": {
+              "n": 71,
+              "mean": 0.3205
+            },
+            "4+": {
+              "n": 28,
+              "mean": 0.0659
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.5964,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.6047
+          "video_equal_weight_acc": 0.6047,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       }
     },
     "tinker_moonshotai_Kimi-K2.6": {
       "joint": {
-        "mean_spearman": 0.0864,
-        "n_videos_scored": 250,
-        "A1_bootstrap": {
-          "n_units": 250,
-          "naive": {
-            "mean": 0.0864,
-            "ci95": [
-              -0.0248,
-              0.1974
-            ],
-            "ci_width": 0.2222
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              -0.0138,
-              0.1614
-            ],
-            "ci_width": 0.1751,
-            "width_ratio_vs_naive": 0.788
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              -0.0331,
-              0.1606
-            ],
-            "ci_width": 0.1937,
-            "width_ratio_vs_naive": 0.8717
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.0864,
-            "holdout_means": {
-              "CineBinge_person1": 0.0931,
-              "CineBinge_person2": 0.0811,
-              "KAI ZAMMIT": 0.1177,
-              "Magic Magy_person1": 0.0618,
-              "Magic Magy_person2": 0.097,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.073,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0792
+        "paper_convention": {
+          "mean_spearman": 0.0864,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.0864,
+              "ci95": [
+                -0.0248,
+                0.1974
+              ],
+              "ci_width": 0.2222
             },
-            "min": 0.0618,
-            "max": 0.1177,
-            "range": 0.0559
-          },
-          "channel": {
-            "full_mean": 0.0864,
-            "holdout_means": {
-              "CineBinge": 0.0883,
-              "KAI ZAMMIT": 0.1177,
-              "Magic Magy": 0.0678,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.073,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0792
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                -0.0138,
+                0.1614
+              ],
+              "ci_width": 0.1751,
+              "width_ratio_vs_naive": 0.788
             },
-            "min": 0.0678,
-            "max": 0.1177,
-            "range": 0.0499
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                -0.0331,
+                0.1606
+              ],
+              "ci_width": 0.1937,
+              "width_ratio_vs_naive": 0.8717
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.0864,
+              "holdout_means": {
+                "CineBinge_person1": 0.0931,
+                "CineBinge_person2": 0.0811,
+                "KAI ZAMMIT": 0.1177,
+                "Magic Magy_person1": 0.0618,
+                "Magic Magy_person2": 0.097,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.073,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0792
+              },
+              "min": 0.0618,
+              "max": 0.1177,
+              "range": 0.0559
+            },
+            "channel": {
+              "full_mean": 0.0864,
+              "holdout_means": {
+                "CineBinge": 0.0883,
+                "KAI ZAMMIT": 0.1177,
+                "Magic Magy": 0.0678,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.073,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0792
+              },
+              "min": 0.0678,
+              "max": 0.1177,
+              "range": 0.0499
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.0207
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.1324
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.2942
+            }
+          },
+          "n_all_tied_as_zero": 0
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 145,
-            "mean": 0.0207
+        "strict_convention": {
+          "mean_spearman": 0.0864,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.0864,
+              "ci95": [
+                -0.0248,
+                0.1974
+              ],
+              "ci_width": 0.2222
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                -0.0138,
+                0.1614
+              ],
+              "ci_width": 0.1751,
+              "width_ratio_vs_naive": 0.788
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                -0.0331,
+                0.1606
+              ],
+              "ci_width": 0.1937,
+              "width_ratio_vs_naive": 0.8717
+            }
           },
-          "3": {
-            "n": 76,
-            "mean": 0.1324
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.0864,
+              "holdout_means": {
+                "CineBinge_person1": 0.0931,
+                "CineBinge_person2": 0.0811,
+                "KAI ZAMMIT": 0.1177,
+                "Magic Magy_person1": 0.0618,
+                "Magic Magy_person2": 0.097,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.073,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0792
+              },
+              "min": 0.0618,
+              "max": 0.1177,
+              "range": 0.0559
+            },
+            "channel": {
+              "full_mean": 0.0864,
+              "holdout_means": {
+                "CineBinge": 0.0883,
+                "KAI ZAMMIT": 0.1177,
+                "Magic Magy": 0.0678,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.073,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.0792
+              },
+              "min": 0.0678,
+              "max": 0.1177,
+              "range": 0.0499
+            }
           },
-          "4+": {
-            "n": 29,
-            "mean": 0.2942
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.0207
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.1324
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.2942
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.5807,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.5455
+          "video_equal_weight_acc": 0.5455,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       },
       "indep": {
-        "mean_spearman": 0.2856,
-        "n_videos_scored": 204,
-        "A1_bootstrap": {
-          "n_units": 204,
-          "naive": {
-            "mean": 0.2856,
-            "ci95": [
-              0.1716,
-              0.3957
-            ],
-            "ci_width": 0.2241
-          },
-          "creator": {
-            "n_clusters": 7,
-            "ci95": [
-              0.2278,
-              0.3543
-            ],
-            "ci_width": 0.1265,
-            "width_ratio_vs_naive": 0.5645
-          },
-          "channel": {
-            "n_clusters": 5,
-            "ci95": [
-              0.22,
-              0.328
-            ],
-            "ci_width": 0.108,
-            "width_ratio_vs_naive": 0.4819
-          }
-        },
-        "A2_leave_one_creator_out": {
-          "creator": {
-            "full_mean": 0.2856,
-            "holdout_means": {
-              "CineBinge_person1": 0.287,
-              "CineBinge_person2": 0.2971,
-              "KAI ZAMMIT": 0.2978,
-              "Magic Magy_person1": 0.2969,
-              "Magic Magy_person2": 0.2517,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2819,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2853
+        "paper_convention": {
+          "mean_spearman": 0.2331,
+          "n_videos_scored": 250,
+          "A1_bootstrap": {
+            "n_units": 250,
+            "naive": {
+              "mean": 0.2331,
+              "ci95": [
+                0.1374,
+                0.3246
+              ],
+              "ci_width": 0.1872
             },
-            "min": 0.2517,
-            "max": 0.2978,
-            "range": 0.0461
-          },
-          "channel": {
-            "full_mean": 0.2856,
-            "holdout_means": {
-              "CineBinge": 0.3024,
-              "KAI ZAMMIT": 0.2978,
-              "Magic Magy": 0.254,
-              "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2819,
-              "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2853
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.1793,
+                0.2965
+              ],
+              "ci_width": 0.1173,
+              "width_ratio_vs_naive": 0.6266
             },
-            "min": 0.254,
-            "max": 0.3024,
-            "range": 0.0484
-          }
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.176,
+                0.2848
+              ],
+              "ci_width": 0.1088,
+              "width_ratio_vs_naive": 0.5812
+            }
+          },
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.2331,
+              "holdout_means": {
+                "CineBinge_person1": 0.2354,
+                "CineBinge_person2": 0.254,
+                "KAI ZAMMIT": 0.2418,
+                "Magic Magy_person1": 0.2361,
+                "Magic Magy_person2": 0.2039,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2304,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2295
+              },
+              "min": 0.2039,
+              "max": 0.254,
+              "range": 0.0501
+            },
+            "channel": {
+              "full_mean": 0.2331,
+              "holdout_means": {
+                "CineBinge": 0.2641,
+                "KAI ZAMMIT": 0.2418,
+                "Magic Magy": 0.1981,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2304,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2295
+              },
+              "min": 0.1981,
+              "max": 0.2641,
+              "range": 0.066
+            }
+          },
+          "A3_by_n_moments": {
+            "2": {
+              "n": 145,
+              "mean": 0.2069
+            },
+            "3": {
+              "n": 76,
+              "mean": 0.2893
+            },
+            "4+": {
+              "n": 29,
+              "mean": 0.2166
+            }
+          },
+          "n_all_tied_as_zero": 46
         },
-        "A3_by_n_moments": {
-          "2": {
-            "n": 110,
-            "mean": 0.2727
+        "strict_convention": {
+          "mean_spearman": 0.2856,
+          "n_videos_scored": 204,
+          "A1_bootstrap": {
+            "n_units": 204,
+            "naive": {
+              "mean": 0.2856,
+              "ci95": [
+                0.1716,
+                0.3957
+              ],
+              "ci_width": 0.2241
+            },
+            "creator": {
+              "n_clusters": 7,
+              "ci95": [
+                0.2278,
+                0.3543
+              ],
+              "ci_width": 0.1265,
+              "width_ratio_vs_naive": 0.5645
+            },
+            "channel": {
+              "n_clusters": 5,
+              "ci95": [
+                0.22,
+                0.328
+              ],
+              "ci_width": 0.108,
+              "width_ratio_vs_naive": 0.4819
+            }
           },
-          "3": {
-            "n": 66,
-            "mean": 0.3332
+          "A2_leave_one_creator_out": {
+            "creator": {
+              "full_mean": 0.2856,
+              "holdout_means": {
+                "CineBinge_person1": 0.287,
+                "CineBinge_person2": 0.2971,
+                "KAI ZAMMIT": 0.2978,
+                "Magic Magy_person1": 0.2969,
+                "Magic Magy_person2": 0.2517,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2819,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2853
+              },
+              "min": 0.2517,
+              "max": 0.2978,
+              "range": 0.0461
+            },
+            "channel": {
+              "full_mean": 0.2856,
+              "holdout_means": {
+                "CineBinge": 0.3024,
+                "KAI ZAMMIT": 0.2978,
+                "Magic Magy": 0.254,
+                "https://www.youtube.com/channel/UCmDTrq0LNgPodDOFZiSbsww": 0.2819,
+                "https://www.youtube.com/channel/UCs95gwav7frv5HTVqAGa7uQ": 0.2853
+              },
+              "min": 0.254,
+              "max": 0.3024,
+              "range": 0.0484
+            }
           },
-          "4+": {
-            "n": 28,
-            "mean": 0.2243
+          "A3_by_n_moments": {
+            "2": {
+              "n": 110,
+              "mean": 0.2727
+            },
+            "3": {
+              "n": 66,
+              "mean": 0.3332
+            },
+            "4+": {
+              "n": 28,
+              "mean": 0.2243
+            }
           }
         },
         "A4_pairwise": {
           "n_pairs": 477,
           "pooled_acc": 0.6101,
           "n_videos": 250,
-          "video_equal_weight_acc": 0.6148
+          "video_equal_weight_acc": 0.6148,
+          "note": "convention-independent: covers every parsed video with >=1 non-tied gold pair (all-tied predictions included, each of their pairs credited 0.5); unparsed videos excluded"
         }
       }
     }
